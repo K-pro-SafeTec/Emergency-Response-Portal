@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-// import ApiCalendar from 'react-google-calendar-api';
-// import Calendar from 'react-calendar'
-// import Calendar from 'react-calendar/dist/entry.nostyle';
-import '../styles/Calendar.css'
-import 'react-big-calendar/lib/css/react-big-calendar.css'
 
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
+import 'moment/locale/en-gb';
 
-BigCalendar.setLocalizer(
-  BigCalendar.momentLocalizer(moment)
-);
+import 'react-big-calendar/lib/css/react-big-calendar.css'
+import '../styles/Calendar.css'
+
+
+moment.locale('en-gb');
+BigCalendar.momentLocalizer(moment);
 
 export class EmergencyResponsePortalCalendar extends Component {
   
