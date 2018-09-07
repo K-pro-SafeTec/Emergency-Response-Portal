@@ -19,26 +19,23 @@ export class EmergencyResponsePortalCalendar extends Component {
         {
           start: new Date('2018-09-07T20:00:00.000Z'),
           end: new Date('2018-09-07T21:45:00.000Z'),
-          type: 'Øvelse',
           participants: 'Alle',
           title: 'Øvelse',
         },
         {
           start: new Date('2018-09-07T21:45:00.000Z'),
           end: new Date('2018-09-07T21:45:00.000Z'),
-          type: 'Trening',
           participants: 'Alle',
           title: 'Trening',
         },
         {
           start: new Date('2018-09-09T21:45:00.000Z'),
           end: new Date('2018-09-09T21:45:00.000Z'),
-          type: 'Table top',
           participants: 'Alle',
           title: 'Table top',
         },
       ],
-      showEventAdder: true,
+      showEventAdder: false,
       selectedDate: new Date()
     };
     this.addEventButtonClicked = this.addEventButtonClicked.bind(this);
@@ -69,16 +66,15 @@ export class EmergencyResponsePortalCalendar extends Component {
     const newEvent = {
       start: startDate,
       end: endDate,
-      type: type,
       participants: participants,
-      title: type.charAt(0).toUpperCase() + type.slice(1)
+      title: capitalizeFirstLetter(type)
     };
     let events = this.state.events;
     events.push(newEvent);
     this.setState({
-      events: events
+      events: events,
+      showEventAdder: false
     });
-    console.log(events)
   }
   
   render() {
@@ -99,4 +95,8 @@ export class EmergencyResponsePortalCalendar extends Component {
       </div>
     )
   }
+}
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }

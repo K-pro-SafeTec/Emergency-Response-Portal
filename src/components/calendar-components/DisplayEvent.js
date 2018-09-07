@@ -9,7 +9,7 @@ export class DisplayEvent extends Component {
     const event = this.props.event;
     return (
       <Paper className="paper">
-        <h1>{event.type}</h1>
+        <h1>{event.title}</h1>
         <h2>{getTimeFormat(event.start)}-{getTimeFormat(event.end)}</h2>
         <h2>Deltakere: {event.participants}</h2>
         <div>
