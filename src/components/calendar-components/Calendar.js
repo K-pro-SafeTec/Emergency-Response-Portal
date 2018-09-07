@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { AddEvent } from './AddEvent';
 import { SideDisplay } from './SideDisplay';
+import Paper from '@material-ui/core/Paper';
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
 import 'moment/locale/nb';
@@ -90,9 +91,11 @@ export class EmergencyResponsePortalCalendar extends Component {
           onSelectEvent={({participants}) => console.log(participants)}
         
         />
-        {!this.state.showEventAdder ? (<SideDisplay events={this.state.events} date={this.state.selectedDate}
-                                                    onAddEventButtonClick={this.addEventButtonClicked}/>) :
-          <AddEvent date={this.state.selectedDate} onSaveButtonClick={this.saveEventButtonClicked}/>}
+        <Paper className="paper-big">
+          {!this.state.showEventAdder ? (<SideDisplay events={this.state.events} date={this.state.selectedDate}
+                                                      onAddEventButtonClick={this.addEventButtonClicked}/>) :
+            <AddEvent date={this.state.selectedDate} onSaveButtonClick={this.saveEventButtonClicked}/>}
+        </Paper>
       </div>
     )
   }

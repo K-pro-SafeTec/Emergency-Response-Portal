@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import classNames from 'classnames';
 
 
 export class DisplayEvent extends Component {
@@ -9,7 +10,7 @@ export class DisplayEvent extends Component {
   render() {
     const event = this.props.event;
     return (
-      <Paper className="paper">
+      <Paper className="paper-small">
         <Typography variant="headline" component="h2">
           {event.title}
         </Typography>
@@ -20,7 +21,7 @@ export class DisplayEvent extends Component {
           Deltakere: {event.participants}
         </Typography>
         <div>
-          <Button variant="outlined" color="primary">
+          <Button style={{marginRight: '5px'}} variant="outlined" color="primary">
             Endre
           </Button>
           <Button variant="outlined" color="secondary">
