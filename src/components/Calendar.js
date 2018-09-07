@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
-
-import { AddEvent } from "./AddEvent";
-import { SideDisplay } from "./SideDisplay";
+import { AddEvent } from './AddEvent';
+import { SideDisplay } from './SideDisplay';
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
 import 'moment/locale/nb';
-
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import '../styles/Calendar.css'
-
-import Button from '@material-ui/core/Button';
-import AddIcon from '@material-ui/icons/Add';
-
 
 moment.locale('nb');
 BigCalendar.momentLocalizer(moment);
@@ -30,43 +24,43 @@ export class EmergencyResponsePortalCalendar extends Component {
           title: 'Øvelse',
         },
         {
-          end: new Date('2018-09-08T21:45:00.000Z'),
-          start: new Date('2018-09-08T21:45:00.000Z'),
-          type: 'Øvelse',
+          start: new Date('2018-09-07T21:45:00.000Z'),
+          end: new Date('2018-09-07T21:45:00.000Z'),
+          type: 'Trening',
           participants: 'Alle',
           title: 'Trening',
         },
         {
-          end: new Date('2018-09-09T21:45:00.000Z'),
           start: new Date('2018-09-09T21:45:00.000Z'),
-          type: 'Øvelse',
+          end: new Date('2018-09-09T21:45:00.000Z'),
+          type: 'Table Top',
           participants: 'Alle',
           title: 'Table Top',
         },
       ],
       showEventAdder: false,
-      showDate: new Date()
+      selectedDate: new Date()
     };
+    this.addEventButtonClicked = this.addEventButtonClicked.bind(this);
   }
   
-  addButtonClicked() {
+  slotClicked(slotInfo) {
+    if (slotInfo.action === "click") {
+      const date = slotInfo.start;
+      this.setState({
+        selectedDate: date
+      })
+    }
+  }
+  
+  addEventButtonClicked() {
     this.setState({
       showEventAdder: true
     })
   }
   
-  slotClicked(slotInfo) {
-    console.log("clot clicked");
-    if (slotInfo.action === "click") {
-      const date = slotInfo.start;
-      this.setState({
-        showDate: date
-      })
-    }
-  }
-  
-  componentDidUpdate() {
-    console.log(this.state.showDate)
+  saveEventButtonClicked() {
+    alert("yes")
   }
   
   render() {
@@ -78,19 +72,12 @@ export class EmergencyResponsePortalCalendar extends Component {
           views={['month', 'week', 'work_week', 'day', 'agenda']}
           selectable={true}
           onSelectSlot={((slot) => this.slotClicked(slot))}
-          onSelectEvent={({ participants }) => console.log(participants)}
-
+          onSelectEvent={({participants}) => console.log(participants)}
+        
         />
-        <SideDisplay events={this.state.events} date={this.state.showDate}/>
-        {/*
-        <div onClick={() => this.addButtonClicked()}>
-          <Button variant="fab" color="primary">
-            <AddIcon />
-          </Button>
-        </div>
-        {this.state.showEventAdder && (
-          <AddEvent/>
-        )}*/}
+        {!this.state.showEventAdder ? (<SideDisplay events={this.state.events} date={this.state.selectedDate}
+                                                    onAddEventButtonClick={this.addEventButtonClicked}/>) :
+          <AddEvent date={this.state.selectedDate} onSaveButtonClick={this.saveEventButtonClicked}/>}
       </div>
     )
   }
