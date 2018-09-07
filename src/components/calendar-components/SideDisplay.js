@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { DisplayEvent } from './DisplayEvent';
+import React, {Component} from 'react';
+import {DisplayEvent} from './DisplayEvent';
 import Button from '@material-ui/core/Button';
 
 
@@ -17,7 +17,8 @@ export class SideDisplay extends Component {
     return (
       <div className="side-display">
         <h1>{getDateFormat(this.props.date)}</h1>
-        <h2>Det er {events.length} hendelse{events.length > 1 && "r"} denne dagen.</h2>
+        <h2>Det er {events.length > 0 ? events.length + " " : "ingen "}
+          hendelse{(events.length > 1 || events.length === 0) && "r"} denne dagen.</h2>
         <div>
           {events.map((e, i) =>
             <DisplayEvent key={i} event={e}/>
