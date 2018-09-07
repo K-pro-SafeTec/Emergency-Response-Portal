@@ -1,3 +1,13 @@
 .container {
+	display: flex;
 	height: 600px;
+}
+
+.rbc-calendar {
+	width: 66%
+}
+
+.side-display {
+	display: flex;
+	width: 33%
 }

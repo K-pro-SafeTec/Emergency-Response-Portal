@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { AddEvent } from "./AddEvent";
+import { SideDisplay } from "./SideDisplay";
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
 import 'moment/locale/nb';
@@ -20,8 +21,31 @@ export class EmergencyResponsePortalCalendar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      events: [],
+      events: [
+        {
+          start: new Date('2018-09-07T20:00:00.000Z'),
+          end: new Date('2018-09-07T21:45:00.000Z'),
+          type: 'Øvelse',
+          participants: 'Alle',
+          title: 'Øvelse',
+        },
+        {
+          end: new Date('2018-09-08T21:45:00.000Z'),
+          start: new Date('2018-09-08T21:45:00.000Z'),
+          type: 'Øvelse',
+          participants: 'Alle',
+          title: 'Trening',
+        },
+        {
+          end: new Date('2018-09-09T21:45:00.000Z'),
+          start: new Date('2018-09-09T21:45:00.000Z'),
+          type: 'Øvelse',
+          participants: 'Alle',
+          title: 'Table Top',
+        },
+      ],
       showEventAdder: false,
+      showDate: new Date()
     };
   }
   
@@ -31,37 +55,34 @@ export class EmergencyResponsePortalCalendar extends Component {
     })
   }
   
+  slotClicked(slotInfo) {
+    console.log("clot clicked");
+    if (slotInfo.action === "click") {
+      const date = slotInfo.start;
+      this.setState({
+        showDate: date
+      })
+    }
+  }
+  
+  componentDidUpdate() {
+    console.log(this.state.showDate)
+  }
+  
   render() {
     return (
       <div className="container">
-        {/*<ApiCalendar/>*/}
         <BigCalendar
-          events={[
-            {
-              start: new Date('2018-09-07T21:45:00.000Z'),
-              end: new Date('2018-09-07T21:45:00.000Z'),
-              type: 'Øvelse',
-              participants: 'Alle',
-              title: 'Øvelse',
-            },
-            {
-              end: new Date('2018-09-08T21:45:00.000Z'),
-              start: new Date('2018-09-08T21:45:00.000Z'),
-              type: 'Øvelse',
-              participants: 'Alle',
-              title: 'Trening',
-            },
-            {
-              end: new Date('2018-09-09T21:45:00.000Z'),
-              start: new Date('2018-09-09T21:45:00.000Z'),
-              type: 'Øvelse',
-              participants: 'Alle',
-              title: 'Table Top',
-            },
-          ]}
+          events={this.state.events}
+          popup={true}
+          views={['month', 'week', 'work_week', 'day', 'agenda']}
+          selectable={true}
+          onSelectSlot={((slot) => this.slotClicked(slot))}
           onSelectEvent={({ participants }) => console.log(participants)}
 
         />
+        <SideDisplay events={this.state.events} date={this.state.showDate}/>
+        {/*
         <div onClick={() => this.addButtonClicked()}>
           <Button variant="fab" color="primary">
             <AddIcon />
@@ -69,7 +90,7 @@ export class EmergencyResponsePortalCalendar extends Component {
         </div>
         {this.state.showEventAdder && (
           <AddEvent/>
-        )}
+        )}*/}
       </div>
     )
   }
