@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 
 
 export class DisplayEvent extends Component {
@@ -9,9 +10,15 @@ export class DisplayEvent extends Component {
     const event = this.props.event;
     return (
       <Paper className="paper">
-        <h1>{event.title}</h1>
-        <h2>{getTimeFormat(event.start)}-{getTimeFormat(event.end)}</h2>
-        <h2>Deltakere: {event.participants}</h2>
+        <Typography variant="headline" component="h2">
+          {event.title}
+        </Typography>
+        <Typography component="p">
+          {getTimeFormat(event.start)}-{getTimeFormat(event.end)}
+        </Typography>
+        <Typography component="p">
+          Deltakere: {event.participants}
+        </Typography>
         <div>
           <Button variant="outlined" color="primary">
             Endre

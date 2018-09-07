@@ -59,7 +59,7 @@ export class EmergencyResponsePortalCalendar extends Component {
   
   saveEventButtonClicked(date, start, end, participants, type) {
     const year = date.substring(0, 4);
-    const month = parseInt(date.substring(5, 7)) - 1;
+    const month = parseInt(date.substring(5, 7), 10) - 1;
     const dayInMonth = date.substring(8, 10);
     const startDate = new Date(year, month, dayInMonth, start.substring(0, 2), end.substring(3, 5));
     const endDate = new Date(year, month, dayInMonth, end.substring(0, 2), end.substring(3, 5));
@@ -73,7 +73,8 @@ export class EmergencyResponsePortalCalendar extends Component {
     events.push(newEvent);
     this.setState({
       events: events,
-      showEventAdder: false
+      showEventAdder: false,
+      selectedDate: startDate
     });
   }
   
