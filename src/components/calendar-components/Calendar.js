@@ -33,15 +33,16 @@ export class EmergencyResponsePortalCalendar extends Component {
         {
           start: new Date('2018-09-09T21:45:00.000Z'),
           end: new Date('2018-09-09T21:45:00.000Z'),
-          type: 'Table Top',
+          type: 'Table top',
           participants: 'Alle',
-          title: 'Table Top',
+          title: 'Table top',
         },
       ],
-      showEventAdder: false,
+      showEventAdder: true,
       selectedDate: new Date()
     };
     this.addEventButtonClicked = this.addEventButtonClicked.bind(this);
+    this.saveEventButtonClicked = this.saveEventButtonClicked.bind(this);
   }
   
   slotClicked(slotInfo) {
@@ -59,8 +60,25 @@ export class EmergencyResponsePortalCalendar extends Component {
     })
   }
   
-  saveEventButtonClicked() {
-    alert("yes")
+  saveEventButtonClicked(date, start, end, participants, type) {
+    const year = date.substring(0, 4);
+    const month = parseInt(date.substring(5, 7)) - 1;
+    const dayInMonth = date.substring(8, 10);
+    const startDate = new Date(year, month, dayInMonth, start.substring(0, 2), end.substring(3, 5));
+    const endDate = new Date(year, month, dayInMonth, end.substring(0, 2), end.substring(3, 5));
+    const newEvent = {
+      start: startDate,
+      end: endDate,
+      type: type,
+      participants: participants,
+      title: type.charAt(0).toUpperCase() + type.slice(1)
+    };
+    let events = this.state.events;
+    events.push(newEvent);
+    this.setState({
+      events: events
+    });
+    console.log(events)
   }
   
   render() {

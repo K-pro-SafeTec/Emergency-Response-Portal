@@ -28,7 +28,7 @@ export class TypeSelect extends React.Component {
           >
             <MenuItem value={"øvelse"}>Øvelse</MenuItem>
             <MenuItem value={"trening"}>Trening</MenuItem>
-            <MenuItem value={"table-top"}>Table top</MenuItem>
+            <MenuItem value={"table top"}>Table top</MenuItem>
           </Select>
         </FormControl>
       </form>

@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { ParticipantsSelect } from './ParticipantsSelect';
-import { TypeSelect } from './TypeSelect';
+import React, {Component} from 'react';
+import {ParticipantsSelect} from './ParticipantsSelect';
+import {TypeSelect} from './TypeSelect';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
@@ -54,9 +54,10 @@ export class AddEvent extends Component {
             }}
           />
         </form>
-        <ParticipantsSelect/>
-        <TypeSelect/>
-        <div onClick={() => this.props.onSaveButtonClick()}>
+        <ParticipantsSelect id="participants"/>
+        <TypeSelect id="type"/>
+        <div
+          onClick={() => this.props.onSaveButtonClick(document.getElementById("date").value, document.getElementById("start").value, document.getElementById("end").value, document.getElementById("participants").value, document.getElementById("type").value)}>
           <Button variant="contained" color="primary">
             Lagre
           </Button>

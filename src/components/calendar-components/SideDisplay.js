@@ -12,7 +12,6 @@ export class SideDisplay extends Component {
   }
   
   render() {
-    
     const events = getEvents(this.props.events, this.props.date)
     return (
       <div className="side-display">
@@ -33,7 +32,6 @@ export class SideDisplay extends Component {
     )
   }
 }
-
 
 // Takes a list of events and a date as objects.
 // Returns the events that starts on the given date.
