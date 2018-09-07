@@ -5,7 +5,7 @@ import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
 import 'moment/locale/nb';
 import 'react-big-calendar/lib/css/react-big-calendar.css'
-import '../styles/Calendar.css'
+import '../../styles/Calendar.css'
 
 moment.locale('nb');
 BigCalendar.momentLocalizer(moment);
