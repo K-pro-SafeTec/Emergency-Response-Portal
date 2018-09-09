@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {DisplayEvent} from './DisplayEvent';
 import Button from '@material-ui/core/Button';
 
-
 export class SideDisplay extends Component {
   
   render() {
@@ -14,7 +13,9 @@ export class SideDisplay extends Component {
           hendelse{(events.length > 1 || events.length === 0) && "r"} denne dagen.</h2>
         <div>
           {events.map((e, i) =>
-            <DisplayEvent key={i} event={e} onChangeEvent={this.props.onChangeEvent} onDeleteButtonClick={this.props.onDeleteButtonClick}/>
+            <DisplayEvent key={i} event={e} onChangeEvent={this.props.onChangeEvent}
+                          onDeleteButtonClick={this.props.onDeleteButtonClick}
+                          onReviewButtonClick={this.props.onReviewButtonClick}/>
           )}
         </div>
         <div onClick={() => this.props.onAddEventButtonClick()}>
@@ -49,7 +50,8 @@ function equalDates(date1, date2) {
 // Takes in a javascript date object and returns a nice string.
 function getDateFormat(date) {
   const weekdays = ["Søndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag"]
-  const months = ["januar", "februar", "mars", "april", "mai", "juni", "july", "august", "september", "oktober", "november", "desember"]
+  const months = ["januar", "februar", "mars", "april", "mai", "juni", "july", "august", "september", "oktober",
+    "november", "desember"]
   const weekday = weekdays[date.getDay()]
   const month = months[date.getMonth()]
   return weekday + " " + date.getDate() + ". " + month + " " + date.getFullYear()

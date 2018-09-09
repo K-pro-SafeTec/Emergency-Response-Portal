@@ -18,11 +18,16 @@ export class DisplayEvent extends Component {
         <Typography component="p">
           Deltakere: {event.participants}
         </Typography>
-        <div>
+        <div style={{display: 'flex'}}>
           <div onClick={() => this.props.onChangeEvent(event.id)}>
           <Button style={{marginRight: '5px'}} variant="outlined" color="primary">
             Endre
           </Button>
+          </div>
+          <div onClick={() => this.props.onReviewButtonClick(event.id)}>
+            <Button style={{marginRight: '5px'}} variant="outlined" color="primary">
+              Vurder
+            </Button>
           </div>
           <div onClick={() => this.props.onDeleteButtonClick(event.id)}>
             <Button variant="outlined" color="secondary">
@@ -34,8 +39,6 @@ export class DisplayEvent extends Component {
     )
   }
 }
-
-
 
 // Takes javascript date object and returns nice time
 function getTimeFormat(date) {

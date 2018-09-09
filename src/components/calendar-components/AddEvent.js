@@ -57,7 +57,11 @@ export class AddEvent extends Component {
         <ParticipantsSelect id="participants"/>
         <TypeSelect id="type"/>
         <div
-          onClick={() => this.props.onSaveButtonClick(document.getElementById("date").value, document.getElementById("start").value, document.getElementById("end").value, document.getElementById("participants").value, document.getElementById("type").value)}>
+          onClick={() => this.props.onSaveButtonClick(document.getElementById("date").value,
+            document.getElementById("start").value,
+            document.getElementById("end").value,
+            document.getElementById("participants").value,
+            document.getElementById("type").value)}>
           <Button variant="contained" color="primary">
             Lagre
           </Button>

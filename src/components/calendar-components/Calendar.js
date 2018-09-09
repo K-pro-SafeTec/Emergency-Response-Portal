@@ -103,6 +103,10 @@ export class EmergencyResponsePortalCalendar extends Component {
     console.log("Change event", eventId)
   }
   
+  reviewEvent(eventId) {
+    console.log("Review event", eventId)
+  }
+  
   render() {
     return (
       <div className="container">
@@ -119,7 +123,8 @@ export class EmergencyResponsePortalCalendar extends Component {
           {!this.state.showEventAdder ? (<SideDisplay events={this.state.events} date={this.state.selectedDate}
                                                       onAddEventButtonClick={this.addEventButtonClicked}
                                                       onDeleteButtonClick={this.deleteEvent}
-                                                      onChangeEvent={this.changeEvent}/>) :
+                                                      onChangeEvent={this.changeEvent}
+                                                      onReviewButtonClick={this.reviewEvent}/>) :
             <AddEvent date={this.state.selectedDate} onSaveButtonClick={this.addEvent}/>}
         </Paper>
       </div>
