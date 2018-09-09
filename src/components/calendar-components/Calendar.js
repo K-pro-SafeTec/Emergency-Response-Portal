@@ -87,13 +87,7 @@ export class EmergencyResponsePortalCalendar extends Component {
   }
   
   deleteEvent(eventId) {
-    const events = this.state.events;
-    for(let i = 0; i < events.length; i++) {
-      if(events[i].id === eventId) {
-        events.splice(i, 1);
-        break;
-      }
-    }
+    const events = this.state.events.filter(event => event.id !== eventId);
     this.setState({
       events
     })
