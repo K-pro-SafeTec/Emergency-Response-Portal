@@ -19,6 +19,7 @@ export class TypeSelect extends React.Component {
         <FormControl>
           <InputLabel htmlFor="age-simple">Type</InputLabel>
           <Select
+            className="width200"
             value={this.state.type}
             onChange={this.handleChange}
             inputProps={{
