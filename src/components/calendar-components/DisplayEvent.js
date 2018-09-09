@@ -19,12 +19,16 @@ export class DisplayEvent extends Component {
           Deltakere: {event.participants}
         </Typography>
         <div>
+          <div onClick={() => this.props.onChangeEvent(event.id)}>
           <Button style={{marginRight: '5px'}} variant="outlined" color="primary">
             Endre
           </Button>
-          <Button variant="outlined" color="secondary">
-            Slett
-          </Button>
+          </div>
+          <div onClick={() => this.props.onDeleteButtonClick(event.id)}>
+            <Button variant="outlined" color="secondary">
+              Slett
+            </Button>
+          </div>
         </div>
       </Paper>
     )

@@ -5,12 +5,6 @@ import Button from '@material-ui/core/Button';
 
 export class SideDisplay extends Component {
   
-  addButtonClicked() {
-    this.setState({
-      showEventAdder: true
-    })
-  }
-  
   render() {
     const events = getEvents(this.props.events, this.props.date)
     return (
@@ -20,7 +14,7 @@ export class SideDisplay extends Component {
           hendelse{(events.length > 1 || events.length === 0) && "r"} denne dagen.</h2>
         <div>
           {events.map((e, i) =>
-            <DisplayEvent key={i} event={e}/>
+            <DisplayEvent key={i} event={e} onChangeEvent={this.props.onChangeEvent} onDeleteButtonClick={this.props.onDeleteButtonClick}/>
           )}
         </div>
         <div onClick={() => this.props.onAddEventButtonClick()}>

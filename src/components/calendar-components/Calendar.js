@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { AddEvent } from './AddEvent';
-import { SideDisplay } from './SideDisplay';
+import React, {Component} from 'react';
+import {AddEvent} from './AddEvent';
+import {SideDisplay} from './SideDisplay';
 import Paper from '@material-ui/core/Paper';
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
@@ -18,18 +18,21 @@ export class EmergencyResponsePortalCalendar extends Component {
     this.state = {
       events: [
         {
+          id: 0,
           start: new Date('2018-09-07T20:00:00.000Z'),
           end: new Date('2018-09-07T21:45:00.000Z'),
           participants: 'Alle',
           title: 'Øvelse',
         },
         {
+          id: 1,
           start: new Date('2018-09-07T21:45:00.000Z'),
           end: new Date('2018-09-07T21:45:00.000Z'),
           participants: 'Alle',
           title: 'Trening',
         },
         {
+          id: 2,
           start: new Date('2018-09-09T21:45:00.000Z'),
           end: new Date('2018-09-09T21:45:00.000Z'),
           participants: 'Alle',
@@ -37,10 +40,12 @@ export class EmergencyResponsePortalCalendar extends Component {
         },
       ],
       showEventAdder: false,
-      selectedDate: new Date()
+      selectedDate: new Date(),
+      nextEventId: 3
     };
     this.addEventButtonClicked = this.addEventButtonClicked.bind(this);
-    this.saveEventButtonClicked = this.saveEventButtonClicked.bind(this);
+    this.addEvent = this.addEvent.bind(this);
+    this.deleteEvent = this.deleteEvent.bind(this);
   }
   
   slotClicked(slotInfo) {
@@ -58,25 +63,44 @@ export class EmergencyResponsePortalCalendar extends Component {
     })
   }
   
-  saveEventButtonClicked(date, start, end, participants, type) {
+  addEvent(date, start, end, participants, type) {
     const year = date.substring(0, 4);
     const month = parseInt(date.substring(5, 7), 10) - 1;
     const dayInMonth = date.substring(8, 10);
     const startDate = new Date(year, month, dayInMonth, start.substring(0, 2), end.substring(3, 5));
     const endDate = new Date(year, month, dayInMonth, end.substring(0, 2), end.substring(3, 5));
     const newEvent = {
+      id: this.state.nextEventId,
       start: startDate,
       end: endDate,
-      participants: participants,
+      participants,
       title: capitalizeFirstLetter(type)
     };
     let events = this.state.events;
     events.push(newEvent);
     this.setState({
-      events: events,
+      events,
       showEventAdder: false,
-      selectedDate: startDate
+      selectedDate: startDate,
+      nextEventId: this.state.nextEventId += 1
     });
+  }
+  
+  deleteEvent(eventId) {
+    const events = this.state.events;
+    for(let i = 0; i < events.length; i++) {
+      if(events[i].id === eventId) {
+        events.splice(i, 1);
+        break;
+      }
+    }
+    this.setState({
+      events
+    })
+  }
+  
+  changeEvent(eventId) {
+    console.log("Change event", eventId)
   }
   
   render() {
@@ -93,8 +117,10 @@ export class EmergencyResponsePortalCalendar extends Component {
         />
         <Paper className="paper-big">
           {!this.state.showEventAdder ? (<SideDisplay events={this.state.events} date={this.state.selectedDate}
-                                                      onAddEventButtonClick={this.addEventButtonClicked}/>) :
-            <AddEvent date={this.state.selectedDate} onSaveButtonClick={this.saveEventButtonClicked}/>}
+                                                      onAddEventButtonClick={this.addEventButtonClicked}
+                                                      onDeleteButtonClick={this.deleteEvent}
+                                                      onChangeEvent={this.changeEvent}/>) :
+            <AddEvent date={this.state.selectedDate} onSaveButtonClick={this.addEvent}/>}
         </Paper>
       </div>
     )
