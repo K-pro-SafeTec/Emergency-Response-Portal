@@ -21,9 +21,6 @@ export class AddEvent extends Component {
             InputLabelProps={{
               shrink: true,
             }}
-            inputProps={{
-              step: 300, // 5 min
-            }}
           />
         </form>
         <form>
