@@ -25,6 +25,12 @@ const norwegian_translations = {
   event: 'Hendelse',
 };
 
+const formats = {
+  dayFormat: 'ddd DD.MM',
+  weekdayFormat: 'dddd',
+  agendaDateFormat: 'dddd DD.MM',
+};
+
 export class EmergencyResponsePortalCalendar extends Component {
   
   constructor(props) {
@@ -124,6 +130,7 @@ export class EmergencyResponsePortalCalendar extends Component {
           popup={true}
           views={['month', 'week', 'work_week', 'day', 'agenda']}
           selectable={true}
+          formats={formats}
           onSelectSlot={((slot) => this.slotClicked(slot))}
           onSelectEvent={({participants}) => console.log(participants)}
         
