@@ -11,6 +11,20 @@ import '../../styles/Calendar.css'
 moment.locale('nb');
 BigCalendar.momentLocalizer(moment);
 
+const norwegian_translations = {
+  previous: 'Forrige',
+  next: 'Neste',
+  today: 'Dagens dato',
+  month: 'Måned',
+  week: 'Uke',
+  work_week: 'Arbeidsuke',
+  day: 'Dag',
+  agenda: 'Agenda',
+  date: 'Dato',
+  time: 'Tid',
+  event: 'Hendelse',
+};
+
 export class EmergencyResponsePortalCalendar extends Component {
   
   constructor(props) {
@@ -105,6 +119,7 @@ export class EmergencyResponsePortalCalendar extends Component {
     return (
       <div className="container">
         <BigCalendar
+          messages={norwegian_translations}
           events={this.state.events}
           popup={true}
           views={['month', 'week', 'work_week', 'day', 'agenda']}
