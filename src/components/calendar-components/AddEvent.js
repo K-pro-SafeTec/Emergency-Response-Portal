@@ -18,8 +18,6 @@ export const AddEvent = (props) => {
             shrink: true,
           }}
         />
-      </form>
-      <form>
         <TextField id="start" label="Start" type="time" defaultValue="09:00"
           InputLabelProps={{
             shrink: true,
@@ -28,8 +26,6 @@ export const AddEvent = (props) => {
             step: 300, // 5 min
           }}
         />
-      </form>
-      <form>
         <TextField id="end" label="Slutt" type="time" defaultValue="10:00"
           InputLabelProps={{
             shrink: true,
@@ -38,9 +34,9 @@ export const AddEvent = (props) => {
             step: 300, // 5 min
           }}
         />
+        <ParticipantsSelect id="participants"/>
+        <TypeSelect id="type"/>
       </form>
-      <ParticipantsSelect id="participants"/>
-      <TypeSelect id="type"/>
       <div
         onClick={() => props.onSaveButtonClick(document.getElementById("date").value,
           document.getElementById("start").value,

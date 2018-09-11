@@ -15,24 +15,22 @@ export class ParticipantsSelect extends React.Component {
   
   render() {
     return (
-      <form autoComplete="off">
-        <FormControl>
-          <InputLabel htmlFor="age-simple">Participants</InputLabel>
-          <Select
-            className="width200"
-            value={this.state.participants}
-            onChange={this.handleChange}
-            inputProps={{
-              name: 'participants',
-              id: 'participants',
-            }}
-          >
-            <MenuItem value={"alle"}>Alle</MenuItem>
-            <MenuItem value={"beredksapslag"}>Beredskapslag</MenuItem>
-            <MenuItem value={"beredskapsledelse"}>Beredskapsledelse</MenuItem>
-          </Select>
-        </FormControl>
-      </form>
+      <FormControl>
+        <InputLabel htmlFor="age-simple">Participants</InputLabel>
+        <Select
+          className="width200"
+          value={this.state.participants}
+          onChange={this.handleChange}
+          inputProps={{
+            name: 'participants',
+            id: 'participants',
+          }}
+        >
+          <MenuItem value={"alle"}>Alle</MenuItem>
+          <MenuItem value={"beredksapslag"}>Beredskapslag</MenuItem>
+          <MenuItem value={"beredskapsledelse"}>Beredskapsledelse</MenuItem>
+        </Select>
+      </FormControl>
     );
   }
 }

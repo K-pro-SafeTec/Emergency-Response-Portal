@@ -15,24 +15,22 @@ export class TypeSelect extends React.Component {
   
   render() {
     return (
-      <form autoComplete="off">
-        <FormControl>
-          <InputLabel htmlFor="age-simple">Type</InputLabel>
-          <Select
-            className="width200"
-            value={this.state.type}
-            onChange={this.handleChange}
-            inputProps={{
-              name: 'type',
-              id: 'type',
-            }}
-          >
-            <MenuItem value={"øvelse"}>Øvelse</MenuItem>
-            <MenuItem value={"trening"}>Trening</MenuItem>
-            <MenuItem value={"table top"}>Table top</MenuItem>
-          </Select>
-        </FormControl>
-      </form>
+      <FormControl>
+        <InputLabel htmlFor="age-simple">Type</InputLabel>
+        <Select
+          className="width200"
+          value={this.state.type}
+          onChange={this.handleChange}
+          inputProps={{
+            name: 'type',
+            id: 'type',
+          }}
+        >
+          <MenuItem value={"øvelse"}>Øvelse</MenuItem>
+          <MenuItem value={"trening"}>Trening</MenuItem>
+          <MenuItem value={"table top"}>Table top</MenuItem>
+        </Select>
+      </FormControl>
     );
   }
 }
