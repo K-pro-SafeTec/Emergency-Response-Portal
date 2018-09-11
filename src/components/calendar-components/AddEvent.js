@@ -9,10 +9,17 @@ import {getDateFormatYMD} from './../../helpers/calendar-helper';
 
 export const AddEvent = (props) => {
   const date = props.date;
+  const handleSubmit= () => {
+    props.onSaveButtonClick(document.getElementById("date").value,
+      document.getElementById("start").value,
+      document.getElementById("end").value,
+      document.getElementById("participants").value,
+      document.getElementById("type").value)
+  };
   return (
     <div className="side-display">
       <h1>Legg til ny hendelse</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <TextField id="date" label="Dato" type="date" defaultValue={getDateFormatYMD(date)}
           InputLabelProps={{
             shrink: true,
@@ -36,17 +43,12 @@ export const AddEvent = (props) => {
         />
         <ParticipantsSelect id="participants"/>
         <TypeSelect id="type"/>
-      </form>
-      <div
-        onClick={() => props.onSaveButtonClick(document.getElementById("date").value,
-          document.getElementById("start").value,
-          document.getElementById("end").value,
-          document.getElementById("participants").value,
-          document.getElementById("type").value)}>
-        <Button variant="contained" color="primary">
+      <div>
+        <Button variant="contained" color="primary" type="submit">
           Lagre
         </Button>
       </div>
+      </form>
     </div>
   )
 };
