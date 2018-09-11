@@ -18,11 +18,9 @@ export const SideDisplay = (props) => {
                         onReviewButtonClick={props.onReviewButtonClick}/>
         )}
       </div>
-      <div onClick={() => props.onAddEventButtonClick()}>
-        <Button variant="contained" color="primary">
-          Legg til ny hendelse
-        </Button>
-      </div>
+      <Button variant="contained" color="primary" onClick={() => props.onAddEventButtonClick()}>
+        Legg til ny hendelse
+      </Button>
     </div>
   )
 }

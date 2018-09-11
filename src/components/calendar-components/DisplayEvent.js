@@ -18,23 +18,15 @@ export const DisplayEvent = (props) => {
       <Typography component="p">
         Deltakere: {event.participants}
       </Typography>
-      <div style={{display: 'flex'}}>
-        <div onClick={() => props.onChangeEvent(event.id)}>
-        <Button style={{marginRight: '5px'}} variant="outlined" color="primary">
-          Endre
-        </Button>
-        </div>
-        <div onClick={() => props.onReviewButtonClick(event.id)}>
-          <Button style={{marginRight: '5px'}} variant="outlined" color="primary">
-            Vurder
-          </Button>
-        </div>
-        <div onClick={() => props.onDeleteButtonClick(event.id)}>
-          <Button variant="outlined" color="secondary">
-            Slett
-          </Button>
-        </div>
-      </div>
+      <Button style={{marginRight: '5px'}} variant="outlined" color="primary" onClick={() => props.onChangeEvent(event.id)}>
+        Endre
+      </Button>
+      <Button style={{marginRight: '5px'}} variant="outlined" color="primary" onClick={() => props.onReviewButtonClick(event.id)}>
+        Vurder
+      </Button>
+      <Button variant="outlined" color="secondary" onClick={() => props.onDeleteButtonClick(event.id)}>
+        Slett
+      </Button>
     </Paper>
   )
 };
