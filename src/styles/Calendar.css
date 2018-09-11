@@ -1,0 +1,31 @@
+.container {
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	height: 600px;
+}
+
+.rbc-calendar {
+	width: 60%
+}
+
+.side-display {
+	display: flex;
+	flex-direction: column;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.paper-big {
+	display: flex;
+}
+
+.paper-small {
+	margin-bottom: 20px;
+	padding: 5px;
+}
+
+.width200 {
+	width: 200px;
+}
