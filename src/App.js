@@ -1,13 +1,25 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
-import { EmergencyResponsePortalCalendar } from './components/calendar-components/Calendar';
+import { EmergencyResponsePortalCalendar as Calendar } from './components/calendar-components/Calendar';
+
+const Nav = () => (
+  <ul>
+    <li>
+      <Link to="/calendar">Calendar</Link>
+    </li>
+  </ul>
+);
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <EmergencyResponsePortalCalendar />
-      </div>
+      <Router>
+        <React.Fragment>
+          <Route exact path="/" component={Nav} />
+          <Route path="/calendar" component={Calendar} />
+        </React.Fragment>
+      </Router>
     );
   }
 }
