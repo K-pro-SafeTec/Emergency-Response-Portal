@@ -10,27 +10,27 @@ export class TypeSelect extends React.Component {
   };
   
    handleChange = event => {
-    this.setState({ [event.target.name]: event.target.value });
+    this.setState({ [ event.target.name ]: event.target.value });
   };
   
   render() {
     return (
-      <FormControl>
-        <InputLabel htmlFor="age-simple">Type</InputLabel>
-        <Select
+        <FormControl>
+            <InputLabel htmlFor="age-simple">Type</InputLabel>
+            <Select
           className="width200"
-          value={this.state.type}
-          onChange={this.handleChange}
-          inputProps={{
+          value={ this.state.type }
+          onChange={ this.handleChange }
+          inputProps={ {
             name: 'type',
             id: 'type',
-          }}
+          } }
         >
-          <MenuItem value={"øvelse"}>Øvelse</MenuItem>
-          <MenuItem value={"trening"}>Trening</MenuItem>
-          <MenuItem value={"table top"}>Table top</MenuItem>
-        </Select>
-      </FormControl>
+                <MenuItem value={ 'øvelse' }>Øvelse</MenuItem>
+                <MenuItem value={ 'trening' }>Trening</MenuItem>
+                <MenuItem value={ 'table top' }>Table top</MenuItem>
+            </Select>
+        </FormControl>
     );
   }
 }

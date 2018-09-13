@@ -10,27 +10,27 @@ export class ParticipantsSelect extends React.Component {
   };
   
   handleChange = event => {
-    this.setState({ [event.target.name]: event.target.value });
+    this.setState({ [ event.target.name ]: event.target.value });
   };
   
   render() {
     return (
-      <FormControl>
-        <InputLabel htmlFor="age-simple">Participants</InputLabel>
-        <Select
+        <FormControl>
+            <InputLabel htmlFor="age-simple">Participants</InputLabel>
+            <Select
           className="width200"
-          value={this.state.participants}
-          onChange={this.handleChange}
-          inputProps={{
+          value={ this.state.participants }
+          onChange={ this.handleChange }
+          inputProps={ {
             name: 'participants',
             id: 'participants',
-          }}
+          } }
         >
-          <MenuItem value={"alle"}>Alle</MenuItem>
-          <MenuItem value={"beredksapslag"}>Beredskapslag</MenuItem>
-          <MenuItem value={"beredskapsledelse"}>Beredskapsledelse</MenuItem>
-        </Select>
-      </FormControl>
+                <MenuItem value={ 'alle' }>Alle</MenuItem>
+                <MenuItem value={ 'beredksapslag' }>Beredskapslag</MenuItem>
+                <MenuItem value={ 'beredskapsledelse' }>Beredskapsledelse</MenuItem>
+            </Select>
+        </FormControl>
     );
   }
 }

@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
-import {AddEvent} from './AddEvent';
-import {SideDisplay} from './SideDisplay';
+import { AddEvent } from './AddEvent';
+import { SideDisplay } from './SideDisplay';
 import Paper from '@material-ui/core/Paper';
 import 'moment/locale/nb';
 import 'react-big-calendar/lib/css/react-big-calendar.css'
@@ -69,7 +69,7 @@ export class EmergencyResponsePortalCalendar extends Component {
   }
   
   slotClicked(slotInfo) {
-    if (slotInfo.action === "click") {
+    if (slotInfo.action === 'click') {
       const date = slotInfo.start;
       this.setState({
         selectedDate: date
@@ -96,7 +96,7 @@ export class EmergencyResponsePortalCalendar extends Component {
       participants,
       title: capitalizeFirstLetter(type)
     };
-    let events = this.state.events;
+    const events = this.state.events;
     events.push(newEvent);
     this.setState({
       events,
@@ -114,36 +114,36 @@ export class EmergencyResponsePortalCalendar extends Component {
   }
   
   changeEvent(eventId) {
-    console.log("Change event", eventId)
+    console.log('Change event', eventId)
   }
   
   reviewEvent(eventId) {
-    console.log("Review event", eventId)
+    console.log('Review event', eventId)
   }
   
   render() {
     return (
-      <div className="container">
-        <BigCalendar
-          messages={norwegian_translations}
-          events={this.state.events}
-          popup={true}
-          views={['month', 'week', 'work_week', 'day', 'agenda']}
-          selectable={true}
-          formats={formats}
-          onSelectSlot={((slot) => this.slotClicked(slot))}
-          onSelectEvent={({participants}) => console.log(participants)}
+        <div className="container">
+            <BigCalendar
+          messages={ norwegian_translations }
+          events={ this.state.events }
+          popup={ true }
+          views={ [ 'month', 'week', 'work_week', 'day', 'agenda' ] }
+          selectable={ true }
+          formats={ formats }
+          onSelectSlot={ ((slot) => this.slotClicked(slot)) }
+          onSelectEvent={ ({ participants }) => console.log(participants) }
         
         />
-        <Paper className="paper-big">
-          {!this.state.showEventAdder ? (<SideDisplay events={this.state.events} date={this.state.selectedDate}
-                                                      onAddEventButtonClick={this.addEventButtonClicked}
-                                                      onDeleteButtonClick={this.deleteEvent}
-                                                      onChangeEvent={this.changeEvent}
-                                                      onReviewButtonClick={this.reviewEvent}/>) :
-            <AddEvent date={this.state.selectedDate} onSaveButtonClick={this.addEvent}/>}
-        </Paper>
-      </div>
+            <Paper className="paper-big">
+                {!this.state.showEventAdder ? (<SideDisplay events={ this.state.events } date={ this.state.selectedDate }
+                                                      onAddEventButtonClick={ this.addEventButtonClicked }
+                                                      onDeleteButtonClick={ this.deleteEvent }
+                                                      onChangeEvent={ this.changeEvent }
+                                                      onReviewButtonClick={ this.reviewEvent }/>) :
+                <AddEvent date={ this.state.selectedDate } onSaveButtonClick={ this.addEvent }/>}
+            </Paper>
+        </div>
     )
   }
 }
