@@ -6,7 +6,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import StatusIcon from './StatusIcon';
 
 const PreparednessSummaryItem = ({ name, status, message }) => (
-  <ListItem>
+  <ListItem button>
     <ListItemIcon style={{ fontSize: '40px' }}>
       <StatusIcon status={status} />
     </ListItemIcon>
