@@ -15,28 +15,34 @@ const SortableDragHandle = SortableHandle(({ value }) => (
   </ListItemIcon>
 ));
 
-const SortableListItem = SortableElement(({ value }) => (
+const SortableListItem = SortableElement(({ value, deleteItem }) => (
   <ListItem button>
     <SortableDragHandle />
     <ListItemText>
       {value.message}
     </ListItemText>
     <ListItemSecondaryAction>
-      <IconButton>
+      <IconButton onClick={() => deleteItem(value.id)}>
         <Delete />
       </IconButton>
     </ListItemSecondaryAction>
   </ListItem>
 ));
 
-const SortableList = SortableContainer(({ items }) => (
+const SortableList = SortableContainer(({ items, deleteItem }) => (
   <List>
     {items.map((value, index) => (
-      <SortableListItem key={value.id} index={index} value={value} />
+      <SortableListItem key={value.id} index={index} value={value} deleteItem={deleteItem} />
     ))}
   </List>
 ));
 
-export default ({ items, onSortEnd }) => (
-  <SortableList items={items} onSortEnd={onSortEnd} lockAxis="y" />
+export default ({ items, onSortEnd, deleteItem }) => (
+  <SortableList
+    items={items}
+    onSortEnd={onSortEnd}
+    lockAxis="y"
+    distance={5}
+    deleteItem={deleteItem}
+  />
 );

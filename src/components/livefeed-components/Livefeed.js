@@ -77,13 +77,20 @@ class Livefeed extends React.Component {
     this.state = {
       feed,
     };
-    this.onSortEnd = this.onSortEnd.bind(this);
+    this.onFeedSortEnd = this.onFeedSortEnd.bind(this);
+    this.deleteFeedItem = this.deleteFeedItem.bind(this);
   }
 
-  onSortEnd({ oldIndex, newIndex }) {
+  onFeedSortEnd({ oldIndex, newIndex }) {
     this.setState({
       feed: arrayMove(this.state.feed, oldIndex, newIndex),
     });
+  }
+
+  deleteFeedItem(id) {
+    this.setState(({ feed }) => ({
+      feed: feed.filter(item => item.id !== id),
+    }));
   }
 
   render() {
@@ -101,7 +108,7 @@ class Livefeed extends React.Component {
           <Grid item xs={12}>
             <Paper>
               <Warning />
-              <Feed items={feed} onSortEnd={this.onSortEnd} />
+              <Feed items={feed} onSortEnd={this.onFeedSortEnd} deleteItem={this.deleteFeedItem} />
             </Paper>
           </Grid>
           <Grid item xs={6}>
