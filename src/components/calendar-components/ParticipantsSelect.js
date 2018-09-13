@@ -26,7 +26,7 @@ export class ParticipantsSelect extends React.Component {
           }}
         >
           <MenuItem value={"alle"}>Alle</MenuItem>
-          <MenuItem value={"beredksapslag"}>Beredskapslag</MenuItem>
+          <MenuItem value={"beredskapslag"}>Beredskapslag</MenuItem>
           <MenuItem value={"beredskapsledelse"}>Beredskapsledelse</MenuItem>
         </Select>
       </FormControl>

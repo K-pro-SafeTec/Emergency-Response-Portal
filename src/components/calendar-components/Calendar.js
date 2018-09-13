@@ -7,6 +7,7 @@ import Paper from '@material-ui/core/Paper';
 import 'moment/locale/nb';
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import '../../styles/Calendar.css'
+import {isValidEvent} from './../../helpers/calendar-helper'
 
 moment.locale('nb');
 BigCalendar.momentLocalizer(moment);
@@ -59,7 +60,7 @@ export class EmergencyResponsePortalCalendar extends Component {
           title: 'Table top',
         },
       ],
-      showEventAdder: true,
+      showEventAdder: false,
       selectedDate: new Date(),
       nextEventId: 3
     };
@@ -84,26 +85,30 @@ export class EmergencyResponsePortalCalendar extends Component {
   }
   
   addEvent(date, start, end, participants, type) {
-    const year = date.substring(0, 4);
-    const month = parseInt(date.substring(5, 7), 10) - 1;
-    const dayInMonth = date.substring(8, 10);
-    const startDate = new Date(year, month, dayInMonth, start.substring(0, 2), end.substring(3, 5));
-    const endDate = new Date(year, month, dayInMonth, end.substring(0, 2), end.substring(3, 5));
-    const newEvent = {
-      id: this.state.nextEventId,
-      start: startDate,
-      end: endDate,
-      participants,
-      title: capitalizeFirstLetter(type)
-    };
-    let events = this.state.events;
-    events.push(newEvent);
-    this.setState({
-      events,
-      showEventAdder: false,
-      selectedDate: startDate,
-      nextEventId: this.state.nextEventId + 1
-    });
+    if (isValidEvent(date, start, end, participants, type)) {
+      const year = date.substring(0, 4);
+      const month = parseInt(date.substring(5, 7), 10) - 1;
+      const dayInMonth = date.substring(8, 10);
+      const startDate = new Date(year, month, dayInMonth, start.substring(0, 2), end.substring(3, 5));
+      const endDate = new Date(year, month, dayInMonth, end.substring(0, 2), end.substring(3, 5));
+      const newEvent = {
+        id: this.state.nextEventId,
+        start: startDate,
+        end: endDate,
+        participants,
+        title: capitalizeFirstLetter(type)
+      };
+      let events = this.state.events;
+      events.push(newEvent);
+      this.setState({
+        events,
+        showEventAdder: false,
+        selectedDate: startDate,
+        nextEventId: this.state.nextEventId + 1
+      });
+    } else {
+      console.log("Some arguments in event is not valid")
+    }
   }
   
   deleteEvent(eventId) {

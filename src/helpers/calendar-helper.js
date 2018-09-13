@@ -52,3 +52,29 @@ export function getDateFormat(date) {
   const month = months[date.getMonth()]
   return weekday + " " + date.getDate() + ". " + month + " " + date.getFullYear()
 }
+
+// Checks if an event is a valid event
+export function isValidEvent(date, start, end, participants, type) {
+  return isValidDate(date) && isValidTime(start) && isValidTime(end) && isValidParticipants(participants) &&
+    isValidType(type)
+}
+
+// Returns true if the input date is on a format that can be parsed to a date
+function isValidDate(date) {
+  return !isNaN(Date.parse(date));
+}
+
+// Returns true if the input time is on the format tt:mm
+function isValidTime(time) {
+  return /^([01][0-9]|2[0-3]):[0-5][0-9]$/.test(time)
+}
+
+function isValidParticipants(participants) {
+  const valids = ['alle', 'beredskapslag', 'beredskapsledelse']
+  return valids.includes(participants)
+}
+
+function isValidType(type) {
+  const valids = ['øvelse', 'trening', 'table top']
+  return valids.includes(type)
+}
