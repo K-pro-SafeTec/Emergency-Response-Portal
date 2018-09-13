@@ -4,6 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
+import Avatar from '@material-ui/core/Avatar';
 import Warning from '@material-ui/icons/Warning';
 import { withStyles } from '@material-ui/core/styles';
 import { arrayMove } from 'react-sortable-hoc';
@@ -79,6 +80,7 @@ class Livefeed extends React.Component {
     };
     this.onFeedSortEnd = this.onFeedSortEnd.bind(this);
     this.deleteFeedItem = this.deleteFeedItem.bind(this);
+    this.addFeedItem = this.addFeedItem.bind(this);
   }
 
   onFeedSortEnd({ oldIndex, newIndex }) {
@@ -90,6 +92,12 @@ class Livefeed extends React.Component {
   deleteFeedItem(id) {
     this.setState(({ feed }) => ({
       feed: feed.filter(item => item.id !== id),
+    }));
+  }
+
+  addFeedItem(item) {
+    this.setState(({ feed }) => ({
+      feed: [...feed, item],
     }));
   }
 
@@ -107,8 +115,15 @@ class Livefeed extends React.Component {
         <Grid container spacing={24}>
           <Grid item xs={12}>
             <Paper>
-              <Warning />
-              <Feed items={feed} onSortEnd={this.onFeedSortEnd} deleteItem={this.deleteFeedItem} />
+              <Avatar>
+                <Warning />
+              </Avatar>
+              <Feed
+                items={feed}
+                onSortEnd={this.onFeedSortEnd}
+                deleteItem={this.deleteFeedItem}
+                addItem={feed.length < 7 ? this.addFeedItem : undefined}
+              />
             </Paper>
           </Grid>
           <Grid item xs={6}>
