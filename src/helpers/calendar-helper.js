@@ -46,7 +46,7 @@ function equalDates(date1, date2) {
 // Takes in a javascript date object and returns a nice string.
 export function getDateFormat(date) {
   const weekdays = ["Søndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag"]
-  const months = ["januar", "februar", "mars", "april", "mai", "juni", "july", "august", "september", "oktober",
+  const months = ["januar", "februar", "mars", "april", "mai", "juni", "juli", "august", "september", "oktober",
     "november", "desember"]
   const weekday = weekdays[date.getDay()]
   const month = months[date.getMonth()]
