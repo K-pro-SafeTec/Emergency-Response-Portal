@@ -6,6 +6,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Warning from '@material-ui/icons/Warning';
 import { withStyles } from '@material-ui/core/styles';
+import { arrayMove } from 'react-sortable-hoc';
 import Status from './Status';
 import Feed from './Feed';
 import PreparednessSummary from './PreparednessSummary';
@@ -70,33 +71,54 @@ const styles = {
   },
 };
 
-const Livefeed = ({ classes }) => (
-  <div className={classes.root}>
-    <AppBar position="static" color="default">
-      <Toolbar>
-        <Typography variant="title" color="inherit">Status beredskap - live feed</Typography>
-      </Toolbar>
-    </AppBar>
-    <Grid container spacing={24}>
-      <Grid item xs={12}>
-        <Paper>
-          <Warning />
-          <Feed items={feed} />
-        </Paper>
-      </Grid>
-      <Grid item xs={6}>
-        <Paper>
-          <Typography variant="title">Beredskapsorganisasjon</Typography>
-          <PreparednessSummary teams={teams} />
-        </Paper>
-      </Grid>
-      <Grid item xs={6}>
-        <Paper>
-          <PreparednessSummary teams={teams} />
-        </Paper>
-      </Grid>
-    </Grid>
-  </div>
-);
+class Livefeed extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      feed,
+    };
+    this.onSortEnd = this.onSortEnd.bind(this);
+  }
+
+  onSortEnd({ oldIndex, newIndex }) {
+    this.setState({
+      feed: arrayMove(this.state.feed, oldIndex, newIndex),
+    });
+  }
+
+  render() {
+    const { classes } = this.props;
+    const { feed } = this.state;
+
+    return (
+      <div className={classes.root}>
+        <AppBar position="static" color="default">
+          <Toolbar>
+            <Typography variant="title" color="inherit">Status beredskap - live feed</Typography>
+          </Toolbar>
+        </AppBar>
+        <Grid container spacing={24}>
+          <Grid item xs={12}>
+            <Paper>
+              <Warning />
+              <Feed items={feed} onSortEnd={this.onSortEnd} />
+            </Paper>
+          </Grid>
+          <Grid item xs={6}>
+            <Paper>
+              <Typography variant="title">Beredskapsorganisasjon</Typography>
+              <PreparednessSummary teams={teams} />
+            </Paper>
+          </Grid>
+          <Grid item xs={6}>
+            <Paper>
+              <PreparednessSummary teams={teams} />
+            </Paper>
+          </Grid>
+        </Grid>
+      </div>
+    );
+  }
+}
 
 export default withStyles(styles)(Livefeed);
