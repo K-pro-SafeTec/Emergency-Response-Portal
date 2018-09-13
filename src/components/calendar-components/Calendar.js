@@ -59,7 +59,7 @@ export class EmergencyResponsePortalCalendar extends Component {
           title: 'Table top',
         },
       ],
-      showEventAdder: false,
+      showEventAdder: true,
       selectedDate: new Date(),
       nextEventId: 3
     };

@@ -19,7 +19,7 @@ export const AddEvent = (props) => {
   return (
     <div className="side-display">
       <h1>Legg til ny hendelse</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="form">
         <TextField id="date" label="Dato" type="date" defaultValue={getDateFormatYMD(date)}
           InputLabelProps={{
             shrink: true,
@@ -44,7 +44,7 @@ export const AddEvent = (props) => {
         <ParticipantsSelect id="participants"/>
         <TypeSelect id="type"/>
       <div>
-        <Button variant="contained" color="primary" type="submit">
+        <Button variant="contained" color="primary" type="submit" id="save-button">
           Lagre
         </Button>
       </div>

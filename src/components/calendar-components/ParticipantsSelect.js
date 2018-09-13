@@ -18,7 +18,6 @@ export class ParticipantsSelect extends React.Component {
       <FormControl>
         <InputLabel htmlFor="age-simple">Participants</InputLabel>
         <Select
-          className="width200"
           value={this.state.participants}
           onChange={this.handleChange}
           inputProps={{
