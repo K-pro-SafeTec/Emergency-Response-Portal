@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
-import { EmergencyResponsePortalCalendar } from './components/calendar-components/Calendar';
+import MainMenu from './components/main-menu-components/MainMenu';
+import { EmergencyResponsePortalCalendar as Calendar } from './components/calendar-components/Calendar';
+
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <EmergencyResponsePortalCalendar />
-      </div>
+      <Router>
+        <React.Fragment>
+          <Route exact path="/" component={MainMenu} />
+          <Route path="/calendar" component={Calendar} />
+        </React.Fragment>
+      </Router>
     );
   }
 }
