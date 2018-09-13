@@ -4,11 +4,11 @@ import { EmergencyResponsePortalCalendar } from './components/calendar-component
 
 class App extends Component {
   render() {
-    return (
-      <div>
-        <EmergencyResponsePortalCalendar />
-      </div>
-    );
+      return (
+          <div>
+              <EmergencyResponsePortalCalendar/>
+          </div>
+      );
   }
 }
 

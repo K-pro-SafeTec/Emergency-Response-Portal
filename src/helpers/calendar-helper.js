@@ -3,25 +3,25 @@ export function getTimeFormat(date) {
   let hours = date.getHours();
   let minutes = date.getMinutes();
   if (hours < 10) {
-    hours = "0" + hours;
+    hours = '0' + hours;
   }
   if (minutes < 10) {
-    minutes = "0" + minutes;
+    minutes = '0' + minutes;
   }
-  return hours + ":" + minutes;
+  return hours + ':' + minutes;
 }
 
 export function getDateFormatYMD(date) {
   const year = date.getFullYear();
   let month = date.getMonth() + 1;
   if (month < 10) {
-    month = "0" + month;
+    month = '0' + month;
   }
   let dayInMonth = date.getDate();
   if (dayInMonth < 10) {
-    dayInMonth = "0" + dayInMonth;
+    dayInMonth = '0' + dayInMonth;
   }
-  return year + "-" + month + "-" + dayInMonth
+  return year + '-' + month + '-' + dayInMonth
 }
 
 // Takes a list of events and a date as objects.
@@ -45,10 +45,10 @@ function equalDates(date1, date2) {
 
 // Takes in a javascript date object and returns a nice string.
 export function getDateFormat(date) {
-  const weekdays = ["Søndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag"]
-  const months = ["januar", "februar", "mars", "april", "mai", "juni", "juli", "august", "september", "oktober",
-    "november", "desember"]
-  const weekday = weekdays[date.getDay()]
-  const month = months[date.getMonth()]
-  return weekday + " " + date.getDate() + ". " + month + " " + date.getFullYear()
+  const weekdays = [ 'Søndag', 'Mandag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lørdag' ]
+  const months = [ 'januar', 'februar', 'mars', 'april', 'mai', 'juni', 'juli', 'august', 'september', 'oktober',
+    'november', 'desember' ]
+  const weekday = weekdays[ date.getDay() ]
+  const month = months[ date.getMonth() ]
+  return weekday + ' ' + date.getDate() + '. ' + month + ' ' + date.getFullYear()
 }
