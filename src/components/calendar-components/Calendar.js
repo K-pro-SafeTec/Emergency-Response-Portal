@@ -36,7 +36,6 @@ export class EmergencyResponsePortalCalendar extends Component {
   
   constructor(props) {
     super(props);
-    alert("constructor")
     this.state = {
       events: [
         {
@@ -63,11 +62,13 @@ export class EmergencyResponsePortalCalendar extends Component {
       ],
       showEventAdder: false,
       selectedDate: new Date(),
-      nextEventId: 3
+      nextEventId: 3,
+      eventToEdit: null
     };
     this.addEventButtonClicked = this.addEventButtonClicked.bind(this);
     this.addEvent = this.addEvent.bind(this);
     this.deleteEvent = this.deleteEvent.bind(this);
+    this.changeEvent = this.changeEvent.bind(this);
   }
   
   slotClicked(slotInfo) {
@@ -119,7 +120,11 @@ export class EmergencyResponsePortalCalendar extends Component {
   }
   
   changeEvent(eventId) {
-    console.log("Change event", eventId)
+    const eventToEdit = this.state.events.filter(event => event.id === eventId)[0];
+    this.setState({
+        eventToEdit,
+        showEventAdder: true
+    })
   }
   
   reviewEvent(eventId) {
@@ -146,7 +151,7 @@ export class EmergencyResponsePortalCalendar extends Component {
                                                       onDeleteButtonClick={this.deleteEvent}
                                                       onChangeEvent={this.changeEvent}
                                                       onReviewButtonClick={this.reviewEvent}/>) :
-            <AddEvent date={this.state.selectedDate} onSaveButtonClick={this.addEvent}/>}
+            <AddEvent date={this.state.selectedDate} eventToEdit={this.state.eventToEdit} onSaveButtonClick={this.addEvent}/>}
         </Paper>
       </div>
     )
