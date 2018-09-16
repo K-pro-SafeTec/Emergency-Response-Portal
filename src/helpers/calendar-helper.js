@@ -33,7 +33,7 @@ export function getEvents(events, date) {
 }
 
 // Takes two javascript date objects as arguments and returns true if the objects fall on the same date.
-function equalDates(date1, date2) {
+export function equalDates(date1, date2) {
   const dayInMonth1 = date1.getDate();
   const dayInMonth2 = date2.getDate();
   const month1 = date1.getMonth();

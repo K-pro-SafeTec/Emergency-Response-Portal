@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Children} from 'react';
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
 import {AddEvent} from './AddEvent';
@@ -7,7 +7,7 @@ import Paper from '@material-ui/core/Paper';
 import 'moment/locale/nb';
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import '../../styles/Calendar.css'
-import {isValidEvent} from './../../helpers/calendar-helper'
+import {isValidEvent, equalDates} from './../../helpers/calendar-helper'
 
 moment.locale('nb');
 BigCalendar.momentLocalizer(moment);
@@ -69,8 +69,19 @@ export class EmergencyResponsePortalCalendar extends Component {
     this.addEvent = this.addEvent.bind(this);
     this.deleteEvent = this.deleteEvent.bind(this);
     this.changeEvent = this.changeEvent.bind(this);
+    this.coloredDateCellWrapper = this.coloredDateCellWrapper.bind(this);
   }
-  
+
+  coloredDateCellWrapper({children, value}) {
+        return (
+          React.cloneElement(Children.only(children), {
+            style: {
+                ...children.style,
+                backgroundColor: equalDates(value, this.state.selectedDate) ? '#eaf6ff' : 'white',
+            },
+          })
+        )}
+
   slotClicked(slotInfo) {
     if (slotInfo.action === "click") {
       const date = slotInfo.start;
@@ -143,6 +154,9 @@ export class EmergencyResponsePortalCalendar extends Component {
           formats={formats}
           onSelectSlot={((slot) => this.slotClicked(slot))}
           onSelectEvent={({participants}) => console.log(participants)}
+          components={{
+              dateCellWrapper: this.coloredDateCellWrapper,
+          }}
         
         />
         <Paper className="paper-big">
