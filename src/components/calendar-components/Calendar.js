@@ -90,6 +90,12 @@ export class EmergencyResponsePortalCalendar extends Component {
       })
     }
   }
+
+  eventClicked(date) {
+    this.setState({
+        selectedDate: date
+    })
+  }
   
   addEventButtonClicked() {
     this.setState({
@@ -153,7 +159,7 @@ export class EmergencyResponsePortalCalendar extends Component {
           selectable={true}
           formats={formats}
           onSelectSlot={((slot) => this.slotClicked(slot))}
-          onSelectEvent={({participants}) => console.log(participants)}
+          onSelectEvent={({start}) => this.eventClicked(start)}
           components={{
               dateCellWrapper: this.coloredDateCellWrapper,
           }}

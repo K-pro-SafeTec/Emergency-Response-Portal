@@ -15,8 +15,6 @@ export const AddEvent = (props) => {
   if (eventToEdit) {
       defaultStart = getTimeFormat(eventToEdit.start);
       defaultEnd = getTimeFormat(eventToEdit.end);
-      const defaultParicipants = eventToEdit.participants;
-      const defaultType = eventToEdit.type;
   }
   const handleSubmit= () => {
     const participants = document.getElementById("participants").value;
