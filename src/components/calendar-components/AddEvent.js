@@ -12,12 +12,15 @@ export const AddEvent = (props) => {
   const handleSubmit= () => {
     const participants = document.getElementById("participants").value;
     const type = document.getElementById("type").value;
-    if (!isValidParticipants(participants)) {
-        alert("not valid participants")
+    const participantsSelected = isValidParticipants(participants);
+    const typeSelected = isValidType(type);
+    if (!participantsSelected) {
+        console.log("not valid participants");
     }
-    else if (!isValidType(type)) {
-        alert("not valid type")
-    } else {
+    if (!typeSelected) {
+        console.log("not valid type");
+    }
+    if (participantsSelected && typeSelected) {
         props.onSaveButtonClick(document.getElementById("date").value,
           document.getElementById("start").value,
           document.getElementById("end").value,
