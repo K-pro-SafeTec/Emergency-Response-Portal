@@ -45,18 +45,18 @@ function equalDates(date1, date2) {
 
 // Takes in a javascript date object and returns a nice string.
 export function getDateFormat(date) {
-  const weekdays = ["Søndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag"]
+  const weekdays = ["Søndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag"];
   const months = ["januar", "februar", "mars", "april", "mai", "juni", "juli", "august", "september", "oktober",
-    "november", "desember"]
-  const weekday = weekdays[date.getDay()]
-  const month = months[date.getMonth()]
+    "november", "desember"];
+  const weekday = weekdays[date.getDay()];
+  const month = months[date.getMonth()];
   return weekday + " " + date.getDate() + ". " + month + " " + date.getFullYear()
 }
 
 // Checks if an event is a valid event
 export function isValidEvent(date, start, end, participants, type) {
   return isValidDate(date) && isValidTime(start) && isValidTime(end) && isValidParticipants(participants) &&
-    isValidType(type)
+      isValidType(type)
 }
 
 // Returns true if the input date is on a format that can be parsed to a date
@@ -69,12 +69,12 @@ function isValidTime(time) {
   return /^([01][0-9]|2[0-3]):[0-5][0-9]$/.test(time)
 }
 
-function isValidParticipants(participants) {
-  const valids = ['alle', 'beredskapslag', 'beredskapsledelse']
+export function isValidParticipants(participants) {
+  const valids = ['alle', 'beredskapslag', 'beredskapsledelse'];
   return valids.includes(participants)
 }
 
-function isValidType(type) {
-  const valids = ['øvelse', 'trening', 'table top']
+export function isValidType(type) {
+  const valids = ['øvelse', 'trening', 'table top'];
   return valids.includes(type)
 }

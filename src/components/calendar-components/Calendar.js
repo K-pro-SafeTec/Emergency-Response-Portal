@@ -36,6 +36,7 @@ export class EmergencyResponsePortalCalendar extends Component {
   
   constructor(props) {
     super(props);
+    alert("constructor")
     this.state = {
       events: [
         {
@@ -83,7 +84,7 @@ export class EmergencyResponsePortalCalendar extends Component {
       showEventAdder: true
     })
   }
-  
+
   addEvent(date, start, end, participants, type) {
     if (isValidEvent(date, start, end, participants, type)) {
       const year = date.substring(0, 4);
@@ -107,7 +108,6 @@ export class EmergencyResponsePortalCalendar extends Component {
         nextEventId: this.state.nextEventId + 1
       });
     } else {
-      console.log("Some arguments in event is not valid")
     }
   }
   
