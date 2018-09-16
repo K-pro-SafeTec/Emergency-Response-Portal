@@ -125,7 +125,6 @@ export class EmergencyResponsePortalCalendar extends Component {
         selectedDate: startDate,
         nextEventId: this.state.nextEventId + 1
       });
-    } else {
     }
   }
   
