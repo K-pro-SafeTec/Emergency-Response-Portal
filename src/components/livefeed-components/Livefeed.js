@@ -81,6 +81,7 @@ const styles = {
   },
   feedList: {
     flex: '1',
+    minWidth: '30em',
   }
 };
 
