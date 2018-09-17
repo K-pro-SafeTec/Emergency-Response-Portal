@@ -133,7 +133,8 @@ class Livefeed extends React.Component {
                   items={feed}
                   onSortEnd={this.onFeedSortEnd}
                   deleteItem={this.deleteFeedItem}
-                  addItem={feed.length < 7 ? this.addFeedItem : undefined}
+                  addItem={this.addFeedItem}
+                  maxItems={7}
                   className={classes.feedList}
                 />
               </Paper>

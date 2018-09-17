@@ -46,21 +46,21 @@ const SortableListItem = SortableElement(({ value, deleteItem }) => (
   </ListItem>
 ));
 
-const SortableList = SortableContainer(({ items, deleteItem, addItem, ...rest }) => (
+const SortableList = SortableContainer(({ items, deleteItem, addItem, maxItems, ...rest }) => (
   <List {...rest}>
     {items.map((value, index) => (
       <SortableListItem key={value.id} index={index} value={value} deleteItem={deleteItem} />
     ))}
     <ListItem
       button
-      disabled={!addItem}
-      onClick={() => addItem && addItem(createRandomItem())}
+      disabled={items.length >= maxItems}
+      onClick={() => (items.length < maxItems) && addItem(createRandomItem())}
     >
       <ListItemIcon>
         <Add />
       </ListItemIcon>
       <ListItemText
-        secondary={addItem ? "Legg til..." : "Slett andre varslinger for å legge til nye"}
+        secondary={items.length < maxItems ? "Legg til..." : "Slett andre varslinger for å legge til nye"}
       />
     </ListItem>
   </List>
