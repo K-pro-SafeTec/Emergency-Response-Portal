@@ -4,7 +4,6 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Avatar from '@material-ui/core/Avatar';
 import Warning from '@material-ui/icons/Warning';
 import { withStyles } from '@material-ui/core/styles';
 import { arrayMove } from 'react-sortable-hoc';
@@ -67,9 +66,22 @@ const teams = [
 ];
 
 const styles = {
-  root: {
-    flexGrow: 1,
+  content: {
+    padding: '1em',
   },
+  feedPaper: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  },
+  feedWarning: {
+    width: '4em',
+    height: '4em',
+    margin: '1em',
+  },
+  feedList: {
+    flex: '1',
+  }
 };
 
 class Livefeed extends React.Component {
@@ -106,38 +118,39 @@ class Livefeed extends React.Component {
     const { feed } = this.state;
 
     return (
-      <div className={classes.root}>
+      <div>
         <AppBar position="static" color="default">
           <Toolbar>
             <Typography variant="title" color="inherit">Status beredskap - live feed</Typography>
           </Toolbar>
         </AppBar>
-        <Grid container spacing={24}>
-          <Grid item xs={12}>
-            <Paper>
-              <Avatar>
-                <Warning />
-              </Avatar>
-              <Feed
-                items={feed}
-                onSortEnd={this.onFeedSortEnd}
-                deleteItem={this.deleteFeedItem}
-                addItem={feed.length < 7 ? this.addFeedItem : undefined}
-              />
-            </Paper>
+        <div className={classes.content}>
+          <Grid container spacing={24}>
+            <Grid item xs={12}>
+              <Paper className={classes.feedPaper}>
+                <Warning color="error" className={classes.feedWarning} />
+                <Feed
+                  items={feed}
+                  onSortEnd={this.onFeedSortEnd}
+                  deleteItem={this.deleteFeedItem}
+                  addItem={feed.length < 7 ? this.addFeedItem : undefined}
+                  className={classes.feedList}
+                />
+              </Paper>
+            </Grid>
+            <Grid item xs={6}>
+              <Paper>
+                <Typography variant="title">Beredskapsorganisasjon</Typography>
+                <PreparednessSummary teams={teams} />
+              </Paper>
+            </Grid>
+            <Grid item xs={6}>
+              <Paper>
+                <PreparednessSummary teams={teams} />
+              </Paper>
+            </Grid>
           </Grid>
-          <Grid item xs={6}>
-            <Paper>
-              <Typography variant="title">Beredskapsorganisasjon</Typography>
-              <PreparednessSummary teams={teams} />
-            </Paper>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper>
-              <PreparednessSummary teams={teams} />
-            </Paper>
-          </Grid>
-        </Grid>
+        </div>
       </div>
     );
   }

@@ -46,8 +46,8 @@ const SortableListItem = SortableElement(({ value, deleteItem }) => (
   </ListItem>
 ));
 
-const SortableList = SortableContainer(({ items, deleteItem, addItem }) => (
-  <List>
+const SortableList = SortableContainer(({ items, deleteItem, addItem, ...rest }) => (
+  <List {...rest}>
     {items.map((value, index) => (
       <SortableListItem key={value.id} index={index} value={value} deleteItem={deleteItem} />
     ))}
@@ -66,7 +66,7 @@ const SortableList = SortableContainer(({ items, deleteItem, addItem }) => (
   </List>
 ));
 
-export default ({ items, onSortEnd, deleteItem, addItem }) => (
+export default ({ items, onSortEnd, deleteItem, addItem, ...rest }) => (
   <SortableList
     items={items}
     onSortEnd={onSortEnd}
@@ -74,5 +74,6 @@ export default ({ items, onSortEnd, deleteItem, addItem }) => (
     distance={5}
     deleteItem={deleteItem}
     addItem={addItem}
+    {...rest}
   />
 );
