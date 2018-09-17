@@ -23,7 +23,6 @@ export class TypeSelect extends React.Component {
           onChange={this.handleChange}
           inputProps={{
             name: 'type',
-            id: 'type',
           }}
         >
           <MenuItem value={"øvelse"}>Øvelse</MenuItem>

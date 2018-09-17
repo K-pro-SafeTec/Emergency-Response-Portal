@@ -23,7 +23,6 @@ export class ParticipantsSelect extends React.Component {
           onChange={this.handleChange}
           inputProps={{
             name: 'participants',
-            id: 'participants',
           }}
         >
           <MenuItem value={"alle"}>Alle</MenuItem>

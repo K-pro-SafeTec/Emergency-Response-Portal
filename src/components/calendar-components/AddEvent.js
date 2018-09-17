@@ -23,11 +23,7 @@ export class AddEvent extends Component {
       end: defaultEnd,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleDateChange = this.handleDateChange.bind(this);
-    this.handleStartChange = this.handleStartChange.bind(this);
-    this.handleEndChange = this.handleEndChange.bind(this);
-    this.handleParticipantChange = this.handleParticipantChange.bind(this);
-    this.handleTypeChange = this.handleTypeChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleSubmit(event) {
@@ -51,33 +47,9 @@ export class AddEvent extends Component {
     }
   };
 
-  handleDateChange(event) {
+  handleChange(event) {
     this.setState({
-      date: event.target.value
-    })
-  }
-
-  handleStartChange(event) {
-    this.setState({
-      start: event.target.value
-    })
-  }
-
-  handleEndChange(event) {
-    this.setState({
-      end: event.target.value
-    })
-  }
-
-  handleParticipantChange(event) {
-    this.setState({
-      participants: event.target.value
-    })
-  }
-
-  handleTypeChange(event) {
-    this.setState({
-      type: event.target.value
+      [event.target.name]: event.target.value
     })
   }
 
@@ -86,20 +58,12 @@ export class AddEvent extends Component {
       <div className="side-display">
         <h1>Legg til ny hendelse</h1>
         <form className="form" onSubmit={this.handleSubmit}>
-          <TextField id="date" label="Dato" type="date" defaultValue={this.state.date} onChange={this.handleDateChange}
+          <TextField name="date" label="Dato" type="date" defaultValue={this.state.date} onChange={this.handleChange}
                      InputLabelProps={{
                        shrink: true,
                      }}
           />
-          <TextField id="start" label="Start" type="time" defaultValue={this.state.start} onChange={this.handleStartChange}
-                     InputLabelProps={{
-                       shrink: true,
-                     }}
-                     inputProps={{
-                       step: 300, // 5 min
-                     }}
-          />
-          <TextField id="end" label="Slutt" type="time" defaultValue={this.state.end} onChange={this.handleEndChange}
+          <TextField name="start" label="Start" type="time" defaultValue={this.state.start} onChange={this.handleChange}
                      InputLabelProps={{
                        shrink: true,
                      }}
@@ -107,8 +71,16 @@ export class AddEvent extends Component {
                        step: 300, // 5 min
                      }}
           />
-          <ParticipantsSelect id="participants" onChange={this.handleParticipantChange}/>
-          <TypeSelect id="type" onChange={this.handleTypeChange}/>
+          <TextField name="end" label="Slutt" type="time" defaultValue={this.state.end} onChange={this.handleChange}
+                     InputLabelProps={{
+                       shrink: true,
+                     }}
+                     inputProps={{
+                       step: 300, // 5 min
+                     }}
+          />
+          <ParticipantsSelect id="participants" onChange={this.handleChange}/>
+          <TypeSelect id="type" onChange={this.handleChange}/>
           <div>
             <Button variant="contained" color="primary" type="submit" id="save-button">
               Lagre
