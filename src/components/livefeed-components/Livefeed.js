@@ -80,8 +80,7 @@ const styles = {
     margin: '1em',
   },
   feedList: {
-    flex: '1',
-    minWidth: '30em',
+    flex: '1 1 30em',
   }
 };
 
