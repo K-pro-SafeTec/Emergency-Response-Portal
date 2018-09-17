@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {ParticipantsSelect} from './ParticipantsSelect';
 import {TypeSelect} from './TypeSelect';
@@ -7,18 +7,33 @@ import Button from '@material-ui/core/Button';
 import {getDateFormatYMD, getTimeFormat, isValidParticipants, isValidType} from "../../helpers/calendar-helper";
 
 
-export const AddEvent = (props) => {
-  const date = props.date;
-  const eventToEdit = props.eventToEdit;
-  let defaultStart = "09:00";
-  let defaultEnd = "10:00";
-  if (eventToEdit) {
-      defaultStart = getTimeFormat(eventToEdit.start);
-      defaultEnd = getTimeFormat(eventToEdit.end);
+export class AddEvent extends Component {
+
+  constructor(props) {
+    super(props);
+    let defaultStart = "09:00";
+    let defaultEnd = "10:00";
+    if (props.eventToEdit) {
+      defaultStart = getTimeFormat(props.eventToEdit.start);
+      defaultEnd = getTimeFormat(props.eventToEdit.end);
+    }
+    this.state = {
+      date: getDateFormatYMD(props.date),
+      start: defaultStart,
+      end: defaultEnd,
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDateChange = this.handleDateChange.bind(this);
+    this.handleStartChange = this.handleStartChange.bind(this);
+    this.handleEndChange = this.handleEndChange.bind(this);
+    this.handleParticipantChange = this.handleParticipantChange.bind(this);
+    this.handleTypeChange = this.handleTypeChange.bind(this);
   }
-  const handleSubmit= () => {
-    const participants = document.getElementById("participants").value;
-    const type = document.getElementById("type").value;
+
+  handleSubmit(event) {
+    event.preventDefault();
+    const participants = this.state.participants;
+    const type = this.state.type;
     const participantsSelected = isValidParticipants(participants);
     const typeSelected = isValidType(type);
     if (!participantsSelected) {
@@ -28,48 +43,81 @@ export const AddEvent = (props) => {
         console.log("not valid type");
     }
     if (participantsSelected && typeSelected) {
-        props.onSaveButtonClick(document.getElementById("date").value,
-          document.getElementById("start").value,
-          document.getElementById("end").value,
+        this.props.onSaveButtonClick(this.state.date,
+          this.state.start,
+          this.state.end,
           participants,
           type)
     }
   };
-  return (
-    <div className="side-display">
-      <h1>Legg til ny hendelse</h1>
-      <form className="form">
-        <TextField id="date" label="Dato" type="date" defaultValue={getDateFormatYMD(date)}
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
-        <TextField id="start" label="Start" type="time" defaultValue={defaultStart}
-          InputLabelProps={{
-            shrink: true,
-          }}
-          inputProps={{
-            step: 300, // 5 min
-          }}
-        />
-        <TextField id="end" label="Slutt" type="time" defaultValue={defaultEnd}
-          InputLabelProps={{
-            shrink: true,
-          }}
-          inputProps={{
-            step: 300, // 5 min
-          }}
-        />
-        <ParticipantsSelect id="participants"/>
-        <TypeSelect id="type"/>
-      <div>
-        <Button variant="contained" color="primary" onClick={handleSubmit} id="save-button">
-          Lagre
-        </Button>
+
+  handleDateChange(event) {
+    this.setState({
+      date: event.target.value
+    })
+  }
+
+  handleStartChange(event) {
+    this.setState({
+      start: event.target.value
+    })
+  }
+
+  handleEndChange(event) {
+    this.setState({
+      end: event.target.value
+    })
+  }
+
+  handleParticipantChange(event) {
+    this.setState({
+      participants: event.target.value
+    })
+  }
+
+  handleTypeChange(event) {
+    this.setState({
+      type: event.target.value
+    })
+  }
+
+  render() {
+    return (
+      <div className="side-display">
+        <h1>Legg til ny hendelse</h1>
+        <form className="form" onSubmit={this.handleSubmit}>
+          <TextField id="date" label="Dato" type="date" defaultValue={this.state.date} onChange={this.handleDateChange}
+                     InputLabelProps={{
+                       shrink: true,
+                     }}
+          />
+          <TextField id="start" label="Start" type="time" defaultValue={this.state.start} onChange={this.handleStartChange}
+                     InputLabelProps={{
+                       shrink: true,
+                     }}
+                     inputProps={{
+                       step: 300, // 5 min
+                     }}
+          />
+          <TextField id="end" label="Slutt" type="time" defaultValue={this.state.end} onChange={this.handleEndChange}
+                     InputLabelProps={{
+                       shrink: true,
+                     }}
+                     inputProps={{
+                       step: 300, // 5 min
+                     }}
+          />
+          <ParticipantsSelect id="participants" onChange={this.handleParticipantChange}/>
+          <TypeSelect id="type" onChange={this.handleTypeChange}/>
+          <div>
+            <Button variant="contained" color="primary" type="submit" id="save-button">
+              Lagre
+            </Button>
+          </div>
+        </form>
       </div>
-      </form>
-    </div>
-  )
+    )
+  }
 };
 
 AddEvent.propTypes = {

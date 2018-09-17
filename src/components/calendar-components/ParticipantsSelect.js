@@ -11,6 +11,7 @@ export class ParticipantsSelect extends React.Component {
   
   handleChange = event => {
     this.setState({ [event.target.name]: event.target.value });
+    this.props.onChange(event)
   };
   
   render() {
