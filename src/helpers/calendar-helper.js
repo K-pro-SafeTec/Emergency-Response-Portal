@@ -55,7 +55,7 @@ export function getDateFormat(date) {
 
 // Checks if an event is a valid event
 export function isValidEvent(date, start, end, participants, type) {
-  return isValidDate(date) && isValidTime(start) && isValidTime(end) && isValidParticipants(participants) &&
+  return isValidDate(date) && isValidPeriod(start, end) && isValidParticipants(participants) &&
       isValidType(type)
 }
 
@@ -67,6 +67,14 @@ function isValidDate(date) {
 // Returns true if the input time is on the format tt:mm
 function isValidTime(time) {
   return /^([01][0-9]|2[0-3]):[0-5][0-9]$/.test(time)
+}
+
+function isValidPeriod(start, end) {
+  if (!isValidTime(start) || !isValidTime(end)) {
+    return false;
+  }
+  return start <= end;
+
 }
 
 export function isValidParticipants(participants) {
