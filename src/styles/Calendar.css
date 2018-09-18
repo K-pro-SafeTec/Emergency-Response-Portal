@@ -26,6 +26,11 @@
 	padding: 5px;
 }
 
-.width200 {
-	width: 200px;
+.form {
+	display: flex;
+	flex-direction: column;
+}
+
+#save-button {
+	margin-top: 20px;
 }

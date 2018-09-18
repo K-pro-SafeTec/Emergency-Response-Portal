@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Children} from 'react';
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
 import {AddEvent} from './AddEvent';
@@ -7,6 +7,7 @@ import Paper from '@material-ui/core/Paper';
 import 'moment/locale/nb';
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import '../../styles/Calendar.css'
+import {isValidEvent, equalDates} from './../../helpers/calendar-helper'
 
 moment.locale('nb');
 BigCalendar.momentLocalizer(moment);
@@ -61,13 +62,26 @@ export class EmergencyResponsePortalCalendar extends Component {
       ],
       showEventAdder: false,
       selectedDate: new Date(),
-      nextEventId: 3
+      nextEventId: 3,
+      eventToEdit: null
     };
     this.addEventButtonClicked = this.addEventButtonClicked.bind(this);
     this.addEvent = this.addEvent.bind(this);
     this.deleteEvent = this.deleteEvent.bind(this);
+    this.changeEvent = this.changeEvent.bind(this);
+    this.coloredDateCellWrapper = this.coloredDateCellWrapper.bind(this);
   }
-  
+
+  coloredDateCellWrapper({children, value}) {
+        return (
+          React.cloneElement(Children.only(children), {
+            style: {
+                ...children.style,
+                backgroundColor: equalDates(value, this.state.selectedDate) ? '#eaf6ff' : 'white',
+            },
+          })
+        )}
+
   slotClicked(slotInfo) {
     if (slotInfo.action === "click") {
       const date = slotInfo.start;
@@ -76,34 +90,42 @@ export class EmergencyResponsePortalCalendar extends Component {
       })
     }
   }
+
+  eventClicked(date) {
+    this.setState({
+        selectedDate: date
+    })
+  }
   
   addEventButtonClicked() {
     this.setState({
       showEventAdder: true
     })
   }
-  
+
   addEvent(date, start, end, participants, type) {
-    const year = date.substring(0, 4);
-    const month = parseInt(date.substring(5, 7), 10) - 1;
-    const dayInMonth = date.substring(8, 10);
-    const startDate = new Date(year, month, dayInMonth, start.substring(0, 2), end.substring(3, 5));
-    const endDate = new Date(year, month, dayInMonth, end.substring(0, 2), end.substring(3, 5));
-    const newEvent = {
-      id: this.state.nextEventId,
-      start: startDate,
-      end: endDate,
-      participants,
-      title: capitalizeFirstLetter(type)
-    };
-    let events = this.state.events;
-    events.push(newEvent);
-    this.setState({
-      events,
-      showEventAdder: false,
-      selectedDate: startDate,
-      nextEventId: this.state.nextEventId + 1
-    });
+    if (isValidEvent(date, start, end, participants, type)) {
+      const year = date.substring(0, 4);
+      const month = parseInt(date.substring(5, 7), 10) - 1;
+      const dayInMonth = date.substring(8, 10);
+      const startDate = new Date(year, month, dayInMonth, start.substring(0, 2), end.substring(3, 5));
+      const endDate = new Date(year, month, dayInMonth, end.substring(0, 2), end.substring(3, 5));
+      const newEvent = {
+        id: this.state.nextEventId,
+        start: startDate,
+        end: endDate,
+        participants,
+        title: capitalizeFirstLetter(type)
+      };
+      let events = this.state.events;
+      events.push(newEvent);
+      this.setState({
+        events,
+        showEventAdder: false,
+        selectedDate: startDate,
+        nextEventId: this.state.nextEventId + 1
+      });
+    }
   }
   
   deleteEvent(eventId) {
@@ -114,7 +136,11 @@ export class EmergencyResponsePortalCalendar extends Component {
   }
   
   changeEvent(eventId) {
-    console.log("Change event", eventId)
+    const eventToEdit = this.state.events.filter(event => event.id === eventId)[0];
+    this.setState({
+        eventToEdit,
+        showEventAdder: true
+    })
   }
   
   reviewEvent(eventId) {
@@ -132,7 +158,10 @@ export class EmergencyResponsePortalCalendar extends Component {
           selectable={true}
           formats={formats}
           onSelectSlot={((slot) => this.slotClicked(slot))}
-          onSelectEvent={({participants}) => console.log(participants)}
+          onSelectEvent={({start}) => this.eventClicked(start)}
+          components={{
+              dateCellWrapper: this.coloredDateCellWrapper,
+          }}
         
         />
         <Paper className="paper-big">
@@ -141,7 +170,7 @@ export class EmergencyResponsePortalCalendar extends Component {
                                                       onDeleteButtonClick={this.deleteEvent}
                                                       onChangeEvent={this.changeEvent}
                                                       onReviewButtonClick={this.reviewEvent}/>) :
-            <AddEvent date={this.state.selectedDate} onSaveButtonClick={this.addEvent}/>}
+            <AddEvent date={this.state.selectedDate} eventToEdit={this.state.eventToEdit} onSaveButtonClick={this.addEvent}/>}
         </Paper>
       </div>
     )
