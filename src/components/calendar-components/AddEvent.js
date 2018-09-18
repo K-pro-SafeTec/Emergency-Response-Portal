@@ -79,9 +79,12 @@ export class AddEvent extends Component {
           />
           <ParticipantsSelect id="participants" onChange={this.handleChange}/>
           <TypeSelect id="type" onChange={this.handleChange}/>
-          <div>
-            <Button variant="contained" color="primary" type="submit" id="save-button">
+          <div className="mt32 flex spacebetween">
+            <Button variant="contained" color="primary" type="submit">
               Lagre
+            </Button>
+            <Button color="primary" onClick={this.props.onCancelClick}>
+              Avbryt
             </Button>
           </div>
         </form>

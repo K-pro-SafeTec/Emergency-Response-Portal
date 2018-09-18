@@ -71,6 +71,7 @@ export class EmergencyResponsePortalCalendar extends Component {
     this.deleteEvent = this.deleteEvent.bind(this);
     this.changeEventButtonClicked = this.changeEventButtonClicked.bind(this);
     this.coloredDateCellWrapper = this.coloredDateCellWrapper.bind(this);
+    this.cancelButtonClicked = this.cancelButtonClicked.bind(this);
   }
 
   coloredDateCellWrapper({children, value}) {
@@ -151,6 +152,13 @@ export class EmergencyResponsePortalCalendar extends Component {
   reviewEvent(eventId) {
     console.log("Review event", eventId)
   }
+
+  cancelButtonClicked() {
+    this.setState({
+      eventToEdit: null,
+      showEventAdder: false
+    })
+  }
   
   render() {
     return (
@@ -176,7 +184,7 @@ export class EmergencyResponsePortalCalendar extends Component {
                                                       onChangeEvent={this.changeEventButtonClicked}
                                                       onReviewButtonClick={this.reviewEvent}/>) :
             <AddEvent date={this.state.selectedDate} eventToEdit={this.state.eventToEdit}
-                      onSaveButtonClick={this.saveEvent} deleteEvent={this.deleteEvent} />}
+                      onSaveButtonClick={this.saveEvent} deleteEvent={this.deleteEvent} onCancelClick={this.cancelButtonClicked} />}
         </Paper>
       </div>
     )
