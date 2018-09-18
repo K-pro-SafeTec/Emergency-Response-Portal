@@ -78,3 +78,7 @@ export function isValidType(type) {
   const valids = ['øvelse', 'trening', 'table top'];
   return valids.includes(type)
 }
+
+export function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}

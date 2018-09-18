@@ -8,6 +8,7 @@ import 'moment/locale/nb';
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import '../../styles/Calendar.css'
 import {isValidEvent, equalDates} from './../../helpers/calendar-helper'
+import {capitalizeFirstLetter} from "../../helpers/calendar-helper";
 
 moment.locale('nb');
 BigCalendar.momentLocalizer(moment);
@@ -114,7 +115,7 @@ export class EmergencyResponsePortalCalendar extends Component {
         id: this.state.nextEventId,
         start: startDate,
         end: endDate,
-        participants,
+        participants: capitalizeFirstLetter(participants),
         title: capitalizeFirstLetter(type)
       };
       let events = this.state.events.slice();
@@ -180,8 +181,4 @@ export class EmergencyResponsePortalCalendar extends Component {
       </div>
     )
   }
-}
-
-function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
 }
