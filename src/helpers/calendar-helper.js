@@ -82,3 +82,13 @@ export function isValidType(type) {
 export function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
+
+export function sortEvents(events) {
+  events.sort(function(a, b){
+    if (a.start - b.start === 0) {
+      return a.end - b.end;
+    }
+    return a.start - b.start;
+  });
+  return events;
+}

@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {DisplayEvent} from './DisplayEvent';
 import Button from '@material-ui/core/Button';
-import {getEvents, getDateFormat} from './../../helpers/calendar-helper';
+import {getEvents, getDateFormat, sortEvents} from './../../helpers/calendar-helper';
 
 export const SideDisplay = (props) => {
-  const events = getEvents(props.events, props.date)
+  let events = getEvents(props.events, props.date);
+  events = sortEvents(events);
   return (
     <div className="side-display">
       <h1>{getDateFormat(props.date)}</h1>
