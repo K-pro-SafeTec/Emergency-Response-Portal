@@ -11,14 +11,16 @@ export class AddEvent extends Component {
 
   constructor(props) {
     super(props);
+    let defaultDate = getDateFormatYMD(props.date);
     let defaultStart = "09:00";
     let defaultEnd = "10:00";
     if (props.eventToEdit) {
+      defaultDate = getDateFormatYMD(props.eventToEdit.start);
       defaultStart = getTimeFormat(props.eventToEdit.start);
       defaultEnd = getTimeFormat(props.eventToEdit.end);
     }
     this.state = {
-      date: getDateFormatYMD(props.date),
+      date: defaultDate,
       start: defaultStart,
       end: defaultEnd,
     };
@@ -39,11 +41,7 @@ export class AddEvent extends Component {
         console.log("not valid type");
     }
     if (participantsSelected && typeSelected) {
-        this.props.onSaveButtonClick(this.state.date,
-          this.state.start,
-          this.state.end,
-          participants,
-          type)
+      this.props.onSaveButtonClick(this.state.date, this.state.start, this.state.end, participants, type)
     }
   };
 
