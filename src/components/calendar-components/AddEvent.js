@@ -54,7 +54,7 @@ export class AddEvent extends Component {
   render() {
     return (
       <div className="side-display">
-        <h1>Legg til ny hendelse</h1>
+        <h1>{this.props.eventToEdit ? ("Endre") : "Legg til ny"} hendelse</h1>
         <form className="form" onSubmit={this.handleSubmit}>
           <TextField name="date" label="Dato" type="date" defaultValue={this.state.date} onChange={this.handleChange}
                      InputLabelProps={{
