@@ -1,5 +1,5 @@
 // Takes javascript date object and returns nice time
-export function getTimeFormat(date) {
+function getTimeFormat(date) {
   let hours = date.getHours();
   let minutes = date.getMinutes();
   if (hours < 10) {
@@ -11,7 +11,7 @@ export function getTimeFormat(date) {
   return hours + ":" + minutes;
 }
 
-export function getDateFormatYMD(date) {
+function getDateFormatYMD(date) {
   const year = date.getFullYear();
   let month = date.getMonth() + 1;
   if (month < 10) {
@@ -26,14 +26,14 @@ export function getDateFormatYMD(date) {
 
 // Takes a list of events and a date as objects.
 // Returns the events that starts on the given date.
-export function getEvents(events, date) {
+function getEvents(events, date) {
   return events.filter(event => {
     return equalDates(event.start, date)
   });
 }
 
 // Takes two javascript date objects as arguments and returns true if the objects fall on the same date.
-export function equalDates(date1, date2) {
+function equalDates(date1, date2) {
   const dayInMonth1 = date1.getDate();
   const dayInMonth2 = date2.getDate();
   const month1 = date1.getMonth();
@@ -44,7 +44,7 @@ export function equalDates(date1, date2) {
 }
 
 // Takes in a javascript date object and returns a nice string.
-export function getDateFormat(date) {
+function getDateFormat(date) {
   const weekdays = ["Søndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag"];
   const months = ["januar", "februar", "mars", "april", "mai", "juni", "juli", "august", "september", "oktober",
     "november", "desember"];
@@ -54,8 +54,8 @@ export function getDateFormat(date) {
 }
 
 // Checks if an event is a valid event
-export function isValidEvent(date, start, end, participants, type) {
-  return isValidDate(date) && isValidTime(start) && isValidTime(end) && isValidParticipants(participants) &&
+function isValidEvent(date, start, end, participants, type) {
+  return isValidDate(date) && isValidPeriod(start, end) && isValidParticipants(participants) &&
       isValidType(type)
 }
 
@@ -69,12 +69,36 @@ function isValidTime(time) {
   return /^([01][0-9]|2[0-3]):[0-5][0-9]$/.test(time)
 }
 
-export function isValidParticipants(participants) {
+function isValidPeriod(start, end) {
+  if (!isValidTime(start) || !isValidTime(end)) {
+    return false;
+  }
+  return start <= end;
+}
+
+function isValidParticipants(participants) {
   const valids = ['alle', 'beredskapslag', 'beredskapsledelse'];
   return valids.includes(participants)
 }
 
-export function isValidType(type) {
+function isValidType(type) {
   const valids = ['øvelse', 'trening', 'table top'];
   return valids.includes(type)
 }
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function sortEvents(events) {
+  events.sort(function(a, b){
+    if (a.start - b.start === 0) {
+      return a.end - b.end;
+    }
+    return a.start - b.start;
+  });
+  return events;
+}
+
+export { getTimeFormat, getDateFormatYMD, getEvents, equalDates, getDateFormat, isValidEvent, isValidParticipants,
+  isValidType, capitalizeFirstLetter, sortEvents }

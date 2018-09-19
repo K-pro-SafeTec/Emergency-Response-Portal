@@ -8,6 +8,7 @@ import 'moment/locale/nb';
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import '../../styles/Calendar.css'
 import {isValidEvent, equalDates} from './../../helpers/calendar-helper'
+import {capitalizeFirstLetter} from "../../helpers/calendar-helper";
 
 moment.locale('nb');
 BigCalendar.momentLocalizer(moment);
@@ -40,22 +41,22 @@ export class EmergencyResponsePortalCalendar extends Component {
       events: [
         {
           id: 0,
-          start: new Date('2018-09-07T20:00:00.000Z'),
-          end: new Date('2018-09-07T21:45:00.000Z'),
+          start: new Date('2018-09-18T20:00:00.000Z'),
+          end: new Date('2018-09-18T21:45:00.000Z'),
           participants: 'Alle',
           title: 'Øvelse',
         },
         {
           id: 1,
-          start: new Date('2018-09-07T21:45:00.000Z'),
-          end: new Date('2018-09-07T21:45:00.000Z'),
+          start: new Date('2018-09-19T21:45:00.000Z'),
+          end: new Date('2018-09-19T21:45:00.000Z'),
           participants: 'Alle',
           title: 'Trening',
         },
         {
           id: 2,
-          start: new Date('2018-09-09T21:45:00.000Z'),
-          end: new Date('2018-09-09T21:45:00.000Z'),
+          start: new Date('2018-09-20T21:45:00.000Z'),
+          end: new Date('2018-09-20T21:45:00.000Z'),
           participants: 'Alle',
           title: 'Table top',
         },
@@ -66,10 +67,11 @@ export class EmergencyResponsePortalCalendar extends Component {
       eventToEdit: null
     };
     this.addEventButtonClicked = this.addEventButtonClicked.bind(this);
-    this.addEvent = this.addEvent.bind(this);
+    this.saveEvent = this.saveEvent.bind(this);
     this.deleteEvent = this.deleteEvent.bind(this);
-    this.changeEvent = this.changeEvent.bind(this);
+    this.changeEventButtonClicked = this.changeEventButtonClicked.bind(this);
     this.coloredDateCellWrapper = this.coloredDateCellWrapper.bind(this);
+    this.cancelButtonClicked = this.cancelButtonClicked.bind(this);
   }
 
   coloredDateCellWrapper({children, value}) {
@@ -103,27 +105,31 @@ export class EmergencyResponsePortalCalendar extends Component {
     })
   }
 
-  addEvent(date, start, end, participants, type) {
+  saveEvent(date, start, end, participants, type) {
     if (isValidEvent(date, start, end, participants, type)) {
       const year = date.substring(0, 4);
       const month = parseInt(date.substring(5, 7), 10) - 1;
       const dayInMonth = date.substring(8, 10);
-      const startDate = new Date(year, month, dayInMonth, start.substring(0, 2), end.substring(3, 5));
+      const startDate = new Date(year, month, dayInMonth, start.substring(0, 2), start.substring(3, 5));
       const endDate = new Date(year, month, dayInMonth, end.substring(0, 2), end.substring(3, 5));
       const newEvent = {
         id: this.state.nextEventId,
         start: startDate,
         end: endDate,
-        participants,
+        participants: capitalizeFirstLetter(participants),
         title: capitalizeFirstLetter(type)
       };
-      let events = this.state.events;
+      let events = this.state.events.slice();
+      if (this.state.eventToEdit) {
+        events = events.filter(event => event.id !== this.state.eventToEdit.id)
+      }
       events.push(newEvent);
       this.setState({
         events,
         showEventAdder: false,
         selectedDate: startDate,
-        nextEventId: this.state.nextEventId + 1
+        nextEventId: this.state.nextEventId + 1,
+        eventToEdit: null
       });
     }
   }
@@ -135,7 +141,7 @@ export class EmergencyResponsePortalCalendar extends Component {
     })
   }
   
-  changeEvent(eventId) {
+  changeEventButtonClicked(eventId) {
     const eventToEdit = this.state.events.filter(event => event.id === eventId)[0];
     this.setState({
         eventToEdit,
@@ -145,6 +151,13 @@ export class EmergencyResponsePortalCalendar extends Component {
   
   reviewEvent(eventId) {
     console.log("Review event", eventId)
+  }
+
+  cancelButtonClicked() {
+    this.setState({
+      eventToEdit: null,
+      showEventAdder: false
+    })
   }
   
   render() {
@@ -168,15 +181,12 @@ export class EmergencyResponsePortalCalendar extends Component {
           {!this.state.showEventAdder ? (<SideDisplay events={this.state.events} date={this.state.selectedDate}
                                                       onAddEventButtonClick={this.addEventButtonClicked}
                                                       onDeleteButtonClick={this.deleteEvent}
-                                                      onChangeEvent={this.changeEvent}
+                                                      onChangeEvent={this.changeEventButtonClicked}
                                                       onReviewButtonClick={this.reviewEvent}/>) :
-            <AddEvent date={this.state.selectedDate} eventToEdit={this.state.eventToEdit} onSaveButtonClick={this.addEvent}/>}
+            <AddEvent date={this.state.selectedDate} eventToEdit={this.state.eventToEdit}
+                      onSaveButtonClick={this.saveEvent} deleteEvent={this.deleteEvent} onCancelClick={this.cancelButtonClicked} />}
         </Paper>
       </div>
     )
   }
-}
-
-function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
 }

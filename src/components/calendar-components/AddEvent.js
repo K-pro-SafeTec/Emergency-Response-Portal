@@ -11,14 +11,16 @@ export class AddEvent extends Component {
 
   constructor(props) {
     super(props);
+    let defaultDate = getDateFormatYMD(props.date);
     let defaultStart = "09:00";
     let defaultEnd = "10:00";
     if (props.eventToEdit) {
+      defaultDate = getDateFormatYMD(props.eventToEdit.start);
       defaultStart = getTimeFormat(props.eventToEdit.start);
       defaultEnd = getTimeFormat(props.eventToEdit.end);
     }
     this.state = {
-      date: getDateFormatYMD(props.date),
+      date: defaultDate,
       start: defaultStart,
       end: defaultEnd,
     };
@@ -39,11 +41,7 @@ export class AddEvent extends Component {
         console.log("not valid type");
     }
     if (participantsSelected && typeSelected) {
-        this.props.onSaveButtonClick(this.state.date,
-          this.state.start,
-          this.state.end,
-          participants,
-          type)
+      this.props.onSaveButtonClick(this.state.date, this.state.start, this.state.end, participants, type)
     }
   };
 
@@ -56,7 +54,7 @@ export class AddEvent extends Component {
   render() {
     return (
       <div className="side-display">
-        <h1>Legg til ny hendelse</h1>
+        <h1>{this.props.eventToEdit ? ("Endre") : "Legg til ny"} hendelse</h1>
         <form className="form" onSubmit={this.handleSubmit}>
           <TextField name="date" label="Dato" type="date" defaultValue={this.state.date} onChange={this.handleChange}
                      InputLabelProps={{
@@ -81,9 +79,12 @@ export class AddEvent extends Component {
           />
           <ParticipantsSelect id="participants" onChange={this.handleChange}/>
           <TypeSelect id="type" onChange={this.handleChange}/>
-          <div>
-            <Button variant="contained" color="primary" type="submit" id="save-button">
+          <div className="mt32 flex spacebetween">
+            <Button variant="contained" color="primary" type="submit">
               Lagre
+            </Button>
+            <Button color="primary" onClick={this.props.onCancelClick}>
+              Avbryt
             </Button>
           </div>
         </form>
