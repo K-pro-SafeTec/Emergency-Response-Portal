@@ -1,8 +1,8 @@
 import React, {Component, Children} from 'react';
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
-import {AddEvent} from './AddEvent';
-import {SideDisplay} from './SideDisplay';
+import AddEvent from './AddEvent';
+import SideDisplay from './SideDisplay';
 import Paper from '@material-ui/core/Paper';
 import 'moment/locale/nb';
 import 'react-big-calendar/lib/css/react-big-calendar.css'
@@ -33,7 +33,7 @@ const formats = {
   agendaDateFormat: 'dddd DD.MM',
 };
 
-export class EmergencyResponsePortalCalendar extends Component {
+export default class EmergencyResponsePortalCalendar extends Component {
   
   constructor(props) {
     super(props);
