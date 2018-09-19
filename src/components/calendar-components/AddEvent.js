@@ -51,6 +51,10 @@ export class AddEvent extends Component {
     })
   }
 
+  handleParticipantChange(state) {
+    console.log(state)
+  }
+
   render() {
     return (
       <div className="side-display">
@@ -77,7 +81,7 @@ export class AddEvent extends Component {
                        step: 300, // 5 min
                      }}
           />
-          <ParticipantsSelect id="participants" onChange={this.handleChange}/>
+          <ParticipantsSelect id="participants" onChange={this.handleParticipantChange}/>
           <TypeSelect id="type" onChange={this.handleChange}/>
           <div className="mt32 flex spacebetween">
             <Button variant="contained" color="primary" type="submit">
