@@ -9,16 +9,16 @@ import IconLivefeed from '../../icons/livefeed.svg';
 export default () => (
   <div>
 
-    <h1 class="title">Emergency Response Portal</h1>
-    <ul class="container">
-      <a class="element" href="/calendar">
-        <img class="icon" src={IconCalendar} alt="Kalender"/>
-        <a>Kalender</a>
-      </a>
-      <a class="element" href="/livefeed">
-        <img class="icon" src={IconLivefeed} alt="Livefeed"/>
-        <a>Livefeed</a>
-      </a>
+    <h1 className="title">Emergency Response Portal</h1>
+    <ul className="container">
+      <Link className="element" to="/calendar">
+        <img className="icon" src={IconCalendar} alt="Kalender"/>
+        <h3>Kalender</h3>
+      </Link>
+      <Link className="element" to="/livefeed">
+        <img className="icon" src={IconLivefeed} alt="Livefeed"/>
+        <h3>Livefeed</h3>
+      </Link>
     </ul>
   </div>
 );
