@@ -4,12 +4,6 @@
   justify-content: center;
 }
 
-.title {
-  display: flex;
-  justify-content: center;
-  font-size: 5em;
-}
-
 .icon {
   margin: 0;
   padding: 0;
