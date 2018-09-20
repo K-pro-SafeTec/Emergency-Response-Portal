@@ -7,7 +7,7 @@ import Status from './Status';
 
 const statusIcons = new Map([
   [Status.OK, ({ style = {}, ...rest }) => <CheckCircle style={{ ...style, color: "green" }} {...rest} />],
-  [Status.WARNING, ({ style = {}, ...rest }) => <Warning style={{ ...style, color: "yellow" }} {...rest} />],
+  [Status.WARNING, ({ style = {}, ...rest }) => <Warning style={{ ...style, color: "orange" }} {...rest} />],
   [Status.ERROR, ({ style = {}, ...rest }) => <Error style={{ ...style, color: "red" }} {...rest} />],
 ]);
 

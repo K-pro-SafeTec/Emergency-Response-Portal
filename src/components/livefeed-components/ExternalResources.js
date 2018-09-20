@@ -6,7 +6,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
 import StatusIcon from './StatusIcon';
 
-const PreparednessSummaryItem = ({ name, status, message }) => (
+const ExternalResourceItem = ({ name, status, message }) => (
   <ListItem button>
     <ListItemIcon style={{ fontSize: '40px' }}>
       <StatusIcon status={status} />
@@ -15,16 +15,17 @@ const PreparednessSummaryItem = ({ name, status, message }) => (
   </ListItem>
 );
 
-export default ({ teams }) => (
+export default ({ items }) => (
   <List>
     <ListItem>
-      <Typography variant="title">Beredskapsorganisasjon</Typography>
+      <Typography variant="title">Tilgjengelighet</Typography>
     </ListItem>
-    {teams.map(({ name, status }) => (
-      <PreparednessSummaryItem
+    {items.map(({ name, status, message }) => (
+      <ExternalResourceItem
         key={name}
         name={name}
         status={status}
+        message={message}
       />
     ))}
   </List>

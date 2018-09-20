@@ -10,6 +10,7 @@ import { arrayMove } from 'react-sortable-hoc';
 import Status from './Status';
 import Feed from './Feed';
 import PreparednessSummary from './PreparednessSummary';
+import ExternalResources from './ExternalResources';
 
 const feed = [
   {
@@ -63,6 +64,22 @@ const teams = [
     name: "MOB-båt lag",
     status: Status.WARNING,
   }
+];
+
+const externalResources = [
+  {
+    name: "Brannslukkingsbåt",
+    status: Status.OK,
+  },
+  {
+    name: "MEDEVAC",
+    status: Status.WARNING,
+    message: "På vei onshore",
+  },
+  {
+    name: "Livbåt",
+    status: Status.OK,
+  },
 ];
 
 const styles = {
@@ -141,13 +158,14 @@ class Livefeed extends React.Component {
             </Grid>
             <Grid item xs={6}>
               <Paper>
-                <Typography variant="title">Beredskapsorganisasjon</Typography>
                 <PreparednessSummary teams={teams} />
               </Paper>
             </Grid>
             <Grid item xs={6}>
               <Paper>
-                <PreparednessSummary teams={teams} />
+                <ExternalResources
+                  items={externalResources}
+                />
               </Paper>
             </Grid>
           </Grid>
