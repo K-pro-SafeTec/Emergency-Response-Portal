@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
-import MainMenu from './components/main-menu-components/MainMenu';
-import { EmergencyResponsePortalCalendar as Calendar } from './components/calendar-components/Calendar';
-import Livefeed from './components/livefeed-components/Livefeed';
+import MainMenu from './components/main-menu/MainMenu';
+import Calendar from './components/calendar/Calendar';
+import Livefeed from './components/livefeed/Livefeed';
 import EmergencyResponseOrganization from './components/emergency-response-organization/EmergencyResponseOrganization';
 
 

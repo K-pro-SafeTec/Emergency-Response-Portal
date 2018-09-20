@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {ParticipantsSelect} from './ParticipantsSelect';
-import {TypeSelect} from './TypeSelect';
+import ParticipantsSelect from './ParticipantsSelect';
+import TypeSelect from './TypeSelect';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import {getDateFormatYMD, getTimeFormat, isValidParticipants, isValidType} from "../../helpers/calendar-helper";
 
 
-export class AddEvent extends Component {
+export default class AddEvent extends Component {
 
   constructor(props) {
     super(props);

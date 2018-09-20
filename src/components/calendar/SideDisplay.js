@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {DisplayEvent} from './DisplayEvent';
+import DisplayEvent from './DisplayEvent';
 import Button from '@material-ui/core/Button';
 import {getEvents, getDateFormat, sortEvents} from './../../helpers/calendar-helper';
 
-export const SideDisplay = (props) => {
+const SideDisplay = (props) => {
   let events = getEvents(props.events, props.date);
   events = sortEvents(events);
   return (
@@ -34,3 +34,5 @@ SideDisplay.propTypes = {
   onChangeEvent: PropTypes.func.isRequired,
   onReviewButtonClick: PropTypes.func.isRequired
 };
+
+export default SideDisplay

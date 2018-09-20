@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import {getTimeFormat} from './../../helpers/calendar-helper';
 
-export const DisplayEvent = (props) => {
+const DisplayEvent = (props) => {
   const event = props.event;
   return (
     <Paper className="paper-small">
@@ -37,3 +37,5 @@ DisplayEvent.propTypes = {
   onDeleteButtonClick: PropTypes.func.isRequired,
   onReviewButtonClick: PropTypes.func.isRequired
 };
+
+export default DisplayEvent;

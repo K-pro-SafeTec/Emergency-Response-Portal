@@ -4,12 +4,12 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
-export class TypeSelect extends React.Component {
+export default class ParticipantsSelect extends React.Component {
   state = {
-    type: '',
+    participants: '',
   };
   
-   handleChange = event => {
+  handleChange = event => {
     this.setState({ [event.target.name]: event.target.value });
     this.props.onChange(event)
   };
@@ -17,17 +17,17 @@ export class TypeSelect extends React.Component {
   render() {
     return (
       <FormControl>
-        <InputLabel htmlFor="age-simple">Type</InputLabel>
+        <InputLabel htmlFor="age-simple">Participants</InputLabel>
         <Select
-          value={this.state.type}
+          value={this.state.participants}
           onChange={this.handleChange}
           inputProps={{
-            name: 'type',
+            name: 'participants',
           }}
         >
-          <MenuItem value={"øvelse"}>Øvelse</MenuItem>
-          <MenuItem value={"trening"}>Trening</MenuItem>
-          <MenuItem value={"table top"}>Table top</MenuItem>
+          <MenuItem value={"alle"}>Alle</MenuItem>
+          <MenuItem value={"beredskapslag"}>Beredskapslag</MenuItem>
+          <MenuItem value={"beredskapsledelse"}>Beredskapsledelse</MenuItem>
         </Select>
       </FormControl>
     );
