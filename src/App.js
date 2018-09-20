@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route exact path="/" component={appPageComponent('Emergency Response Portal', MainMenu)} />
+          <Route exact path="/" component={appPageComponent('Safetec Beredskapsportal', MainMenu)} />
           <Route path="/calendar" component={appPageComponent('Kalender', Calendar)} />
           <Route path="/livefeed" component={appPageComponent('Status beredskap - live feed', Livefeed)} />
           <Route path="/emergency-response-organization" component={appPageComponent('Beredskapsorganisasjon', EmergencyResponseOrganization)} />
