@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../styles/MainMenu.css';
 import IconCalendar from '../../icons/calendar.svg';
 import IconLivefeed from '../../icons/livefeed.svg';
 import IconShield from '../../icons/shield.svg';
