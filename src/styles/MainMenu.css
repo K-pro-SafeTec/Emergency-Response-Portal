@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 5em;
+}
+
+.icon {
+  margin: 0;
+  padding: 0;
+  height: 15em;
+  width: 15em;
+  border-radius: 1;
+  border-color: red;
+}
+
+.element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
