@@ -1,28 +1,14 @@
 import React from 'react';
-import Grade from '@material-ui/icons/Grade';
-import { withStyles } from '@material-ui/core/styles';
-import NavigationButton from './NavigationButton';
+import NavMenu from '../shared/NavMenu';
+import NavMenuItem from '../shared/NavMenuItem';
+import IconShield from '../../icons/shield.svg';
 
-const styles = {
-  content: {
-    padding: '1em',
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-  },
-};
-
-const EmergencyResponseOrganization = ({ classes }) => (
-  <div>
-    <div className={classes.content}>
-      <NavigationButton name="Beredskapslag" Icon={Grade} />
-      <NavigationButton name="Kompetansestatus" Icon={Grade} />
-      <NavigationButton name="Forenlighetsmatrise" Icon={Grade} />
-      <NavigationButton name="Stedfortredere" Icon={Grade} />
-      <NavigationButton name="Reserveressurser" Icon={Grade} />
-    </div>
-  </div>
+export default () => (
+  <NavMenu>
+    <NavMenuItem name="Beredskapslag" icon={IconShield} to="" />
+    <NavMenuItem name="Kompetansestatus" icon={IconShield} to="" />
+    <NavMenuItem name="Forenlighetsmatrise" icon={IconShield} to="" />
+    <NavMenuItem name="Stedfortredere" icon={IconShield} to="" />
+    <NavMenuItem name="Reserveressurser" icon={IconShield} to="" />
+  </NavMenu>
 );
-
-export default withStyles(styles)(EmergencyResponseOrganization);
