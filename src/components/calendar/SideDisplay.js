@@ -24,7 +24,7 @@ const SideDisplay = (props) => {
       </Button>
     </div>
   )
-}
+};
 
 SideDisplay.propTypes = {
   events: PropTypes.array.isRequired,

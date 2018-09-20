@@ -41,22 +41,22 @@ export default class EmergencyResponsePortalCalendar extends Component {
       events: [
         {
           id: 0,
-          start: new Date('2018-09-18T20:00:00.000Z'),
-          end: new Date('2018-09-18T21:45:00.000Z'),
+          start: new Date('2018-09-18T09:00:00.000Z'),
+          end: new Date('2018-09-18T11:45:00.000Z'),
           participants: 'Alle',
           title: 'Øvelse',
         },
         {
           id: 1,
-          start: new Date('2018-09-19T21:45:00.000Z'),
-          end: new Date('2018-09-19T21:45:00.000Z'),
+          start: new Date('2018-09-19T12:30:00.000Z'),
+          end: new Date('2018-09-19T14:00:00.000Z'),
           participants: 'Alle',
           title: 'Trening',
         },
         {
           id: 2,
-          start: new Date('2018-09-20T21:45:00.000Z'),
-          end: new Date('2018-09-20T21:45:00.000Z'),
+          start: new Date('2018-09-20T10:15:00.000Z'),
+          end: new Date('2018-09-20T14:00:00.000Z'),
           participants: 'Alle',
           title: 'Table top',
         },
@@ -161,9 +161,11 @@ export default class EmergencyResponsePortalCalendar extends Component {
   }
   
   render() {
+    const initTime = new Date(this.state.selectedDate.setHours(9));
     return (
       <div className="container">
         <BigCalendar
+          scrollToTime={initTime}
           messages={norwegian_translations}
           events={this.state.events}
           popup={true}
