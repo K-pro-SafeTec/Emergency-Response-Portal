@@ -20,10 +20,10 @@ export default () => (
         <img className="icon" src={IconLivefeed} alt="Livefeed"/>
         <h3>Livefeed</h3>
       </Link>
-      <List className="element" to="/emergency-response-organization">
+      <Link className="element" to="/emergency-response-organization">
         <img className="icon" src={IconShield} alt="Beredskapsorganisasjon"/>
         <h3>Beredskapsorganisasjon</h3>
-      </List>
+      </Link>
     </ul>
   </div>
 );
