@@ -9,10 +9,10 @@ import IconCogs from '../../icons/cogs.svg';
 
 export default () => (
   <NavMenu>
-    <NavMenuItem name="Beredskapslag" icon={IconHierarchy} to="" />
-    <NavMenuItem name="Kompetansestatus" icon={IconShield} to="" />
-    <NavMenuItem name="Forenlighetsmatrise" icon={IconFileExcel} to="" />
-    <NavMenuItem name="Stedfortredere" icon={IconProfileGroup} to="" />
-    <NavMenuItem name="Reserveressurser" icon={IconCogs} to="" />
+    <NavMenuItem name="Beredskapslag" icon={IconHierarchy} to="emergency-response-teams/" />
+    <NavMenuItem name="Kompetansestatus" icon={IconShield} to="competence-status/" />
+    <NavMenuItem name="Forenlighetsmatrise" icon={IconFileExcel} to="compatibility-matrix/" />
+    <NavMenuItem name="Stedfortredere" icon={IconProfileGroup} to="deputies/" />
+    <NavMenuItem name="Reserveressurser" icon={IconCogs} to="backup-resources/" />
   </NavMenu>
 );

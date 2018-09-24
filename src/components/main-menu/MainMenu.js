@@ -9,8 +9,8 @@ import NavMenuItem from '../shared/NavMenuItem';
 
 export default () => (
   <NavMenu>
-    <NavMenuItem name="Kalender" icon={IconCalendar} to="calendar" />
-    <NavMenuItem name="Live feed" icon={IconLivefeed} to="livefeed" />
-    <NavMenuItem name="Beredskapsorganisasjon" icon={IconShield} to="emergency-response-organization" />
+    <NavMenuItem name="Kalender" icon={IconCalendar} to="calendar/" />
+    <NavMenuItem name="Live feed" icon={IconLivefeed} to="livefeed/" />
+    <NavMenuItem name="Beredskapsorganisasjon" icon={IconShield} to="emergency-response-organization/" />
   </NavMenu>
 );
