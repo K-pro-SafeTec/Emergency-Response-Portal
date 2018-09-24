@@ -2,7 +2,7 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import SafetecLogo from '../../icons/safetec_logo.png';
+import SafetecLogo from '../../icons/safetek_for_now.svg';
 import { withStyles } from '@material-ui/core';
 
 const styles = {
