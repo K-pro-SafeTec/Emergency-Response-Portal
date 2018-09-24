@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -8,7 +9,7 @@ import AppPage from '../shared/AppPage';
 import { teamList } from '../../dummy-data/team';
 
 const TeamItem = ({ team }) => (
-  <ListItem button>
+  <ListItem button component={Link} to={`team/${team.id}/`}>
     <ListItemIcon style={{ fontSize: '40px' }}>
       <StatusIcon status={team.status} />
     </ListItemIcon>
