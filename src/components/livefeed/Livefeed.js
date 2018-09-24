@@ -4,11 +4,12 @@ import Paper from '@material-ui/core/Paper';
 import Warning from '@material-ui/icons/Warning';
 import { withStyles } from '@material-ui/core/styles';
 import { arrayMove } from 'react-sortable-hoc';
-import Status from './Status';
+import Status from '../../helpers/Status';
 import Feed from './Feed';
 import PreparednessSummary from './PreparednessSummary';
 import ExternalResources from './ExternalResources';
 import AppPage from '../shared/AppPage';
+import { teamList } from '../../dummy-data/team';
 
 const feed = [
   {
@@ -28,41 +29,6 @@ const feed = [
     message: "Arbeid over sjø på RP",
   }
 ]
-
-const teams = [
-  {
-    name: "Beredskapsledelse",
-    status: Status.OK,
-  },
-  {
-    name: "Skadestedsleder",
-    status: Status.OK,
-  },
-  {
-    name: "Søk- og redningslag",
-    status: Status.ERROR,
-  },
-  {
-    name: "Sykepleier",
-    status: Status.OK,
-  },
-  {
-    name: "Førstehjelpslag",
-    status: Status.OK,
-  },
-  {
-    name: "Livbåtlag",
-    status: Status.OK,
-  },
-  {
-    name: "Helidekklag",
-    status: Status.OK,
-  },
-  {
-    name: "MOB-båt lag",
-    status: Status.WARNING,
-  }
-];
 
 const externalResources = [
   {
@@ -151,7 +117,7 @@ class Livefeed extends React.Component {
             </Grid>
             <Grid item xs={6}>
               <Paper>
-                <PreparednessSummary teams={teams} />
+                <PreparednessSummary teams={teamList} />
               </Paper>
             </Grid>
             <Grid item xs={6}>

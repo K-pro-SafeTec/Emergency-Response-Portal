@@ -2,7 +2,7 @@ import React from 'react';
 import CheckCircle from '@material-ui/icons/CheckCircle';
 import Warning from '@material-ui/icons/Warning';
 import Error from '@material-ui/icons/Error';
-import Status from './Status';
+import Status from '../../helpers/Status';
 
 
 const statusIcons = new Map([
