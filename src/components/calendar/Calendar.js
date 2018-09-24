@@ -9,6 +9,7 @@ import 'react-big-calendar/lib/css/react-big-calendar.css'
 import '../../styles/Calendar.css'
 import {isValidEvent, equalDates} from './../../helpers/calendar-helper'
 import {capitalizeFirstLetter} from "../../helpers/calendar-helper";
+import AppPage from '../shared/AppPage';
 
 moment.locale('nb');
 BigCalendar.momentLocalizer(moment);
@@ -163,32 +164,34 @@ export default class EmergencyResponsePortalCalendar extends Component {
   render() {
     const initTime = new Date(this.state.selectedDate.setHours(9));
     return (
-      <div className="container">
-        <BigCalendar
-          scrollToTime={initTime}
-          messages={norwegian_translations}
-          events={this.state.events}
-          popup={true}
-          views={['month', 'week', 'work_week', 'day', 'agenda']}
-          selectable={true}
-          formats={formats}
-          onSelectSlot={((slot) => this.slotClicked(slot))}
-          onSelectEvent={({start}) => this.eventClicked(start)}
-          components={{
-              dateCellWrapper: this.coloredDateCellWrapper,
-          }}
-        
-        />
-        <Paper className="paper-big">
-          {!this.state.showEventAdder ? (<SideDisplay events={this.state.events} date={this.state.selectedDate}
-                                                      onAddEventButtonClick={this.addEventButtonClicked}
-                                                      onDeleteButtonClick={this.deleteEvent}
-                                                      onChangeEvent={this.changeEventButtonClicked}
-                                                      onReviewButtonClick={this.reviewEvent}/>) :
-            <AddEvent date={this.state.selectedDate} eventToEdit={this.state.eventToEdit}
-                      onSaveButtonClick={this.saveEvent} deleteEvent={this.deleteEvent} onCancelClick={this.cancelButtonClicked} />}
-        </Paper>
-      </div>
+      <AppPage title="Kalender">
+        <div className="container">
+          <BigCalendar
+            scrollToTime={initTime}
+            messages={norwegian_translations}
+            events={this.state.events}
+            popup={true}
+            views={['month', 'week', 'work_week', 'day', 'agenda']}
+            selectable={true}
+            formats={formats}
+            onSelectSlot={((slot) => this.slotClicked(slot))}
+            onSelectEvent={({start}) => this.eventClicked(start)}
+            components={{
+                dateCellWrapper: this.coloredDateCellWrapper,
+            }}
+          
+          />
+          <Paper className="paper-big">
+            {!this.state.showEventAdder ? (<SideDisplay events={this.state.events} date={this.state.selectedDate}
+                                                        onAddEventButtonClick={this.addEventButtonClicked}
+                                                        onDeleteButtonClick={this.deleteEvent}
+                                                        onChangeEvent={this.changeEventButtonClicked}
+                                                        onReviewButtonClick={this.reviewEvent}/>) :
+              <AddEvent date={this.state.selectedDate} eventToEdit={this.state.eventToEdit}
+                        onSaveButtonClick={this.saveEvent} deleteEvent={this.deleteEvent} onCancelClick={this.cancelButtonClicked} />}
+          </Paper>
+        </div>
+      </AppPage>
     )
   }
 }

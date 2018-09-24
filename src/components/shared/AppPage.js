@@ -2,7 +2,7 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import SafetecLogo from './icons/safetec_logo.png';
+import SafetecLogo from '../../icons/safetec_logo.png';
 import { withStyles } from '@material-ui/core';
 
 const styles = {
@@ -11,7 +11,7 @@ const styles = {
   },
 }
 
-const AppPage = ({ classes, title, Component }) => (
+const AppPage = ({ classes, title, children }) => (
   <React.Fragment>
     <AppBar position="static" color="default">
       <Toolbar>
@@ -27,7 +27,7 @@ const AppPage = ({ classes, title, Component }) => (
         </a>
       </Toolbar>
     </AppBar>
-    <Component />
+    {children}
   </React.Fragment>
 );
 

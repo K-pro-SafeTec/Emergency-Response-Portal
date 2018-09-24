@@ -8,6 +8,7 @@ import Status from './Status';
 import Feed from './Feed';
 import PreparednessSummary from './PreparednessSummary';
 import ExternalResources from './ExternalResources';
+import AppPage from '../shared/AppPage';
 
 const feed = [
   {
@@ -132,35 +133,37 @@ class Livefeed extends React.Component {
     const { feed } = this.state;
 
     return (
-      <div className={classes.content}>
-        <Grid container spacing={24}>
-          <Grid item xs={12}>
-            <Paper className={classes.feedPaper}>
-              <Warning color="error" className={classes.feedWarning} />
-              <Feed
-                items={feed}
-                onSortEnd={this.onFeedSortEnd}
-                deleteItem={this.deleteFeedItem}
-                addItem={this.addFeedItem}
-                maxItems={7}
-                className={classes.feedList}
-              />
-            </Paper>
+      <AppPage title="Beredskapsstatus - Live feed">
+        <div className={classes.content}>
+          <Grid container spacing={24}>
+            <Grid item xs={12}>
+              <Paper className={classes.feedPaper}>
+                <Warning color="error" className={classes.feedWarning} />
+                <Feed
+                  items={feed}
+                  onSortEnd={this.onFeedSortEnd}
+                  deleteItem={this.deleteFeedItem}
+                  addItem={this.addFeedItem}
+                  maxItems={7}
+                  className={classes.feedList}
+                />
+              </Paper>
+            </Grid>
+            <Grid item xs={6}>
+              <Paper>
+                <PreparednessSummary teams={teams} />
+              </Paper>
+            </Grid>
+            <Grid item xs={6}>
+              <Paper>
+                <ExternalResources
+                  items={externalResources}
+                />
+              </Paper>
+            </Grid>
           </Grid>
-          <Grid item xs={6}>
-            <Paper>
-              <PreparednessSummary teams={teams} />
-            </Paper>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper>
-              <ExternalResources
-                items={externalResources}
-              />
-            </Paper>
-          </Grid>
-        </Grid>
-      </div>
+        </div>
+      </AppPage>
     );
   }
 }
