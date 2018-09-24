@@ -7,15 +7,20 @@ const styles = {
   navigationButton: {
     padding: '1em',
     margin: '1em',
-    height: '20em',
-    flex: '0 0 20em',
+    height: '15em',
+    flex: '0 0 28em',
     display: 'block',
     textAlign: 'center',
   },
   icon: {
-    width: '15em',
-    height: '15em',
+    width: '10em',
+    height: '10em',
   },
+  '@media (max-width: 440px)': {
+    navigationButton: {
+      maxWidth: '24em',
+    }
+  }
 };
 
 const NavMenuItem = ({ classes, name, icon, to, ...rest }) => (

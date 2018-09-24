@@ -16,4 +16,3 @@ const NavMenu = ({ classes, children }) => (
 );
 
 export default withStyles(styles)(NavMenu);
-
