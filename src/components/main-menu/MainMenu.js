@@ -24,7 +24,7 @@ export default () => (
       <NavMenuItem name="Øvelsesscenarier" icon={IconExerciseScenarios} to="exercise-scenarios/" />
       <NavMenuItem name="Beredskapsdokumenter" icon={IconEmergencyResponseDocuments} to="emergency-response-documents/" />
       <NavMenuItem name="Beredskapsorganisasjon" icon={IconEmergencyResponseOrganization} to="emergency-response-organization/" />
-      <NavMenuItem name="Kompetanseoversikt" icon={IconCompetanceOverview} to="competance-overview/" />
+      <NavMenuItem name="Kompetanseoversikt" icon={IconCompetanceOverview} to="competence-overview/" />
       <NavMenuItem name="Beredskapsrelaterte tegninger" icon={IconEmergencyResponseDrawings} to="emergency-response-drawings/" />
     </NavMenu>
   </AppPage>
