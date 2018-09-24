@@ -19,7 +19,6 @@ export default () => (
     <NavMenu>
       <NavMenuItem name="Kalender" icon={IconCalendar} to="calendar/" />
       <NavMenuItem name="Live feed" icon={IconLivefeed} to="livefeed/" />
-      <NavMenuItem name="Beredskapsorganisasjon" icon={IconEmergencyResponseOrganization} to="emergency-response-organization/" />
       <NavMenuItem name="Erfaringslogg" icon={IconExperiencelog} to="experience-log/" />
       <NavMenuItem name="Øvelser" icon={IconExercise} to="excercises/" />
       <NavMenuItem name="Øvelsesscenarier" icon={IconExerciseScenarios} to="exercise-scenarios/" />
