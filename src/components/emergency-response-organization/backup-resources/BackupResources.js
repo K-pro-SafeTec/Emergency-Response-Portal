@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import AppPage from '../../shared/AppPage';
 import Status from '../../livefeed/Status';
 import Team from "./Team";
@@ -103,14 +103,23 @@ const teams = [
   }
 ];
 
-export default class BackupResources extends Component {
-  render() {
-    return(
-      <AppPage title="Reserveressurser">
+const styles = {
+  display: 'flex',
+  flexDirection: 'row',
+  flexWrap: 'wrap',
+  justifyContent: 'center'
+};
+
+const BackupResources = () => {
+  return(
+    <AppPage title="Reserveressurser">
+      <div style={styles}>
         {teams.map(({id, name, backups}) => (
           <Team key={id} name={name} backups={backups} />
         ))}
-      </AppPage>
-    )
-  }
-}
+      </div>
+    </AppPage>
+  )
+};
+
+export default BackupResources;

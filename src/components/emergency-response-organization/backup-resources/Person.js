@@ -1,17 +1,16 @@
-import React, {Component} from 'react';
+import React from 'react';
 import StatusIcon from "../../livefeed/StatusIcon";
-import '../../../styles/Calendar.css'
 import ListItemIcon from "@material-ui/core/ListItemIcon/ListItemIcon";
 
-export default class Person extends Component {
-  render() {
+const Person = (props) => {
     return(
-      <div className={"flex"}>
+      <div style={{display: 'flex'}}>
         <ListItemIcon style={{ fontSize: '40px', alignSelf: 'center' }}>
-          <StatusIcon status={this.props.status} />
+          <StatusIcon status={props.status} />
         </ListItemIcon>
-        <h3>{this.props.name}</h3>
+        <h3>{props.name}</h3>
       </div>
     )
-  }
-}
+};
+
+export default Person;
