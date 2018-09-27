@@ -7,6 +7,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import StatusIcon from '../shared/StatusIcon';
 import AppPage from '../shared/AppPage';
 import Team from './Team';
+import Person from './Person';
 import { teamList } from '../../dummy-data/team';
 
 const TeamItem = ({ team }) => (
@@ -30,5 +31,6 @@ export default ({ match }) => (
       </AppPage>
     </Route>
     <Route path={`${match.url}/teams/:teamId/`} component={Team} />
+    <Route path={`${match.url}/people/:personId/`} component={Person} />
   </Switch>
 );
