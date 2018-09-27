@@ -52,7 +52,7 @@ export default () => (
               <TableRow key={row.id}>
                 <TableCell>{row.dfu}</TableCell>
                 <TableCell>{row.learned}</TableCell>
-                <TableCell>{row.dfu}</TableCell>
+                <TableCell>{row.action}</TableCell>
               </TableRow>
             );
           })}
