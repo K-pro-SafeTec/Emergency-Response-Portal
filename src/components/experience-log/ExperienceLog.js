@@ -4,7 +4,13 @@ import NavMenuItem from '../shared/NavMenuItem';
 import AppPage from '../shared/AppPage';
 import { Switch, Route } from 'react-router-dom';
 
-//Icons
+// Components
+import ExerciseReport from './excercise-report/ExerciseReport';
+import PerformanceRequirement from './performance-requirement/PerformanceRequirements';
+import ReportGenerator from './report-generator/ReportGenerator';
+import EmergencyResponseAction from './emergency-response-action/EmergencyResponseAction';
+
+// Icons
 import IconExerciseReports from '../../icons/experience-log/exercise-reports.svg';
 import IconPerformanceConditions from '../../icons/experience-log/performance-conditions.svg';
 import IconLessonsLearned from '../../icons/experience-log/lessons-learned.svg';
@@ -14,14 +20,13 @@ import IconBranchInformation from '../../icons/experience-log/branch-information
 
 
 
-export default () => (
+export default ({ match }) => (
   <Switch>
     <Route exact path={match.path}>
       <AppPage title="Erfaringslogg">
         <NavMenu>
           <NavMenuItem name="Øvingsrapporter" icon={IconExerciseReports} to="exercise-report/" />
           <NavMenuItem name="Ytelseskrav" icon={IconPerformanceConditions} to="performance-requirements/" />
-          <NavMenuItem name="Lært leksa si" icon={IconLessonsLearned} to="lessons-learned/" />
           <NavMenuItem name="Rapportgenerator" icon={IconReportGenerator} to="report-generator/" />
           <NavMenuItem name="Beredskapsrelaterte aksjoner" icon={IconEmergencyResponseActions} to="emergency-response-action/" />
           <NavMenuItem name="Bransjeinformasjon" icon={IconBranchInformation} to="branch-information/" />
@@ -29,9 +34,8 @@ export default () => (
       </AppPage>
     </Route>
     <Route path={`${match.path}exercise-report/`} component={ExerciseReport} />
-    <Route path={`${match.path}performance-requirements/`} component={PerformanceRequirment} />
-    <Route path={`${match.path}lessons-learned/`} component={LessonsLearned} />
+    <Route path={`${match.path}performance-requirements/`} component={PerformanceRequirement} />
     <Route path={`${match.path}report-generator/`} component={ReportGenerator} />
-    <Route path={`${match.path}emergency-response-actions/`} component={EmergencyResponseAction} />
+    <Route path={`${match.path}emergency-response-action/`} component={EmergencyResponseAction} />
   </Switch>
 );
