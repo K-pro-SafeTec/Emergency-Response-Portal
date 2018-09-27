@@ -15,12 +15,8 @@ import { withStyles } from '@material-ui/core';
 
 
 const styles = {
-  noPad: {
-    padding: 0,
-  },
-  tablePad: {
-    display: 'table-cell',
-    padding: '4px 56px 4px 24px',
+  noUnderline: {
+    textDecoration: 'none',
   },
 }
 
@@ -30,30 +26,42 @@ const Team = ({ match, classes }) => {
     const competenceTypeList = team.requiredCompetence.map(requiredCompetenceId => competenceTypeById[requiredCompetenceId]);
     return (
       <AppPage title={`Kompetanseoversikt - ${team.name}`}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>Medlem</TableCell>
+        <Table component="div">
+          <TableHead component="div">
+            <TableRow component="div">
+              <TableCell component="div">
+                Medlem
+              </TableCell>
               {competenceTypeList.map(competenceType => (
-                <TableCell key={competenceType.id}>{competenceType.name}</TableCell>
+                <TableCell
+                  key={competenceType.id}
+                  component="div"
+                >
+                  {competenceType.name}
+                </TableCell>
               ))}
             </TableRow>
           </TableHead>
-          <TableBody>
+          <TableBody component="div">
             {team.members.map(memberId => {
               const person = personById[memberId];
               return (
-                <TableRow hover key={memberId}>
-                  <TableCell className={classes.noPad}>
-                    <Link className={classes.tablePad} to={`../../people/${memberId}/`}>
-                      {person.name}
-                    </Link>
+                <TableRow
+                  key={memberId}
+                  hover
+                  component={Link}
+                  to={`../../people/${memberId}/`}
+                  className={classes.noUnderline}
+                >
+                  <TableCell component="div">
+                    {person.name}
                   </TableCell>
                   {competenceTypeList.map(competenceType => (
-                    <TableCell key={competenceType.id} className={classes.noPad}>
-                      <Link className={classes.tablePad} to={`../../people/${memberId}/`}>
-                        <StatusIcon status={person.competence[competenceType.id] || Status.ERROR} />
-                      </Link>
+                    <TableCell
+                      key={competenceType.id}
+                      component="div"
+                    >
+                      <StatusIcon status={person.competence[competenceType.id] || Status.ERROR} />
                     </TableCell>
                   ))}
                 </TableRow>
