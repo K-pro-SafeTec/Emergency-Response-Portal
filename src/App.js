@@ -7,10 +7,10 @@ import Livefeed from './components/livefeed/Livefeed';
 import ExperienceLog from './components/experience-log/ExperienceLog';
 import Exercises from './components/exercises/Exercises';
 import ExerciseScenarios from './components/exercise-scenarios/ExerciseScenarios';
-import EmergencyResponseDocuments from './components/emergency-response-documents/EmergencyResponseDocuments';
+import Documents from './components/documents/Documents';
 import EmergencyResponseOrganization from './components/emergency-response-organization/EmergencyResponseOrganization';
 import CompetenceOverview from './components/competence-overview/CompetenceOverview';
-import EmergencyResponseDrawings from './components/emergency-response-drawings/EmergencyResponseDrawings';
+import Drawings from './components/drawings/Drawings';
 
 
 class App extends Component {
@@ -24,10 +24,10 @@ class App extends Component {
           <Route path="/experience-log/" component={ExperienceLog} />
           <Route path="/exercises/" component={Exercises} />
           <Route path="/exercise-scenarios/" component={ExerciseScenarios} />
-          <Route path="/emergency-response-documents/" component={EmergencyResponseDocuments} />
+          <Route path="/documents/" component={Documents} />
           <Route path="/emergency-response-organization/" component={EmergencyResponseOrganization} />
           <Route path="/competence-overview/" component={CompetenceOverview} />
-          <Route path="/emergency-response-drawings/" component={EmergencyResponseDrawings} />
+          <Route path="/drawings/" component={Drawings} />
         </Switch>
       </Router>
     );
