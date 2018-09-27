@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Warning from '@material-ui/icons/Warning';
+import WarningRed from '../../icons/livefeed/red_warning.svg';
 import { withStyles } from '@material-ui/core/styles';
 import { arrayMove } from 'react-sortable-hoc';
 import Status from '../../helpers/Status';
@@ -56,9 +56,7 @@ const styles = {
     justifyContent: 'center',
   },
   feedWarning: {
-    width: '4em',
-    height: '4em',
-    margin: '1em',
+    margin: '3em',
   },
   feedList: {
     flex: '1 1 30em',
@@ -104,7 +102,7 @@ class Livefeed extends React.Component {
           <Grid container spacing={24}>
             <Grid item xs={12}>
               <Paper className={classes.feedPaper}>
-                <Warning color="error" className={classes.feedWarning} />
+                <img  src={WarningRed} alt="Warning" className={classes.feedWarning} />
                 <Feed
                   items={feed}
                   onSortEnd={this.onFeedSortEnd}

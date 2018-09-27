@@ -1,14 +1,15 @@
 import React from 'react';
-import CheckCircle from '@material-ui/icons/CheckCircle';
-import Warning from '@material-ui/icons/Warning';
-import Error from '@material-ui/icons/Error';
 import Status from '../../helpers/Status';
 
+// Icons
+import WarningYellow from '../../icons/livefeed/yellow_warning.svg';
+import Checkmark from '../../icons/livefeed/checkmark.svg';
+import Error from '../../icons/livefeed/not-checkmark.svg';
 
 const statusIcons = new Map([
-  [Status.OK, ({ style = {}, ...rest }) => <CheckCircle style={{ ...style, color: "green" }} {...rest} />],
-  [Status.WARNING, ({ style = {}, ...rest }) => <Warning style={{ ...style, color: "orange" }} {...rest} />],
-  [Status.ERROR, ({ style = {}, ...rest }) => <Error style={{ ...style, color: "red" }} {...rest} />],
+  [Status.OK, (props) => <img src={Checkmark} alt="Ok" height="35em" width="35em" {...props} />],
+  [Status.WARNING, (props) => <img src={WarningYellow} alt="Advarsel" height="35em" width="35em" {...props} />],
+  [Status.ERROR, (props) => <img src={Error} alt="OBS!" height="35em" width="35em" {...props} />],
 ]);
 
 export default ({ status, ...rest }) => {
