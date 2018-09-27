@@ -56,7 +56,7 @@ const styles = {
     justifyContent: 'center',
   },
   feedWarning: {
-    margin: '1em',
+    margin: '3em',
   },
   feedList: {
     flex: '1 1 30em',
@@ -102,7 +102,7 @@ class Livefeed extends React.Component {
           <Grid container spacing={24}>
             <Grid item xs={12}>
               <Paper className={classes.feedPaper}>
-                <img className="feedWarning" src={WarningRed} alt="Warning"/>
+                <img  src={WarningRed} alt="Warning" className={classes.feedWarning} />
                 <Feed
                   items={feed}
                   onSortEnd={this.onFeedSortEnd}
