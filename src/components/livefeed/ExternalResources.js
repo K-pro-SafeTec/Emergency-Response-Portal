@@ -4,7 +4,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
-import StatusIcon from './StatusIcon';
+import StatusIcon from '../shared/StatusIcon';
 
 const ExternalResourceItem = ({ name, status, message }) => (
   <ListItem button>

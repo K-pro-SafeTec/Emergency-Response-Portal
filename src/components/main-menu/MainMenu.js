@@ -6,7 +6,7 @@ import IconExercise from '../../icons/main-menu/exercise.svg';
 import IconExerciseScenarios from '../../icons/main-menu/exerciseScenarios.svg';
 import IconEmergencyResponseDocuments from '../../icons/main-menu/emergencyResponseDocs.svg';
 import IconEmergencyResponseOrganization from '../../icons/main-menu/emergencyResponseOrg.svg';
-import IconCompetanceOverview  from '../../icons/main-menu/competanceOverview.svg';
+import IconCompetenceOverview  from '../../icons/main-menu/competenceOverview.svg';
 import IconEmergencyResponseDrawings from '../../icons/main-menu/emergencyResponseDrawings.svg';
 import NavMenu from '../shared/NavMenu';
 import NavMenuItem from '../shared/NavMenuItem';
@@ -24,7 +24,7 @@ export default () => (
       <NavMenuItem name="Øvelsesscenarier" icon={IconExerciseScenarios} to="exercise-scenarios/" />
       <NavMenuItem name="Beredskapsdokumenter" icon={IconEmergencyResponseDocuments} to="emergency-response-documents/" />
       <NavMenuItem name="Beredskapsorganisasjon" icon={IconEmergencyResponseOrganization} to="emergency-response-organization/" />
-      <NavMenuItem name="Kompetanseoversikt" icon={IconCompetanceOverview} to="competance-overview/" />
+      <NavMenuItem name="Kompetanseoversikt" icon={IconCompetenceOverview} to="competence-overview/" />
       <NavMenuItem name="Beredskapsrelaterte tegninger" icon={IconEmergencyResponseDrawings} to="emergency-response-drawings/" />
     </NavMenu>
   </AppPage>

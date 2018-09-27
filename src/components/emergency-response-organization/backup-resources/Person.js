@@ -1,5 +1,5 @@
 import React from 'react';
-import StatusIcon from "../../livefeed/StatusIcon";
+import StatusIcon from "../../shared/StatusIcon";
 import ListItemIcon from "@material-ui/core/ListItemIcon/ListItemIcon";
 
 const Person = (props) => {
