@@ -1,5 +1,5 @@
 import React from 'react';
-import Status from './Status';
+import Status from '../../helpers/Status';
 
 // Icons
 import WarningYellow from '../../icons/livefeed/yellow_warning.svg';

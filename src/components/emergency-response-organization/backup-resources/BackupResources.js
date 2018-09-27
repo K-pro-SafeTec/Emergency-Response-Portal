@@ -1,6 +1,6 @@
 import React from 'react';
 import AppPage from '../../shared/AppPage';
-import Status from '../../livefeed/Status';
+import Status from '../../../helpers/Status';
 import Team from "./Team";
 
 const teams = [
