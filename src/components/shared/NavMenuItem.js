@@ -8,7 +8,7 @@ const styles = {
     padding: '1em',
     margin: '1em',
     height: '15em',
-    flex: '0 0 28em',
+    flex: '1 0 20em',
     display: 'block',
     textAlign: 'center',
   },
