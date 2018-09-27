@@ -21,13 +21,13 @@ class App extends Component {
           <Route exact path="/" component={MainMenu} />
           <Route path="/calendar/" component={Calendar} />
           <Route path="/livefeed/" component={Livefeed} />
-          <Route path="/experience-log" component={ExperienceLog} />
-          <Route path="/excercises" component={Excercises} />
-          <Route path="/exercise-scenarios" component={ExcerciseScenarios} />
-          <Route path="/emergency-response-documents" component={EmergencyResponseDocuments} />
-          <Route path="/emergency-response-organization" component={EmergencyResponseOrganization} />
-          <Route path="/competance-overview" component={CompetenceOverview} />
-          <Route path="/emergency-response-drawings" component={EmergencyResponseDrawings} />
+          <Route path="/experience-log/" component={ExperienceLog} />
+          <Route path="/excercises/" component={Excercises} />
+          <Route path="/exercise-scenarios/" component={ExcerciseScenarios} />
+          <Route path="/emergency-response-documents/" component={EmergencyResponseDocuments} />
+          <Route path="/emergency-response-organization/" component={EmergencyResponseOrganization} />
+          <Route path="/competence-overview/" component={CompetenceOverview} />
+          <Route path="/emergency-response-drawings/" component={EmergencyResponseDrawings} />
         </Switch>
       </Router>
     );
