@@ -2,7 +2,7 @@ import React from 'react';
 import IconCalendar from '../../icons/calendar.svg';
 import IconLivefeed from '../../icons/livefeed.svg';
 import IconExperiencelog from '../../icons/experiencelog.svg';
-import IconExercise from '../../icons/exercise.svg';
+import IconExercises from '../../icons/exercises.svg';
 import IconExerciseScenarios from '../../icons/exerciseScenarios.svg';
 import IconEmergencyResponseDocuments from '../../icons/emergencyResponseDocs.svg';
 import IconEmergencyResponseOrganization from '../../icons/emergencyResponseOrg.svg';
@@ -20,7 +20,7 @@ export default () => (
       <NavMenuItem name="Kalender" icon={IconCalendar} to="calendar/" />
       <NavMenuItem name="Live feed" icon={IconLivefeed} to="livefeed/" />
       <NavMenuItem name="Erfaringslogg" icon={IconExperiencelog} to="experience-log/" />
-      <NavMenuItem name="Øvelser" icon={IconExercise} to="excercises/" />
+      <NavMenuItem name="Øvelser" icon={IconExercises} to="exercises/" />
       <NavMenuItem name="Øvelsesscenarier" icon={IconExerciseScenarios} to="exercise-scenarios/" />
       <NavMenuItem name="Beredskapsdokumenter" icon={IconEmergencyResponseDocuments} to="emergency-response-documents/" />
       <NavMenuItem name="Beredskapsorganisasjon" icon={IconEmergencyResponseOrganization} to="emergency-response-organization/" />
