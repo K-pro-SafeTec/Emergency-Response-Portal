@@ -15,16 +15,23 @@ import IconBranchInformation from '../../icons/experience-log/branch-information
 
 
 export default () => (
-
+  <Switch>
+    <Route exact path={match.path}>
       <AppPage title="Erfaringslogg">
         <NavMenu>
-          <NavMenuItem name="Øvingsrapporter" icon={IconExerciseReports} to="competence-status/" />
-          <NavMenuItem name="Ytelseskrav" icon={IconPerformanceConditions} to="competence-status/" />
-          <NavMenuItem name="Lært leksa si" icon={IconLessonsLearned} to="competence-status/" />
-          <NavMenuItem name="Rapportgenerator" icon={IconReportGenerator} to="competence-status/" />
-          <NavMenuItem name="Beredskapsrelaterte aksjoner" icon={IconEmergencyResponseActions} to="competence-status/" />
-          <NavMenuItem name="Bransjeinformasjon" icon={IconBranchInformation} to="competence-status/" />
+          <NavMenuItem name="Øvingsrapporter" icon={IconExerciseReports} to="exercise-report/" />
+          <NavMenuItem name="Ytelseskrav" icon={IconPerformanceConditions} to="performance-requirements/" />
+          <NavMenuItem name="Lært leksa si" icon={IconLessonsLearned} to="lessons-learned/" />
+          <NavMenuItem name="Rapportgenerator" icon={IconReportGenerator} to="report-generator/" />
+          <NavMenuItem name="Beredskapsrelaterte aksjoner" icon={IconEmergencyResponseActions} to="emergency-response-action/" />
+          <NavMenuItem name="Bransjeinformasjon" icon={IconBranchInformation} to="branch-information/" />
         </NavMenu>
       </AppPage>
-
+    </Route>
+    <Route path={`${match.path}exercise-report/`} component={ExerciseReport} />
+    <Route path={`${match.path}performance-requirements/`} component={PerformanceRequirment} />
+    <Route path={`${match.path}lessons-learned/`} component={LessonsLearned} />
+    <Route path={`${match.path}report-generator/`} component={ReportGenerator} />
+    <Route path={`${match.path}emergency-response-actions/`} component={EmergencyResponseAction} />
+  </Switch>
 );
