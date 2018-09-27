@@ -16,11 +16,6 @@ const styles = {
     width: '10em',
     height: '10em',
   },
-  '@media (max-width: 440px)': {
-    navigationButton: {
-      maxWidth: '24em',
-    }
-  }
 };
 
 const NavMenuItem = ({ classes, name, icon, to, ...rest }) => (
