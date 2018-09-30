@@ -5,7 +5,8 @@ import MainMenu from './components/main-menu/MainMenu';
 import Calendar from './components/calendar/Calendar';
 import Livefeed from './components/livefeed/Livefeed';
 import ExperienceLog from './components/experience-log/ExperienceLog';
-import Exercises from './components/exercises/Exercises';
+import ExerciseList from './components/exercises/ExercisesList';
+import Exercise from './components/exercises/Exercise';
 import ExerciseScenarios from './components/exercise-scenarios/ExerciseScenarios';
 import Documents from './components/documents/Documents';
 import EmergencyResponseOrganization from './components/emergency-response-organization/EmergencyResponseOrganization';
@@ -22,7 +23,8 @@ class App extends Component {
           <Route path="/calendar/" component={Calendar} />
           <Route path="/livefeed/" component={Livefeed} />
           <Route path="/experience-log/" component={ExperienceLog} />
-          <Route path="/exercises/" component={Exercises} />
+          <Route exact path="/exercises/" component={ExerciseList} />
+          <Route path="/exercises/:id" component={Exercise} />
           <Route path="/exercise-scenarios/" component={ExerciseScenarios} />
           <Route path="/documents/" component={Documents} />
           <Route path="/emergency-response-organization/" component={EmergencyResponseOrganization} />
