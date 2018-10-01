@@ -6,7 +6,7 @@ import '../../styles/Exercise.css'
 
 
 const Exercise = (props) => {
-  const exercise = exercises.find(exercise => exercise.id === parseInt(props.match.params.id));
+  const exercise = exercises.find(exercise => exercise.id === parseInt(props.match.params.id, 10));
   return(
     <AppPage title="Øvelser">
       <Paper style={{margin: '1em', padding: '1em'}}>
