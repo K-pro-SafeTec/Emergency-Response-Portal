@@ -17,18 +17,18 @@ const styles = {
 
 const ExerciseList = ({ classes }) => (
   <AppPage title="Øvelser">
-    <Table>
-      <TableHead>
-        <TableRow>
-          <TableCell>
+    <Table component="div">
+      <TableHead component="div">
+        <TableRow component="div">
+          <TableCell component="div">
             DFU
           </TableCell>
-          <TableCell>
+          <TableCell component="div">
             Scenario
           </TableCell>
         </TableRow>
       </TableHead>
-      <TableBody>
+      <TableBody component="div">
         {exercises.map(exercise => (
           <TableRow
             key={exercise.id}
@@ -37,10 +37,10 @@ const ExerciseList = ({ classes }) => (
             component={Link}
             to={`${exercise.id}/`}
           >
-            <TableCell>
+            <TableCell component="div">
               {exercise.dfu}
             </TableCell>
-            <TableCell>
+            <TableCell component="div">
               {exercise.scenario}
             </TableCell>
           </TableRow>
