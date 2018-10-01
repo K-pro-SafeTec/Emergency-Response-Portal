@@ -5,8 +5,8 @@ import MainMenu from './components/main-menu/MainMenu';
 import Calendar from './components/calendar/Calendar';
 import Livefeed from './components/livefeed/Livefeed';
 import ExperienceLog from './components/experience-log/ExperienceLog';
-import ExerciseList from './components/exercises/ExercisesList';
-import Exercise from './components/exercises/Exercise';
+import ExerciseList from './components/exercises/ExerciseList';
+import Exercise from './components/exercises/Exercise'
 import ExerciseScenarios from './components/exercise-scenarios/ExerciseScenarios';
 import Documents from './components/documents/Documents';
 import EmergencyResponseOrganization from './components/emergency-response-organization/EmergencyResponseOrganization';
