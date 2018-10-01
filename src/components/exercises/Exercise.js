@@ -1,23 +1,37 @@
 import React from 'react';
+import Paper from '@material-ui/core/Paper';
 import AppPage from '../shared/AppPage';
 import { exercises } from '../../dummy-data/exercises';
+import '../../styles/Exercise.css'
 
 
 const Exercise = (props) => {
   const exercise = exercises.find(exercise => exercise.id == props.match.params.id);
   return(
     <AppPage title="Øvelser">
-      <h1>DFU {exercise.dfu} {exercise.scenario}</h1>
-      <h2>Scenariobeskrivelse: {exercise.description}</h2>
-      <h2>Forberedelser: {exercise.preparations}</h2>
-      <h2>Ytelseskrav: {exercise.performanceRequirements}</h2>
-      <h2>Parametere:</h2>
-      <h3>Vind: {exercise.parameters.wind}</h3>
-      <h3>Bølger: {exercise.parameters.waves}</h3>
-      <h3>POB: {exercise.parameters.pob}</h3>
-      <h3>Pågående aktiviteter: {exercise.parameters.ongoingActivities}</h3>
-      <h2>Fokusområder: {exercise.focusAreas}</h2>
-      <h2>Utvikling: {exercise.development}</h2>
+      <Paper style={{margin: '1em', padding: '1em'}}>
+        <h2>DFU {exercise.dfu} {exercise.scenario}</h2>
+        <p><span>Scenariobeskrivelse:</span> {exercise.description}</p>
+        <p><span>Forberedelser:</span> {exercise.preparations}</p>
+        <p><span>Ytelseskrav:</span> {exercise.performanceRequirements}</p>
+        <p><span>Parametere:</span></p>
+        <ul>
+          <li>
+            <p>Vind: {exercise.parameters.wind}</p>
+          </li>
+          <li>
+            <p>Bølger: {exercise.parameters.waves}</p>
+          </li>
+          <li>
+            <p>POB: {exercise.parameters.pob}</p>
+          </li>
+          <li>
+            <p>Pågående aktiviteter: {exercise.parameters.ongoingActivities}</p>
+          </li>
+        </ul>
+        <p><span>Fokusområder:</span> {exercise.focusAreas}</p>
+        <p><span>Utvikling:</span> {exercise.development}</p>
+      </Paper>
     </AppPage>
   )
 };
