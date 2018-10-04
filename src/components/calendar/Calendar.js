@@ -164,7 +164,7 @@ export default class EmergencyResponsePortalCalendar extends Component {
   render() {
     const initTime = new Date(this.state.selectedDate.setHours(9));
     return (
-      <AppPage title="Kalender">
+      <AppPage title="Kalender" back="..">
         <div className="container">
           <BigCalendar
             scrollToTime={initTime}

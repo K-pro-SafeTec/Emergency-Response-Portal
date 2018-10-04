@@ -22,7 +22,7 @@ const TeamItem = ({ team }) => (
 export default ({ match }) => (
   <Switch>
     <Route exact path={match.path}>
-      <AppPage title="Kompetanseoversikt">
+      <AppPage title="Kompetanseoversikt" back="..">
         <List>
           {teamList.map(team => (
             <TeamItem key={team.id} team={team} />

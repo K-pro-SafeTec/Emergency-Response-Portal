@@ -98,7 +98,7 @@ class Livefeed extends React.Component {
     const { feed } = this.state;
 
     return (
-      <AppPage title="Beredskapsstatus - Live feed">
+      <AppPage title="Beredskapsstatus - Live feed" back="..">
         <div className={classes.content}>
           <Grid container spacing={24}>
             <Grid item xs={12}>

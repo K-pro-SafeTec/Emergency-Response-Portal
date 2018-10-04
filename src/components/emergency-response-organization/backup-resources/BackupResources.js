@@ -112,7 +112,7 @@ const styles = {
 
 const BackupResources = () => {
   return(
-    <AppPage title="Reserveressurser">
+    <AppPage title="Reserveressurser" back="..">
       <div style={styles}>
         {teams.map(({id, name, backups}) => (
           <Team key={id} name={name} backups={backups} />

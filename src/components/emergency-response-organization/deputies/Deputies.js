@@ -9,7 +9,7 @@ import { roleList, roleById } from '../../../dummy-data/role';
 import { personById } from '../../../dummy-data/person';
 
 export default () => (
-  <AppPage title="Stedfortredere">
+  <AppPage title="Stedfortredere" back="..">
     <Table>
       <TableHead>
         <TableRow>
