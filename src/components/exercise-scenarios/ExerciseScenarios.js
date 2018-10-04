@@ -67,7 +67,7 @@ const scenarios = [
 ];
 
 export default () => (
-  <AppPage title="Øvelsesscenarioer">
+  <AppPage title="Øvelsesscenarioer" back="..">
     <Paper style={{margin: '1em'}}>
       <Table>
         <TableHead>

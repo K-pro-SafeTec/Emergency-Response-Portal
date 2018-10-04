@@ -25,7 +25,7 @@ const Team = ({ match, classes }) => {
   if (team) {
     const competenceTypeList = team.requiredCompetence.map(requiredCompetenceId => competenceTypeById[requiredCompetenceId]);
     return (
-      <AppPage title={`Kompetanseoversikt - ${team.name}`}>
+      <AppPage title={`Kompetanseoversikt - ${team.name}`} back="../..">
         <Table component="div">
           <TableHead component="div">
             <TableRow component="div">
