@@ -37,3 +37,6 @@ export const exercises = [
     development: 'Kommer nærmere og nærmere isfjellet'
   }
 ];
+
+export const exerciseById = {};
+exercises.forEach(exercise => exerciseById[exercise.id] = exercise);
