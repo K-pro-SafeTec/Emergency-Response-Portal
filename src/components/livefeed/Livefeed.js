@@ -57,6 +57,7 @@ const styles = {
   },
   feedWarning: {
     margin: '3em',
+    width: '10em',
   },
   feedList: {
     flex: '1 1 30em',
