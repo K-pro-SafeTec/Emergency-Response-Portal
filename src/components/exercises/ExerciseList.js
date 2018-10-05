@@ -7,18 +7,7 @@ import TableCell from "@material-ui/core/TableCell/TableCell";
 import TableBody from "@material-ui/core/TableBody/TableBody";
 import {Link, Route, Switch} from "react-router-dom";
 import Table from "@material-ui/core/Table/Table";
-import {withStyles} from "@material-ui/core";
-import List from "@material-ui/core/List/List";
-import {teamList} from "../../dummy-data/team";
-import Team from "../competence-overview/Team";
-import Person from "../competence-overview/Person";
 import Exercise from "./Exercise";
-
-const styles = {
-  noUnderline: {
-    textDecoration: 'none',
-  },
-};
 
 const ExerciseList = () => (
     <Table component="div">
@@ -38,7 +27,7 @@ const ExerciseList = () => (
             key={exercise.id}
             hover
             component={Link}
-            className={styles.noUnderline}
+            style={{textDecoration: 'none'}}
             to={`${exercise.id}/`}
           >
             <TableCell component="div">
