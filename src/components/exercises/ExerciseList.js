@@ -5,9 +5,14 @@ import TableHead from "@material-ui/core/TableHead/TableHead";
 import TableRow from "@material-ui/core/TableRow/TableRow";
 import TableCell from "@material-ui/core/TableCell/TableCell";
 import TableBody from "@material-ui/core/TableBody/TableBody";
-import {Link} from "react-router-dom";
+import {Link, Route, Switch} from "react-router-dom";
 import Table from "@material-ui/core/Table/Table";
 import {withStyles} from "@material-ui/core";
+import List from "@material-ui/core/List/List";
+import {teamList} from "../../dummy-data/team";
+import Team from "../competence-overview/Team";
+import Person from "../competence-overview/Person";
+import Exercise from "./Exercise";
 
 const styles = {
   noUnderline: {
@@ -15,8 +20,7 @@ const styles = {
   },
 };
 
-const ExerciseList = ({ classes }) => (
-  <AppPage title="Øvelser">
+const ExerciseList = () => (
     <Table component="div">
       <TableHead component="div">
         <TableRow component="div">
@@ -33,8 +37,8 @@ const ExerciseList = ({ classes }) => (
           <TableRow
             key={exercise.id}
             hover
-            className={classes.noUnderline}
             component={Link}
+            className={styles.noUnderline}
             to={`${exercise.id}/`}
           >
             <TableCell component="div">
@@ -47,7 +51,15 @@ const ExerciseList = ({ classes }) => (
         ))}
       </TableBody>
     </Table>
-  </AppPage>
 );
 
-export default withStyles(styles)(ExerciseList);
+export default ({ match }) => (
+    <Switch>
+      <Route exact path={match.path}>
+        <AppPage title="Øvelser">
+            <ExerciseList/>
+        </AppPage>
+      </Route>
+      <Route path={`${match.url}/:id/`} component={Exercise} />
+    </Switch>
+);
