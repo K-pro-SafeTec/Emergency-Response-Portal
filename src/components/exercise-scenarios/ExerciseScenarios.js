@@ -111,7 +111,7 @@ export default class ExerciseScenarios extends React.Component {
             </TableHead>
             <TableBody>
               {[].concat(scenarios)
-                .sort((a, b) => a.dfu > b.dfu)
+                .sort((a, b) => a[this.state.sortingCategory] > b[this.state.sortingCategory])
                 .map(row => {
                 return (
                   <TableRow key={row.id}>
