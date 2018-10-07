@@ -1,3 +1,8 @@
+# Emergency Response Portal
+
+[![Build Status](https://travis-ci.com/K-pro-SafeTec/Emergency-Response-Portal.svg?branch=master)](https://travis-ci.com/K-pro-SafeTec/Emergency-Response-Portal)
+[![Greenkeeper badge](https://badges.greenkeeper.io/K-pro-SafeTec/Emergency-Response-Portal.svg)](https://greenkeeper.io/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

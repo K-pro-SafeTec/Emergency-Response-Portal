@@ -17,7 +17,7 @@ import { Switch, Route } from 'react-router-dom';
 export default ({ match }) => (
   <Switch>
     <Route exact path={match.path}>
-      <AppPage title="Beredskapsorganisasjon">
+      <AppPage title="Beredskapsorganisasjon" back="..">
         <NavMenu>
           <NavMenuItem name="Beredskapslag" icon={IconResponseTeams} to="emergency-response-teams/" />
           <NavMenuItem name="Kompetansestatus" icon={IconCompetanceStatus} to="competence-status/" />

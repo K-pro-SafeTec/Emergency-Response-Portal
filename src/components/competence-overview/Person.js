@@ -29,7 +29,7 @@ export default ({ match }) => {
   const person = personById[match.params.personId];
   if (person) {
     return (
-      <AppPage title={`Kompetanseoversikt - ${person.name}`}>
+      <AppPage title={`Kompetanseoversikt - ${person.name}`} back="../..">
         <List>
           {person.teams.map(teamId => (
             <TeamItem key={teamId} team={teamById[teamId]} person={person} />

@@ -24,7 +24,7 @@ import IconBranchInformation from '../../icons/experience-log/branch-information
 export default ({ match }) => (
   <Switch>
     <Route exact path={match.path}>
-      <AppPage title="Erfaringslogg">
+      <AppPage title="Erfaringslogg" back="..">
         <NavMenu>
           <NavMenuItem name="Øvingsrapporter" icon={IconExerciseReports} to="exercise-report/" />
           <NavMenuItem name="Ytelseskrav" icon={IconPerformanceConditions} to="performance-requirements/" />
