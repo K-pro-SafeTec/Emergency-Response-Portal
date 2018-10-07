@@ -56,14 +56,14 @@ const scenarios = [
     id: 6,
     week: 20,
     type: 'Øvelse',
-    dfu: '9',
+    dfu: 9,
     scenario: 'Brann i boligkvarter'
   },
   {
     id: 7,
     week: 21,
     type: 'Table top',
-    dfu: '14',
+    dfu: 14,
     scenario: 'Strukturhendelse'
   }
 ];
@@ -110,7 +110,9 @@ export default class ExerciseScenarios extends React.Component {
               </TableRow>
             </TableHead>
             <TableBody>
-              {scenarios.map(row => {
+              {[].concat(scenarios)
+                .sort((a, b) => a.dfu > b.dfu)
+                .map(row => {
                 return (
                   <TableRow key={row.id}>
                     <TableCell>{row.week}</TableCell>
