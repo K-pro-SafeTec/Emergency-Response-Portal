@@ -16,10 +16,12 @@ export const personList = [
       0: {
         status: Status.OK,
         validUntil: new Date('2019-10-20'),
+        comment: null,
       },
       1: {
         status: Status.WARNING,
         validUntil: new Date('2018-11-18'),
+        comment: 'Eksempelkommentar',
       },
     },
     roles: getRolesForPerson(0),
