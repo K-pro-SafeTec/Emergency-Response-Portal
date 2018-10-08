@@ -1,4 +1,4 @@
-export default [
+export const scenarios = [
   {
     id: 0,
     week: 2,
@@ -56,3 +56,6 @@ export default [
     scenario: 'Strukturhendelse'
   }
 ];
+
+export const exerciseScenarioById = {};
+scenarios.forEach(scenario => exerciseScenarioById[scenario.id] = scenario);
