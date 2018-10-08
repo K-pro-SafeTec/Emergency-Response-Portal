@@ -12,7 +12,7 @@ import PersonIcon from '@material-ui/icons/Person';
 import StatusIcon from '../shared/StatusIcon';
 import AppPage from '../shared/AppPage';
 import Status, { mostSevere } from '../../helpers/Status';
-import { withStyles } from '@material-ui/core';
+import EntityInfo from './EntityInfo';
 
 const TeamItem = ({ team, person }) => (
   <ListItem button component={Link} to={`../../teams/${team.id}/`}>
@@ -29,37 +29,17 @@ const TeamItem = ({ team, person }) => (
   </ListItem>
 );
 
-const styles = {
-  personInfoContainer: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    padding: '1em',
-  },
-  personAvatar: {
-    height: '4em',
-    flex: '0 0 4em',
-  },
-  personInfo: {
-    flex: '1 1 24em',
-    padding: '1em',
-  },
-};
-
-const Person = ({ classes, match }) => {
+const Person = ({ match }) => {
   const person = personById[match.params.personId];
   if (person) {
     return (
       <AppPage title={`Kompetanseoversikt - ${person.name}`} back="../..">
-        <div className={classes.personInfoContainer}>
-          <PersonIcon className={classes.personAvatar} />
-          <div className={classes.personInfo}>
-            <Typography variant="headline">{person.name}</Typography>
-            <Typography variant="subheading">
-              {person.roles.map(role => roleById[role].name).join(", ")}
-            </Typography>
-          </div>
-        </div>
+        <EntityInfo Icon={PersonIcon}>
+          <Typography variant="headline">{person.name}</Typography>
+          <Typography variant="subheading">
+            {person.roles.map(role => roleById[role].name).join(", ")}
+          </Typography>
+        </EntityInfo>
         <List>
           <ListItem>
             <Typography variant="title">Beredskapslag</Typography>
@@ -74,4 +54,4 @@ const Person = ({ classes, match }) => {
   return <p>Fant ikke noen person med denne IDen.</p>
 };
 
-export default withStyles(styles)(Person);
+export default Person;
