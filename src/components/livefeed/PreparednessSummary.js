@@ -5,9 +5,10 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
 import StatusIcon from '../shared/StatusIcon';
+import { Link } from 'react-router-dom';
 
-const PreparednessSummaryItem = ({ name, status, message }) => (
-  <ListItem button>
+const PreparednessSummaryItem = ({ id, name, status, message }) => (
+  <ListItem button component={Link} to={`/competence-overview/teams/${id}/`}>
     <ListItemIcon style={{ fontSize: '40px' }}>
       <StatusIcon status={status} />
     </ListItemIcon>
@@ -17,12 +18,13 @@ const PreparednessSummaryItem = ({ name, status, message }) => (
 
 export default ({ teams }) => (
   <List>
-    <ListItem>
+    <ListItem component={Link} to="/emergency-response-organization/">
       <Typography variant="title">Beredskapsorganisasjon</Typography>
     </ListItem>
-    {teams.map(({ name, status }) => (
+    {teams.map(({ id, name, status }) => (
       <PreparednessSummaryItem
-        key={name}
+        key={id}
+        id={id}
         name={name}
         status={status}
       />

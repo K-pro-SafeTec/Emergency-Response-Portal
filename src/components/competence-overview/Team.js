@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { teamById } from '../../dummy-data/team';
 import { personById } from '../../dummy-data/person';
 import { competenceTypeById } from '../../dummy-data/competenceType';
@@ -11,14 +10,8 @@ import TableCell from '@material-ui/core/TableCell';
 import StatusIcon from '../shared/StatusIcon';
 import AppPage from '../shared/AppPage';
 import Status from '../../helpers/Status';
-import { withStyles } from '@material-ui/core';
+import LinkTableRow from '../shared/LinkTableRow';
 
-
-const styles = {
-  noUnderline: {
-    textDecoration: 'none',
-  },
-}
 
 const Team = ({ match, classes }) => {
   const team = teamById[match.params.teamId];
@@ -46,12 +39,9 @@ const Team = ({ match, classes }) => {
             {team.members.map(memberId => {
               const person = personById[memberId];
               return (
-                <TableRow
+                <LinkTableRow
                   key={memberId}
-                  hover
-                  component={Link}
                   to={`../../people/${memberId}/`}
-                  className={classes.noUnderline}
                 >
                   <TableCell component="div">
                     {person.name}
@@ -64,7 +54,7 @@ const Team = ({ match, classes }) => {
                       <StatusIcon status={person.competence[competenceType.id] || Status.ERROR} />
                     </TableCell>
                   ))}
-                </TableRow>
+                </LinkTableRow>
               );
             })}
           </TableBody>
@@ -77,4 +67,4 @@ const Team = ({ match, classes }) => {
   );
 };
 
-export default withStyles(styles)(Team);
+export default Team;

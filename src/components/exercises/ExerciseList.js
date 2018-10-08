@@ -5,9 +5,10 @@ import TableHead from "@material-ui/core/TableHead/TableHead";
 import TableRow from "@material-ui/core/TableRow/TableRow";
 import TableCell from "@material-ui/core/TableCell/TableCell";
 import TableBody from "@material-ui/core/TableBody/TableBody";
-import {Link, Route, Switch} from "react-router-dom";
+import {Route, Switch} from "react-router-dom";
 import Table from "@material-ui/core/Table/Table";
 import Exercise from "./Exercise";
+import LinkTableRow from '../shared/LinkTableRow';
 
 const ExerciseList = () => (
     <Table component="div">
@@ -23,11 +24,8 @@ const ExerciseList = () => (
       </TableHead>
       <TableBody component="div">
         {exercises.map(exercise => (
-          <TableRow
+          <LinkTableRow
             key={exercise.id}
-            hover
-            component={Link}
-            style={{textDecoration: 'none'}}
             to={`${exercise.id}/`}
           >
             <TableCell component="div">
@@ -36,7 +34,7 @@ const ExerciseList = () => (
             <TableCell component="div">
               {exercise.scenario}
             </TableCell>
-          </TableRow>
+          </LinkTableRow>
         ))}
       </TableBody>
     </Table>
