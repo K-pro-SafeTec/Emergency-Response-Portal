@@ -13,8 +13,14 @@ export const personList = [
     name: 'Navn Navnesen',
     teams: [0, 1, 2, 3, 4, 5, 6, 7, 8],
     competence: {
-      0: Status.OK,
-      1: Status.WARNING,
+      0: {
+        status: Status.OK,
+        validUntil: new Date('2019-10-20'),
+      },
+      1: {
+        status: Status.WARNING,
+        validUntil: new Date('2018-11-18'),
+      },
     },
     roles: getRolesForPerson(0),
   },

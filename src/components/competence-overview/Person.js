@@ -20,7 +20,7 @@ const TeamItem = ({ team, person }) => (
       <StatusIcon
         status={
           team.requiredCompetence
-            .map(competenceId => person.competence[competenceId] || Status.ERROR)
+            .map(competenceId => (person.competence[competenceId] && person.competence[competenceId].status) || Status.ERROR)
             .reduce(mostSevere) || Status.ERROR
         }
       />
@@ -33,7 +33,7 @@ const Person = ({ match }) => {
   const person = personById[match.params.personId];
   if (person) {
     return (
-      <AppPage title={`Kompetanseoversikt - ${person.name}`} back="../..">
+      <AppPage title="Kompetanseoversikt" back="../..">
         <EntityInfo Icon={PersonIcon}>
           <Typography variant="headline">{person.name}</Typography>
           <Typography variant="subheading">

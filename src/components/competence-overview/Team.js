@@ -10,11 +10,10 @@ import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
 import Typography from '@material-ui/core/Typography';
 import GroupIcon from '@material-ui/icons/People';
-import StatusIcon from '../shared/StatusIcon';
 import AppPage from '../shared/AppPage';
-import Status from '../../helpers/Status';
 import EntityInfo from './EntityInfo';
 import { withStyles } from '@material-ui/core';
+import CompetenceStatus from './CompetenceStatus';
 
 
 const styles = {
@@ -37,7 +36,7 @@ const Team = ({ match, classes }) => {
   if (team) {
     const competenceTypeList = team.requiredCompetence.map(requiredCompetenceId => competenceTypeById[requiredCompetenceId]);
     return (
-      <AppPage title={`Kompetanseoversikt - ${team.name}`} back="../..">
+      <AppPage title="Kompetanseoversikt" back="../..">
         <EntityInfo Icon={GroupIcon}>
           <Typography variant="headline">{team.name}</Typography>
           <Typography variant="subheading">Noe mer info her?</Typography>
@@ -78,7 +77,7 @@ const Team = ({ match, classes }) => {
                       key={competenceType.id}
                       component="div"
                     >
-                      <StatusIcon status={person.competence[competenceType.id] || Status.ERROR} />
+                      <CompetenceStatus competence={person.competence[competenceType.id]} />
                     </TableCell>
                   ))}
                 </TableRow>
