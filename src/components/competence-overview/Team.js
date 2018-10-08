@@ -8,9 +8,12 @@ import TableHead from '@material-ui/core/TableHead';
 import TableBody from '@material-ui/core/TableBody';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
+import Typography from '@material-ui/core/Typography';
+import GroupIcon from '@material-ui/icons/People';
 import StatusIcon from '../shared/StatusIcon';
 import AppPage from '../shared/AppPage';
 import Status from '../../helpers/Status';
+import EntityInfo from './EntityInfo';
 import { withStyles } from '@material-ui/core';
 
 
@@ -18,6 +21,15 @@ const styles = {
   noUnderline: {
     textDecoration: 'none',
   },
+  title: {
+    padding: '12px 16px 12px 16px',
+  },
+  '@media (min-width: 600px)': {
+    title: {
+      paddingLeft: '24px',
+      paddingRight: '24px',
+    }
+  }
 }
 
 const Team = ({ match, classes }) => {
@@ -26,6 +38,11 @@ const Team = ({ match, classes }) => {
     const competenceTypeList = team.requiredCompetence.map(requiredCompetenceId => competenceTypeById[requiredCompetenceId]);
     return (
       <AppPage title={`Kompetanseoversikt - ${team.name}`} back="../..">
+        <EntityInfo Icon={GroupIcon}>
+          <Typography variant="headline">{team.name}</Typography>
+          <Typography variant="subheading">Noe mer info her?</Typography>
+        </EntityInfo>
+        <Typography variant="title" className={classes.title}>Medlemskompetanse</Typography>
         <Table component="div">
           <TableHead component="div">
             <TableRow component="div">
