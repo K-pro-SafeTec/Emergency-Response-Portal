@@ -4,6 +4,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
+import Typography from '@material-ui/core/Typography';
 import StatusIcon from '../shared/StatusIcon';
 import AppPage from '../shared/AppPage';
 import Team from './Team';
@@ -24,6 +25,9 @@ export default ({ match }) => (
     <Route exact path={match.path}>
       <AppPage title="Kompetanseoversikt" back="..">
         <List>
+          <ListItem>
+            <Typography variant="title">Beredskapslag</Typography>
+          </ListItem>
           {teamList.map(team => (
             <TeamItem key={team.id} team={team} />
           ))}
