@@ -17,11 +17,11 @@ const styles = {
 // Material UI lets us create tables without using the actual table DOM elements.
 // We can use Links as table rows to link to the documents, but a Link cannot appear as a child of <tbody> (as React will complain).
 // To use Links as table rows, we'll use divs for everything else.
-const DocumentTable = ({ classes, documents }) => (
-  <Table component="div">
+const DocumentTable = ({ classes, documents, ...rest }) => (
+  <Table component="div" {...rest}>
     <TableHead component="div">
       <TableRow component="div">
-        <TableCell component="div">
+        <TableCell padding="dense" component="div">
           Dok. Nr.
         </TableCell>
         <TableCell component="div">
