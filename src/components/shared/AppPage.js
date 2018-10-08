@@ -13,12 +13,12 @@ const styles = {
   grow: {
     flexGrow: '1',
   },
-  menuButton: {
-    marginRight: '24px',
-  },
   homeButton: {
-    marginRight: '8px',
-  }
+    marginLeft: '-12px',
+  },
+  backButton: {
+    marginRight: '16px',
+  },
 };
 
 const AppPage = ({ classes, title, back, children }) => (
@@ -30,7 +30,7 @@ const AppPage = ({ classes, title, back, children }) => (
             <IconButton className={classes.homeButton} component={Link} to="/">
               <Home />
             </IconButton>
-            <IconButton className={classes.menuButton} component={Link} to={back}>
+            <IconButton className={classes.backButton} component={Link} to={back}>
               <ArrowBack />
             </IconButton>
           </div>
