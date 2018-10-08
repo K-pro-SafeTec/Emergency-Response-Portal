@@ -4,6 +4,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import ArrowBack from '@material-ui/icons/ArrowBack';
+import Home from '@material-ui/icons/Home';
 import SafetecLogo from '../../icons/safetek_for_now.svg';
 import { withStyles } from '@material-ui/core';
 import { Link } from 'react-router-dom';
@@ -12,20 +13,27 @@ const styles = {
   grow: {
     flexGrow: '1',
   },
-  menuButton: {
+  homeButton: {
     marginLeft: '-12px',
-    marginRight: '20px',
-  }
-}
+  },
+  backButton: {
+    marginRight: '16px',
+  },
+};
 
 const AppPage = ({ classes, title, back, children }) => (
   <React.Fragment>
     <AppBar position="static" color="default">
       <Toolbar>
         {back && (
-          <IconButton className={classes.menuButton} component={Link} to={back}>
-            <ArrowBack />
-          </IconButton>
+          <div>
+            <IconButton className={classes.homeButton} component={Link} to="/">
+              <Home />
+            </IconButton>
+            <IconButton className={classes.backButton} component={Link} to={back}>
+              <ArrowBack />
+            </IconButton>
+          </div>
         )}
         <Typography variant="title" color="inherit" className={classes.grow}>
           {title}
