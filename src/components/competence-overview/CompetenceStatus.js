@@ -11,14 +11,6 @@ export default ({ competence }) => {
   if (!competence) {
     status = Status.ERROR;
     message = 'Ikke gjennomført';
-    return (
-      <div>
-        <StatusIcon status={Status.ERROR} />
-        <div>
-          Ikke gjennomført
-        </div>
-      </div>
-    );
   } else {
     status = competence.status;
     if (competence.validUntil !== null) {
