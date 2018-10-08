@@ -21,7 +21,7 @@ const DocumentTable = ({ classes, documents, ...rest }) => (
   <Table component="div" {...rest}>
     <TableHead component="div">
       <TableRow component="div">
-        <TableCell padding="dense" component="div">
+        <TableCell component="div">
           Dok. Nr.
         </TableCell>
         <TableCell component="div">
