@@ -7,29 +7,46 @@ import TableCell from '@material-ui/core/TableCell';
 import AppPage from '../../shared/AppPage';
 import { roleList, roleById } from '../../../dummy-data/role';
 import { personById } from '../../../dummy-data/person';
+import LinkTableRow from '../../shared/LinkTableRow';
 
-export default () => (
+
+const Deputies = () => (
   <AppPage title="Stedfortredere" back="..">
-    <Table>
-      <TableHead>
-        <TableRow>
-          <TableCell>Beredskapsrolle</TableCell>
-          <TableCell>Stedfortrederrolle</TableCell>
-          <TableCell>Stedfortredere</TableCell>
+    <Table component="div">
+      <TableHead component="div">
+        <TableRow component="div">
+          <TableCell component="div">
+            Beredskapsrolle
+          </TableCell>
+          <TableCell component="div">
+            Stedfortrederrolle
+          </TableCell>
+          <TableCell component="div">
+            Stedfortredere
+          </TableCell>
         </TableRow>
       </TableHead>
-      <TableBody>
+      <TableBody component="div">
         {
           roleList
             .filter(role => role.replacementRole !== null)
             .map(role => {
               const replacementRole = roleById[role.replacementRole];
               return (
-                <TableRow key={role.id}>
-                  <TableCell>{role.name}</TableCell>
-                  <TableCell>{replacementRole.name}</TableCell>
-                  <TableCell>{personById[replacementRole.person].name}</TableCell>
-                </TableRow>
+                <LinkTableRow
+                  key={role.id}
+                  to={`/competence-overview/people/${replacementRole.person}/`}
+                >
+                  <TableCell component="div">
+                    {role.name}
+                  </TableCell>
+                  <TableCell component="div">
+                    {replacementRole.name}
+                  </TableCell>
+                  <TableCell component="div">
+                    {personById[replacementRole.person].name}
+                  </TableCell>
+                </LinkTableRow>
               );
             })
         }
@@ -37,3 +54,5 @@ export default () => (
     </Table>
   </AppPage>
 );
+
+export default Deputies;
