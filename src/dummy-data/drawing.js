@@ -30,7 +30,7 @@ export const drawingList = [
     title: 'Førstehjelpsutstyr',
   },
   {
-    id: 4,
+    id: 5,
     rev: '1.0',
     date: 'xx.xx.xxxx',
     title: 'Innretninger i nærheten',
