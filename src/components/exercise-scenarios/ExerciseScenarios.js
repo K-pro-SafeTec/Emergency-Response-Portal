@@ -51,7 +51,7 @@ class ExerciseScenariosTableHead extends React.Component {
                 </Tooltip>
               </TableCell>
             );
-          }, this)}
+          })}
         </TableRow>
       </TableHead>
     );
@@ -65,15 +65,14 @@ export default class ExerciseScenarios extends React.Component {
     this.state = {
       order: "asc",
       orderBy: "week",
-      data: scenarios,
     }
   }
 
   handleRequestSort = (event, property) => {
     const orderBy = property;
-    let order = "desc";
-    if (this.state.orderBy === property && this.state.order === "desc") {
-      order = "asc";
+    let order = "asc";
+    if (this.state.orderBy === property && this.state.order === "asc") {
+      order = "desc";
     }
     this.setState({ order, orderBy });
   };
@@ -84,7 +83,7 @@ export default class ExerciseScenarios extends React.Component {
   };
 
   render() {
-    const { data, order, orderBy } = this.state;
+    const { order, orderBy } = this.state;
 
     return (
       <AppPage title="Øvelsesscenarioer" back="..">
@@ -95,10 +94,10 @@ export default class ExerciseScenarios extends React.Component {
                 order={order}
                 orderBy={orderBy}
                 onRequestSort={this.handleRequestSort}
-                rowCount={data.length}
+                rowCount={scenarios.length}
               />
               <TableBody>
-                {stableSort(data, getSorting(order, orderBy))
+                {stableSort(scenarios, getSorting(order, orderBy))
                   .map(n => {
                     return (
                       <TableRow
