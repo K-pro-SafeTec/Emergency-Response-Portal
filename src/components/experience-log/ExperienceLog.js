@@ -10,6 +10,7 @@ import PerformanceRequirement from './performance-requirement/PerformanceRequire
 import ReportGenerator from './report-generator/ReportGenerator';
 import EmergencyResponseAction from './emergency-response-action/EmergencyResponseAction';
 import LessonsLearned from "./lessons-learned/LessonsLearned"
+import IndustryInformation from './industry-information/IndustryInformation';
 
 // Icons
 import IconExerciseReports from '../../icons/experience-log/exercise-reports.svg';
@@ -17,7 +18,7 @@ import IconPerformanceConditions from '../../icons/experience-log/performance-co
 import IconLessonsLearned from '../../icons/experience-log/lessons-learned.svg';
 import IconReportGenerator from '../../icons/experience-log/report-generator.svg';
 import IconEmergencyResponseActions from '../../icons/experience-log/emergency-response-action.svg';
-import IconBranchInformation from '../../icons/experience-log/branch-information.svg';
+import IconIndustryInformation from '../../icons/experience-log/industry-information.svg';
 
 
 
@@ -31,7 +32,7 @@ export default ({ match }) => (
           <NavMenuItem name="Lessons learned" icon={IconLessonsLearned} to="lessons-learned/" />
           <NavMenuItem name="Rapportgenerator" icon={IconReportGenerator} to="report-generator/" />
           <NavMenuItem name="Beredskapsrelaterte aksjoner" icon={IconEmergencyResponseActions} to="emergency-response-action/" />
-          <NavMenuItem name="Bransjeinformasjon" icon={IconBranchInformation} to="branch-information/" />
+          <NavMenuItem name="Bransjeinformasjon" icon={IconIndustryInformation} to="industry-information/" />
         </NavMenu>
       </AppPage>
     </Route>
@@ -40,5 +41,6 @@ export default ({ match }) => (
     <Route path={`${match.path}lessons-learned/`} component={LessonsLearned} />
     <Route path={`${match.path}report-generator/`} component={ReportGenerator} />
     <Route path={`${match.path}emergency-response-action/`} component={EmergencyResponseAction} />
+    <Route path={`${match.path}industry-information/`} component={IndustryInformation} />
   </Switch>
 );
