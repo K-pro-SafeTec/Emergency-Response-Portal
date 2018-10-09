@@ -29,71 +29,28 @@ export const personList = [
   {
     id: 1,
     name: 'Otto',
-    teams: [6],
-    competence: {
-      0: {
-        status: Status.OK,
-        validUntil: new Date('2019-10-20'),
-        comment: null,
-      },
-      1: {
-        status: Status.OK,
-        validUntil: new Date('2019-01-23'),
-        comment: 'Eksempelkommentar',
-      },
-      2: {
-        status: Status.OK,
-        validUntil: new Date('2020-04-18'),
-        comment: 'Eksempelkommentar',
-      },
-    },
+    teams: [],
+    competence: {},
     roles: getRolesForPerson(1),
   },
   {
     id: 2,
     name: 'Anne Turid',
-    teams: [6],
-    competence: {
-      1: {
-        status: Status.OK,
-        validUntil: new Date('2019-10-20'),
-        comment: null,
-      },
-      2: {
-        status: Status.WARNING,
-        validUntil: new Date('2018-11-18'),
-        comment: 'Eksempelkommentar',
-      },
-    },
+    teams: [],
+    competence: {},
     roles: getRolesForPerson(2),
   },
   {
     id: 3,
     name: 'Gustav',
-    teams: [6],
-    competence: {
-      0: {
-        status: Status.WARNING,
-        validUntil: new Date('2019-02-20'),
-        comment: null,
-      },
-      1: {
-        status: Status.WARNING,
-        validUntil: new Date('2018-12-18'),
-        comment: 'Eksempelkommentar',
-      },
-      2: {
-        status: Status.OK,
-        validUntil: new Date('2020-11-18'),
-        comment: 'Eksempelkommentar',
-      },
-    },
+    teams: [],
+    competence: {},
     roles: getRolesForPerson(3),
   },
   {
     id: 4,
     name: 'Petter',
-    teams: [6],
+    teams: [],
     competence: {},
     roles: getRolesForPerson(4),
   },

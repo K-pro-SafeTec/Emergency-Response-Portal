@@ -6,7 +6,7 @@ const Status = {
 
 export default Status;
 
-export const severity = new Map([
+const severity = new Map([
   [Symbol.OK, 0],
   [Symbol.WARNING, 1],
   [Symbol.ERROR, 2]
