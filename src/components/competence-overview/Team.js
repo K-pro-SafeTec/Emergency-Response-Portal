@@ -52,7 +52,8 @@ const Team = ({ teamId, orderBy, order, tableHeadClicked, classes }) => {
   const teamMembers = [];
   team.members.forEach(memberId => teamMembers.push(personById[memberId]));
   if (team) {
-    const competenceTypeList = team.requiredCompetence.map(requiredCompetenceId => competenceTypeById[requiredCompetenceId]);
+    const competenceTypeList = team.requiredCompetence.map(requiredCompetenceId =>
+      competenceTypeById[requiredCompetenceId]);
     return (
       <AppPage title="Kompetanseoversikt" back="../..">
         <EntityInfo Icon={GroupIcon}>
