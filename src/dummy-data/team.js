@@ -47,7 +47,7 @@ export const teamList = [
     id: 6,
     name: "Søk- og redningslag",
     status: Status.ERROR,
-    members: [0],
+    members: [0, 1, 2, 3, 4],
     requiredCompetence: [0, 1, 2],
   },
   {
