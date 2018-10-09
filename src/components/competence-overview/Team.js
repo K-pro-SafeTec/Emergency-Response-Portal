@@ -15,6 +15,7 @@ import { withStyles } from '@material-ui/core';
 import CompetenceStatus from './CompetenceStatus';
 import LinkTableRow from '../shared/LinkTableRow';
 
+
 const styles = {
   title: {
     padding: '12px 16px 12px 16px',
@@ -25,10 +26,12 @@ const styles = {
       paddingRight: '24px',
     }
   }
-};
+}
 
-const Team = ({ teamId, classes }) => {
-  const team = teamById[teamId];
+
+
+const Team = ({ match, classes }) => {
+  const team = teamById[match.params.teamId];
   if (team) {
     const competenceTypeList = team.requiredCompetence.map(requiredCompetenceId => competenceTypeById[requiredCompetenceId]);
     return (
