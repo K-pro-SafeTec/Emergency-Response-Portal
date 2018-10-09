@@ -15,8 +15,6 @@ import { withStyles } from '@material-ui/core';
 import CompetenceStatus from './CompetenceStatus';
 import LinkTableRow from '../shared/LinkTableRow';
 import {getSorting, stableSort} from "../../helpers/table-sort-helper";
-import TableSortLabel from "@material-ui/core/TableSortLabel/TableSortLabel";
-import Tooltip from "@material-ui/core/Tooltip/Tooltip";
 
 const styles = {
   title: {
@@ -30,8 +28,7 @@ const styles = {
   }
 };
 
-const Team = ({ teamId, orderBy, order, createSortHandler, classes }) => {
-
+const Team = ({ teamId, orderBy, order, classes }) => {
   const team = teamById[teamId];
   const teamMembers = [];
   team.members.forEach(memberId => teamMembers.push(personById[memberId]));
@@ -48,38 +45,14 @@ const Team = ({ teamId, orderBy, order, createSortHandler, classes }) => {
           <TableHead component="div">
             <TableRow component="div">
               <TableCell component="div">
-                <Tooltip
-                  title="Sortér"
-                  placement={"bottom-start"}
-                  enterDelay={300}
-                >
-                  <TableSortLabel
-                    active={orderBy === "name"}
-                    direction={order}
-                    onClick={createSortHandler("name")}
-                  >
-                    {"Medlem"}
-                  </TableSortLabel>
-                </Tooltip>
+                Medlem
               </TableCell>
               {competenceTypeList.map(competenceType => (
                 <TableCell
                   key={competenceType.id}
                   component="div"
                 >
-                  <Tooltip
-                    title="Sortér"
-                    placement={"bottom-start"}
-                    enterDelay={300}
-                  >
-                    <TableSortLabel
-                      active={orderBy === competenceType.id}
-                      direction={order}
-                      onClick={createSortHandler(competenceType.id)}
-                    >
-                      {competenceType.name}
-                    </TableSortLabel>
-                  </Tooltip>
+                  {competenceType.name}
                 </TableCell>
               ))}
             </TableRow>
