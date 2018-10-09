@@ -14,7 +14,6 @@ import EntityInfo from './EntityInfo';
 import { withStyles } from '@material-ui/core';
 import CompetenceStatus from './CompetenceStatus';
 import LinkTableRow from '../shared/LinkTableRow';
-import {getSorting, stableSort} from "../../helpers/table-sort-helper";
 
 const styles = {
   title: {
@@ -28,10 +27,8 @@ const styles = {
   }
 };
 
-const Team = ({ teamId, orderBy, order, classes }) => {
+const Team = ({ teamId, classes }) => {
   const team = teamById[teamId];
-  const teamMembers = [];
-  team.members.forEach(memberId => teamMembers.push(personById[memberId]));
   if (team) {
     const competenceTypeList = team.requiredCompetence.map(requiredCompetenceId => competenceTypeById[requiredCompetenceId]);
     return (
@@ -58,26 +55,27 @@ const Team = ({ teamId, orderBy, order, classes }) => {
             </TableRow>
           </TableHead>
           <TableBody component="div">
-            {stableSort(teamMembers, getSorting(order, orderBy))
-              .map(person => (
-                  <LinkTableRow
-                    key={person.id}
-                    to={`../../people/${person.id}/`}
-                  >
-                    <TableCell component="div">
-                      {person.name}
+            {team.members.map(memberId => {
+              const person = personById[memberId];
+              return (
+                <LinkTableRow
+                  key={memberId}
+                  to={`../../people/${memberId}/`}
+                >
+                  <TableCell component="div">
+                    {person.name}
+                  </TableCell>
+                  {competenceTypeList.map(competenceType => (
+                    <TableCell
+                      key={competenceType.id}
+                      component="div"
+                    >
+                      <CompetenceStatus competence={person.competence[competenceType.id]} />
                     </TableCell>
-                    {competenceTypeList.map(competenceType => (
-                      <TableCell
-                        key={competenceType.id}
-                        component="div"
-                      >
-                        <CompetenceStatus competence={person.competence[competenceType.id]} />
-                      </TableCell>
-                    ))}
-                  </LinkTableRow>
-                ))
-            }
+                  ))}
+                </LinkTableRow>
+              );
+            })}
           </TableBody>
         </Table>
       </AppPage>

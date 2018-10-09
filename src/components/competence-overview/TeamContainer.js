@@ -6,8 +6,8 @@ export default class TeamContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      orderBy: "name",
       order: "asc",
+      orderBy: "name",
     }
   }
 
@@ -23,7 +23,7 @@ export default class TeamContainer extends React.Component {
   render() {
     const teamId = this.props.match.params.teamId;
     return (
-      <Team teamId={teamId} orderBy={this.state.orderBy} order={this.state.order}/>
+      <Team teamId={teamId}/>
     )
   }
 }
