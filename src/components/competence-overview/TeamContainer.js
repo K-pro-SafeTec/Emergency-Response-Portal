@@ -12,6 +12,8 @@ export default class TeamContainer extends React.Component {
   }
 
   handleRequestSort = (event, property) => {
+    console.log(property)
+
     const orderBy = property;
     let order = "asc";
     if (this.state.orderBy === property && this.state.order === "asc") {
@@ -20,10 +22,19 @@ export default class TeamContainer extends React.Component {
     this.setState({ order, orderBy });
   };
 
+  createSortHandler = property => event => {
+    this.handleRequestSort(event, property);
+  };
+
   render() {
     const teamId = this.props.match.params.teamId;
     return (
-      <Team teamId={teamId} orderBy={this.state.orderBy} order={this.state.order}/>
+      <Team
+        teamId={teamId}
+        orderBy={this.state.orderBy}
+        order={this.state.order}
+        createSortHandler={this.createSortHandler}
+      />
     )
   }
 }
