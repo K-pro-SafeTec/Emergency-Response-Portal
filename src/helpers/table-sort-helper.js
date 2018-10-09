@@ -38,7 +38,7 @@ export function stableSort(array, cmp) {
 }
 
 export function getSorting(order, orderBy) {
-  const descFunction = (((typeof orderBy) === "number") ? statusDesc : desc);
+  const descFunction = typeof orderBy === "number" ? statusDesc : desc;
   return order === "desc"
     ? (a, b) => descFunction(a, b, orderBy)
     : (a, b) => -descFunction(a, b, orderBy);

@@ -2,6 +2,11 @@ import React from 'react';
 import { teamById } from '../../dummy-data/team';
 import { personById } from '../../dummy-data/person';
 import { competenceTypeById } from '../../dummy-data/competenceType';
+import { getSorting, stableSort } from "../../helpers/table-sort-helper";
+import CompetenceStatus from './CompetenceStatus';
+import LinkTableRow from '../shared/LinkTableRow';
+import AppPage from '../shared/AppPage';
+import EntityInfo from './EntityInfo';
 import Table from '@material-ui/core/Table';
 import TableHead from '@material-ui/core/TableHead';
 import TableBody from '@material-ui/core/TableBody';
@@ -9,14 +14,9 @@ import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
 import Typography from '@material-ui/core/Typography';
 import GroupIcon from '@material-ui/icons/People';
-import AppPage from '../shared/AppPage';
-import EntityInfo from './EntityInfo';
 import { withStyles } from '@material-ui/core';
-import CompetenceStatus from './CompetenceStatus';
-import LinkTableRow from '../shared/LinkTableRow';
-import {getSorting, stableSort} from "../../helpers/table-sort-helper";
-import TableSortLabel from "@material-ui/core/TableSortLabel/TableSortLabel";
-import Tooltip from "@material-ui/core/Tooltip/Tooltip";
+import TableSortLabel from '@material-ui/core/TableSortLabel/TableSortLabel';
+import Tooltip from '@material-ui/core/Tooltip/Tooltip';
 
 const styles = {
   title: {
@@ -30,8 +30,24 @@ const styles = {
   }
 };
 
-const Team = ({ teamId, orderBy, order, createSortHandler, classes }) => {
+const TableHeadCell = ({orderBy, order, tableHeadClicked, id}) => (
+    <TableCell component="div">
+      <Tooltip
+        title="Sortér"
+        enterDelay={300}
+      >
+        <TableSortLabel
+          active={orderBy === id}
+          direction={order}
+          onClick={() => tableHeadClicked(id)}
+        >
+          {id === "name" ? "Medlem" : competenceTypeById[id].name}
+        </TableSortLabel>
+      </Tooltip>
+    </TableCell>
+  );
 
+const Team = ({ teamId, orderBy, order, tableHeadClicked, classes }) => {
   const team = teamById[teamId];
   const teamMembers = [];
   team.members.forEach(memberId => teamMembers.push(personById[memberId]));
@@ -47,40 +63,15 @@ const Team = ({ teamId, orderBy, order, createSortHandler, classes }) => {
         <Table component="div">
           <TableHead component="div">
             <TableRow component="div">
-              <TableCell component="div">
-                <Tooltip
-                  title="Sortér"
-                  placement={"bottom-start"}
-                  enterDelay={300}
-                >
-                  <TableSortLabel
-                    active={orderBy === "name"}
-                    direction={order}
-                    onClick={createSortHandler("name")}
-                  >
-                    {"Medlem"}
-                  </TableSortLabel>
-                </Tooltip>
-              </TableCell>
+              <TableHeadCell orderBy={orderBy} order={order} tableHeadClicked={tableHeadClicked} id={"name"} />
               {competenceTypeList.map(competenceType => (
-                <TableCell
+                <TableHeadCell
                   key={competenceType.id}
-                  component="div"
-                >
-                  <Tooltip
-                    title="Sortér"
-                    placement={"bottom-start"}
-                    enterDelay={300}
-                  >
-                    <TableSortLabel
-                      active={orderBy === competenceType.id}
-                      direction={order}
-                      onClick={createSortHandler(competenceType.id)}
-                    >
-                      {competenceType.name}
-                    </TableSortLabel>
-                  </Tooltip>
-                </TableCell>
+                  orderBy={orderBy}
+                  order={order}
+                  tableHeadClicked={tableHeadClicked}
+                  id={competenceType.id}
+                />
               ))}
             </TableRow>
           </TableHead>
@@ -103,8 +94,7 @@ const Team = ({ teamId, orderBy, order, createSortHandler, classes }) => {
                       </TableCell>
                     ))}
                   </LinkTableRow>
-                ))
-            }
+                ))}
           </TableBody>
         </Table>
       </AppPage>
