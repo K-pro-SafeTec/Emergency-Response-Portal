@@ -7,6 +7,8 @@ export const teamList = [
     status: Status.OK,
     members: [0],
     requiredCompetence: [0],
+    hasTraining: false,
+    hasTableTops: true,
   },
   {
     id: 1,
@@ -14,6 +16,8 @@ export const teamList = [
     status: Status.WARNING,
     members: [0],
     requiredCompetence: [0, 1],
+    hasTraining: false,
+    hasTableTops: true,
   },
   {
     id: 2,
@@ -21,6 +25,8 @@ export const teamList = [
     status: Status.OK,
     members: [0],
     requiredCompetence: [0],
+    hasTraining: false,
+    hasTableTops: false,
   },
   {
     id: 3,
@@ -28,6 +34,8 @@ export const teamList = [
     status: Status.OK,
     members: [0],
     requiredCompetence: [0],
+    hasTraining: true,
+    hasTableTops: false,
   },
   {
     id: 4,
@@ -35,6 +43,8 @@ export const teamList = [
     status: Status.OK,
     members: [0],
     requiredCompetence: [0],
+    hasTraining: true,
+    hasTableTops: false,
   },
   {
     id: 5,
@@ -42,6 +52,8 @@ export const teamList = [
     status: Status.OK,
     members: [0],
     requiredCompetence: [0],
+    hasTraining: false,
+    hasTableTops: false,
   },
   {
     id: 6,
@@ -49,6 +61,8 @@ export const teamList = [
     status: Status.ERROR,
     members: [0, 1, 2, 3, 4],
     requiredCompetence: [0, 1, 2],
+    hasTraining: true,
+    hasTableTops: false,
   },
   {
     id: 7,
@@ -56,6 +70,8 @@ export const teamList = [
     status: Status.OK,
     members: [0],
     requiredCompetence: [0],
+    hasTraining: true,
+    hasTableTops: false,
   },
   {
     id: 8,
@@ -63,6 +79,8 @@ export const teamList = [
     status: Status.WARNING,
     members: [0],
     requiredCompetence: [0, 1],
+    hasTraining: true,
+    hasTableTops: false,
   },
 ];
 

@@ -5,7 +5,7 @@ import MainMenu from './components/main-menu/MainMenu';
 import Calendar from './components/calendar/Calendar';
 import Livefeed from './components/livefeed/Livefeed';
 import ExperienceLog from './components/experience-log/ExperienceLog';
-import Training from './components/training/Training';
+import Training from './components/training/Routes';
 import ExerciseScenarios from './components/exercise-scenarios/ExerciseScenarios';
 import TableTops from './components/table-tops/TableTops';
 import Documents from './components/documents/Documents';

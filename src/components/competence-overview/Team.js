@@ -6,7 +6,7 @@ import { getSorting, stableSort, competenceStatusDesc } from "../../helpers/tabl
 import CompetenceStatus from './CompetenceStatus';
 import LinkTableRow from '../shared/LinkTableRow';
 import AppPage from '../shared/AppPage';
-import EntityInfo from './EntityInfo';
+import EntityInfo from '../shared/EntityInfo';
 import Table from '@material-ui/core/Table';
 import TableHead from '@material-ui/core/TableHead';
 import TableBody from '@material-ui/core/TableBody';
