@@ -6,8 +6,8 @@ export default class TeamContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      orderBy: 0,
-      order: "desc",
+      orderBy: "name",
+      order: "asc",
     }
   }
 

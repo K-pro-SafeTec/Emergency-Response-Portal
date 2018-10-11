@@ -8,15 +8,24 @@ function desc(a, b, orderBy) {
   return 0;
 }
 
-function statusDesc(a, b, competenceNumber) {
-  const statuses = ["Symbol(OK)", "Symbol(WARNING)", "Symbol(ERROR)"];
-  let indexA = 2;
-  let indexB = 2;
+function competenceStatusDesc(a, b, competenceNumber) {
+  let indexA = 0;
+  let indexB = 0;
   if (a.competence[competenceNumber]) {
-    indexA = statuses.indexOf(a.competence[competenceNumber].status.toString());
+    if (a.competence[competenceNumber].validUntil !== null) {
+      indexA = a.competence[competenceNumber].validUntil;
+    }
+    else {
+      indexA = Infinity
+    }
   }
   if (b.competence[competenceNumber]) {
-    indexB = statuses.indexOf(b.competence[competenceNumber].status.toString());
+    if (b.competence[competenceNumber].validUntil !== null) {
+      indexB = b.competence[competenceNumber].validUntil;
+    }
+    else {
+      indexB = Infinity
+    }
   }
   if (indexB < indexA) {
     return -1;
@@ -38,7 +47,7 @@ export function stableSort(array, cmp) {
 }
 
 export function getSorting(order, orderBy) {
-  const descFunction = typeof orderBy === "number" ? statusDesc : desc;
+  const descFunction = typeof orderBy === "number" ? competenceStatusDesc : desc;
   return order === "desc"
     ? (a, b) => descFunction(a, b, orderBy)
     : (a, b) => -descFunction(a, b, orderBy);

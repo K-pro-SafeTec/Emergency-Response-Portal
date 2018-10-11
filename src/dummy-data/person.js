@@ -33,12 +33,12 @@ export const personList = [
     competence: {
       0: {
         status: Status.OK,
-        validUntil: new Date('2019-10-20'),
+        validUntil: new Date('2019-10-21'),
         comment: null,
       },
       1: {
         status: Status.OK,
-        validUntil: new Date('2019-01-23'),
+        validUntil: null,
         comment: 'Eksempelkommentar',
       },
       2: {
@@ -74,7 +74,7 @@ export const personList = [
     competence: {
       0: {
         status: Status.WARNING,
-        validUntil: new Date('2019-02-20'),
+        validUntil: new Date('2019-02-22'),
         comment: null,
       },
       1: {
