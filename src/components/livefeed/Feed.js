@@ -6,37 +6,29 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import IconButton from '@material-ui/core/IconButton';
 import DragHandle from '@material-ui/icons/DragHandle';
+import TextField from '@material-ui/core/TextField';
+import Typography from '@material-ui/core/Typography';
 import Delete from '@material-ui/icons/Delete';
 import Add from '@material-ui/icons/Add';
 import { SortableContainer, SortableElement, SortableHandle } from 'react-sortable-hoc';
 
 
 let uid = 100;
-const words = ['En', 'To', 'Tre', 'Fire', 'Fem', 'Seks', 'Sju', 'Åtte', 'Ni', 'Ti', 'Mandag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lørdag', 'Søndag'];
-
-function createRandomItem() {
-  const itemWords = [];
-  for (let i = 0; i < 3; i++) {
-    itemWords.push(words[Math.floor(Math.random() * words.length)]);
-  }
-  return {
-    id: uid++,
-    message: itemWords.join(' '),
-  };
-}
 
 
-const SortableDragHandle = SortableHandle(({ value }) => (
+const SortableDragHandle = SortableHandle(() => (
   <ListItemIcon>
     <DragHandle />
   </ListItemIcon>
 ));
 
 const SortableListItem = SortableElement(({ value, deleteItem }) => (
-  <ListItem button>
+  <ListItem>
     <SortableDragHandle />
     <ListItemText>
-      {value.message}
+      <Typography variant="body1">
+        {value.message}
+      </Typography>
     </ListItemText>
     <ListItemSecondaryAction>
       <IconButton onClick={() => deleteItem(value.id)}>
@@ -46,23 +38,52 @@ const SortableListItem = SortableElement(({ value, deleteItem }) => (
   </ListItem>
 ));
 
-const SortableList = SortableContainer(({ items, deleteItem, addItem, maxItems, ...rest }) => (
+const SortableList = SortableContainer(({ items, deleteItem, addItem, maxItems, inputText, setInputText, ...rest }) => (
   <List {...rest}>
     {items.map((value, index) => (
       <SortableListItem key={value.id} index={index} value={value} deleteItem={deleteItem} />
     ))}
-    <ListItem
-      button
-      disabled={items.length >= maxItems}
-      onClick={() => (items.length < maxItems) && addItem(createRandomItem())}
-    >
-      <ListItemIcon>
-        <Add />
-      </ListItemIcon>
-      <ListItemText
-        secondary={items.length < maxItems ? "Legg til..." : "Slett andre varslinger for å legge til nye"}
-      />
-    </ListItem>
+    {items.length < maxItems ? (
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          if (inputText.trim().length > 0) {
+            addItem({
+              id: uid++,
+              message: inputText.trim(),
+            });
+            setInputText('');
+          }
+        }}
+      >
+        <ListItem>
+          <ListItemText>
+            <TextField
+              placeholder={"Legg til varsling..."}
+              fullWidth
+              value={inputText}
+              onChange={(e) => setInputText(e.target.value)}
+            />
+          </ListItemText>
+          <ListItemSecondaryAction>
+            <IconButton
+              type="submit"
+              disabled={inputText.trim().length === 0}
+            >
+              <Add />
+            </IconButton>
+          </ListItemSecondaryAction>
+        </ListItem>
+      </form>
+    ) : (
+      <ListItem>
+        <ListItemText>
+          <Typography variant="caption">
+            Det er ikke plass til flere varslinger. Slett varslinger for å legge til nye.
+          </Typography>
+        </ListItemText>
+      </ListItem>
+    )}
   </List>
 ));
 

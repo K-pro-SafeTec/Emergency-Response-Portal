@@ -1,4 +1,5 @@
 import React from 'react';
-import AppPage from '../../shared/AppPage';
+import PlaceholderPage from '../../shared/PlaceholderPage';
 
-export default () => <AppPage title="Bransjeinformasjon" back=".." />;
+
+export default () => <PlaceholderPage title="Bransjeinformasjon" back=".." />;

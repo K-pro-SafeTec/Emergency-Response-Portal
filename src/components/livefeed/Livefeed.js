@@ -69,10 +69,12 @@ class Livefeed extends React.Component {
     super(props);
     this.state = {
       feed,
+      inputText: '',
     };
     this.onFeedSortEnd = this.onFeedSortEnd.bind(this);
     this.deleteFeedItem = this.deleteFeedItem.bind(this);
     this.addFeedItem = this.addFeedItem.bind(this);
+    this.setInputText = this.setInputText.bind(this);
   }
 
   onFeedSortEnd({ oldIndex, newIndex }) {
@@ -93,9 +95,15 @@ class Livefeed extends React.Component {
     }));
   }
 
+  setInputText(inputText) {
+    this.setState({
+      inputText,
+    });
+  }
+
   render() {
     const { classes } = this.props;
-    const { feed } = this.state;
+    const { feed, inputText } = this.state;
 
     return (
       <AppPage title="Beredskapsstatus - Live feed" back="..">
@@ -103,12 +111,14 @@ class Livefeed extends React.Component {
           <Grid container spacing={24}>
             <Grid item xs={12}>
               <Paper className={classes.feedPaper}>
-                <img  src={WarningRed} alt="Warning" className={classes.feedWarning} />
+                <img  src={WarningRed} alt="Advarsel" className={classes.feedWarning} />
                 <Feed
                   items={feed}
                   onSortEnd={this.onFeedSortEnd}
                   deleteItem={this.deleteFeedItem}
                   addItem={this.addFeedItem}
+                  setInputText={this.setInputText}
+                  inputText={inputText}
                   maxItems={7}
                   className={classes.feedList}
                 />

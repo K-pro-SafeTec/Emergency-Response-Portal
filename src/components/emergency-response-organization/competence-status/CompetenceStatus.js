@@ -1,3 +1,5 @@
 import React from 'react';
+import PlaceholderPage from '../../shared/PlaceholderPage';
 
-export default () => <p>Placeholder</p>;
+
+export default () => <PlaceholderPage title="Kompetansestatus" back=".." />;
