@@ -29,7 +29,7 @@ const TableHeadCell = ({orderBy, order, tableHeadClicked, id, label}) => (
 );
 
 export default ({order, orderBy, tableHeadClicked}) => (
-  <AppPage title="Lessons learned">
+  <AppPage title="Lessons learned" back="..">
     <Paper style={{margin: '1em'}}>
       <Table>
         <TableHead>
