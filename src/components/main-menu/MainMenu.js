@@ -19,7 +19,7 @@ export default () => (
       <NavMenuItem name="Kalender" icon={IconCalendar} to="calendar/" />
       <NavMenuItem name="Live feed" icon={IconLivefeed} to="livefeed/" />
       <NavMenuItem name="Erfaringslogg" icon={IconExperiencelog} to="experience-log/" />
-      <NavMenuItem name="Trening" icon={IconTraining} to="training/" />
+      <NavMenuItem name="Trening" icon={IconTraining} to="training/teams/" />
       <NavMenuItem name="Øvelsesscenarier" icon={IconExerciseScenarios} to="exercise-scenarios/" />
       <NavMenuItem name="Table tops" icon={IconTraining} to="table-tops/" />{/* TODO: Find unique icon */}
       <NavMenuItem name="Beredskapsdokumenter" icon={IconDocuments} to="documents/" />
