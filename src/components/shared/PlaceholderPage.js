@@ -10,7 +10,7 @@ const PlaceholderPage = ({ title, back }) => (
   >
     <br />
     <Typography variant="title" align="center">
-      Denne siden er ikke implementert ennå
+      <span role="img" aria-label="Construction Worker">👷</span> Denne siden er ikke implementert ennå
     </Typography>
     <Typography variant="body2" align="center">
       Kom tilbake senere :)
