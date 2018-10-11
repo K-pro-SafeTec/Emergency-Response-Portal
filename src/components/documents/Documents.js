@@ -1,11 +1,10 @@
 import React from 'react';
-import AppPage from '../shared/AppPage';
-import DocumentTable from './DocumentTable';
-import { documentList } from '../../dummy-data/document';
-import { drawingList } from '../../dummy-data/drawing';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core';
+import AppPage from '../shared/AppPage';
+import { documentList } from '../../dummy-data/document';
+import { drawingList } from '../../dummy-data/drawing';
 import DocumentTableContainer from "./DocumentTableContainer";
 
 

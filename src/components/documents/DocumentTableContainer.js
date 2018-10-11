@@ -11,12 +11,24 @@ class DocumentTableContainer extends Component {
     }
   }
 
+  handleRequestSort = orderBy => {
+    let order = "asc";
+    if (this.state.orderBy === orderBy && this.state.order === "asc") {
+      order = "desc";
+    }
+    this.setState({ order, orderBy });
+  };
+
   render() {
     return (
-      <DocumentTable documents={this.props.documents} orderBy={this.state.orderBy} order={this.state.order} />
+      <DocumentTable
+        documents={this.props.documents}
+        orderBy={this.state.orderBy}
+        order={this.state.order}
+        tableHeadClicked={this.handleRequestSort}
+      />
     )
   }
-
 }
 
 export default DocumentTableContainer;
