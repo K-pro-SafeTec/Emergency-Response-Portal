@@ -2,6 +2,11 @@ import React from 'react';
 import { teamById } from '../../dummy-data/team';
 import { personById } from '../../dummy-data/person';
 import { competenceTypeById } from '../../dummy-data/competenceType';
+import { getSorting, stableSort } from "../../helpers/table-sort-helper";
+import CompetenceStatus from './CompetenceStatus';
+import LinkTableRow from '../shared/LinkTableRow';
+import AppPage from '../shared/AppPage';
+import EntityInfo from './EntityInfo';
 import Table from '@material-ui/core/Table';
 import TableHead from '@material-ui/core/TableHead';
 import TableBody from '@material-ui/core/TableBody';
@@ -9,12 +14,9 @@ import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
 import Typography from '@material-ui/core/Typography';
 import GroupIcon from '@material-ui/icons/People';
-import AppPage from '../shared/AppPage';
-import EntityInfo from './EntityInfo';
 import { withStyles } from '@material-ui/core';
-import CompetenceStatus from './CompetenceStatus';
-import LinkTableRow from '../shared/LinkTableRow';
-
+import TableSortLabel from '@material-ui/core/TableSortLabel/TableSortLabel';
+import Tooltip from '@material-ui/core/Tooltip/Tooltip';
 
 const styles = {
   title: {
@@ -26,14 +28,32 @@ const styles = {
       paddingRight: '24px',
     }
   }
-}
+};
 
+const TableHeadCell = ({orderBy, order, tableHeadClicked, id}) => (
+    <TableCell component="div">
+      <Tooltip
+        title="Sortér"
+        enterDelay={300}
+      >
+        <TableSortLabel
+          active={orderBy === id}
+          direction={order}
+          onClick={() => tableHeadClicked(id)}
+        >
+          {id === "name" ? "Medlem" : competenceTypeById[id].name}
+        </TableSortLabel>
+      </Tooltip>
+    </TableCell>
+  );
 
-
-const Team = ({ match, classes }) => {
-  const team = teamById[match.params.teamId];
+const Team = ({ teamId, orderBy, order, tableHeadClicked, classes }) => {
+  const team = teamById[teamId];
+  const teamMembers = [];
+  team.members.forEach(memberId => teamMembers.push(personById[memberId]));
   if (team) {
-    const competenceTypeList = team.requiredCompetence.map(requiredCompetenceId => competenceTypeById[requiredCompetenceId]);
+    const competenceTypeList = team.requiredCompetence.map(requiredCompetenceId =>
+      competenceTypeById[requiredCompetenceId]);
     return (
       <AppPage title="Kompetanseoversikt" back="../..">
         <EntityInfo Icon={GroupIcon}>
@@ -44,41 +64,38 @@ const Team = ({ match, classes }) => {
         <Table component="div">
           <TableHead component="div">
             <TableRow component="div">
-              <TableCell component="div">
-                Medlem
-              </TableCell>
+              <TableHeadCell orderBy={orderBy} order={order} tableHeadClicked={tableHeadClicked} id={"name"} />
               {competenceTypeList.map(competenceType => (
-                <TableCell
+                <TableHeadCell
                   key={competenceType.id}
-                  component="div"
-                >
-                  {competenceType.name}
-                </TableCell>
+                  orderBy={orderBy}
+                  order={order}
+                  tableHeadClicked={tableHeadClicked}
+                  id={competenceType.id}
+                />
               ))}
             </TableRow>
           </TableHead>
           <TableBody component="div">
-            {team.members.map(memberId => {
-              const person = personById[memberId];
-              return (
-                <LinkTableRow
-                  key={memberId}
-                  to={`../../people/${memberId}/`}
-                >
-                  <TableCell component="div">
-                    {person.name}
-                  </TableCell>
-                  {competenceTypeList.map(competenceType => (
-                    <TableCell
-                      key={competenceType.id}
-                      component="div"
-                    >
-                      <CompetenceStatus competence={person.competence[competenceType.id]} />
+            {stableSort(teamMembers, getSorting(order, orderBy))
+              .map(person => (
+                  <LinkTableRow
+                    key={person.id}
+                    to={`../../people/${person.id}/`}
+                  >
+                    <TableCell component="div">
+                      {person.name}
                     </TableCell>
-                  ))}
-                </LinkTableRow>
-              );
-            })}
+                    {competenceTypeList.map(competenceType => (
+                      <TableCell
+                        key={competenceType.id}
+                        component="div"
+                      >
+                        <CompetenceStatus competence={person.competence[competenceType.id]} />
+                      </TableCell>
+                    ))}
+                  </LinkTableRow>
+                ))}
           </TableBody>
         </Table>
       </AppPage>

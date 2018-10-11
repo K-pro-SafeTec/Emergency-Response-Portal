@@ -7,7 +7,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
 import StatusIcon from '../shared/StatusIcon';
 import AppPage from '../shared/AppPage';
-import Team from './Team';
+import TeamContainer from './TeamContainer';
 import Person from './Person';
 import { teamList } from '../../dummy-data/team';
 
@@ -34,7 +34,7 @@ export default ({ match }) => (
         </List>
       </AppPage>
     </Route>
-    <Route path={`${match.url}/teams/:teamId/`} component={Team} />
+    <Route path={`${match.url}/teams/:teamId/`} component={TeamContainer} />
     <Route path={`${match.url}/people/:personId/`} component={Person} />
   </Switch>
 );
