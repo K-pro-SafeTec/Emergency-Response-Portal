@@ -3,11 +3,19 @@ import { trainingScenarioList } from './trainingScenario';
 export const trainingInstanceList = [
   {
     scenario: 0,
+    date: '2018-10-9',
+  },
+  {
+    scenario: 0,
     date: '2018-10-10',
   },
   {
     scenario: 0,
     date: '2018-10-22',
+  },
+  {
+    scenario: 0,
+    date: '2018-10-23',
   },
 ];
 

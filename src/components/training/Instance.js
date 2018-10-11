@@ -35,7 +35,7 @@ const Instance = ({ match }) => {
           <ListItem>
             <Typography variant="title">Deltakerlag</Typography>
           </ListItem>
-          {scenario.participatingTeams.map(teamId => {
+          {scenario.teams.map(teamId => {
             const team = teamById[teamId];
             return (
               <ListItem
