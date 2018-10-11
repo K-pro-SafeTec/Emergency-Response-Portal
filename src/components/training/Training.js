@@ -1,5 +1,5 @@
 import React from 'react';
-import AppPage from '../shared/AppPage';
+import PlaceholderPage from '../shared/PlaceholderPage';
 
 
-export default () => <AppPage title="Trening" back=".." />;
+export default () => <PlaceholderPage title="Trening" back=".." />;
