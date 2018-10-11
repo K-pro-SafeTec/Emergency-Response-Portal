@@ -9,7 +9,7 @@ import ExerciseReport from './excercise-report/ExerciseReport';
 import PerformanceRequirement from './performance-requirement/PerformanceRequirements';
 import ReportGenerator from './report-generator/ReportGenerator';
 import EmergencyResponseAction from './emergency-response-action/EmergencyResponseAction';
-import LessonsLearned from "./lessons-learned/LessonsLearned"
+import LessonsLearnedContainer from "./lessons-learned/LessonsLearnedContainer"
 import IndustryInformation from './industry-information/IndustryInformation';
 
 // Icons
@@ -38,7 +38,7 @@ export default ({ match }) => (
     </Route>
     <Route path={`${match.path}exercise-report/`} component={ExerciseReport} />
     <Route path={`${match.path}performance-requirements/`} component={PerformanceRequirement} />
-    <Route path={`${match.path}lessons-learned/`} component={LessonsLearned} />
+    <Route path={`${match.path}lessons-learned/`} component={LessonsLearnedContainer} />
     <Route path={`${match.path}report-generator/`} component={ReportGenerator} />
     <Route path={`${match.path}emergency-response-action/`} component={EmergencyResponseAction} />
     <Route path={`${match.path}industry-information/`} component={IndustryInformation} />
