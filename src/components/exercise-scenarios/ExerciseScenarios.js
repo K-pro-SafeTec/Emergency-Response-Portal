@@ -1,7 +1,7 @@
 import React from 'react';
 import AppPage from '../shared/AppPage';
 import {exerciseScenarioById, scenarios} from '../../dummy-data/exercise-scenarios'
-import { getSorting, stableSort } from '../../helpers/table-sort-helper'
+import { getSorting, stableSort, descByValue } from '../../helpers/table-sort-helper'
 import Paper from '@material-ui/core/Paper';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -97,7 +97,7 @@ export default class ExerciseScenarios extends React.Component {
                 rowCount={scenarios.length}
               />
               <TableBody>
-                {stableSort(scenarios, getSorting(order, orderBy))
+                {stableSort(scenarios, getSorting(order, orderBy, descByValue))
                   .map(n => {
                     return (
                       <TableRow

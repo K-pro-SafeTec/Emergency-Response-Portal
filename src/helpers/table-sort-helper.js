@@ -1,14 +1,14 @@
-function desc(a, b, orderBy) {
-  if (b[orderBy] < a[orderBy]) {
-    return -1;
-  }
-  if (b[orderBy] > a[orderBy]) {
-    return 1;
-  }
-  return 0;
+import {roleById} from "../dummy-data/role";
+import {personById} from "../dummy-data/person";
+
+export function descByValue(a, b, orderBy) {
+  return simpleDesc(a[orderBy], b[orderBy])
 }
 
-function competenceStatusDesc(a, b, competenceNumber) {
+export function competenceStatusDesc(a, b, competenceNumber) {
+  if (competenceNumber === "name") {
+    return descByValue(a, b, "name")
+  }
   let indexA = 0;
   let indexB = 0;
   if (a.competence[competenceNumber]) {
@@ -27,10 +27,30 @@ function competenceStatusDesc(a, b, competenceNumber) {
       indexB = Infinity
     }
   }
-  if (indexB < indexA) {
+  return simpleDesc(indexA, indexB)
+}
+
+export function deputiesDesc(a, b, orderBy) {
+  if (orderBy === "beredskapsrolle") {
+    a = a.name;
+    b = b.name;
+  }
+  if (orderBy === "stedsfortrederrolle") {
+    a = roleById[a.replacementRole].name;
+    b = roleById[b.replacementRole].name;
+  }
+  if (orderBy === "stedfortredere") {
+    a = personById[roleById[a.replacementRole].person].name;
+    b = personById[roleById[b.replacementRole].person].name;
+  }
+  return simpleDesc(a, b)
+}
+
+function simpleDesc(a, b) {
+  if (b < a) {
     return -1;
   }
-  if (indexB > indexA) {
+  if (b > a) {
     return 1;
   }
   return 0;
@@ -46,8 +66,7 @@ export function stableSort(array, cmp) {
   return stabilizedThis.map(el => el[0]);
 }
 
-export function getSorting(order, orderBy) {
-  const descFunction = typeof orderBy === "number" ? competenceStatusDesc : desc;
+export function getSorting(order, orderBy, descFunction) {
   return order === "desc"
     ? (a, b) => descFunction(a, b, orderBy)
     : (a, b) => -descFunction(a, b, orderBy);
