@@ -46,6 +46,15 @@ export function deputiesDesc(a, b, orderBy) {
   return simpleDesc(a, b)
 }
 
+export function documentsDesc(a, b, orderBy) {
+  if (orderBy === "rev") {
+    a = parseInt(a.rev);
+    b = parseInt(b.rev);
+    return simpleDesc(a, b)
+  }
+  return descByValue(a, b, orderBy)
+}
+
 function simpleDesc(a, b) {
   if (b < a) {
     return -1;
