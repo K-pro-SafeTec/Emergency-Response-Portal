@@ -12,7 +12,7 @@ import {capitalizeFirstLetter} from "../../helpers/calendar-helper";
 import AppPage from '../shared/AppPage';
 
 moment.locale('nb');
-BigCalendar.momentLocalizer(moment);
+const localizer = BigCalendar.momentLocalizer(moment);
 
 const norwegian_translations = {
   previous: 'Forrige',
@@ -167,6 +167,7 @@ export default class EmergencyResponsePortalCalendar extends Component {
       <AppPage title="Kalender" back="..">
         <div className="container">
           <BigCalendar
+            localizer={localizer}
             scrollToTime={initTime}
             messages={norwegian_translations}
             events={this.state.events}
