@@ -16,7 +16,7 @@ import { SortableContainer, SortableElement, SortableHandle } from 'react-sortab
 let uid = 100;
 
 
-const SortableDragHandle = SortableHandle(({ value }) => (
+const SortableDragHandle = SortableHandle(() => (
   <ListItemIcon>
     <DragHandle />
   </ListItemIcon>
