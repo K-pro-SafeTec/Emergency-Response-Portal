@@ -12,7 +12,7 @@ import PersonIcon from '@material-ui/icons/Person';
 import StatusIcon from '../shared/StatusIcon';
 import AppPage from '../shared/AppPage';
 import Status, { mostSevere } from '../../helpers/Status';
-import EntityInfo from './EntityInfo';
+import EntityInfo from '../shared/EntityInfo';
 
 const TeamItem = ({ team, person }) => (
   <ListItem button component={Link} to={`../../teams/${team.id}/`}>

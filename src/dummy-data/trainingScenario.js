@@ -3,7 +3,7 @@ import { teamList } from './team';
 export const trainingScenarioList = [
   {
     id: 0,
-    theme: "Tema - Eksempel",
+    theme: "Lage eksempeltema",
     goals: "Lage tekst som ser ut som faktiske mål. Oppnå en struktur som er representativ for faktisk data som kommer inn i systemet, slik at eksemplet ser realistisk ut. Skrive lang nok eksempeltekst slik at teksten bryter.",
     setup: "Motta eksempeldata fra kunden.",
     participatingTeams: [3, 4, 6, 7, 8],
