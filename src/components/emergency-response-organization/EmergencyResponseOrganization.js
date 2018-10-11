@@ -10,7 +10,7 @@ import AppPage from '../shared/AppPage';
 import BackupResources from './backup-resources/BackupResources';
 import CompatibilityMatrix from './compatibility-matrix/CompatibilityMatrix';
 import CompetenceStatus from './competence-status/CompetenceStatus';
-import Deputies from './deputies/Deputies';
+import DeputiesContainer from './deputies/DeputiesContainer';
 import EmergencyResponseTeams from './emergency-response-teams/EmergencyResponseTeams';
 import { Switch, Route } from 'react-router-dom';
 
@@ -30,7 +30,7 @@ export default ({ match }) => (
     <Route path={`${match.path}backup-resources/`} component={BackupResources} />
     <Route path={`${match.path}compatibility-matrix/`} component={CompatibilityMatrix} />
     <Route path={`${match.path}competence-status/`} component={CompetenceStatus} />
-    <Route path={`${match.path}deputies/`} component={Deputies} />
+    <Route path={`${match.path}deputies/`} component={DeputiesContainer} />
     <Route path={`${match.path}emergency-response-teams/`} component={EmergencyResponseTeams} />
   </Switch>
 );

@@ -2,7 +2,7 @@ import React from 'react';
 import { teamById } from '../../dummy-data/team';
 import { personById } from '../../dummy-data/person';
 import { competenceTypeById } from '../../dummy-data/competenceType';
-import { getSorting, stableSort } from "../../helpers/table-sort-helper";
+import { getSorting, stableSort, competenceStatusDesc } from "../../helpers/table-sort-helper";
 import CompetenceStatus from './CompetenceStatus';
 import LinkTableRow from '../shared/LinkTableRow';
 import AppPage from '../shared/AppPage';
@@ -77,7 +77,7 @@ const Team = ({ teamId, orderBy, order, tableHeadClicked, classes }) => {
             </TableRow>
           </TableHead>
           <TableBody component="div">
-            {stableSort(teamMembers, getSorting(order, orderBy))
+            {stableSort(teamMembers, getSorting(order, orderBy, competenceStatusDesc))
               .map(person => (
                   <LinkTableRow
                     key={person.id}
