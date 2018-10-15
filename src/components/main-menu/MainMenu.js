@@ -20,7 +20,7 @@ export default () => (
       <NavMenuItem name="Erfaringslogg" icon={IconExperiencelog} to="experience-log/" />
       <NavMenuItem name="Trening" icon={IconTraining} to="training/teams/" />
       <NavMenuItem name="Øvelsesscenarier" icon={IconExerciseScenarios} to="exercise-scenarios/" />
-      <NavMenuItem name="Table tops" icon={IconTableTops} to="table-tops/" />
+      <NavMenuItem name="Table tops" icon={IconTableTops} to="table-tops/teams/" />
       <NavMenuItem name="Beredskapsdokumenter" icon={IconDocuments} to="documents/" />
       <NavMenuItem name="Beredskapsorganisasjon" icon={IconEmergencyResponseOrganization} to="emergency-response-organization/" />
       <NavMenuItem name="Kompetanseoversikt" icon={IconCompetenceOverview} to="competence-overview/" />
