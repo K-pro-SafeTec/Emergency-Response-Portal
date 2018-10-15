@@ -7,7 +7,7 @@ import Livefeed from './components/livefeed/Livefeed';
 import ExperienceLog from './components/experience-log/ExperienceLog';
 import Training from './components/training/Routes';
 import ExerciseScenarios from './components/exercise-scenarios/ExerciseScenarios';
-import TableTops from './components/table-tops/TableTops';
+import TableTops from './components/table-tops/Routes';
 import Documents from './components/documents/Documents';
 import EmergencyResponseOrganization from './components/emergency-response-organization/EmergencyResponseOrganization';
 import CompetenceOverview from './components/competence-overview/CompetenceOverview';
