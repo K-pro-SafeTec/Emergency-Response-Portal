@@ -14,9 +14,9 @@ const ExerciseReports = ({ match }) => (
     <Route exact path={`${match.url}/`}>
       <AppPage title="Øvingsrapporter" back="..">
         <NavMenu>
-          <NavMenuItem name="Øvingsrapporter - Trening" icon={IconTraining} to="training/teams/" />
+          <NavMenuItem name="Øvingsrapporter - Trening" icon={IconTraining} to="training/" />
           <NavMenuItem name="Øvingsrapporter - Øvelser" icon={IconExerciseScenarios} to="exercises/" />
-          <NavMenuItem name="Øvingsrapporter - Table Tops" icon={IconTableTops} to="table-tops/teams/" />
+          <NavMenuItem name="Øvingsrapporter - Table Tops" icon={IconTableTops} to="table-tops/" />
         </NavMenu>
       </AppPage>
     </Route>
