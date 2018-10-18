@@ -1,61 +1,42 @@
-export const scenarios = [
+export const exerciseScenarioList = [
   {
     id: 0,
-    week: 2,
-    type: 'Øvelse',
-    dfu: 4,
-    scenario: 'Fartøy på kollisjonskurs'
+    dfu: 11,
+    scenario: 'Alvorlig syk/skadet person',
+    description: 'Deler av et stillas raser sammen. Person som jobbet i stillaset ligger skadet under\n' +
+      'stillasdelene.',
+    preparations: 'Klargjøre dukke og stillasdeler.',
+    performanceRequirements: 'Beredskapslag skal være klar til innsats, ferdig påkledd på mønstringssted, innen 10 minutter etter\n' +
+      'at varsel er gitt.',
+    parameters:
+      {
+        wind: '6 m/s SØ',
+        waves: '2m Hs',
+        pob: '112',
+        ongoingActivities: 'Interne løfteoperasjoner'
+      },
+    focusAreas: 'Redning, transport og behandling av skadet person',
+    development: 'Skadet person mister bevissthet'
   },
   {
     id: 1,
-    week: 3,
-    type: 'Table top',
-    dfu: 15,
-    scenario: 'Ekstremvær over design-/operasjonskriterier'
-  },
-  {
-    id: 2,
-    week: 8,
-    type: 'Øvelse',
-    dfu: 11,
-    scenario: 'Alvorlig syk/skadet person'
-  },
-  {
-    id: 3,
-    week: 9,
-    type: 'Table top',
-    dfu: 7,
-    scenario: 'Helikopterulykke i sjø'
-  },
-  {
-    id: 4,
-    week: 14,
-    type: 'Øvelse',
-    dfu: 10,
-    scenario: 'Mann over bord'
-  },
-  {
-    id: 5,
-    week: 15,
-    type: 'Table top',
-    dfu: '12',
-    scenario: 'Sikringstrussel/terror'
-  },
-  {
-    id: 6,
-    week: 20,
-    type: 'Øvelse',
-    dfu: 9,
-    scenario: 'Brann i boligkvarter'
-  },
-  {
-    id: 7,
-    week: 21,
-    type: 'Table top',
-    dfu: 14,
-    scenario: 'Strukturhendelse'
+    dfu: 4,
+    scenario: 'Fartøy på kollisjonskurs',
+    description: 'En båt holder på å kræsje i et isfjell',
+    preparations: 'Ingen forberedelser',
+    performanceRequirements: 'Beredskapslag skal være klar til innsats, ferdig påkledd på mønstringssted, innen 10 minutter etter\n' +
+      'at varsel er gitt.',
+    parameters:
+      {
+        wind: '10 m/s SØ',
+        waves: '4m Hs',
+        pob: '113',
+        ongoingActivities: 'Interne løfteoperasjoner'
+      },
+    focusAreas: 'Få fartøyet på rett kurs igjen',
+    development: 'Kommer nærmere og nærmere isfjellet'
   }
 ];
 
 export const exerciseScenarioById = {};
-scenarios.forEach(scenario => exerciseScenarioById[scenario.id] = scenario);
+exerciseScenarioList.forEach(exercise => exerciseScenarioById[exercise.id] = exercise);
