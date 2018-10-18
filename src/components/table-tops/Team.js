@@ -10,7 +10,7 @@ import TableTopTable from "./TableTopTable";
 const Team = ({ match }) => {
   const team = teamById[match.params.teamId];
   if (team) {
-    const instances = tableTopInstanceList.filter(instance => tableTopScenarioById[instance.scenario].teams.indexOf(team.id) !== -1);
+    const instances = tableTopInstanceList.filter(instance => tableTopScenarioById[instance.scenario].team === team.id);
     return (
       <AppPage title="Table top" back="..">
         <TableTopTable

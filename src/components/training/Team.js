@@ -10,7 +10,7 @@ import { trainingScenarioById } from '../../dummy-data/trainingScenario';
 const Team = ({ match }) => {
   const team = teamById[match.params.teamId];
   if (team) {
-    const instances = trainingInstanceList.filter(instance => trainingScenarioById[instance.scenario].teams.indexOf(team.id) !== -1);
+    const instances = trainingInstanceList.filter(instance => trainingScenarioById[instance.scenario].team === team.id);
     return (
       <AppPage title="Trening" back="..">
         <TrainingTable

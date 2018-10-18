@@ -3,19 +3,27 @@ import { trainingScenarioList } from './trainingScenario';
 export const trainingInstanceList = [
   {
     scenario: 0,
-    date: '2018-10-9',
+    date: '2018-10-09',
+    start: new Date('2018-10-09T09:00:00Z'),
+    end: new Date('2018-10-09T11:45:00Z'),
   },
   {
-    scenario: 0,
+    scenario: 1,
     date: '2018-10-10',
+    start: new Date('2018-10-10T09:00:00Z'),
+    end: new Date('2018-10-10T11:45:00Z'),
   },
   {
     scenario: 0,
     date: '2018-10-22',
+    start: new Date('2018-10-22T09:00:00Z'),
+    end: new Date('2018-10-22T11:45:00Z'),
   },
   {
-    scenario: 0,
+    scenario: 1,
     date: '2018-10-23',
+    start: new Date('2018-10-23T09:00:00Z'),
+    end: new Date('2018-10-23T11:45:00Z'),
   },
 ];
 
