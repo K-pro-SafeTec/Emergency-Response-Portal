@@ -4676,10 +4676,10 @@ hyphenate-style-name@^1.0.2:
   resolved "https://registry.yarnpkg.com/hyphenate-style-name/-/hyphenate-style-name-1.0.2.tgz#31160a36930adaf1fc04c6074f7eb41465d4ec4b"
   integrity sha1-MRYKNpMK2vH8BMYHT360FGXU7Es=
 
-iana-tz-data@^2017.1.0:
-  version "2017.1.0"
-  resolved "https://registry.yarnpkg.com/iana-tz-data/-/iana-tz-data-2017.1.0.tgz#1eda4bfb9a09293499465066341743240e10d7ec"
-  integrity sha1-HtpL+5oJKTSZRlBmNBdDJA4Q1+w=
+iana-tz-data@^2018.4.0:
+  version "2018.4.0"
+  resolved "https://registry.yarnpkg.com/iana-tz-data/-/iana-tz-data-2018.4.0.tgz#dc96c054af28e1aca46157d67905a305ff3513d4"
+  integrity sha512-8vc2R4iRMcsPs9h9t9LUBUZynLvREl2zw2q13+u1S789uO5WcSKY8BKGufhDhGxFa7b+qgjCUuEnHBFCVufPTw==
 
 iconv-lite@0.4.19:
   version "0.4.19"

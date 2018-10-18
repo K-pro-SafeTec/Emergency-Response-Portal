@@ -32,16 +32,16 @@ const feed = [
 
 const externalResources = [
   {
-    name: "Brannslukkingsbåt",
+    name: "Beredskapsfartøy",
     status: Status.OK,
   },
   {
-    name: "MEDEVAC",
+    name: "SAR-helikopter",
     status: Status.WARNING,
     message: "På vei onshore",
   },
   {
-    name: "Livbåt",
+    name: "MOB-båt",
     status: Status.OK,
   },
 ];
@@ -58,6 +58,7 @@ const styles = {
   feedWarning: {
     margin: '3em',
     width: '10em',
+    height: '10em',
   },
   feedList: {
     flex: '1 1 30em',
