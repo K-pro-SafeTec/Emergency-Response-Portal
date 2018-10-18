@@ -60,7 +60,7 @@ const Person = ({ match }) => {
           </TableHead>
           <TableBody>
             {Object.keys(person.competence).map(competenceId => (
-              <TableRow>
+              <TableRow key={competenceId}>
                 <TableCell>
                   {competenceTypeById[competenceId].name}
                 </TableCell>
