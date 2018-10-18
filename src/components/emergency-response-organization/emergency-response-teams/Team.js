@@ -9,14 +9,13 @@ const styles = {
   width: '17em'
 };
 
-const Team = (props) => {
-  const teamMembers = [];
-  props.team.members.forEach(memberId => teamMembers.push(personById[memberId]));
+const Team = ({team}) => {
+  const teamMembers = team.members.map(memberId => personById[memberId]);
   return(
     <Paper style={styles}>
-      <h2>{props.team.name}</h2>
-      {teamMembers.map(({ id, name }) => (
-        <Person key={id} name={name}/>
+      <h2>{team.name}</h2>
+      {teamMembers.map(member => (
+        <Person key={member.id} name={member.name}/>
       ))}
     </Paper>
   )
