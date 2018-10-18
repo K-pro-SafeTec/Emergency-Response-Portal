@@ -1,5 +1,33 @@
 import React from 'react';
-import PlaceholderPage from '../../shared/PlaceholderPage';
+import AppPage from '../../shared/AppPage';
 
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+import CardMedia from '@material-ui/core/CardMedia';
 
-export default () => <PlaceholderPage title="Forenlighetsmatrise" back=".." />;
+import compat_image from './compat_matrix.png';
+
+const styles = {
+  media: {
+    height: 654,
+    width: 837
+  }
+};
+  
+function MediaCard(props) {
+  const { classes } = props;
+  return (
+  <AppPage title="Forenelighetsmatrise" back="..">
+    <CardMedia
+      className={classes.media}
+      image= {compat_image}
+    />
+  </AppPage>
+);
+}
+
+MediaCard.propTypes = {
+  classes: PropTypes.object.isRequired
+};
+  
+export default withStyles(styles)(MediaCard);
