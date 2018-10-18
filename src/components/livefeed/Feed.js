@@ -59,7 +59,7 @@ const SortableList = SortableContainer(({ items, deleteItem, addItem, maxItems, 
         <ListItem>
           <ListItemText>
             <TextField
-              placeholder={"Legg til varsling..."}
+              placeholder={"Legg til punkt..."}
               fullWidth
               value={inputText}
               onChange={(e) => setInputText(e.target.value)}
