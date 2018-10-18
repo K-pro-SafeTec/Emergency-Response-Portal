@@ -1,18 +1,11 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 import Paper from '@material-ui/core/Paper';
-import People from '@material-ui/icons/People';
-import { Link } from 'react-router-dom';
 import AppPage from '../shared/AppPage';
 import EntityInfo from '../shared/EntityInfo';
 import IconTraining from '../../icons/main-menu/training.svg';
 import { trainingScenarioById } from '../../dummy-data/trainingScenario';
 import { getTrainingInstanceByKey } from '../../dummy-data/trainingInstance';
-import { teamById } from '../../dummy-data/team';
 
 
 const Instance = ({ match }) => {
@@ -31,29 +24,6 @@ const Instance = ({ match }) => {
           <Typography variant="subheading" gutterBottom>Oppsett:</Typography>
           <Typography variant="body1" paragraph>{scenario.setup}</Typography>
         </Paper>
-        <List>
-          <ListItem>
-            <Typography variant="title">Deltakerlag</Typography>
-          </ListItem>
-          {scenario.teams.map(teamId => {
-            const team = teamById[teamId];
-            return (
-              <ListItem
-                key={team.id}
-                button
-                component={Link}
-                to={`../../../teams/${team.id}/`}
-              >
-                <ListItemIcon>
-                  <People />
-                </ListItemIcon>
-                <ListItemText>
-                  {team.name}
-                </ListItemText>
-              </ListItem>
-            );
-          })}
-        </List>
       </AppPage>
     );
   }
