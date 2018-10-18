@@ -21,7 +21,9 @@ const DisplayEvent = (props) => {
       <Button style={{marginRight: '5px'}} variant="outlined" color="primary" onClick={() => props.onChangeEvent(event.id)}>
         Endre
       </Button>
-      <Button href="https://drive.google.com/open?id=1mhpegs45N7HZAdWVIDB12apAO45WP9et" download style={{marginRight: '5px'}} variant="outlined" color="primary" onClick={() => props.onReviewButtonClick(event.id)}>
+      <Button href="https://drive.google.com/file/d/1SIy2luM50jY-_od88vfXg5k7l0oT8C0s/view?usp=sharing" target="_blank"
+              style={{marginRight: '5px'}} variant="outlined" color="primary"
+              onClick={() => props.onReviewButtonClick(event.id)}>
         Se debrief
       </Button>
       <Button variant="outlined" color="secondary" onClick={() => props.onDeleteButtonClick(event.id)}>
