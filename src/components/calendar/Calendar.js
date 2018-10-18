@@ -11,6 +11,7 @@ import {isValidEvent, equalDates} from './../../helpers/calendar-helper'
 import {capitalizeFirstLetter} from "../../helpers/calendar-helper";
 import AppPage from '../shared/AppPage';
 import { trainingInstanceList } from '../../dummy-data/trainingInstance';
+import { exerciseInstanceList } from '../../dummy-data/exerciseInstance';
 import { tableTopInstanceList } from '../../dummy-data/tableTopInstance';
 import { trainingScenarioById } from '../../dummy-data/trainingScenario';
 import { tableTopScenarioById } from '../../dummy-data/tableTopScenario';
@@ -52,13 +53,21 @@ export default class EmergencyResponsePortalCalendar extends Component {
         title: 'Trening',
         href: `/training/scenarios/${training.scenario}/${training.date}/`
       }))),
+      ...(exerciseInstanceList.map(exercise => ({
+        id: `tt/${exercise.scenario}/${exercise.date}`,
+        start: exercise.start,
+        end: exercise.end,
+        participants: 'Alle',
+        title: 'Øvelse',
+        href: `/exercises/${exercise.scenario}/${exercise.date}/`
+      }))),
       ...(tableTopInstanceList.map(tableTop => ({
         id: `tt/${tableTop.scenario}/${tableTop.date}`,
         start: tableTop.start,
         end: tableTop.end,
         participants: teamById[tableTopScenarioById[tableTop.scenario].team].name,
         title: 'Table top',
-        href: `/training/scenarios/${tableTop.scenario}/${tableTop.date}/`
+        href: `/table-tops/scenarios/${tableTop.scenario}/${tableTop.date}/`
       }))),
     ];
     this.state = {
