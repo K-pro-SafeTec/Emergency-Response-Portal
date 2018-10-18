@@ -1,6 +1,6 @@
 import React from 'react';
 import AppPage from '../shared/AppPage';
-import {exerciseScenarioById, scenarios} from '../../dummy-data/exercise-scenarios'
+import {exerciseScenarioById, scenarios} from '../../dummy-data/exerciseScenario'
 import { getSorting, stableSort, descByValue } from '../../helpers/table-sort-helper'
 import Paper from '@material-ui/core/Paper';
 import Table from '@material-ui/core/Table';
@@ -10,6 +10,12 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Tooltip from "@material-ui/core/Tooltip/Tooltip";
 import TableSortLabel from "@material-ui/core/TableSortLabel/TableSortLabel";
+
+/*
+ * Displays a sortable list of different exercises.
+ * Sorting functionality
+ * Not possible to click an exercise
+ */
 
 const rows = [
   { id: "week", numeric: true, label: "Uke" },
@@ -58,7 +64,7 @@ class ExerciseScenariosTableHead extends React.Component {
   }
 }
 
-export default class ExerciseScenarios extends React.Component {
+export default class Exercises extends React.Component {
 
   constructor(props) {
     super(props);
@@ -86,7 +92,7 @@ export default class ExerciseScenarios extends React.Component {
     const { order, orderBy } = this.state;
 
     return (
-      <AppPage title="Øvelsesscenarioer" back="..">
+      <AppPage title="Øvelser" back="..">
         <Paper>
           <div>
             <Table>

@@ -8,7 +8,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Tooltip from "@material-ui/core/Tooltip/Tooltip";
 import TableSortLabel from "@material-ui/core/TableSortLabel/TableSortLabel";
 import AppPage from "../../shared/AppPage";
-import scenarios from "../../../dummy-data/lessons-learned.js";
+import scenarios from "../../../dummy-data/lessonsLearned.js";
 import {descByValue, getSorting, stableSort} from "../../../helpers/table-sort-helper";
 
 const TableHeadCell = ({orderBy, order, tableHeadClicked, id, label}) => (

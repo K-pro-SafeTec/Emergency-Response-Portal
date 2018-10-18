@@ -8,7 +8,7 @@ import '../../styles/Exercise.css'
 const Exercise = (props) => {
   const exercise = exerciseById[parseInt(props.match.params.id, 10)];
   return(
-    <AppPage title="Øvelser">
+    <AppPage title="Øvelser" back="..">
       <Paper style={{margin: '1em', padding: '1em'}}>
         <h2>DFU {exercise.dfu} {exercise.scenario}</h2>
         <p><span className="bold">Scenariobeskrivelse:</span> {exercise.description}</p>
