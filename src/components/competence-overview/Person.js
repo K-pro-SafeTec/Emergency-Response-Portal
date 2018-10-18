@@ -13,6 +13,13 @@ import StatusIcon from '../shared/StatusIcon';
 import AppPage from '../shared/AppPage';
 import Status, { mostSevere } from '../../helpers/Status';
 import EntityInfo from '../shared/EntityInfo';
+import CompetenceStatus from './CompetenceStatus';
+import { competenceTypeById } from '../../dummy-data/competenceType';
+import Table from '@material-ui/core/Table';
+import TableHead from '@material-ui/core/TableHead';
+import TableBody from '@material-ui/core/TableBody';
+import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell';
 
 const TeamItem = ({ team, person }) => (
   <ListItem button component={Link} to={`../../teams/${team.id}/`}>
@@ -40,6 +47,30 @@ const Person = ({ match }) => {
             {person.roles.map(role => roleById[role].name).join(", ")}
           </Typography>
         </EntityInfo>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>
+                Kompetanse
+              </TableCell>
+              <TableCell>
+                Status
+              </TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {Object.keys(person.competence).map(competenceId => (
+              <TableRow>
+                <TableCell>
+                  {competenceTypeById[competenceId].name}
+                </TableCell>
+                <TableCell>
+                  <CompetenceStatus competence={person.competence[competenceId]} />
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
         <List>
           <ListItem>
             <Typography variant="title">Beredskapslag</Typography>
