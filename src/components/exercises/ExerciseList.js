@@ -43,7 +43,7 @@ const ExerciseList = () => (
 export default ({ match }) => (
     <Switch>
       <Route exact path={match.path}>
-        <AppPage title="Øvelser">
+        <AppPage title="Øvelser" back="..">
             <ExerciseList/>
         </AppPage>
       </Route>
