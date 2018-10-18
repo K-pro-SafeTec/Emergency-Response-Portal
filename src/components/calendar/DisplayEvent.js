@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
@@ -18,6 +19,11 @@ const DisplayEvent = (props) => {
       <Typography component="p">
         Deltakere: {event.participants}
       </Typography>
+      {event.href && (
+        <Button style={{marginRight: '5px'}} variant="outlined" color="primary" component={Link} to={event.href}>
+          Vis
+        </Button>
+      )}
       <Button style={{marginRight: '5px'}} variant="outlined" color="primary" onClick={() => props.onChangeEvent(event.id)}>
         Endre
       </Button>

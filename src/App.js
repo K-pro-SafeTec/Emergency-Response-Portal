@@ -6,7 +6,7 @@ import Calendar from './components/calendar/Calendar';
 import Livefeed from './components/livefeed/Livefeed';
 import ExperienceLog from './components/experience-log/ExperienceLog';
 import Training from './components/training/Routes';
-import Exercises from './components/exercises/ExerciseList';
+import Exercises from './components/exercises/Routes';
 import TableTops from './components/table-tops/Routes';
 import Documents from './components/documents/Documents';
 import EmergencyResponseOrganization from './components/emergency-response-organization/EmergencyResponseOrganization';

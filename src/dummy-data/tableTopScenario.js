@@ -7,7 +7,15 @@ export const tableTopScenarioList = [
     dfuTitle: "Tittel på dfu",
     scenario: "Motta scenario fra kunden.",
     description: "Motta beskrivelse fra kunden.",
-    teams: [0, 1],
+    team: 0,
+  },
+  {
+    id: 1,
+    dfuNr: "1",
+    dfuTitle: "Tittel på dfu",
+    scenario: "Motta scenario fra kunden.",
+    description: "Motta beskrivelse fra kunden.",
+    team: 1,
   },
 ];
 
@@ -17,7 +25,5 @@ tableTopScenarioList.forEach(tableTopScenario => tableTopScenarioById[tableTopSc
 export const tableTopScenarioByTeamId = {};
 teamList.forEach(team => tableTopScenarioByTeamId[team.id] = []);
 tableTopScenarioList.forEach(tableTopScenario => {
-  tableTopScenario.teams.forEach(teamId => {
-    tableTopScenarioByTeamId[teamId].push(tableTopScenario);
-  });
+  tableTopScenarioByTeamId[tableTopScenario.team].push(tableTopScenario);
 });

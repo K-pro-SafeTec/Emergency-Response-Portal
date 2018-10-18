@@ -10,6 +10,12 @@ import '../../styles/Calendar.css'
 import {isValidEvent, equalDates} from './../../helpers/calendar-helper'
 import {capitalizeFirstLetter} from "../../helpers/calendar-helper";
 import AppPage from '../shared/AppPage';
+import { trainingInstanceList } from '../../dummy-data/trainingInstance';
+import { exerciseInstanceList } from '../../dummy-data/exerciseInstance';
+import { tableTopInstanceList } from '../../dummy-data/tableTopInstance';
+import { trainingScenarioById } from '../../dummy-data/trainingScenario';
+import { tableTopScenarioById } from '../../dummy-data/tableTopScenario';
+import { teamById } from '../../dummy-data/team';
 
 moment.locale('nb');
 const localizer = BigCalendar.momentLocalizer(moment);
@@ -38,30 +44,34 @@ export default class EmergencyResponsePortalCalendar extends Component {
   
   constructor(props) {
     super(props);
+    const events = [
+      ...(trainingInstanceList.map(training => ({
+        id: `tr/${training.scenario}/${training.date}`,
+        start: training.start,
+        end: training.end,
+        participants: teamById[trainingScenarioById[training.scenario].team].name,
+        title: 'Trening',
+        href: `/training/scenarios/${training.scenario}/${training.date}/`
+      }))),
+      ...(exerciseInstanceList.map(exercise => ({
+        id: `tt/${exercise.scenario}/${exercise.date}`,
+        start: exercise.start,
+        end: exercise.end,
+        participants: 'Alle',
+        title: 'Øvelse',
+        href: `/exercises/${exercise.scenario}/${exercise.date}/`
+      }))),
+      ...(tableTopInstanceList.map(tableTop => ({
+        id: `tt/${tableTop.scenario}/${tableTop.date}`,
+        start: tableTop.start,
+        end: tableTop.end,
+        participants: teamById[tableTopScenarioById[tableTop.scenario].team].name,
+        title: 'Table top',
+        href: `/table-tops/scenarios/${tableTop.scenario}/${tableTop.date}/`
+      }))),
+    ];
     this.state = {
-      events: [
-        {
-          id: 0,
-          start: new Date('2018-09-18T09:00:00.000Z'),
-          end: new Date('2018-09-18T11:45:00.000Z'),
-          participants: 'Alle',
-          title: 'Øvelse',
-        },
-        {
-          id: 1,
-          start: new Date('2018-09-19T12:30:00.000Z'),
-          end: new Date('2018-09-19T14:00:00.000Z'),
-          participants: 'Alle',
-          title: 'Trening',
-        },
-        {
-          id: 2,
-          start: new Date('2018-09-20T10:15:00.000Z'),
-          end: new Date('2018-09-20T14:00:00.000Z'),
-          participants: 'Alle',
-          title: 'Table top',
-        },
-      ],
+      events,
       showEventAdder: false,
       selectedDate: new Date(),
       nextEventId: 3,
