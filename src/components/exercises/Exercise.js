@@ -6,7 +6,6 @@ import EntityInfo from '../shared/EntityInfo';
 import IconExercise from '../../icons/main-menu/exerciseScenarios.svg';
 import { exerciseScenarioById } from '../../dummy-data/exerciseScenario';
 import { getExerciseInstanceByKey } from '../../dummy-data/exerciseInstance';
-import '../../styles/Exercise.css'
 
 
 const Exercise = ({ match }) => {
@@ -20,26 +19,31 @@ const Exercise = ({ match }) => {
             <Typography variant="headline">{scenario.scenario}</Typography>
             <Typography variant="subheading">DFU {scenario.dfu}</Typography>
           </EntityInfo>
-          <p><span className="bold">Scenariobeskrivelse:</span> {scenario.description}</p>
-          <p><span className="bold">Forberedelser:</span> {scenario.preparations}</p>
-          <p><span className="bold">Ytelseskrav:</span> {scenario.performanceRequirements}</p>
-          <p><span className="bold">Parametere:</span></p>
+          <Typography variant="subheading">Scenariobeskrivelse:</Typography>
+          <Typography variant="body1" paragraph>{scenario.description}</Typography>
+          <Typography variant="subheading">Forberedelser:</Typography>
+          <Typography variant="body1" paragraph>{scenario.preparations}</Typography>
+          <Typography variant="subheading">Ytelseskrav:</Typography>
+          <Typography variant="body1" paragraph>{scenario.performanceRequirements}</Typography>
+          <Typography variant="subheading">Parametere:</Typography>
           <ul>
             <li>
-              <p>Vind: {scenario.parameters.wind}</p>
+              <Typography variant="body1">Vind: {scenario.parameters.wind}</Typography>
             </li>
             <li>
-              <p>Bølger: {scenario.parameters.waves}</p>
+              <Typography variant="body1">Bølger: {scenario.parameters.waves}</Typography>
             </li>
             <li>
-              <p>POB: {scenario.parameters.pob}</p>
+              <Typography variant="body1">POB: {scenario.parameters.pob}</Typography>
             </li>
             <li>
-              <p>Pågående aktiviteter: {scenario.parameters.ongoingActivities}</p>
+              <Typography variant="body1">Pågående aktiviteter: {scenario.parameters.ongoingActivities}</Typography>
             </li>
           </ul>
-          <p><span className="bold">Fokusområder:</span> {scenario.focusAreas}</p>
-          <p><span className="bold">Utvikling:</span> {scenario.development}</p>
+          <Typography variant="subheading">Fokusområder:</Typography>
+          <Typography variant="body1" paragraph>{scenario.focusAreas}</Typography>
+          <Typography variant="subheading">Utvikling:</Typography>
+          <Typography variant="body1" paragraph>{scenario.development}</Typography>
         </Paper>
       </AppPage>
     );
