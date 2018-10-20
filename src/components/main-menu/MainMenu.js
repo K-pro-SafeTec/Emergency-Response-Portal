@@ -12,7 +12,8 @@ import NavMenu from '../shared/NavMenu';
 import NavMenuItem from '../shared/NavMenuItem';
 import AppPage from '../shared/AppPage';
 
-import '../../raw-data/test';
+
+import '../../raw-data/preprocess_data';
 
 
 export default () => (

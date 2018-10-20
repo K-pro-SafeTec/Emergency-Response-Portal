@@ -25,10 +25,6 @@ export const raw_erteam_courses = [
       "course_id": 5
     },
     {
-      "er_team_id": 1,
-      "course_id": 3
-    },
-    {
       "er_team_id": 7,
       "course_id": 6
     },
