@@ -17,10 +17,10 @@ export default ({ match }) => (
     <Route exact path={match.path}>
       <AppPage title="Beredskapsorganisasjon" back="..">
         <NavMenu>
-          <NavMenuItem name="Beredskapslag" icon={IconResponseTeams} to="emergency-response-teams/" />
-          <NavMenuItem name="Forenlighetsmatrise" icon={IconStats} to="compatibility-matrix/" />
-          <NavMenuItem name="Stedfortredere" icon={IconDeputies} to="deputies/" />
-          <NavMenuItem name="Reserveressurser" icon={IconCogs} to="backup-resources/" />
+          <NavMenuItem name="Beredskapslag" icon={IconResponseTeams} to="emergency-response-teams/" style={{ flexBasis: '30em' }} />
+          <NavMenuItem name="Forenlighetsmatrise" icon={IconStats} to="compatibility-matrix/" style={{ flexBasis: '30em' }} />
+          <NavMenuItem name="Stedfortredere" icon={IconDeputies} to="deputies/" style={{ flexBasis: '30em' }} />
+          <NavMenuItem name="Reserveressurser" icon={IconCogs} to="backup-resources/" style={{ flexBasis: '30em' }} />
         </NavMenu>
       </AppPage>
     </Route>
