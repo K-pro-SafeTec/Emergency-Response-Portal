@@ -66,7 +66,7 @@ export default class EmergencyResponsePortalCalendar extends Component {
         end: tableTop.end,
         participants: teamById[tableTopScenarioById[tableTop.scenario].team].name,
         title: 'Table top',
-        href: `/table-tops/scenarios/${tableTop.scenario}/${tableTop.date}/`
+        href: `/table-tops/scenarios/${tableTop.scenario}/${getDateFormatYMD(tableTop.start)}/`
       }))),
     ];
     this.state = {
