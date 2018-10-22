@@ -7,7 +7,7 @@ import { Switch, Route } from 'react-router-dom';
 // Components
 import ExerciseReport from './excercise-report/ExerciseReport';
 import PerformanceRequirement from './performance-requirement/PerformanceRequirements';
-import ReportGenerator from './report-generator/ReportGenerator';
+import ReportGenerator from './report-generator/Routes';
 import EmergencyResponseActions from './emergency-response-actions/EmergencyResponseActions';
 import LessonsLearnedContainer from "./lessons-learned/LessonsLearnedContainer"
 import IndustryInformation from './industry-information/IndustryInformation';
