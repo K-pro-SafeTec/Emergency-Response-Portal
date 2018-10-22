@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { MemoryRouter as Router, Route, Switch } from 'react-router-dom';
+// import createBrowserHistory from 'history/createBrowserHistory';
 import './App.css';
 import MainMenu from './components/main-menu/MainMenu';
 import Calendar from './components/calendar/Calendar';
@@ -12,6 +13,8 @@ import Documents from './components/documents/Documents';
 import EmergencyResponseOrganization from './components/emergency-response-organization/EmergencyResponseOrganization';
 import CompetenceOverview from './components/competence-overview/CompetenceOverview';
 
+
+// const history = 
 
 class App extends Component {
   render() {
