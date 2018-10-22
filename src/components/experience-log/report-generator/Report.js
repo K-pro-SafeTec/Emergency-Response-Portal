@@ -10,7 +10,7 @@ const ReportGenerator = ({ match, classes }) => {
       <AppPage title="Rapportgenerator" back="../..">
         <img
           src={performanceRequirement.report}
-          alt={performanceRequirement.id}
+          alt={`${performanceRequirement.id} - ${performanceRequirement.description}`}
         />
       </AppPage>
     );
