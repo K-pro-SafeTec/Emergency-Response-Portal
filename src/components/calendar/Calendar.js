@@ -171,7 +171,8 @@ export default class EmergencyResponsePortalCalendar extends Component {
   }
   
   render() {
-    const initTime = new Date(this.state.selectedDate.setHours(9));
+    let initTime = new Date(this.state.selectedDate);
+    initTime.setHours(9);
     return (
       <AppPage title="Kalender" back="..">
         <div className="container">
@@ -189,7 +190,6 @@ export default class EmergencyResponsePortalCalendar extends Component {
             components={{
                 dateCellWrapper: this.coloredDateCellWrapper,
             }}
-          
           />
           <Paper className="paper-big">
             {!this.state.showEventAdder ? (<SideDisplay events={this.state.events} date={this.state.selectedDate}
