@@ -2,6 +2,7 @@ import React from 'react';
 import AppPage from '../../shared/AppPage';
 import Status from '../../../helpers/Status';
 import Team from "./Team";
+import { withStyles } from '@material-ui/core'
 
 const teams = [
   {
@@ -104,16 +105,17 @@ const teams = [
 ];
 
 const styles = {
-  display: 'flex',
-  flexDirection: 'row',
-  flexWrap: 'wrap',
-  justifyContent: 'center'
+  container: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  }
 };
 
-const BackupResources = () => {
+const BackupResources = ({ classes }) => {
   return(
     <AppPage title="Reserveressurser" back="..">
-      <div style={styles}>
+      <div className={classes.container}>
         {teams.map(({id, name, backups}) => (
           <Team key={id} name={name} backups={backups} />
         ))}
@@ -122,4 +124,4 @@ const BackupResources = () => {
   )
 };
 
-export default BackupResources;
+export default withStyles(styles)(BackupResources);
