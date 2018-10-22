@@ -11,7 +11,7 @@ import { teamList } from '../../dummy-data/team';
 
 
 const Teams = () => (
-  <AppPage title="Table top" back="../..">
+  <AppPage title="Table tops" back="../..">
     <List>
       <ListItem>
         <Typography variant="title">Velg lag</Typography>

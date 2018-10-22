@@ -12,7 +12,7 @@ const Team = ({ match }) => {
   if (team) {
     const instances = tableTopInstanceList.filter(instance => tableTopScenarioById[instance.scenario].team === team.id);
     return (
-      <AppPage title="Table top" back="..">
+      <AppPage title="Table tops" back="..">
         <TableTopTable
           instances={instances}
         />
@@ -20,7 +20,7 @@ const Team = ({ match }) => {
     );
   }
   return (
-    <AppPage title="Table top" back="..">
+    <AppPage title="Table tops" back="..">
       <Typography>Fant ikke noe lag med denne IDen</Typography>
     </AppPage>
   )

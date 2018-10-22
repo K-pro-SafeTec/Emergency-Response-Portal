@@ -15,7 +15,7 @@ const Instance = ({ match }) => {
   if (instance) {
     const scenario = tableTopScenarioById[match.params.scenarioId];
     return (
-      <AppPage title="Table top" back="../../../teams/">
+      <AppPage title="Table tops" back="../../../teams/">
         <Paper style={{margin: '1em', padding: '1em'}}>
           <EntityInfo Icon={(props) => <img src={IconTableTop} alt="Table Top" {...props} />}>
             <Typography variant="headline">DFU {scenario.dfuNr}</Typography>
@@ -33,7 +33,7 @@ const Instance = ({ match }) => {
     );
   }
   return (
-    <AppPage title="Table top" back="..">
+    <AppPage title="Table tops" back="..">
       <Typography>Fant ikke table top</Typography>
     </AppPage>
   )
