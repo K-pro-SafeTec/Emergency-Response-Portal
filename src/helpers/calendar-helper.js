@@ -100,5 +100,17 @@ function sortEvents(events) {
   return events;
 }
 
+// Returns the date of a special weekday some weeks in the future or in the past.
+// 0 is Sunday, 1 is Monday etc.
+// For instance, running the method getDateRelatedToThisDate(2, 3) will return the date of Wednesday in three weeks.
+function getDateRelatedToThisDate(weekdayNumber, numberOfWeeks, hours=0, minutes=0) {
+  let date = new Date()
+  const today = new Date()
+  date.setDate(today.getDate()+7*numberOfWeeks + (weekdayNumber - today.getDay()))
+  date.setHours(hours)
+  date.setMinutes(minutes)
+  return date
+}
+
 export { getTimeFormat, getDateFormatYMD, getEvents, equalDates, getDateFormat, isValidEvent, isValidParticipants,
-  isValidType, capitalizeFirstLetter, sortEvents }
+  isValidType, capitalizeFirstLetter, sortEvents, getDateRelatedToThisDate }

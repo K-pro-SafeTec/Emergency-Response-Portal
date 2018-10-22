@@ -1,31 +1,23 @@
 import { trainingScenarioList } from './trainingScenario';
+import { getDateFormatYMD, getDateRelatedToThisDate } from '../helpers/calendar-helper';
 
-export const trainingInstanceList = [
-  {
-    scenario: 0,
-    date: '2018-10-09',
-    start: new Date('2018-10-09T09:00:00Z'),
-    end: new Date('2018-10-09T11:45:00Z'),
-  },
-  {
-    scenario: 1,
-    date: '2018-10-10',
-    start: new Date('2018-10-10T09:00:00Z'),
-    end: new Date('2018-10-10T11:45:00Z'),
-  },
-  {
-    scenario: 0,
-    date: '2018-10-22',
-    start: new Date('2018-10-22T09:00:00Z'),
-    end: new Date('2018-10-22T11:45:00Z'),
-  },
-  {
-    scenario: 1,
-    date: '2018-10-23',
-    start: new Date('2018-10-23T09:00:00Z'),
-    end: new Date('2018-10-23T11:45:00Z'),
-  },
-];
+function createData(scenario, weekday, numberOfWeeks) {
+  return {
+    scenario,
+    start: getDateRelatedToThisDate(weekday, numberOfWeeks, 20),
+    end: getDateRelatedToThisDate(weekday, numberOfWeeks, 21),
+  };
+}
+
+export let trainingInstanceList = [];
+
+for (let numberOfWeeks = -6; numberOfWeeks < 18; numberOfWeeks += 2) {
+  trainingInstanceList.push(createData(0, 1, numberOfWeeks));
+  trainingInstanceList.push(createData(1, 2, numberOfWeeks));
+  trainingInstanceList.push(createData(2, 3, numberOfWeeks));
+  trainingInstanceList.push(createData(3, 2, numberOfWeeks + 1));
+  trainingInstanceList.push(createData(4, 3, numberOfWeeks + 1));
+}
 
 function key(scenario, date) {
   return `${scenario}/${date}`;
@@ -33,7 +25,7 @@ function key(scenario, date) {
 
 const keyLookup = {};
 trainingInstanceList.forEach(trainingInstance => {
-  keyLookup[key(trainingInstance.scenario, trainingInstance.date)] = trainingInstance;
+  keyLookup[key(trainingInstance.scenario, getDateFormatYMD(trainingInstance.start))] = trainingInstance;
 });
 
 export function getTrainingInstanceByKey(scenario, date) {
@@ -43,7 +35,7 @@ export function getTrainingInstanceByKey(scenario, date) {
 const scenarioLookup = {};
 trainingScenarioList.forEach(trainingScenario => {
   scenarioLookup[trainingScenario.id] = [];
-})
+});
 trainingInstanceList.forEach(trainingInstance => {
   scenarioLookup[trainingInstance.scenario].push(trainingInstance);
 });
