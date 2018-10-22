@@ -8,7 +8,7 @@ import { Switch, Route } from 'react-router-dom';
 import ExerciseReport from './excercise-report/ExerciseReport';
 import PerformanceRequirement from './performance-requirement/PerformanceRequirements';
 import ReportGenerator from './report-generator/ReportGenerator';
-import EmergencyResponseAction from './emergency-response-action/EmergencyResponseAction';
+import EmergencyResponseActions from './emergency-response-actions/EmergencyResponseActions';
 import LessonsLearnedContainer from "./lessons-learned/LessonsLearnedContainer"
 import IndustryInformation from './industry-information/IndustryInformation';
 
@@ -31,7 +31,7 @@ export default ({ match }) => (
           <NavMenuItem name="Ytelseskrav" icon={IconPerformanceConditions} to="performance-requirements/" />
           <NavMenuItem name="Lessons learned" icon={IconLessonsLearned} to="lessons-learned/" />
           <NavMenuItem name="Rapportgenerator" icon={IconReportGenerator} to="report-generator/" />
-          <NavMenuItem name="Beredskapsrelaterte aksjoner" icon={IconEmergencyResponseActions} to="emergency-response-action/" />
+          <NavMenuItem name="Beredskapsrelaterte aksjoner" icon={IconEmergencyResponseActions} to="emergency-response-actions/" />
           <NavMenuItem name="Bransjeinformasjon" icon={IconIndustryInformation} to="industry-information/" />
         </NavMenu>
       </AppPage>
@@ -40,7 +40,7 @@ export default ({ match }) => (
     <Route path={`${match.path}performance-requirements/`} component={PerformanceRequirement} />
     <Route path={`${match.path}lessons-learned/`} component={LessonsLearnedContainer} />
     <Route path={`${match.path}report-generator/`} component={ReportGenerator} />
-    <Route path={`${match.path}emergency-response-action/`} component={EmergencyResponseAction} />
+    <Route path={`${match.path}emergency-response-actions/`} component={EmergencyResponseActions} />
     <Route path={`${match.path}industry-information/`} component={IndustryInformation} />
   </Switch>
 );
