@@ -45,7 +45,7 @@ export default class EmergencyResponsePortalCalendar extends Component {
     super(props);
     const events = [
       ...(trainingInstanceList.map(training => ({
-        id: `tr/${training.scenario}/${training.date}`,
+        id: `tr/${training.scenario}/${getDateFormatYMD(training.start)}`,
         start: training.start,
         end: training.end,
         participants: teamById[trainingScenarioById[training.scenario].team].name,
@@ -53,15 +53,15 @@ export default class EmergencyResponsePortalCalendar extends Component {
         href: `/training/scenarios/${training.scenario}/${getDateFormatYMD(training.start)}/`
       }))),
       ...(exerciseInstanceList.map(exercise => ({
-        id: `tt/${exercise.scenario}/${exercise.date}`,
+        id: `tt/${exercise.scenario}/${getDateFormatYMD(exercise.start)}`,
         start: exercise.start,
         end: exercise.end,
         participants: 'Alle',
         title: 'Øvelse',
-        href: `/exercises/${exercise.scenario}/${exercise.date}/`
+        href: `/exercises/${exercise.scenario}/${getDateFormatYMD(exercise.start)}/`
       }))),
       ...(tableTopInstanceList.map(tableTop => ({
-        id: `tt/${tableTop.scenario}/${tableTop.date}`,
+        id: `tt/${tableTop.scenario}/${getDateFormatYMD(tableTop.start)}`,
         start: tableTop.start,
         end: tableTop.end,
         participants: teamById[tableTopScenarioById[tableTop.scenario].team].name,

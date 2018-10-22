@@ -1,29 +1,52 @@
 import { exerciseScenarioList } from './exerciseScenario';
+import { getDateFormatYMD, getDateRelatedToThisDate } from '../helpers/calendar-helper';
+
 
 export const exerciseInstanceList = [
   {
-    scenario: 0,
-    date: '2018-10-11',
-    start: new Date('2018-10-11T09:00:00Z'),
-    end: new Date('2018-10-11T11:45:00Z'),
+    scenario: 11,
+    start: getDateRelatedToThisDate(0, -4, 20),
+    end: getDateRelatedToThisDate(0, -4, 21),
   },
   {
-    scenario: 1,
-    date: '2018-10-12',
-    start: new Date('2018-10-12T09:00:00Z'),
-    end: new Date('2018-10-12T11:45:00Z'),
+    scenario: 11,
+    start: getDateRelatedToThisDate(0, -2, 20),
+    end: getDateRelatedToThisDate(0, -2, 21),
   },
   {
-    scenario: 0,
-    date: '2018-10-23',
-    start: new Date('2018-10-23T09:00:00Z'),
-    end: new Date('2018-10-23T11:45:00Z'),
+    scenario: 11,
+    start: getDateRelatedToThisDate(0, -0, 20),
+    end: getDateRelatedToThisDate(0, -0, 21),
   },
   {
-    scenario: 1,
-    date: '2018-10-24',
-    start: new Date('2018-10-24T09:00:00Z'),
-    end: new Date('2018-10-24T11:45:00Z'),
+    scenario: 8,
+    start: getDateRelatedToThisDate(0, 2, 20),
+    end: getDateRelatedToThisDate(0, 2, 21),
+  },
+  {
+    scenario: 8,
+    start: getDateRelatedToThisDate(0, 4, 20),
+    end: getDateRelatedToThisDate(0, 4, 21),
+  },
+  {
+    scenario: 8,
+    start: getDateRelatedToThisDate(0, 6, 20),
+    end: getDateRelatedToThisDate(0, 6, 21),
+  },
+  {
+    scenario: 6,
+    start: getDateRelatedToThisDate(0, 14, 20),
+    end: getDateRelatedToThisDate(0, 14, 21),
+  },
+  {
+    scenario: 6,
+    start: getDateRelatedToThisDate(0, 16, 20),
+    end: getDateRelatedToThisDate(0, 16, 21),
+  },
+  {
+    scenario: 6,
+    start: getDateRelatedToThisDate(0, 18, 20),
+    end: getDateRelatedToThisDate(0, 18, 21),
   },
 ];
 
@@ -33,7 +56,7 @@ function key(scenario, date) {
 
 const keyLookup = {};
 exerciseInstanceList.forEach(exerciseInstance => {
-  keyLookup[key(exerciseInstance.scenario, exerciseInstance.date)] = exerciseInstance;
+  keyLookup[key(exerciseInstance.scenario, getDateFormatYMD(exerciseInstance.start))] = exerciseInstance;
 });
 
 export function getExerciseInstanceByKey(scenario, date) {

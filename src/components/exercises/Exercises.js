@@ -2,6 +2,7 @@ import React from 'react';
 import AppPage from '../shared/AppPage';
 import { exerciseInstanceList } from '../../dummy-data/exerciseInstance';
 import { exerciseScenarioById } from '../../dummy-data/exerciseScenario';
+import { getDateFormatYMD } from "../../helpers/calendar-helper";
 import TableHead from "@material-ui/core/TableHead/TableHead";
 import TableRow from "@material-ui/core/TableRow/TableRow";
 import TableCell from "@material-ui/core/TableCell/TableCell";
@@ -30,11 +31,11 @@ const Exercises = () => (
           .map(exercise => [exercise, exerciseScenarioById[exercise.scenario]])
           .map(([instance, scenario]) => (
             <LinkTableRow
-              key={`${instance.scenario}/${instance.date}`}
-              to={`${instance.scenario}/${instance.date}/`}
+              key={`${instance.scenario}/${getDateFormatYMD(instance.start)}`}
+              to={`${instance.scenario}/${getDateFormatYMD(instance.start)}/`}
             >
               <TableCell component="div">
-                {instance.date}
+                {getDateFormatYMD(instance.start)}
               </TableCell>
               <TableCell component="div">
                 {scenario.dfu}
