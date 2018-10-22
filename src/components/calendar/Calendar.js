@@ -171,7 +171,7 @@ export default class EmergencyResponsePortalCalendar extends Component {
   }
   
   render() {
-    let initTime = new Date(this.state.selectedDate);
+    const initTime = new Date(this.state.selectedDate);
     initTime.setHours(9);
     return (
       <AppPage title="Kalender" back="..">
