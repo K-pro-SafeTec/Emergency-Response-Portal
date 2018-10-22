@@ -6,6 +6,8 @@ import EntityInfo from '../shared/EntityInfo';
 import IconExercise from '../../icons/main-menu/exerciseScenarios.svg';
 import { exerciseScenarioById } from '../../dummy-data/exerciseScenario';
 import { getExerciseInstanceByKey } from '../../dummy-data/exerciseInstance';
+import Button from "@material-ui/core/Button/Button";
+import {Link} from "react-router-dom";
 
 
 const Exercise = ({ match }) => {
@@ -44,6 +46,7 @@ const Exercise = ({ match }) => {
           <Typography variant="body1" paragraph>{scenario.focusAreas}</Typography>
           <Typography variant="subheading">Utvikling:</Typography>
           <Typography variant="body1" paragraph>{scenario.development}</Typography>
+          <Button variant="contained" color="primary" component={Link} to={`${match.url}debrief/`}>Vis rapport</Button>
         </Paper>
       </AppPage>
     );
