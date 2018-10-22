@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { MemoryRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import MainMenu from './components/main-menu/MainMenu';
 import Calendar from './components/calendar/Calendar';

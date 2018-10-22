@@ -1,3 +1,6 @@
+import report0 from './report0.svg';
+import report1 from './report1.svg';
+
 export const performanceRequirementList = [
   {
     id: "V.YK-1",
@@ -93,7 +96,8 @@ export const performanceRequirementList = [
   },
   {
     id: "R.YK-1",
-    description: "POB oversikt skal etableres så snart som mulig (innen 20 minutter), for å avklare om personell er savnet."
+    description: "POB oversikt skal etableres så snart som mulig (innen 20 minutter), for å avklare om personell er savnet.",
+    report: report1
   },
   {
     id: "R.YK-2",
@@ -137,7 +141,8 @@ export const performanceRequirementList = [
   },
   {
     id: "E.YK-1",
-    description: "Ved evakueringsalarm skal alt personell være mønstret i livbåt, og POB klar innen 25 minutter."
+    description: "Ved evakueringsalarm skal alt personell være mønstret i livbåt, og POB klar innen 25 minutter.",
+    report: report0
   },
   {
     id: "E.YK-2",
@@ -164,3 +169,6 @@ export const performanceRequirementList = [
     description: "Opprydding og klargjøring for normal drift skal ikke medføre tap av informasjon som kan være av betydning for granskning og etterforskning av ulykken."
   }
 ];
+
+export const performanceRequirementById = {};
+performanceRequirementList.forEach(performanceRequirement => performanceRequirementById[performanceRequirement.id] = performanceRequirement);
