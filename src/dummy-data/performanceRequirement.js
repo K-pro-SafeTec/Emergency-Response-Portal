@@ -1,5 +1,5 @@
-import report0 from './report0.png';
-import report1 from './report1.png';
+import report0 from './report0.svg';
+import report1 from './report1.svg';
 
 export const performanceRequirementList = [
   {
