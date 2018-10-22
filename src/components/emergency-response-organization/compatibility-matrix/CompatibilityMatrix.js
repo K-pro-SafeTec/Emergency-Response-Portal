@@ -17,7 +17,7 @@ const styles = {
 function MediaCard(props) {
   const { classes } = props;
   return (
-  <AppPage title="Forenelighetsmatrise" back="..">
+  <AppPage title="Forenlighetsmatrise" back="..">
     <CardMedia
       className={classes.media}
       image= {compat_image}
