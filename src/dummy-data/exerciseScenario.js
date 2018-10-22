@@ -52,6 +52,24 @@ export const exerciseScenarioList = [
     focusAreas: 'Mangler',
     development: 'Mangler'
   },
+
+  {
+    id: 9,
+    dfu: '9',
+    scenario: 'Brann i hjelpesystemer',
+    description: 'Mangler beskrivelse',
+    preparations: 'Mangle data.',
+    performanceRequirements: 'Mangler data',
+    parameters:
+      {
+        wind: 'mangler',
+        waves: 'mangler',
+        pob: 'mangler',
+        ongoingActivities: 'mangler'
+      },
+    focusAreas: 'Mangler',
+    development: 'Mangler'
+  },
 ];
 
 export const exerciseScenarioById = {};

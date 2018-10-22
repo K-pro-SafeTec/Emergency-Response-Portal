@@ -34,6 +34,21 @@ export const exerciseInstanceList = [
     end: getDateRelatedToThisDate(0, 6, 21),
   },
   {
+    scenario: 9,
+    start: getDateRelatedToThisDate(4, 7, 21),
+    end: getDateRelatedToThisDate(4, 7, 22),
+  },
+  {
+    scenario: 9,
+    start: getDateRelatedToThisDate(4, 9, 21),
+    end: getDateRelatedToThisDate(4, 9, 22),
+  },
+  {
+    scenario: 9,
+    start: getDateRelatedToThisDate(4, 11, 21),
+    end: getDateRelatedToThisDate(4, 11, 22),
+  },
+  {
     scenario: 6,
     start: getDateRelatedToThisDate(0, 14, 20),
     end: getDateRelatedToThisDate(0, 14, 21),
