@@ -1,6 +1,8 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
+import Button from "@material-ui/core/Button/Button";
 import AppPage from '../shared/AppPage';
 import EntityInfo from '../shared/EntityInfo';
 import IconTableTop from '../../icons/main-menu/tableTops.svg';
@@ -25,6 +27,7 @@ const Instance = ({ match }) => {
           <Typography variant="body1" paragraph>{scenario.description}</Typography>
           <Typography variant="subheading" gutterBottom>Utvikling:</Typography>
           <Typography variant="body1" paragraph>{instance.development}</Typography>
+          <Button variant="contained" color="primary" component={Link} to={`${match.url}debrief/`}>Vis rapport</Button>
         </Paper>
       </AppPage>
     );
