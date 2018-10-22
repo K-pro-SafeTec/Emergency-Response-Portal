@@ -40,7 +40,7 @@ export default ({ items }) => (
         <StatusIcon status={Status.OK} />
       </ListItemIcon>
       <ListItemText>
-        Beredskapsstatus (2 dager)
+        Beredskapsressurser (2 dager)
       </ListItemText>
     </ListItem>
     <ListItem button>
@@ -48,7 +48,7 @@ export default ({ items }) => (
         <StatusIcon status={Status.WARNING} />
       </ListItemIcon>
       <ListItemText>
-        Beredskapsstatus (4 dager)
+        Beredskapsressurser (4 dager)
       </ListItemText>
     </ListItem>
   </List>
