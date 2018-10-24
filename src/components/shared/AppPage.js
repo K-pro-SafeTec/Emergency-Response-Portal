@@ -6,7 +6,7 @@ import IconButton from '@material-ui/core/IconButton';
 import ArrowBack from '@material-ui/icons/ArrowBack';
 import ArrowForward from '@material-ui/icons/ArrowForward';
 import Home from '@material-ui/icons/Home';
-import SafetecLogo from '../../icons/safetek_for_now.svg';
+import SafetecLogo from '../../icons/safetec.svg';
 import { withStyles } from '@material-ui/core';
 import { Link, withRouter } from 'react-router-dom';
 
