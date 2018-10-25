@@ -2,23 +2,30 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DisplayEvent from './DisplayEvent';
 import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 import {getEvents, getDateFormat, sortEvents} from './../../helpers/calendar-helper';
 
 const SideDisplay = (props) => {
   let events = getEvents(props.events, props.date);
   events = sortEvents(events);
   return (
-    <div className="side-display">
-      <h1>{getDateFormat(props.date)}</h1>
-      <h2>Det er {events.length > 0 ? events.length + " " : "ingen "}
-        hendelse{(events.length > 1 || events.length === 0) && "r"} denne dagen.</h2>
-      <div>
-        {events.map((e, i) =>
-          <DisplayEvent key={i} event={e} onChangeEvent={props.onChangeEvent}
-                        onDeleteButtonClick={props.onDeleteButtonClick}
-                        onReviewButtonClick={props.onReviewButtonClick}/>
-        )}
-      </div>
+    <div>
+      <Typography variant="headline">{getDateFormat(props.date)}</Typography>
+      {events.length > 0 ? (
+        <div style={{ margin: '20px 0'}}>
+          {events.map((e, i) => (
+            <DisplayEvent
+              key={i}
+              event={e}
+              onChangeEvent={props.onChangeEvent}
+              onDeleteButtonClick={props.onDeleteButtonClick}
+              onReviewButtonClick={props.onReviewButtonClick}
+            />
+          ))}
+        </div>
+      ) : (
+        <Typography variant="body1" paragraph>Det er ingen hendelser denne dagen.</Typography>
+      )}
       <Button variant="contained" color="primary" onClick={() => props.onAddEventButtonClick()}>
         Legg til ny hendelse
       </Button>

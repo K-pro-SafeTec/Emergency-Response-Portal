@@ -4,6 +4,7 @@ import ParticipantsSelect from './ParticipantsSelect';
 import TypeSelect from './TypeSelect';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 import {getDateFormatYMD, getTimeFormat, isValidParticipants, isValidType} from "../../helpers/calendar-helper";
 
 
@@ -53,32 +54,47 @@ export default class AddEvent extends Component {
 
   render() {
     return (
-      <div className="side-display">
-        <h1>{this.props.eventToEdit ? ("Endre") : "Legg til ny"} hendelse</h1>
+      <div>
+        <Typography variant="headline">{this.props.eventToEdit ? ("Endre") : "Legg til ny"} hendelse</Typography>
         <form className="form" onSubmit={this.handleSubmit}>
-          <TextField name="date" label="Dato" type="date" defaultValue={this.state.date} onChange={this.handleChange}
-                     InputLabelProps={{
-                       shrink: true,
-                     }}
+          <TextField
+            name="date"
+            label="Dato"
+            type="date"
+            value={this.state.date}
+            onChange={this.handleChange}
+            InputLabelProps={{
+              shrink: true,
+            }}
           />
-          <TextField name="start" label="Start" type="time" defaultValue={this.state.start} onChange={this.handleChange}
-                     InputLabelProps={{
-                       shrink: true,
-                     }}
-                     inputProps={{
-                       step: 300, // 5 min
-                     }}
+          <TextField
+            name="start"
+            label="Start"
+            type="time"
+            value={this.state.start}
+            onChange={this.handleChange}
+            InputLabelProps={{
+              shrink: true,
+            }}
+            inputProps={{
+              step: 300, // 5 min
+            }}
           />
-          <TextField name="end" label="Slutt" type="time" defaultValue={this.state.end} onChange={this.handleChange}
-                     InputLabelProps={{
-                       shrink: true,
-                     }}
-                     inputProps={{
-                       step: 300, // 5 min
-                     }}
+          <TextField
+            name="end"
+            label="Slutt"
+            type="time"
+            defaultValue={this.state.end}
+            onChange={this.handleChange}
+            InputLabelProps={{
+              shrink: true,
+            }}
+            inputProps={{
+              step: 300, // 5 min
+            }}
           />
-          <ParticipantsSelect id="participants" onChange={this.handleChange}/>
-          <TypeSelect id="type" onChange={this.handleChange}/>
+          <ParticipantsSelect onChange={this.handleChange}/>
+          <TypeSelect onChange={this.handleChange}/>
           <div className="mt32 flex spacebetween">
             <Button variant="contained" color="primary" type="submit">
               Lagre

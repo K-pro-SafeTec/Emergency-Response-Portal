@@ -177,6 +177,7 @@ export default class EmergencyResponsePortalCalendar extends Component {
       <AppPage title="Kalender" back="..">
         <div className="container">
           <BigCalendar
+            className="calendar"
             localizer={localizer}
             scrollToTime={initTime}
             messages={norwegian_translations}
@@ -188,17 +189,28 @@ export default class EmergencyResponsePortalCalendar extends Component {
             onSelectSlot={((slot) => this.slotClicked(slot))}
             onSelectEvent={({start}) => this.eventClicked(start)}
             components={{
-                dateCellWrapper: this.coloredDateCellWrapper,
+              dateCellWrapper: this.coloredDateCellWrapper,
             }}
           />
-          <Paper className="paper-big">
-            {!this.state.showEventAdder ? (<SideDisplay events={this.state.events} date={this.state.selectedDate}
-                                                        onAddEventButtonClick={this.addEventButtonClicked}
-                                                        onDeleteButtonClick={this.deleteEvent}
-                                                        onChangeEvent={this.changeEventButtonClicked}
-                                                        onReviewButtonClick={this.reviewEvent}/>) :
-              <AddEvent date={this.state.selectedDate} eventToEdit={this.state.eventToEdit}
-                        onSaveButtonClick={this.saveEvent} deleteEvent={this.deleteEvent} onCancelClick={this.cancelButtonClicked} />}
+          <Paper className="side-display">
+            {!this.state.showEventAdder ? (
+              <SideDisplay
+                events={this.state.events}
+                date={this.state.selectedDate}
+                onAddEventButtonClick={this.addEventButtonClicked}
+                onDeleteButtonClick={this.deleteEvent}
+                onChangeEvent={this.changeEventButtonClicked}
+                onReviewButtonClick={this.reviewEvent}
+              />
+            ) : (
+              <AddEvent
+                date={this.state.selectedDate}
+                eventToEdit={this.state.eventToEdit}
+                onSaveButtonClick={this.saveEvent}
+                deleteEvent={this.deleteEvent}
+                onCancelClick={this.cancelButtonClicked}
+              />
+            )}
           </Paper>
         </div>
       </AppPage>
