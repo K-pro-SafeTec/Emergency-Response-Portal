@@ -5,26 +5,39 @@ export const tableTopScenarioList = [
     id: 1,
     dfuNr: "1",
     dfuTitle: "Uantent/Antent hydrokarbonlekkasje",
+<<<<<<< HEAD
     scenario: "Lekkasje i turret",
     description: "",
     team: 1,
     questions: [],
     debrief: [],
+=======
+    scenario: "Motta scenario fra kunden.",
+    description: "Motta beskrivelse fra kunden.",
+    team: 11,
+>>>>>>> Reassign the teams to scenarios
   },
   {
     id: 2,
     dfuNr: "2",
     dfuTitle: "Brønnhendelse",
+<<<<<<< HEAD
     scenario: "Tap av brønnkontroll",
     description: "",
     team: 1,
     questions: [],
     debrief: [],
+=======
+    scenario: "Motta scenario fra kunden.",
+    description: "Motta beskrivelse fra kunden.",
+    team: 11,
+>>>>>>> Reassign the teams to scenarios
   },
   {
     id: 3,
     dfuNr: "3",
     dfuTitle: "Akutt utslipp",
+<<<<<<< HEAD
     scenario: "Oljeutslipp til sjø fra innretninig",
     description: "Scenarioet omhandler oljeutslipp fra innretningen. I initiell fase er ikke lekksjekilde kjent. Et " +
       "større søl brer seg utover sjø. Værfold er 6 m/s vind fra nordvest, smul sjø (1-1,5m bølger). Hendelsen blir " +
@@ -43,11 +56,17 @@ export const tableTopScenarioList = [
       "Helseskade - avdampning fra utslipp - hvordan er dette?",
     ],
     debrief: [],
+=======
+    scenario: "Motta scenario fra kunden.",
+    description: "Motta beskrivelse fra kunden.",
+    team: 1,
+>>>>>>> Reassign the teams to scenarios
   },
   {
     id: 4,
     dfuNr: "4",
     dfuTitle: "Fare for kollisjon",
+<<<<<<< HEAD
     scenario: "Drivende fartøy på kollisjonskurs",
     description: "Slepet til en en stor lekter (110 meter lang) har røket, og denne driver nå mot inretningen. " +
       "Installasjonen er varslet iht. gjeldene ytelseskrav ved en avtand på 20 nm. Det blåser kuling i området " +
@@ -73,21 +92,33 @@ export const tableTopScenarioList = [
       "Hva bør vi trene mer på",
       "Erfaringer vi skal dele med andre som ikke var med på øvelsen",
     ],
+=======
+    scenario: "Motta scenario fra kunden.",
+    description: "Motta beskrivelse fra kunden.",
+    team: 1,
+>>>>>>> Reassign the teams to scenarios
   },
   {
     id: 9,
     dfuNr: "9",
     dfuTitle: "Brann i hjelpesystemer",
+<<<<<<< HEAD
     scenario: "",
     description: "",
     team: 1,
     questions: [],
     debrief: [],
+=======
+    scenario: "Motta scenario fra kunden.",
+    description: "Motta beskrivelse fra kunden.",
+    team: 11,
+>>>>>>> Reassign the teams to scenarios
   },
   {
     id: 12,
     dfuNr: "12",
     dfuTitle: "Kriminell handling",
+<<<<<<< HEAD
     scenario: "Bombetrussel",
     description: "Installasjonen mottar varsel om at det skal være utplassert en bombe på installsjonen. Trusslene " +
       "er ringt inn til lokal avis. Media ringer til oljeselskapet og spør hva de vil gjøre med dette. Så langt er " +
@@ -107,16 +138,27 @@ export const tableTopScenarioList = [
       "Vil debrief iverksettes etter en slik hendelse?",
     ],
     debrief: [],
+=======
+    scenario: "Motta scenario fra kunden.",
+    description: "Motta beskrivelse fra kunden.",
+    team: 1,
+>>>>>>> Reassign the teams to scenarios
   },
   {
     id: 13,
     dfuNr: "13",
     dfuTitle: "Tap av posisjon",
+<<<<<<< HEAD
     scenario: "Ankerlinebrudd",
     description: "",
     team: 1,
     questions: [],
     debrief: [],
+=======
+    scenario: "Motta scenario fra kunden.",
+    description: "Motta beskrivelse fra kunden.",
+    team: 11,
+>>>>>>> Reassign the teams to scenarios
   },
   {
     id: 14,
