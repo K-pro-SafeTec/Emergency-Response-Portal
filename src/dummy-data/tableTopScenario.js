@@ -7,7 +7,7 @@ export const tableTopScenarioList = [
     dfuTitle: "Uantent/Antent hydrokarbonlekkasje",
     scenario: "Lekkasje i turret",
     description: "",
-    team: 1,
+    team: 11,
     questions: [],
     debrief: [],
   },
@@ -17,7 +17,7 @@ export const tableTopScenarioList = [
     dfuTitle: "Brønnhendelse",
     scenario: "Tap av brønnkontroll",
     description: "",
-    team: 1,
+    team: 11,
     questions: [],
     debrief: [],
   },
@@ -29,7 +29,7 @@ export const tableTopScenarioList = [
     description: "Scenarioet omhandler oljeutslipp fra innretningen. I initiell fase er ikke lekksjekilde kjent. Et " +
       "større søl brer seg utover sjø. Værfold er 6 m/s vind fra nordvest, smul sjø (1-1,5m bølger). Hendelsen blir " +
       "varslet kontrollrom av uteoperatør.",
-    team: 0,
+    team: 1,
     questions: [
       "Hvordan blir et slikt varsel til kontrollrom/radio håndtert og varslet videre?",
       "Hvem mobiliserer?",
@@ -52,7 +52,7 @@ export const tableTopScenarioList = [
     description: "Slepet til en en stor lekter (110 meter lang) har røket, og denne driver nå mot inretningen. " +
       "Installasjonen er varslet iht. gjeldene ytelseskrav ved en avtand på 20 nm. Det blåser kuling i området " +
       "(18-20 m/s).",
-    team: 0,
+    team: 1,
     questions: [
       "Hvordan blir et slikt varsel til kontrollrom/radio håndtert og varslet videre?",
       "Hvem mobiliserer?",
@@ -80,7 +80,7 @@ export const tableTopScenarioList = [
     dfuTitle: "Brann i hjelpesystemer",
     scenario: "",
     description: "",
-    team: 1,
+    team: 11,
     questions: [],
     debrief: [],
   },
@@ -92,7 +92,7 @@ export const tableTopScenarioList = [
     description: "Installasjonen mottar varsel om at det skal være utplassert en bombe på installsjonen. Trusslene " +
       "er ringt inn til lokal avis. Media ringer til oljeselskapet og spør hva de vil gjøre med dette. Så langt er " +
       "ikke politiet etc. varslet.",
-    team: 0,
+    team: 1,
     questions: [
       "Hvordan blir et slikt varsel til sentralbord håndtert, når tid blir installasjonen, politiet etc. varslet?",
       "Har sentralbord skjema for mottak og videre varsling?",
@@ -114,7 +114,7 @@ export const tableTopScenarioList = [
     dfuTitle: "Tap av posisjon",
     scenario: "Ankerlinebrudd",
     description: "",
-    team: 1,
+    team: 11,
     questions: [],
     debrief: [],
   },
@@ -124,7 +124,7 @@ export const tableTopScenarioList = [
     dfuTitle: "Tap av stabilitet",
     scenario: "Vanninntrengning",
     description: "",
-    team: 0,
+    team: 1,
     questions: [],
     debrief: [],
   },

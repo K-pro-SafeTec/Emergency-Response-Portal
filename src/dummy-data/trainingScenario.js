@@ -10,7 +10,7 @@ export const trainingScenarioList = [
       "Bytte av luftflaske - røykdykkerapparat\n" +
       "Gjennomgang og test av kommunikasjon\n" +
       "Bli kjent runde ved behov",
-    team: 6,
+    team: 2,
   },
   {
     id: 1,
@@ -18,7 +18,7 @@ export const trainingScenarioList = [
     goals: "Repetisjon av kutt og klemskade behandling",
     setup: "Bruk av trykkbandasje og strips for større kuttskader\n" +
       "Gjennomgå og repetere symptomer på indre klemskader",
-    team: 7,
+    team: 12,
   },
   {
     id: 2,
@@ -30,17 +30,17 @@ export const trainingScenarioList = [
       "Introduksjon og test av radiokommunikasjon \n" +
       "Om været tillater det, låre MOB-båt og simulere redning av person i sjø\n" +
       "Tilbakeføring av utstyr til stand-by for beredskap",
-    team: 8,
+    team: 3,
   },
   {
     id: 3,
     theme: "Helidekk grunntrening for hver offshore periode",
     goals: "Bli kjent med og trene på bruk av spesialutstyr (crash-kit) og dual-agent aggregat",
-    setup: "\"Gjennomgå og trene på bruk av crash-kit\n" +
+    setup: "Gjennomgå og trene på bruk av crash-kit\n" +
       "Gjennomgå bruk av dual-agent aggregat\n" +
       "Test av faste brannmonitorer\n" +
       "Gjennomgang av aksjonsrutiner ved helikopterkras.",
-    team: 3,
+    team: 6,
   },
   {
     id: 4,
