@@ -5,7 +5,8 @@ import ListItemText from "@material-ui/core/ListItemText/ListItemText";
 import List from "@material-ui/core/List/List";
 import { withStyles } from '@material-ui/core/styles';
 import Typography from "@material-ui/core/Typography/Typography";
-import { raw_person_list } from "../../raw-data/raw_person";
+import { personById } from "../../raw-data/preprocess_data";
+import { teamById } from "../../dummy-data/team";
 
 const styles = theme => ({
   root: {
@@ -50,11 +51,8 @@ class PersonList extends Component {
       <div className={classes.root}>
         <Typography variant="subheading" style={{marginTop: '24px'}} gutterBottom>Deltakere:</Typography>
         <List>
-          {raw_person_list
-            .filter(person => person.Beredskapslag_1 === this.props.scenario.team
-              || person.Beredskapslag_2 === this.props.scenario.team
-              || person.Beredskapslag_3 === this.props.scenario.team)
-            .map((person, key) => (
+          {teamById[this.props.scenario.team].members
+            .map((personId, key) => (
               <ListItem key={key} className={classes.listItem} button onClick={this.handleToggle(key)}>
                 <Checkbox
                   color={"primary"}
@@ -62,7 +60,7 @@ class PersonList extends Component {
                   tabIndex={-1}
                   disableRipple
                 />
-                <ListItemText primary={person.first_name + " " + person.last_name} />
+                <ListItemText primary={personById[personId].first_name + " " + personById[personId].last_name} />
               </ListItem>
             ))
           }
