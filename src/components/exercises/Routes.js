@@ -9,6 +9,7 @@ const Routes = ({ match }) => (
     <Route exact path={match.url} component={Exercises} />
     <Route exact path={`${match.url}/:scenarioId/:date/`} component={Exercise} />
     <Route path={`${match.url}/:scenarioId/:date/debrief/`} component={Debrief} />
+    <Route component={UnknownPage} />
   </Switch>
 );
 

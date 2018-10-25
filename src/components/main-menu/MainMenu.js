@@ -40,7 +40,7 @@ const MainMenu = ({ classes }) => (
       <NavMenuItem name="Table tops" icon={IconTableTops} to="table-tops/teams/" />
       <NavMenuItem name="Beredskapsdokumenter" icon={IconDocuments} to="documents/" />
       <NavMenuItem name="Beredskapsorganisasjon" icon={IconEmergencyResponseOrganization} to="emergency-response-organization/" />
-      <NavMenuItem name="Kompetanseoversikt" icon={IconCompetenceOverview} to="competence-overview/" />
+      <NavMenuItem name="Kompetanseoversikt" icon={IconCompetenceOverview} to="competence-overvieww/" />
     </NavMenu>
   </AppPage>
 );

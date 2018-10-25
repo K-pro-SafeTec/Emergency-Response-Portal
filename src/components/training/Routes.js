@@ -4,6 +4,7 @@ import Teams from './Teams';
 import Team from './Team';
 import Instance from './Instance';
 import Debrief from './Debrief';
+import UnknownPage from './components/shared/UnknownPage';
 
 const Routes = ({ match }) => (
   <Switch>
@@ -11,6 +12,7 @@ const Routes = ({ match }) => (
     <Route path={`${match.url}/teams/:teamId/`} component={Team} />
     <Route exact path={`${match.url}/scenarios/:scenarioId/:date/`} component={Instance} />
     <Route path={`${match.url}/scenarios/:scenarioId/:date/debrief/`} component={Debrief} />
+    <Route component={UnknownPage} />
   </Switch>
 );
 

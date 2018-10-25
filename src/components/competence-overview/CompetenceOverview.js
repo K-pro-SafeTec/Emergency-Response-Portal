@@ -10,6 +10,7 @@ import AppPage from '../shared/AppPage';
 import TeamContainer from './TeamContainer';
 import Person from './Person';
 import { teamList } from '../../dummy-data/team';
+import UnknownPage from '../shared/UnknownPage';
 
 const TeamItem = ({ team }) => (
   <ListItem button component={Link} to={`teams/${team.id}/`}>
@@ -36,5 +37,6 @@ export default ({ match }) => (
     </Route>
     <Route path={`${match.url}/teams/:teamId/`} component={TeamContainer} />
     <Route path={`${match.url}/people/:personId/`} component={Person} />
+    <Route component={UnknownPage} />
   </Switch>
 );

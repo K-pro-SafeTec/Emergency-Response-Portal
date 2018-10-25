@@ -6,7 +6,8 @@ import NavMenu from '../../shared/NavMenu';
 import NavMenuItem from '../../shared/NavMenuItem';
 import IconTraining from '../../../icons/main-menu/training.svg';
 import IconExerciseScenarios from '../../../icons/main-menu/exerciseScenarios.svg';
-import IconTableTops from '../../../icons/main-menu/tableTops.svg'
+import IconTableTops from '../../../icons/main-menu/tableTops.svg';
+import UnknownPage from './components/shared/UnknownPage';
 
 
 const ExerciseReports = ({ match }) => (
@@ -29,6 +30,7 @@ const ExerciseReports = ({ match }) => (
     <Route path={`${match.url}/table-tops/`}>
       <PlaceholderPage title="Øvingsrapporter - Table Tops" back=".." />
     </Route>
+    <Route component={UnknownPage} />
   </Switch>
 )
 
