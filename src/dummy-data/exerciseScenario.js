@@ -11,13 +11,6 @@ export const exerciseScenarioList = [
       'Avtale med dekksmannskap om varsling til kontrollrom, husk ""Øvelse-øvelse-øvelse""\n' +
       'Om mulig, simuler at markør ligger fast og må frigjøres',
     performanceRequirements: '',
-    parameters:
-      {
-        wind: '6 m/s SØ',
-        waves: '2m Hs',
-        pob: '112',
-        ongoingActivities: 'Interne løfteoperasjoner'
-      },
     focusAreas: 'Livreddende stabilisering på skadested\n' +
       'Koordinere frigjøring av forulykket med S&R lag\n' +
       'Skånsom transport til hospital\n' +
@@ -40,13 +33,6 @@ export const exerciseScenarioList = [
       'Forhåndsvarsel av MOB ressurser som ved arbeid over sjø',
     performanceRequirements: 'R.YK-3 Personell som utfører planlagt arbeid over sjø skal kunne plukkes opp fra sjøen ' +
       'innen 8 minutter.',
-    parameters:
-      {
-        wind: 'mangler',
-        waves: 'mangler',
-        pob: 'mangler',
-        ongoingActivities: 'mangler'
-      },
     focusAreas: 'Egensikkerhet \n' +
       'Sikker sjøsetting av MOB båt\n' +
       'Kommunikasjon \n' +
@@ -70,13 +56,6 @@ export const exerciseScenarioList = [
       'Avtale med et utvalg av passasjerer om markørroller.',
     performanceRequirements: 'B.YK-3 Søk- og redningslag skal være klar til innsats fra mønstringssted innen 7 ' +
       'minutter etter at PA-melding er gitt.',
-    parameters:
-      {
-        wind: 'mangler',
-        waves: 'mangler',
-        pob: 'mangler',
-        ongoingActivities: 'mangler'
-      },
     focusAreas: 'Egensikkerhet for helidekk mannskap ved landing og avgang\n' +
       'Sikring av helikopter på helidekk, fare for brann\n' +
       'Redning av passasjerer ut av helikopter\n' +
@@ -98,13 +77,6 @@ export const exerciseScenarioList = [
     preparations: 'Forbered AT for vedlikehold på brannspjeld, slik at disse er (simulert) utkoplet i øvelsen.',
     performanceRequirements: 'B.YK-2 Skadestedsleder skal opprette skadestedssenter innen 5 minutter etter at ' +
       'PA-melding er gitt.',
-    parameters:
-      {
-        wind: 'mangler',
-        waves: 'mangler',
-        pob: 'mangler',
-        ongoingActivities: 'mangler'
-      },
     focusAreas: 'Bruk av fast slukkesystem\n' +
       'Sjekk av AT, for å avklare om det er noe som kan begrense effekt av fast slukkesystem. (Liten betydning for watermist)\n' +
       'Kjennskap til og bruk av ventil for avstengning av dieseltilførsel til maskinrom.\n' +
