@@ -112,16 +112,14 @@ const styles = {
   }
 };
 
-const BackupResources = ({ classes }) => {
-  return(
-    <AppPage title="Reserveressurser" back="..">
-      <div className={classes.container}>
-        {teams.map(({id, name, backups}) => (
-          <Team key={id} name={name} backups={backups} />
-        ))}
-      </div>
-    </AppPage>
-  )
-};
+const BackupResources = ({ classes }) => (
+  <AppPage title="Reserveressurser" back="..">
+    <div className={classes.container}>
+      {teams.map(({id, name, backups}) => (
+        <Team key={id} name={name} backups={backups} />
+      ))}
+    </div>
+  </AppPage>
+);
 
 export default withStyles(styles)(BackupResources);
