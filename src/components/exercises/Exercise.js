@@ -26,11 +26,15 @@ const Exercise = ({ match }) => {
           <Typography variant="subheading">Scenariobeskrivelse:</Typography>
           <Typography variant="body1" paragraph>{scenario.description}</Typography>
           <Typography variant="subheading">Forberedelser:</Typography>
-          <Typography variant="body1" paragraph>{scenario.preparations}</Typography>
+          {scenario.preparations.map(preparation => (
+            <Typography variant="body1">{preparation}</Typography>
+          ))}
           <Typography variant="subheading">Ytelseskrav:</Typography>
           <Typography variant="body1" paragraph>{scenario.performanceRequirements}</Typography>
           <Typography variant="subheading">Fokusområder:</Typography>
-          <Typography variant="body1" paragraph>{scenario.focusAreas}</Typography>
+          {scenario.focusAreas.map(focusArea => (
+            <Typography variant="body1">{focusArea}</Typography>
+          ))}
           <Typography variant="subheading">Utvikling:</Typography>
           <Typography variant="body1" paragraph>{scenario.development}</Typography>
           <Button variant="contained" color="primary" component={Link} to={`${match.url}debrief/`}>Vis rapport</Button>
