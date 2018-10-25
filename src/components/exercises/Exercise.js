@@ -16,7 +16,7 @@ const Exercise = ({ match }) => {
     const scenario = exerciseScenarioById[match.params.scenarioId];
     return (
       <AppPage title="Øvelser" back="../..">
-        <Paper style={{margin: '1em', padding: '1em'}}>
+        <Paper style={{margin: '1em', padding: '1em', whiteSpace: 'pre-line'}}>
           <EntityInfo Icon={(props) => <img src={IconExercise} alt="Øvelse" {...props} />}>
             <Typography variant="headline">{scenario.title}</Typography>
             <Typography variant="subheading">DFU {scenario.dfu}</Typography>

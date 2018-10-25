@@ -16,7 +16,7 @@ const Instance = ({ match }) => {
     const scenario = trainingScenarioById[match.params.scenarioId];
     return (
       <AppPage title="Trening" back="../../../teams/">
-        <Paper style={{margin: '1em', padding: '1em'}}>
+        <Paper style={{margin: '1em', padding: '1em', whiteSpace: 'pre-line'}}>
           <EntityInfo Icon={(props) => <img src={IconTraining} alt="Trening" {...props} />}>
             <Typography variant="headline">{scenario.theme}</Typography>
             <Typography variant="subheading">{instance.date}</Typography>
