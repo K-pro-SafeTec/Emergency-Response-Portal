@@ -16,7 +16,7 @@ const Instance = ({ match }) => {
     const scenario = tableTopScenarioById[match.params.scenarioId];
     return (
       <AppPage title="Table tops" back="../../../teams/">
-        <Paper style={{margin: '1em', padding: '1em', whiteSpace: 'pre-line'}}>
+        <Paper style={{margin: '1em', padding: '1em'}}>
           <EntityInfo Icon={(props) => <img src={IconTableTop} alt="Table Top" {...props} />}>
             <Typography variant="headline">DFU {scenario.dfuNr}</Typography>
             <Typography variant="subheading">{scenario.dfuTitle}</Typography>
