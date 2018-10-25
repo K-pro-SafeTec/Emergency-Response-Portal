@@ -1,16 +1,19 @@
 import React from 'react';
-import StatusIcon from "../../shared/StatusIcon";
-import ListItemIcon from "@material-ui/core/ListItemIcon/ListItemIcon";
+import StatusIcon from '../../shared/StatusIcon';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import Typography from '@material-ui/core/Typography';
 
-const Person = (props) => {
-    return(
-      <div style={{display: 'flex'}}>
-        <ListItemIcon style={{ fontSize: '40px', alignSelf: 'center' }}>
-          <StatusIcon status={props.status} />
-        </ListItemIcon>
-        <h3>{props.name}</h3>
-      </div>
-    )
-};
+const Person = ({ status, name }) => (
+  <ListItem>
+    <ListItemIcon>
+      <StatusIcon status={status} />
+    </ListItemIcon>
+    <ListItemText>
+      <Typography variant="body1">{name}</Typography>
+    </ListItemText>
+  </ListItem>
+);
 
 export default Person;

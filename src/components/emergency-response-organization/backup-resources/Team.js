@@ -1,22 +1,34 @@
 import React from 'react';
 import Paper from '@material-ui/core/Paper';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import Typography from '@material-ui/core/Typography';
 import Person from "./Person";
+import { withStyles } from '@material-ui/core'
 
 const styles = {
-  margin: '1em',
-  padding: '1em',
-  width: '15em'
+  paper: {
+    margin: '1em',
+    flex: '1 0 20em',
+  },
 };
 
-const Team = (props) => {
+const Team = ({ classes, name, backups }) => {
   return(
-    <Paper style={styles}>
-      <h2>{props.name}</h2>
-      {props.backups.map(({ id, name, status }) => (
-        <Person key={id} name={name} status={status}/>
-      ))}
+    <Paper className={classes.paper}>
+      <List>
+        <ListItem>
+          <ListItemText>
+            <Typography variant="title">{name}</Typography>
+          </ListItemText>
+        </ListItem>
+        {backups.map(({ id, name, status }) => (
+          <Person key={id} name={name} status={status}/>
+        ))}
+      </List>
     </Paper>
   )
 };
 
-export default Team;
+export default withStyles(styles)(Team);
