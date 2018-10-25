@@ -23,6 +23,12 @@ function createTeamList() {
       for (let k in competenceList) { // Check all required courses
         const course_id = competenceList[k]
         // If some person lacks required competence
+        if (person.competence[course_id] === undefined || person.competence[course_id] === null) {
+          status = Status.ERROR;
+          break;
+        }
+
+        // Update severity
         if (person.competence[course_id].status === Status.ERROR ) {
           status = Status.ERROR;
           break; // Don't need to check anymore, since team will have ERROR status
@@ -31,7 +37,6 @@ function createTeamList() {
           status = Status.WARNING; // Continue checking to see if we find ERROR
         }
       }
-      
       if (status === Status.ERROR) {break;} // Will return error status for team so stop checking
     }
 
