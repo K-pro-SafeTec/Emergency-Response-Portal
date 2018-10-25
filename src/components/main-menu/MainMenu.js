@@ -14,8 +14,12 @@ import AppPage from '../shared/AppPage';
 import EmergencyPortalLogo from '../../icons/emergencyPortal.svg'
 import { withStyles } from '@material-ui/core/styles';
 
-
 import '../../raw-data/preprocess_data';
+
+// Seed random values globally to generate deteministic numbers
+var seedrandom = require('seedrandom');
+seedrandom(0, { global: true });
+
 
 
 const styles = {

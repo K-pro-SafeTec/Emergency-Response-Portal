@@ -1,17 +1,19 @@
 import Status from '../helpers/Status';
 import { roleList } from './role';
-
-// Get team info
 import { raw_person_list } from '../raw-data/raw_person';
-
 import { erTeamsByPerson } from '../raw-data/preprocess_data';
-
 import { personShouldHaveCourses } from '../raw-data/preprocess_data';
 
 function getRolesForPerson(id) {
   return roleList
     .filter(role => role.person === id)
     .map(role => role.id);
+}
+
+Date.prototype.addDays = function(days) {
+  var date = new Date(this.valueOf());
+  date.setDate(date.getDate() + days);
+  return date;
 }
 
 function fillPersonList(personList) {
@@ -25,14 +27,34 @@ function fillPersonList(personList) {
     ///// STILL NEED DATA ON WHAT COURSES AND DATES PEOPLE ACTUALLY HAVE 
     // Get courses ids this person should have
     const competenceIdList = personShouldHaveCourses[i];
-    
+
+    const max_offset = 20
+    const min_offset = -10
+
     const comp = {}
+    const today = new Date()
+    const num_days_warning = -5
+
+
     for (let i in competenceIdList) {
       const course_id = competenceIdList[i];
+
+      const offset_days = Math.round(Math.random() * (max_offset - min_offset) + min_offset)
+
+      const date = today.addDays(offset_days); 
+      const date_warning = date.addDays(num_days_warning)
+
+      var status = Status.OK
+      if (date < today)          {status = Status.ERROR;}
+      else if (date_warning <= today)   {status = Status.WARNING;}
+
+      const comment = null;
+      if( Math.random() < 0.2) {comment = 'Eksempelkommentar'}
+      
       comp[course_id] = {
-        status: Status.OK,
-        validUntil: new Date('2019-10-20'),
-        comment: 'Eksempelkommentar',
+        status: status,
+        validUntil: date,
+        comment: comment,
       }
       
     }
@@ -45,7 +67,7 @@ function fillPersonList(personList) {
         // TODO: handle this... 
         roles: getRolesForPerson(0),
       };
-      personList.push(personListEntry)
+      personList.push(personListEntry);
   }
 }
 
@@ -146,6 +168,6 @@ export const personList = [
   // },
 ];
 
-fillPersonList(personList)
+fillPersonList(personList);
 export const personById = {};
 personList.forEach(person => personById[person.id] = person);
