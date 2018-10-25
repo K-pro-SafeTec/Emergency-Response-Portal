@@ -36,7 +36,7 @@ export const trainingScenarioList = [
     id: 3,
     theme: "Helidekk grunntrening for hver offshore periode",
     goals: "Bli kjent med og trene på bruk av spesialutstyr (crash-kit) og dual-agent aggregat",
-    setup: "\"Gjennomgå og trene på bruk av crash-kit\n" +
+    setup: "Gjennomgå og trene på bruk av crash-kit\n" +
       "Gjennomgå bruk av dual-agent aggregat\n" +
       "Test av faste brannmonitorer\n" +
       "Gjennomgang av aksjonsrutiner ved helikopterkras.",
