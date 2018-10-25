@@ -7,7 +7,7 @@ import NavMenuItem from '../../shared/NavMenuItem';
 import IconTraining from '../../../icons/main-menu/training.svg';
 import IconExerciseScenarios from '../../../icons/main-menu/exerciseScenarios.svg';
 import IconTableTops from '../../../icons/main-menu/tableTops.svg';
-import UnknownPage from './components/shared/UnknownPage';
+import UnknownPage from '../../shared/UnknownPage';
 
 
 const ExerciseReports = ({ match }) => (

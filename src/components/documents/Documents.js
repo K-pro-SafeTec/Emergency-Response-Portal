@@ -8,7 +8,7 @@ import { documentList } from '../../dummy-data/document';
 import { drawingList } from '../../dummy-data/drawing';
 import DocumentTableContainer from "./DocumentTableContainer";
 import DocumentView from "./DocumentView";
-import UnknownPage from './components/shared/UnknownPage';
+import UnknownPage from '../shared/UnknownPage';
 
 
 const styles = {

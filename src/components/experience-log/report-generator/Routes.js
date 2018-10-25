@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import ReportGenerator from './ReportGenerator';
 import Report from './Report';
-import UnknownPage from './components/shared/UnknownPage';
+import UnknownPage from '../../shared/UnknownPage';
 
 const Routes = ({ match }) => (
   <Switch>

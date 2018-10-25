@@ -11,7 +11,7 @@ import CompatibilityMatrix from './compatibility-matrix/CompatibilityMatrix';
 import DeputiesContainer from './deputies/DeputiesContainer';
 import EmergencyResponseTeams from './emergency-response-teams/EmergencyResponseTeams';
 import { Switch, Route } from 'react-router-dom';
-import UnknownPage from './components/shared/UnknownPage';
+import UnknownPage from '../shared/UnknownPage';
 
 export default ({ match }) => (
   <Switch>

@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Exercises from './Exercises';
 import Exercise from './Exercise';
 import Debrief from "./Debrief";
+import UnknownPage from '../shared/UnknownPage';
 
 const Routes = ({ match }) => (
   <Switch>

@@ -4,7 +4,7 @@ import Teams from './Teams';
 import Team from './Team';
 import Instance from './Instance';
 import Debrief from './Debrief';
-import UnknownPage from './components/shared/UnknownPage';
+import UnknownPage from '../shared/UnknownPage';
 
 const Routes = ({ match }) => (
   <Switch>

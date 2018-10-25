@@ -3,7 +3,7 @@ import NavMenu from '../shared/NavMenu';
 import NavMenuItem from '../shared/NavMenuItem';
 import AppPage from '../shared/AppPage';
 import { Switch, Route } from 'react-router-dom';
-import UnknownPage from './components/shared/UnknownPage';
+import UnknownPage from '../shared/UnknownPage';
 
 // Components
 import ExerciseReport from './excercise-report/ExerciseReport';
