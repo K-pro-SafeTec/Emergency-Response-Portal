@@ -111,4 +111,3 @@ export const teamList = [
 fillTeamList(teamList);
 export const teamById = {};
 teamList.forEach(team => teamById[team.id] = team);
-

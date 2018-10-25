@@ -6,6 +6,7 @@ import EntityInfo from '../shared/EntityInfo';
 import IconTraining from '../../icons/main-menu/training.svg';
 import { trainingScenarioById } from '../../dummy-data/trainingScenario';
 import { getTrainingInstanceByKey } from '../../dummy-data/trainingInstance';
+import PersonList from './PersonList';
 
 
 const Instance = ({ match }) => {
@@ -25,6 +26,7 @@ const Instance = ({ match }) => {
           {scenario.setup.map((setup, key) => (
             <Typography key={key} variant="body1">{setup}</Typography>
           ))}
+          <PersonList scenario={scenario} />
         </Paper>
       </AppPage>
     );
