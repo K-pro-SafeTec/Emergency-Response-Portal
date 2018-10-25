@@ -45,7 +45,7 @@ for (let i in raw_erteam){
 
 const personShouldHaveCoursesByTeam = {};
 for (let i in raw_person_list) {
-    const coursesByTeam = {}
+    const coursesByTeam = {};
 
     // Get all teams of person
     const team1 = raw_person_list[i]['Beredskapslag_1'];
@@ -53,12 +53,12 @@ for (let i in raw_person_list) {
     const team2 = raw_person_list[i]['Beredskapslag_2'];
     const team3 = raw_person_list[i]['Beredskapslag_3'];
 
-    if (Number.isInteger(team1))      {coursesByTeam[team1] = coursesByTeamId[team1]}
-    if (Number.isInteger(team1_role)) {coursesByTeam[team1_role] = coursesByTeamId[team1_role]}
-    if (Number.isInteger(team2))      {coursesByTeam[team2] = coursesByTeamId[team2]}
-    if (Number.isInteger(team3))      {coursesByTeam[team3] = coursesByTeamId[team3]}
+    if (Number.isInteger(team1))      {coursesByTeam[team1] = coursesByTeamId[team1];}
+    if (Number.isInteger(team1_role)) {coursesByTeam[team1_role] = coursesByTeamId[team1_role];}
+    if (Number.isInteger(team2))      {coursesByTeam[team2] = coursesByTeamId[team2];}
+    if (Number.isInteger(team3))      {coursesByTeam[team3] = coursesByTeamId[team3];}
 
-    personShouldHaveCoursesByTeam[i] = coursesByTeam
+    personShouldHaveCoursesByTeam[i] = coursesByTeam;
 }
 
 export function getPersonCoursesByKey(emp_id, team_id) {
@@ -82,12 +82,12 @@ for (let i in raw_person_list) {
     if (Number.isInteger(team2))      {team_list.push(team2);}
     if (Number.isInteger(team3))      {team_list.push(team3);}
 
-    const courses_list = []
+    const courses_list = [];
     // Find courses required for all team and collect them
     for (let team in team_list) {
         team = team_list[team];
         // Get all courses for given team
-        const courses = coursesByTeamId[team]
+        const courses = coursesByTeamId[team];
         // Add courses if not currently in list
         for (let cid in courses) {
             cid = courses[cid];
