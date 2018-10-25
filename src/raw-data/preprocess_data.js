@@ -16,7 +16,11 @@ raw_erteam.forEach(team => erTeamById[team.er_team_id] = team);
 
 function getERTeamMembers(er_team_id, shift){
     return raw_person_list.filter(person => 
-        person.skift === shift && person.Beredskapslag_1 === er_team_id);
+        person.skift === shift && (person.Beredskapslag_1 === er_team_id
+                                || person.Rolle_lag_1     === er_team_id
+                                || person.Beredskapslag_2 === er_team_id
+                                || person.Beredskapslag_3 === er_team_id
+                                ));
 }
 
 const erTeamMembersByTeamAndShift = {};
@@ -27,9 +31,26 @@ for (let team_id in erTeamById){
     erTeamMembersByTeamAndShift[team_id][1] = getERTeamMembers(team_id, 1);
     erTeamMembersByTeamAndShift[team_id][2] = getERTeamMembers(team_id, 2);
 }
-
 export function getTeamMembersByKey(team_id, shift) {
     return erTeamMembersByTeamAndShift[team_id][shift];
+}
+
+export const erTeamsByPerson = {};
+for (let i in raw_person_list){
+    // Get all teams of person
+    const team1 = raw_person_list[i]['Beredskapslag_1'];
+    const team1_role = raw_person_list[i]['Rolle_lag_1'];
+    const team2 = raw_person_list[i]['Beredskapslag_2'];
+    const team3 = raw_person_list[i]['Beredskapslag_3'];
+
+    // Create array of all teams
+    const team_list = [];
+
+    if (Number.isInteger(team1))      {team_list.push(team1);}
+    if (Number.isInteger(team1_role)) {team_list.push(team1_role);}
+    if (Number.isInteger(team2))      {team_list.push(team2);}
+    if (Number.isInteger(team3))      {team_list.push(team3);}
+    erTeamsByPerson[i] = team_list
 }
 
 // Data om kurs til en person, til når gjelder kurs og kommentar
