@@ -8,6 +8,7 @@ import { documentList } from '../../dummy-data/document';
 import { drawingList } from '../../dummy-data/drawing';
 import DocumentTableContainer from "./DocumentTableContainer";
 import DocumentView from "./DocumentView";
+import UnknownPage from '../shared/UnknownPage';
 
 
 const styles = {
@@ -49,6 +50,7 @@ const Documents = ({ classes, match }) => (
       </AppPage>
     </Route>
     <Route path={`${match.url}/:documentId/`} component={DocumentView} />
+    <Route component={UnknownPage} />
   </Switch>
 );
 

@@ -11,6 +11,7 @@ import CompatibilityMatrix from './compatibility-matrix/CompatibilityMatrix';
 import DeputiesContainer from './deputies/DeputiesContainer';
 import EmergencyResponseTeams from './emergency-response-teams/EmergencyResponseTeams';
 import { Switch, Route } from 'react-router-dom';
+import UnknownPage from '../shared/UnknownPage';
 
 export default ({ match }) => (
   <Switch>
@@ -28,5 +29,6 @@ export default ({ match }) => (
     <Route path={`${match.path}compatibility-matrix/`} component={CompatibilityMatrix} />
     <Route path={`${match.path}deputies/`} component={DeputiesContainer} />
     <Route path={`${match.path}emergency-response-teams/`} component={EmergencyResponseTeams} />
+    <Route component={UnknownPage} />
   </Switch>
 );

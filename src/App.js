@@ -11,6 +11,7 @@ import TableTops from './components/table-tops/Routes';
 import Documents from './components/documents/Documents';
 import EmergencyResponseOrganization from './components/emergency-response-organization/EmergencyResponseOrganization';
 import CompetenceOverview from './components/competence-overview/CompetenceOverview';
+import UnknownPage from './components/shared/UnknownPage';
 
 
 class App extends Component {
@@ -28,6 +29,7 @@ class App extends Component {
           <Route path="/documents/" component={Documents} />
           <Route path="/emergency-response-organization/" component={EmergencyResponseOrganization} />
           <Route path="/competence-overview/" component={CompetenceOverview} />
+          <Route component={UnknownPage} />
         </Switch>
       </Router>
     );
