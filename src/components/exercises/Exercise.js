@@ -29,13 +29,13 @@ const Exercise = ({ match }) => {
           {scenario.preparations.map(preparation => (
             <Typography variant="body1">{preparation}</Typography>
           ))}
-          <Typography variant="subheading">Ytelseskrav:</Typography>
+          <Typography variant="subheading" style={{marginTop: '12px'}}>Ytelseskrav:</Typography>
           <Typography variant="body1" paragraph>{scenario.performanceRequirements}</Typography>
           <Typography variant="subheading">Fokusområder:</Typography>
           {scenario.focusAreas.map(focusArea => (
             <Typography variant="body1">{focusArea}</Typography>
           ))}
-          <Typography variant="subheading">Utvikling:</Typography>
+          <Typography variant="subheading" style={{marginTop: '12px'}}>Utvikling:</Typography>
           <Typography variant="body1" paragraph>{scenario.development}</Typography>
           <Button variant="contained" color="primary" component={Link} to={`${match.url}debrief/`}>Vis rapport</Button>
         </Paper>
