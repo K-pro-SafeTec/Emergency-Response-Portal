@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
-import Button from '@material-ui/core/Button';
 import AppPage from '../shared/AppPage';
 import EntityInfo from '../shared/EntityInfo';
 import IconTraining from '../../icons/main-menu/training.svg';
@@ -24,8 +22,9 @@ const Instance = ({ match }) => {
           <Typography variant="subheading" gutterBottom>Mål:</Typography>
           <Typography variant="body1" paragraph>{scenario.goals}</Typography>
           <Typography variant="subheading" gutterBottom>Oppsett:</Typography>
-          <Typography variant="body1" paragraph>{scenario.setup}</Typography>
-          <Button variant="contained" color="primary" component={Link} to={`${match.url}debrief/`}>Vis rapport</Button>
+          {scenario.setup.map((setup, key) => (
+            <Typography key={key} variant="body1">{setup}</Typography>
+          ))}
         </Paper>
       </AppPage>
     );
