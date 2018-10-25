@@ -1,6 +1,7 @@
 import { raw_courses } from '../raw-data/raw_courses';
 
-function fillCompetenceTypeList(competenceTypeList) {
+function createCompetenceTypeList() {
+  const competenceTypeList = [];
   for (let i in raw_courses) {
     const course = raw_courses[i];
     const listEntry = {
@@ -11,10 +12,11 @@ function fillCompetenceTypeList(competenceTypeList) {
     };
     competenceTypeList.push(listEntry);
   }
+  return competenceTypeList;
 }
 
 
-export const competenceTypeList = [
+// export const competenceTypeList = [
   // {
   //   id: 0,
   //   name: "Offshore grunnkurs",
@@ -27,8 +29,8 @@ export const competenceTypeList = [
   //   id: 2,
   //   name: "Modultrening",
   // }
-];
+// ];
 
-fillCompetenceTypeList(competenceTypeList);
+export const competenceTypeList = createCompetenceTypeList();
 export const competenceTypeById = {};
 competenceTypeList.forEach(competenceType => competenceTypeById[competenceType.id] = competenceType);
