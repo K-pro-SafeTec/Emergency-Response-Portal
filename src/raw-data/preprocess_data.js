@@ -43,44 +43,59 @@ for (let i in raw_erteam){
                                                     .sort(function(a, b){return a - b});
 }
 
+const personShouldHaveCoursesByTeam = {};
+for (let i in raw_person_list) {
+    const coursesByTeam = {};
+
+    // Get all teams of person
+    const team1 = raw_person_list[i]['Beredskapslag_1'];
+    const team1_role = raw_person_list[i]['Rolle_lag_1'];
+    const team2 = raw_person_list[i]['Beredskapslag_2'];
+    const team3 = raw_person_list[i]['Beredskapslag_3'];
+
+    if (Number.isInteger(team1))      {coursesByTeam[team1] = coursesByTeamId[team1];}
+    if (Number.isInteger(team1_role)) {coursesByTeam[team1_role] = coursesByTeamId[team1_role];}
+    if (Number.isInteger(team2))      {coursesByTeam[team2] = coursesByTeamId[team2];}
+    if (Number.isInteger(team3))      {coursesByTeam[team3] = coursesByTeamId[team3];}
+
+    personShouldHaveCoursesByTeam[i] = coursesByTeam;
+}
+
+export function getPersonCoursesByKey(emp_id, team_id) {
+    return personShouldHaveCoursesByTeam[emp_id][team_id];
+}
 
 export const personShouldHaveCourses = {};
 for (let i in raw_person_list) {
+
     // Get all teams of person
-    var team1 = raw_person_list[i]['Beredskapslag_1'];
-    var team1_role = raw_person_list[i]['Rolle_lag_1'];
-    var team2 = raw_person_list[i]['Beredskapslag_2'];
-    var team3 = raw_person_list[i]['Beredskapslag_3'];
+    const team1 = raw_person_list[i]['Beredskapslag_1'];
+    const team1_role = raw_person_list[i]['Rolle_lag_1'];
+    const team2 = raw_person_list[i]['Beredskapslag_2'];
+    const team3 = raw_person_list[i]['Beredskapslag_3'];
 
     // Create array of all teams
-    var team_list = [];
-    team_list.push(team1);
-    team_list.push(team1_role);
-    team_list.push(team2);
-    team_list.push(team3);
+    const team_list = [];
 
-    // Filter away trash values ""
-    team_list = team_list.filter(el => Number.isInteger(el));
-    var courses_list = []
+    if (Number.isInteger(team1))      {team_list.push(team1);}
+    if (Number.isInteger(team1_role)) {team_list.push(team1_role);}
+    if (Number.isInteger(team2))      {team_list.push(team2);}
+    if (Number.isInteger(team3))      {team_list.push(team3);}
 
+    const courses_list = [];
     // Find courses required for all team and collect them
     for (let team in team_list) {
-        team = team_list[team]
+        team = team_list[team];
         // Get all courses for given team
-        var courses = coursesByTeamId[team]
+        const courses = coursesByTeamId[team];
         // Add courses if not currently in list
         for (let cid in courses) {
-            cid = courses[cid]
+            cid = courses[cid];
             if (!courses_list.includes(cid)){
-                courses_list.push(cid)
+                courses_list.push(cid);
             }
         }
-
     }
-    courses_list = courses_list.sort(function(a, b){return a - b})
-    personShouldHaveCourses[i] = courses_list
+    courses_list.sort(function(a, b){return a - b});
+    personShouldHaveCourses[i] = courses_list;
 }
-
-// console.log(personShouldHaveCourses[0])
-// console.log(personShouldHaveCourses[1])
-// console.log(personShouldHaveCourses[12])
