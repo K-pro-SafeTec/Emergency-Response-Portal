@@ -13,5 +13,5 @@ const severity = {
 };
 
 export function mostSevere(a, b) {
-  return severity.get(a) > severity.get(b) ? a : b;
+  return severity[a] > severity[b] ? a : b;
 }
