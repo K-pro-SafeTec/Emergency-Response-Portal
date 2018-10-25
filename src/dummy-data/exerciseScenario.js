@@ -19,10 +19,12 @@ export const exerciseScenarioList = [
       "Skånsom transport til hospital",
       "Forberede for MEDEVAC ",
     ],
-    development: 'Potensiell alvorlig skade på forulykket, herunder brudd og indre blødninger\n' +
-      'Situasjonen forverrer seg grunnet indre blødning\n' +
-      'Sykepleier må følge helikopter til land med pasient\n' +
-      'Tiltak på innretningen når sykepleier ikke lenger er tilstede',
+    development: [
+      "Potensiell alvorlig skade på forulykket, herunder brudd og indre blødninger",
+      "Situasjonen forverrer seg grunnet indre blødning",
+      "Sykepleier må følge helikopter til land med pasient",
+      "Tiltak på innretningen når sykepleier ikke lenger er tilstede",
+    ],
     questions: [
       "Hvordan ble det varslet (GA, pager, radio, telefon eller personlig oppmøte)?",
       "Mønstring, tid brukt?",
@@ -57,8 +59,11 @@ export const exerciseScenarioList = [
       "Kommunikasjon",
       "Manøvrering og redning av person i sjø",
     ],
-    development: '1) Personen blir bevisstløs i fallet (treffer strukturen i fallet) og drukner. \n' +
-      '2) Kald temperatur i vannet fører til at tiden fra personen faller i vannet til vedkommende må hentes opp er kritisk.',
+    development: [
+      "1) Personen blir bevisstløs i fallet (treffer strukturen i fallet) og drukner.",
+      "2) Kald temperatur i vannet fører til at tiden fra personen faller i vannet til vedkommende må hentes opp er " +
+      "kritisk.",
+    ],
     questions: [],
   },
   {
@@ -88,8 +93,10 @@ export const exerciseScenarioList = [
       "Båretrasport",
       "Bruk av hospital/nødhospital",
     ],
-    development: 'Potensielle alvorlige skader på helikopter og brann kan oppstå dersom brenselslekkasje antennes ' +
-      'av kollisionsenergien eller annen tenningskilde (for eksempel helikopterturbiner).',
+    development: [
+      "Potensielle alvorlige skader på helikopter og brann kan oppstå dersom brenselslekkasje antennes av " +
+      "kollisionsenergien eller annen tenningskilde (for eksempel helikopterturbiner)."
+    ],
     questions: [],
   },
 
@@ -111,9 +118,11 @@ export const exerciseScenarioList = [
       "Kjennskap til og bruk av ventil for avstengning av dieseltilførsel til maskinrom.",
       "Egensikkerhet ved røykdykking i maskinrom.",
     ],
-    development: 'Potensiell spredning av mye røyk ved åpne brannspjeld\n' +
-      'Ved åpne brannspjeld, meget begrenset virkning ved utløsning av Argonite eller inergen \n' +
-      'Store lokale materielle skader',
+    development: [
+      "Potensiell spredning av mye røyk ved åpne brannspjeld",
+      "Ved åpne brannspjeld, meget begrenset virkning ved utløsning av Argonite eller inergen",
+      "Store lokale materielle skader",
+    ],
     questions: [],
   },
 ];

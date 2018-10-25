@@ -36,8 +36,10 @@ const Exercise = ({ match }) => {
             <Typography variant="body1">{focusArea}</Typography>
           ))}
           <Typography variant="subheading" style={{marginTop: '12px'}}>Utvikling:</Typography>
-          <Typography variant="body1" paragraph>{scenario.development}</Typography>
-          <Button variant="contained" color="primary" component={Link} to={`${match.url}debrief/`}>Vis rapport</Button>
+          {scenario.development.map(development => (
+            <Typography variant="body1">{development}</Typography>
+          ))}
+          <Button variant="contained" color="primary" style={{marginTop: '12px'}} component={Link} to={`${match.url}debrief/`}>Vis rapport</Button>
         </Paper>
       </AppPage>
     );
