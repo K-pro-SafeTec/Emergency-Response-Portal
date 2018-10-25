@@ -11,13 +11,26 @@ import IconCompetenceOverview  from '../../icons/main-menu/competenceOverview.sv
 import NavMenu from '../shared/NavMenu';
 import NavMenuItem from '../shared/NavMenuItem';
 import AppPage from '../shared/AppPage';
+import EmergencyPortalLogo from '../../icons/emergencyPortal.svg'
+import { withStyles } from '@material-ui/core/styles';
 
 
 import '../../raw-data/preprocess_data';
 
 
-export default () => (
-  <AppPage title="Safetec Beredskapsportal">
+const styles = {
+  logo: {
+    margin: '15px 0 -15px 25px'
+  },
+};
+
+const MainMenu = ({ classes }) => (
+  <AppPage name="Safetec Beredskapsportal">
+    <img className={classes.logo}
+      src={EmergencyPortalLogo}
+      alt="Levert av Safetec"
+      height="40px"
+    />
     <NavMenu>
       <NavMenuItem name="Kalender" icon={IconCalendar} to="calendar/" />
       <NavMenuItem name="Live feed" icon={IconLivefeed} to="livefeed/" />
@@ -31,3 +44,5 @@ export default () => (
     </NavMenu>
   </AppPage>
 );
+
+export default withStyles(styles)(MainMenu);
