@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Person from "./Person";
 import { personById } from "../../../dummy-data/person"
 import { withStyles } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 const styles = {
   paper: {
@@ -20,13 +21,13 @@ const Team = ({ classes, team }) => {
   return(
     <Paper className={classes.paper}>
       <List>
-        <ListItem>
+        <ListItem button component={Link} to={`/competence-overview/teams/${team.id}/`}>
           <ListItemText>
             <Typography variant="title">{team.name}</Typography>
           </ListItemText>
         </ListItem>
         {teamMembers.map(member => (
-          <Person key={member.id} name={member.name}/>
+          <Person key={member.id} id={member.id} name={member.name}/>
         ))}
       </List>
     </Paper>
