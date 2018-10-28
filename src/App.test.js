@@ -15,6 +15,7 @@ import {
   capitalizeFirstLetter,
   sortEvents,
 } from './helpers/calendar-helper';
+import Status, { mostSevere } from './helpers/Status'
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -161,4 +162,16 @@ it('sortEvents works as expected', () => {
   const sorted4 = sortEvents([event3, event1]);
   expect(sorted4[0]).toBe(event1);
   expect(sorted4[1]).toBe(event3);
+});
+
+it('mostSevere works as expected', () => {
+  const ok = Status.OK;
+  const warning = Status.WARNING;
+  const error = Status.ERROR;
+  expect(mostSevere(ok, warning)).toBe(warning);
+  expect(mostSevere(warning, ok)).toBe(warning);
+  expect(mostSevere(warning, error)).toBe(error);
+  expect(mostSevere(error, warning)).toBe(error);
+  expect(mostSevere(error, ok)).toBe(error);
+  expect(mostSevere(ok, errir)).toBe(error);
 });
