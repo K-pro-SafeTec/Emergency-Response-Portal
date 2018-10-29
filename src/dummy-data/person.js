@@ -3,6 +3,11 @@ import { roleList } from './role';
 import { raw_person_list } from '../raw-data/raw_person';
 import { erTeamsByPerson } from '../raw-data/preprocess_data';
 import { personShouldHaveCourses } from '../raw-data/preprocess_data';
+import seedrandom from 'seedrandom';
+
+ //  Seed 4 gives OK distribution of courses having different statuses, but most being ok for max_offset 20, min_offset -2, num_days_warning -2
+const random = seedrandom(4);
+
 
 function getRolesForPerson(id) {
   return roleList
@@ -39,10 +44,11 @@ function createPersonList() {
     const today = new Date()
 
     for (let i in competenceIdList) {
+      if (random() < 0.05) continue;
       const course_id = competenceIdList[i];
 
       // Get days to offset validUntil from today
-      const offset_days = Math.round(Math.random() * (max_offset - min_offset) + min_offset)
+      const offset_days = Math.round(random() * (max_offset - min_offset) + min_offset)
 
       // Dates for today and warning date to compare if a warning needs to be displayed
       const date = addDays(today, offset_days); 
@@ -55,7 +61,7 @@ function createPersonList() {
 
       // Add comments on some course completions
       let comment = null;
-      if( Math.random() < 0.2) {comment = 'Eksempelkommentar'}
+      if(random() < 0.2) {comment = 'Eksempelkommentar'}
       
       // Fill out course entry
       competence[course_id] = {
