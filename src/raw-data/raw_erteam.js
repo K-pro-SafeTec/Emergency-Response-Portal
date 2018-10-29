@@ -3,7 +3,7 @@
 export const raw_erteam = [
   {
     "er_team_id": 0,
-    "er_team_name": "All",
+    "er_team_name": "Alle",
     "has_training": 0,
     "has_tabletop": 0,
     "replacement_role": -1

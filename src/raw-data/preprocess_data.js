@@ -15,12 +15,19 @@ raw_erteam.forEach(team => erTeamById[team.er_team_id] = team);
 
 
 function getERTeamMembers(er_team_id, shift){
-    return raw_person_list.filter(person => 
-        person.skift === shift && (person.Beredskapslag_1 === er_team_id
-                                || person.Rolle_lag_1     === er_team_id
-                                || person.Beredskapslag_2 === er_team_id
-                                || person.Beredskapslag_3 === er_team_id
-                                ));
+    if (er_team_id === 0) { // All members
+        return raw_person_list.filter(person => 
+            person.skift === shift);
+    }
+    else{
+        return raw_person_list.filter(person => 
+            person.skift === shift && (person.Beredskapslag_1 === er_team_id
+                                    || person.Rolle_lag_1     === er_team_id
+                                    || person.Beredskapslag_2 === er_team_id
+                                    || person.Beredskapslag_3 === er_team_id
+                                    ));
+    }
+
 }
 
 const erTeamMembersByTeamAndShift = {};
@@ -68,6 +75,9 @@ const personShouldHaveCoursesByTeam = {};
 for (let i in raw_person_list) {
     const coursesByTeam = {};
 
+    // Everyone should have course 0, 1, 2 as they are mandatory for all personell
+    coursesByTeam[0] = [0, 1, 2];
+
     // Get all teams of person
     const team1 = raw_person_list[i]['Beredskapslag_1'];
     const team1_role = raw_person_list[i]['Rolle_lag_1'];
@@ -89,6 +99,7 @@ export function getPersonCoursesByKey(emp_id, team_id) {
 export const personShouldHaveCourses = {};
 for (let i in raw_person_list) {
 
+
     // Get all teams of person
     const team1 = raw_person_list[i]['Beredskapslag_1'];
     const team1_role = raw_person_list[i]['Rolle_lag_1'];
@@ -96,7 +107,7 @@ for (let i in raw_person_list) {
     const team3 = raw_person_list[i]['Beredskapslag_3'];
 
     // Create array of all teams
-    const team_list = [];
+    const team_list = [0]; // All persons is part of team 0, which is team of all members
 
     if (typeof team1 === 'number')      {team_list.push(team1);}
     if (typeof team1_role === 'number') {team_list.push(team1_role);}
