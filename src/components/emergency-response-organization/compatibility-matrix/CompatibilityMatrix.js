@@ -20,7 +20,7 @@ function MediaCard(props) {
   <AppPage title="Forenlighetsmatrise" back="..">
     <img
         src={IllustrationCompatibilityMatrix}
-        alt="Beredskapslag hierarki"
+        alt="Beredskapslag oversikt"
     />
     <img
         src={compat_image}
