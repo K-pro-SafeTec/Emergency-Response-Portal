@@ -18,6 +18,9 @@ const styles = {
   homeButton: {
     marginLeft: '-12px',
   },
+  safetecLink: {
+    lineHeight: 0,
+  },
 };
 
 const AppPage = ({ classes, history, title, children }) => (
@@ -36,11 +39,14 @@ const AppPage = ({ classes, history, title, children }) => (
         <Typography variant="title" color="inherit" className={classes.grow}>
           {title}
         </Typography>
-        <a href="https://www.safetec.no/">
+        <a
+          href="https://www.safetec.no/"
+          className={classes.safetecLink}
+        >
           <img
             src={SafetecLogo}
             alt="Levert av Safetec"
-            height="40px"
+            height="44px"
           />
         </a>
       </Toolbar>

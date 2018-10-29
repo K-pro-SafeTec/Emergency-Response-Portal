@@ -46,10 +46,10 @@ for (let i in raw_person_list){
     // Create array of all teams
     const team_list = [];
 
-    if (Number.isInteger(team1))      {team_list.push(team1);}
-    if (Number.isInteger(team1_role)) {team_list.push(team1_role);}
-    if (Number.isInteger(team2))      {team_list.push(team2);}
-    if (Number.isInteger(team3))      {team_list.push(team3);}
+    if (typeof team1 === 'number')      {team_list.push(team1);}
+    if (typeof team1_role === 'number') {team_list.push(team1_role);}
+    if (typeof team2 === 'number')      {team_list.push(team2);}
+    if (typeof team3 === 'number')      {team_list.push(team3);}
     erTeamsByPerson[i] = team_list
 }
 
@@ -74,10 +74,10 @@ for (let i in raw_person_list) {
     const team2 = raw_person_list[i]['Beredskapslag_2'];
     const team3 = raw_person_list[i]['Beredskapslag_3'];
 
-    if (Number.isInteger(team1))      {coursesByTeam[team1] = coursesByTeamId[team1];}
-    if (Number.isInteger(team1_role)) {coursesByTeam[team1_role] = coursesByTeamId[team1_role];}
-    if (Number.isInteger(team2))      {coursesByTeam[team2] = coursesByTeamId[team2];}
-    if (Number.isInteger(team3))      {coursesByTeam[team3] = coursesByTeamId[team3];}
+    if (typeof team1 === 'number')      {coursesByTeam[team1] = coursesByTeamId[team1];}
+    if (typeof team1_role === 'number') {coursesByTeam[team1_role] = coursesByTeamId[team1_role];}
+    if (typeof team2 === 'number')      {coursesByTeam[team2] = coursesByTeamId[team2];}
+    if (typeof team3 === 'number')      {coursesByTeam[team3] = coursesByTeamId[team3];}
 
     personShouldHaveCoursesByTeam[i] = coursesByTeam;
 }
@@ -98,10 +98,10 @@ for (let i in raw_person_list) {
     // Create array of all teams
     const team_list = [];
 
-    if (Number.isInteger(team1))      {team_list.push(team1);}
-    if (Number.isInteger(team1_role)) {team_list.push(team1_role);}
-    if (Number.isInteger(team2))      {team_list.push(team2);}
-    if (Number.isInteger(team3))      {team_list.push(team3);}
+    if (typeof team1 === 'number')      {team_list.push(team1);}
+    if (typeof team1_role === 'number') {team_list.push(team1_role);}
+    if (typeof team2 === 'number')      {team_list.push(team2);}
+    if (typeof team3 === 'number')      {team_list.push(team3);}
 
     const courses_list = [];
     // Find courses required for all team and collect them
@@ -112,7 +112,7 @@ for (let i in raw_person_list) {
         // Add courses if not currently in list
         for (let cid in courses) {
             cid = courses[cid];
-            if (!courses_list.includes(cid)){
+            if (!courses_list.indexOf(cid) >= 0){
                 courses_list.push(cid);
             }
         }

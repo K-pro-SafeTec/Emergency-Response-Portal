@@ -25,18 +25,18 @@ seedrandom(4, { global: true });
 
 const styles = {
   logo: {
-    margin: '15px 0 -15px 25px'
+    height: '44px',
+    width: '100%',
   },
 };
 
 const MainMenu = ({ classes }) => (
   <AppPage name="Safetec Beredskapsportal">
-    <img className={classes.logo}
-      src={EmergencyPortalLogo}
-      alt="Levert av Safetec"
-      height="40px"
-    />
     <NavMenu>
+      <img className={classes.logo}
+        src={EmergencyPortalLogo}
+        alt="Beredskapsportalen"
+      />
       <NavMenuItem name="Kalender" icon={IconCalendar} to="calendar/" />
       <NavMenuItem name="Live feed" icon={IconLivefeed} to="livefeed/" />
       <NavMenuItem name="Erfaringslogg" icon={IconExperiencelog} to="experience-log/" />

@@ -13,8 +13,9 @@ const TableTopTable = ({ instances }) => (
   <Table component="div">
     <TableHead component="div">
       <TableRow component="div">
-        <TableCell component="div">DFU Nr.</TableCell>
-        <TableCell component="div">DFU Tittel</TableCell>
+        <TableCell component="div">Dato</TableCell>
+        <TableCell component="div">DFU</TableCell>
+        <TableCell component="div">Tittel</TableCell>
         <TableCell component="div">Scenario</TableCell>
       </TableRow>
     </TableHead>
@@ -26,6 +27,9 @@ const TableTopTable = ({ instances }) => (
             key={`${instance.scenario}/${getDateFormatYMD(instance.start)}`}
             to={`../../scenarios/${instance.scenario}/${getDateFormatYMD(instance.start)}/`}
           >
+            <TableCell component="div">
+              {getDateFormatYMD(instance.start)}
+            </TableCell>
             <TableCell component="div">
               {scenario.dfuNr}
             </TableCell>

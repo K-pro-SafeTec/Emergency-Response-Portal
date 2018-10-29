@@ -15,15 +15,10 @@ const Exercises = () => (
     <Table component="div">
       <TableHead component="div">
         <TableRow component="div">
-          <TableCell component="div">
-            Dato
-          </TableCell>
-          <TableCell component="div">
-            DFU
-          </TableCell>
-          <TableCell component="div">
-            Scenario
-          </TableCell>
+          <TableCell component="div">Dato</TableCell>
+          <TableCell component="div">DFU</TableCell>
+          <TableCell component="div">Tittel</TableCell>
+          <TableCell component="div">Scenario</TableCell>
         </TableRow>
       </TableHead>
       <TableBody component="div">
@@ -39,6 +34,9 @@ const Exercises = () => (
               </TableCell>
               <TableCell component="div">
                 {scenario.dfu}
+              </TableCell>
+              <TableCell component="div">
+                {scenario.title}
               </TableCell>
               <TableCell component="div">
                 {scenario.scenario}

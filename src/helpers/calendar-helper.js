@@ -78,12 +78,12 @@ function isValidPeriod(start, end) {
 
 function isValidParticipants(participants) {
   const valids = ['alle', 'beredskapslag', 'beredskapsledelse'];
-  return valids.includes(participants)
+  return valids.indexOf(participants) >= 0
 }
 
 function isValidType(type) {
   const valids = ['øvelse', 'trening', 'table top'];
-  return valids.includes(type)
+  return valids.indexOf(type) >= 0
 }
 
 function capitalizeFirstLetter(string) {
