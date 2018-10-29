@@ -21,11 +21,14 @@ const styles = {
   safetecLink: {
     lineHeight: 0,
   },
+  content: {
+    marginTop: '64px',
+  }
 };
 
 const AppPage = ({ classes, history, title, children }) => (
   <React.Fragment>
-    <AppBar position="static" color="default">
+    <AppBar position="fixed" color="default">
       <Toolbar>
         <IconButton className={classes.homeButton} component={Link} to="/">
           <Home />
@@ -51,7 +54,9 @@ const AppPage = ({ classes, history, title, children }) => (
         </a>
       </Toolbar>
     </AppBar>
-    {children}
+    <div className={classes.content}>
+      {children}
+    </div>
   </React.Fragment>
 );
 
