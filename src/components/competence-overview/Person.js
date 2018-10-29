@@ -26,7 +26,8 @@ const TeamItem = ({ team, person }) => (
       <StatusIcon
         status={
           team.requiredCompetence
-            .map(competenceId => (person.competence[competenceId] && person.competence[competenceId].status) || Status.ERROR)
+            .map(competenceId => person.competence[competenceId])
+            .map(competence => (competence && competence.status) || Status.ERROR)
             .reduce(mostSevere, Status.OK)
         }
       />
@@ -72,7 +73,7 @@ const Person = ({ match }) => {
         </Table>
         <List>
           <ListItem>
-            <Typography variant="title">Beredskapslag</Typography>
+            <Typography variant="title">Medlemskompetanse</Typography>
           </ListItem>
           {person.teams.map(teamId => (
             <TeamItem key={teamId} team={teamById[teamId]} person={person} />
