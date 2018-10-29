@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import {getTimeFormat} from './../../helpers/calendar-helper';
 
-const DisplayEvent = ({ event, onChangeEvent, onReviewButtonClick, onDeleteButtonClick }) => {
+const DisplayEvent = ({ event, onChangeEvent, onDeleteButtonClick }) => {
   return (
     <Paper className="paper-small">
       <Typography variant="headline">

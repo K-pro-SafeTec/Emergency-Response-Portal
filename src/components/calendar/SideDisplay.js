@@ -19,7 +19,6 @@ const SideDisplay = (props) => {
               event={e}
               onChangeEvent={props.onChangeEvent}
               onDeleteButtonClick={props.onDeleteButtonClick}
-              onReviewButtonClick={props.onReviewButtonClick}
             />
           ))}
         </div>
@@ -39,7 +38,6 @@ SideDisplay.propTypes = {
   onAddEventButtonClick: PropTypes.func.isRequired,
   onDeleteButtonClick: PropTypes.func.isRequired,
   onChangeEvent: PropTypes.func.isRequired,
-  onReviewButtonClick: PropTypes.func.isRequired
 };
 
 export default SideDisplay
