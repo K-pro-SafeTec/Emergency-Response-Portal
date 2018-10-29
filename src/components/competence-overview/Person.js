@@ -28,7 +28,7 @@ const TeamItem = ({ team, person }) => (
         status={
           team.requiredCompetence
             .map(competenceId => (person.competence[competenceId] && person.competence[competenceId].status) || Status.ERROR)
-            .reduce(mostSevere) || Status.ERROR
+            .reduce(mostSevere, Status.OK)
         }
       />
     </ListItemIcon>
