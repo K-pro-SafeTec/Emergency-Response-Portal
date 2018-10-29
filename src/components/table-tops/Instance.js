@@ -27,7 +27,15 @@ const Instance = ({ match }) => {
           <Typography variant="body1" paragraph>{scenario.description}</Typography>
           <Typography variant="subheading" gutterBottom>Utvikling:</Typography>
           <Typography variant="body1" paragraph>{instance.development}</Typography>
-          <Button variant="contained" color="primary" component={Link} to={`${match.url}debrief/`}>Vis rapport</Button>
+          {scenario.questions.length > 0 && (
+            <React.Fragment>
+              <Typography variant="subheading" gutterBottom>Spørsmål:</Typography>
+              {scenario.questions.map((question, key) => (
+                <Typography key={key} variant="body1">{question}</Typography>
+              ))}
+            </React.Fragment>
+          )}
+          <Button variant="contained" color="primary" component={Link} to={`${match.url}debrief/`}>Debrief</Button>
         </Paper>
       </AppPage>
     );

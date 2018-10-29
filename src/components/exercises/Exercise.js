@@ -6,6 +6,7 @@ import EntityInfo from '../shared/EntityInfo';
 import IconExercise from '../../icons/main-menu/exerciseScenarios.svg';
 import { exerciseScenarioById } from '../../dummy-data/exerciseScenario';
 import { getExerciseInstanceByKey } from '../../dummy-data/exerciseInstance';
+import { performanceRequirementById } from '../../dummy-data/performanceRequirement';
 import Button from "@material-ui/core/Button/Button";
 import {Link} from "react-router-dom";
 
@@ -15,7 +16,7 @@ const Exercise = ({ match }) => {
   if (instance) {
     const scenario = exerciseScenarioById[match.params.scenarioId];
     return (
-      <AppPage title="Øvelser" back="../..">
+      <AppPage title="Øvelser">
         <Paper style={{margin: '1em', padding: '1em'}}>
           <EntityInfo Icon={(props) => <img src={IconExercise} alt="Øvelse" {...props} />}>
             <Typography variant="headline">{scenario.title}</Typography>
@@ -30,7 +31,13 @@ const Exercise = ({ match }) => {
             <Typography key={key} variant="body1">{preparation}</Typography>
           ))}
           <Typography variant="subheading" style={{marginTop: '12px'}}>Ytelseskrav:</Typography>
-          <Typography variant="body1" paragraph>{scenario.performanceRequirements}</Typography>
+          {scenario.performanceRequirements.map(performanceRequirement => (
+            <Typography key={performanceRequirement} variant="body1" paragraph>
+              {performanceRequirement}
+              {': '}
+              {performanceRequirementById[performanceRequirement].description}
+            </Typography>
+          ))}
           <Typography variant="subheading">Fokusområder:</Typography>
           {scenario.focusAreas.map((focusArea, key) => (
             <Typography key={key} variant="body1">{focusArea}</Typography>
@@ -39,7 +46,7 @@ const Exercise = ({ match }) => {
           {scenario.development.map((development, key) => (
             <Typography key={key} variant="body1">{development}</Typography>
           ))}
-          <Button variant="contained" color="primary" style={{marginTop: '12px'}} component={Link} to={`${match.url}debrief/`}>Vis rapport</Button>
+          <Button variant="contained" color="primary" style={{marginTop: '12px'}} component={Link} to={`${match.url}debrief/`}>Debrief</Button>
         </Paper>
       </AppPage>
     );

@@ -12,7 +12,7 @@ export const exerciseScenarioList = [
       "Avtale med dekksmannskap om varsling til kontrollrom, husk \"Øvelse-øvelse-øvelse\"",
       "Om mulig, simuler at markør ligger fast og må frigjøres",
     ],
-    performanceRequirements: '',
+    performanceRequirements: [],
     focusAreas: [
       "Livreddende stabilisering på skadested",
       "Koordinere frigjøring av forulykket med S&R lag",
@@ -51,8 +51,9 @@ export const exerciseScenarioList = [
       "Livbøye",
       "Forhåndsvarsel av MOB ressurser som ved arbeid over sjø",
     ],
-    performanceRequirements: 'R.YK-3 Personell som utfører planlagt arbeid over sjø skal kunne plukkes opp fra sjøen ' +
-      'innen 8 minutter.',
+    performanceRequirements: [
+      'R.YK-3',
+    ],
     focusAreas: [
       "Egensikkerhet",
       "Sikker sjøsetting av MOB båt",
@@ -93,8 +94,9 @@ export const exerciseScenarioList = [
       "Briefe passasjerer og piloter om øvelsen før avreise fra land.",
       "Avtale med et utvalg av passasjerer om markørroller."
     ],
-    performanceRequirements: 'B.YK-3 Søk- og redningslag skal være klar til innsats fra mønstringssted innen 7 ' +
-      'minutter etter at PA-melding er gitt.',
+    performanceRequirements: [
+      'B.YK-3',
+    ],
     focusAreas: [
       "Egensikkerhet for helidekk mannskap ved landing og avgang",
       "Sikring av helikopter på helidekk, fare for brann",
@@ -134,8 +136,9 @@ export const exerciseScenarioList = [
     preparations: [
       "Forbered AT for vedlikehold på brannspjeld, slik at disse er (simulert) utkoplet i øvelsen."
     ],
-    performanceRequirements: 'B.YK-2 Skadestedsleder skal opprette skadestedssenter innen 5 minutter etter at ' +
-      'PA-melding er gitt.',
+    performanceRequirements: [
+      'B.YK-2',
+    ],
     focusAreas: [
       "Bruk av fast slukkesystem",
       "Sjekk av AT, for å avklare om det er noe som kan begrense effekt av fast slukkesystem. (Liten betydning for watermist)",
