@@ -22,14 +22,6 @@ const Debrief = ({ match }) => {
             <Typography variant="headline">DFU {scenario.dfuNr}</Typography>
             <Typography variant="subheading">{scenario.dfuTitle}</Typography>
           </EntityInfo>
-          {scenario.questions.length > 0 && (
-            <React.Fragment>
-              <Typography variant="title">Spørsmål:</Typography>
-              {scenario.questions.map((question, key) => (
-                <TextField key={key} label={question} margin="normal" multiline fullWidth />
-              ))}
-            </React.Fragment>
-          )}
           {scenario.debrief.length > 0 && (
             <React.Fragment>
               <Typography variant="title">Oppsummering:</Typography>
