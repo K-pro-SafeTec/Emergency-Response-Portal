@@ -27,7 +27,7 @@ const Instance = ({ match }) => {
           <Typography variant="body1" paragraph>{scenario.description}</Typography>
           <Typography variant="subheading" gutterBottom>Utvikling:</Typography>
           <Typography variant="body1" paragraph>{instance.development}</Typography>
-          <Button variant="contained" color="primary" component={Link} to={`${match.url}debrief/`}>Vis rapport</Button>
+          <Button variant="contained" color="primary" component={Link} to={`${match.url}debrief/`}>Debrief</Button>
         </Paper>
       </AppPage>
     );
