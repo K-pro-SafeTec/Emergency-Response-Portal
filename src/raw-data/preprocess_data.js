@@ -51,7 +51,7 @@ for (let i in raw_person_list){
     const team3 = raw_person_list[i]['Beredskapslag_3'];
 
     // Create array of all teams
-    const team_list = [];
+    const team_list = [0];
 
     if (typeof team1 === 'number')      {team_list.push(team1);}
     if (typeof team1_role === 'number') {team_list.push(team1_role);}
@@ -114,7 +114,7 @@ for (let i in raw_person_list) {
     if (typeof team2 === 'number')      {team_list.push(team2);}
     if (typeof team3 === 'number')      {team_list.push(team3);}
 
-    const courses_list = [];
+    const courses_list = [0, 1, 2];
     // Find courses required for all team and collect them
     for (let team in team_list) {
         team = team_list[team];

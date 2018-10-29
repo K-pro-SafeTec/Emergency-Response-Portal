@@ -23,9 +23,9 @@ function MediaCard(props) {
         src={IllustrationCompatibilityMatrix}
         alt="Emergency response team hierarchy"
     />
-    <CardMedia
-      className={classes.media}
-      image= {compat_image}
+    <img
+        src={compat_image}
+        alt="Compatability matrix"
     />
   </AppPage>
 );
