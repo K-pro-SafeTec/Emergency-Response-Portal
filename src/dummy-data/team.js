@@ -1,4 +1,5 @@
 import Status from '../helpers/Status';
+import { mostSevere } from '../helpers/Status';
 import { getTeamMembersByKey } from '../raw-data/preprocess_data';
 import { coursesByTeamId } from '../raw-data/preprocess_data';
 import { raw_erteam } from '../raw-data/raw_erteam';
@@ -27,15 +28,8 @@ function createTeamList() {
           status = Status.ERROR;
           break;
         }
-
-        // Update severity
-        if (person.competence[course_id].status === Status.ERROR ) {
-          status = Status.ERROR;
-          break; // Don't need to check anymore, since team will have ERROR status
-        }
-        else if (person.competence[course_id].status === Status.WARNING ) {
-          status = Status.WARNING; // Continue checking to see if we find ERROR
-        }
+        status = mostSevere(status, person.competence[course_id].status)
+        if (status === Status.ERROR) {break;} // Will return error status for team so stop checking
       }
       if (status === Status.ERROR) {break;} // Will return error status for team so stop checking
     }
