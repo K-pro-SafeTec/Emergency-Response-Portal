@@ -21,7 +21,7 @@ const EmergencyResponseTeams = ({ classes }) => (
         alt="Emergency response team hierarchy"
     />
     <div className={classes.container}>
-      {teamList.map(team => (
+      {teamList.filter(team => team.id !== 0).map(team => (
         <Team key={team.id} team={team} />
       ))}
     </div>
