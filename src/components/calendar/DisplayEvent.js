@@ -29,7 +29,7 @@ const DisplayEvent = ({ event, onChangeEvent, onReviewButtonClick, onDeleteButto
           variant="outlined"
           color="primary"
           component={Link}
-          to={`${event.href}debrief/`}
+          to={event.debrief}
         >
           Debrief
         </Button>
