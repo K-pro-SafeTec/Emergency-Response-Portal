@@ -8,9 +8,13 @@ export default class ReportImage extends React.Component {
   }
 
   componentDidMount() {
-    setTimeout(() => this.setState({
+    this.timeout = setTimeout(() => this.setState({
       loaded: true,
     }), this.props.delay);
+  }
+  
+  componentWillUnmount() {
+    clearTimeout(this.timeout);
   }
 
   render() {
