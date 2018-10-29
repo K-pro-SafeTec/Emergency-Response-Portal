@@ -14,8 +14,13 @@ import AppPage from '../shared/AppPage';
 import EmergencyPortalLogo from '../../icons/emergencyPortal.svg'
 import { withStyles } from '@material-ui/core/styles';
 
-
 import '../../raw-data/preprocess_data';
+
+// Seed random values globally to generate deteministic numbers
+import seedrandom from 'seedrandom';
+ //  Seed 4 gives OK distribution of courses having different statuses, but most being ok for max_offset 20, min_offset -2, num_days_warning -2
+seedrandom(4, { global: true });
+
 
 
 const styles = {

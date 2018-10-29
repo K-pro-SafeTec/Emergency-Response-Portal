@@ -1,11 +1,7 @@
 import Status from '../helpers/Status';
 import { roleList } from './role';
-
-// Get team info
 import { raw_person_list } from '../raw-data/raw_person';
-
 import { erTeamsByPerson } from '../raw-data/preprocess_data';
-
 import { personShouldHaveCourses } from '../raw-data/preprocess_data';
 
 function getRolesForPerson(id) {
@@ -14,47 +10,77 @@ function getRolesForPerson(id) {
     .map(role => role.id);
 }
 
-function fillPersonList(personList) {
-  for (let i in raw_person_list) {
 
+// Add days to a Date object
+function addDays(initial_date, days) {
+  var date = new Date(initial_date.valueOf());
+  date.setDate(date.getDate() + days);
+  return date;
+}
+
+function createPersonList() {
+  const personList = []
+  for (let i in raw_person_list) {
+    // Data about person i
     const personData = raw_person_list[i];
 
     // At the moment only return team member's emp ids from first shift
     const teamMemberList = erTeamsByPerson[i];
 
-    ///// STILL NEED DATA ON WHAT COURSES AND DATES PEOPLE ACTUALLY HAVE 
     // Get courses ids this person should have
     const competenceIdList = personShouldHaveCourses[i];
-    
-    const comp = {}
+
+    // interval to offset course validUntil data from today in days
+    const max_offset = 20
+    const min_offset = -1
+    const num_days_warning = -2
+
+    const competence = {}
+    const today = new Date()
+
     for (let i in competenceIdList) {
       const course_id = competenceIdList[i];
-      comp[course_id] = {
-        status: Status.OK,
-        validUntil: new Date('2019-10-20'),
-        comment: 'Eksempelkommentar',
+
+      // Get days to offset validUntil from today
+      const offset_days = Math.round(Math.random() * (max_offset - min_offset) + min_offset)
+
+      // Dates for today and warning date to compare if a warning needs to be displayed
+      const date = addDays(today, offset_days); 
+      const date_warning = addDays(date, num_days_warning)
+
+      // Update status
+      var status = Status.OK
+      if (date <= today)                 {status = Status.ERROR;}
+      else if (date_warning <= today)   {status = Status.WARNING;}
+
+      // Add comments on some course completions
+      let comment = null;
+      if( Math.random() < 0.2) {comment = 'Eksempelkommentar'}
+      
+      // Fill out course entry
+      competence[course_id] = {
+        status: status,
+        validUntil: date,
+        comment: comment,
       }
       
     }
 
+    // Fill out person entry
     const personListEntry = {
         id: personData.emp_id,
         name: personData.first_name + " " + personData.last_name,
         teams: teamMemberList,
-        competence: comp,
+        competence: competence,
         // TODO: handle this... 
         roles: getRolesForPerson(0),
       };
-      personList.push(personListEntry)
+      personList.push(personListEntry);
   }
+  return personList
 }
 
-// const personTest = []
-// fillPersonList(personTest)
-// console.log(personTest)
-
-
-export const personList = [
+// export const personList = [
   // {
   //   id: 0,
   //   name: 'Navn Navnesen',
@@ -144,8 +170,8 @@ export const personList = [
   //   competence: {},
   //   roles: getRolesForPerson(4),
   // },
-];
+// ];
 
-fillPersonList(personList)
+export const personList = createPersonList();
 export const personById = {};
 personList.forEach(person => personById[person.id] = person);
