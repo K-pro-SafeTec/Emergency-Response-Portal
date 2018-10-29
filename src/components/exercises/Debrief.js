@@ -11,6 +11,8 @@ import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
 import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
+import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 
 
 export default ({ match }) => {
@@ -24,28 +26,37 @@ export default ({ match }) => {
             <Typography variant="headline">{scenario.title}</Typography>
             <Typography variant="subheading">DFU {scenario.dfu}</Typography>
           </EntityInfo>
-          <Typography variant="title">Ytelseskrav:</Typography>
-          {scenario.performanceRequirements.map(performanceRequirement => (
-            <Typography key={performanceRequirement} variant="subheading">
-              {performanceRequirement}
-              {': '}
-              {performanceRequirementById[performanceRequirement].description}
-              {' '}
-              <FormControl>
-                <Input
-                  required
-                  type="number"
-                  endAdornment={<InputAdornment position="end">min</InputAdornment>}
-                />
-              </FormControl>
-            </Typography>
-          ))}
+          {scenario.performanceRequirements.length > 0 && (
+            <React.Fragment>
+              <Typography variant="title">Ytelseskrav:</Typography>
+              {scenario.performanceRequirements.map(performanceRequirement => (
+                <Typography key={performanceRequirement} variant="subheading">
+                  {performanceRequirement}
+                  {': '}
+                  {performanceRequirementById[performanceRequirement].description}
+                  {' '}
+                  <FormControl>
+                    <Input
+                      required
+                      type="number"
+                      endAdornment={<InputAdornment position="end">min</InputAdornment>}
+                    />
+                  </FormControl>
+                </Typography>
+              ))}
+            </React.Fragment>
+          )}
           <TextField margin="normal" label="Identifiserte utfordringer" multiline fullWidth />
-          <Typography variant="title">Spørsmål:</Typography>
-          {scenario.questions.map((question, key) => (
-            <TextField key={key} label={question} margin="normal" multiline fullWidth />
-          ))}
+          {scenario.questions.length > 0 && (
+            <React.Fragment>
+              <Typography variant="title">Spørsmål:</Typography>
+              {scenario.questions.map((question, key) => (
+                <TextField key={key} label={question} margin="normal" multiline fullWidth />
+              ))}
+            </React.Fragment>
+          )}
           <TextField margin="normal" label="Læringspunkter" multiline fullWidth />
+          <Button variant="contained" color="primary" style={{marginTop: '12px'}} component={Link} to="..">Fullfør</Button>
         </Paper>
       </AppPage>
     );
