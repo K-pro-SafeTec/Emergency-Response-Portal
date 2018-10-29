@@ -50,6 +50,7 @@ const AppPage = ({ classes, history, title, children }) => (
             src={SafetecLogo}
             alt="Levert av Safetec"
             height="44px"
+            width="153px"
           />
         </a>
       </Toolbar>
