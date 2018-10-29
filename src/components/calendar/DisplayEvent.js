@@ -23,18 +23,19 @@ const DisplayEvent = ({ event, onChangeEvent, onReviewButtonClick, onDeleteButto
           Vis
         </Button>
       )}
+      {event.debrief && (
+        <Button
+          style={{marginRight: '5px'}}
+          variant="outlined"
+          color="primary"
+          component={Link}
+          to={`${event.href}debrief/`}
+        >
+          Debrief
+        </Button>
+      )}
       <Button style={{marginRight: '5px'}} variant="outlined" color="primary" onClick={() => onChangeEvent(event.id)}>
         Endre
-      </Button>
-      <Button
-        href="https://drive.google.com/file/d/1SIy2luM50jY-_od88vfXg5k7l0oT8C0s/view?usp=sharing"
-        target="_blank"
-        style={{marginRight: '5px'}}
-        variant="outlined"
-        color="primary"
-        onClick={() => onReviewButtonClick(event.id)}
-      >
-        Se debrief
       </Button>
       <Button variant="outlined" color="secondary" onClick={() => onDeleteButtonClick(event.id)}>
         Slett

@@ -50,15 +50,16 @@ export default class EmergencyResponsePortalCalendar extends Component {
         end: training.end,
         participants: teamById[trainingScenarioById[training.scenario].team].name,
         title: 'Trening',
-        href: `/training/scenarios/${training.scenario}/${getDateFormatYMD(training.start)}/`
+        href: `/training/scenarios/${training.scenario}/${getDateFormatYMD(training.start)}/`,
       }))),
       ...(exerciseInstanceList.map(exercise => ({
-        id: `tt/${exercise.scenario}/${getDateFormatYMD(exercise.start)}`,
+        id: `ex/${exercise.scenario}/${getDateFormatYMD(exercise.start)}`,
         start: exercise.start,
         end: exercise.end,
         participants: 'Alle',
         title: 'Øvelse',
-        href: `/exercises/${exercise.scenario}/${getDateFormatYMD(exercise.start)}/`
+        href: `/exercises/${exercise.scenario}/${getDateFormatYMD(exercise.start)}/`,
+        debrief: `/exercises/${exercise.scenario}/${getDateFormatYMD(exercise.start)}/debrief`,
       }))),
       ...(tableTopInstanceList.map(tableTop => ({
         id: `tt/${tableTop.scenario}/${getDateFormatYMD(tableTop.start)}`,
@@ -66,7 +67,8 @@ export default class EmergencyResponsePortalCalendar extends Component {
         end: tableTop.end,
         participants: teamById[tableTopScenarioById[tableTop.scenario].team].name,
         title: 'Table top',
-        href: `/table-tops/scenarios/${tableTop.scenario}/${getDateFormatYMD(tableTop.start)}/`
+        href: `/table-tops/scenarios/${tableTop.scenario}/${getDateFormatYMD(tableTop.start)}/`,
+        debrief: `/table-tops/scenarios/${tableTop.scenario}/${getDateFormatYMD(tableTop.start)}/debrief`,
       }))),
     ];
     this.state = {
