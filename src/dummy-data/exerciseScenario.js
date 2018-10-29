@@ -64,7 +64,18 @@ export const exerciseScenarioList = [
       "2) Kald temperatur i vannet fører til at tiden fra personen faller i vannet til vedkommende må hentes opp er " +
       "kritisk.",
     ],
-    questions: [],
+    questions: [
+      "Varsling av hendelsen, via kontrollrom?",
+      "Mønstring beredskapsledelse, tid brukt?",
+      "Var det utfordringer med noe av MOB-lagets utstyr eller MOB-båt?",
+      "8 minutters kravet til opplukking fra sjø, oppfylte vi dette?",
+      "Egensikkerhet, vær og bølgeforhold, var det utfordringer knyttet til dette?",
+      "Hvordan fungerte kommunikasjon og bruk av radioer?",
+      "Ble SAR-helikopter varslet?",
+      "Var det andre utfordringer som ikke er dekket av punktene over?",
+      "Hvilke lærepunkter var det, hvilke skal vi overføre til andre som ikke var med på øvelsen?",
+      "Hvordan ville oppfølging av involverte blitt utført om det hadde vært en reell hendelse?"
+    ],
   },
   {
     id: 6,
@@ -97,7 +108,20 @@ export const exerciseScenarioList = [
       "Potensielle alvorlige skader på helikopter og brann kan oppstå dersom brenselslekkasje antennes av " +
       "kollisionsenergien eller annen tenningskilde (for eksempel helikopterturbiner)."
     ],
-    questions: [],
+    questions: [
+      "Varsling av hendelsen, via kontrollrom?",
+      "Mønstring, tid brukt for S&R-lag, førtehjelpslag, beredskapsledelse?",
+      "Hvilken livreddende førstehjelp ble gitt, hvilket skadebilde identifiserte vi?",
+      "Hvordan var samordning mellom helidekklag, S&R-lag for frigjøring, redning ut av helikopter og transport til hospital/nødhospital?",
+      "Egensikkerhet, var det utfordringer knyttet til dette?",
+      "Hvordan fungerte kommunikasjon og bruk av radioer?",
+      "Personell til hjelp med båretransport, tilstrekkelig antall personer? Nok bårer?",
+      "Organisering av hospital/nødhospital, var det utfordringer?",
+      "Ble MEDEVAC vurdert/besluttet?",
+      "Var det andre utfordringer som ikke er dekket av punktene over?",
+      "Hvilke lærepunkter var det, hvilke skal vi overføre til andre som ikke var med på øvelsen?",
+      "Hvordan ville oppfølging av involverte blitt utført om det hadde vært en reell hendelse?"
+    ],
   },
 
   {
@@ -123,7 +147,18 @@ export const exerciseScenarioList = [
       "Ved åpne brannspjeld, meget begrenset virkning ved utløsning av Argonite eller inergen",
       "Store lokale materielle skader",
     ],
-    questions: [],
+    questions: [
+      "Ble deteksjon av brannen tolket som bekreftet brann?",
+      "Ble Alarm Reaksjonslag brukt til \"sjekk og rapporter\"?",
+      "Mønstring av beredskapslag, tid brukt?",
+      "Tid til POB oversikt, var noen savnet?",
+      "Hvilke faste slukkesystemer var \"i bruk\"?",
+      "S&R-lag, det det utført søk?",
+      "Egensikkerhet, var det utfordringer knyttet til dette?",
+      "Var det andre utfordringer som ikke er dekket av punktene over?",
+      "Hvilke lærepunkter var det, hvilke skal vi overføre til andre som ikke var med på øvelsen?",
+      "Hvordan ville oppfølging av involverte blitt utført om det hadde vært en reell hendelse?"
+    ],
   },
 ];
 
