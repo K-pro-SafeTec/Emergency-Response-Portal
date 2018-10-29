@@ -1,0 +1,32 @@
+.seasick * {
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+.seasick *:nth-child(even) {
+	animation-duration: 1s;
+  animation-name: seasick1;
+}
+
+.seasick *:nth-child(odd) {
+	animation-duration: 1.12345s;
+  animation-name: seasick2;
+}
+
+@keyframes seasick1 {
+	from {
+		transform: rotate(1deg);
+	}
+	to {
+		transform: rotate(-1deg);
+	}
+}
+
+@keyframes seasick2 {
+	from {
+		transform: rotate(-2deg);
+	}
+	to {
+		transform: rotate(2deg);
+	}
+}
