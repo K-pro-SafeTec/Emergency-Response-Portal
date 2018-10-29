@@ -58,7 +58,6 @@ const Team = ({ teamId, orderBy, order, tableHeadClicked, classes }) => {
       <AppPage title="Kompetanseoversikt" back="../..">
         <EntityInfo Icon={GroupIcon}>
           <Typography variant="headline">{team.name}</Typography>
-          <Typography variant="subheading">Noe mer info her?</Typography>
         </EntityInfo>
         <Typography variant="title" className={classes.title}>Medlemskompetanse</Typography>
         <Table component="div">
