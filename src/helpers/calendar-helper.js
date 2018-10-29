@@ -1,4 +1,4 @@
-// Takes javascript date object and returns nice time
+// Takes javascript date object and returns the hours and the minutes in a pretty format.
 function getTimeFormat(date) {
   let hours = date.getHours();
   let minutes = date.getMinutes();
@@ -24,9 +24,9 @@ function getDateFormatYMD(date) {
   return year + "-" + month + "-" + dayInMonth
 }
 
-// Takes a list of events and a date as objects.
+// Takes a list of events and a date object as parameters.
 // Returns the events that starts on the given date.
-function getEvents(events, date) {
+function getEventsOnDate(events, date) {
   return events.filter(event => {
     return equalDates(event.start, date)
   });
@@ -43,7 +43,7 @@ function equalDates(date1, date2) {
   return dayInMonth1 === dayInMonth2 && month1 === month2 && year1 === year2;
 }
 
-// Takes in a javascript date object and returns a nice string.
+// Takes in a javascript date object and returns a pretty string.
 function getDateFormat(date) {
   const weekdays = ["Søndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag"];
   const months = ["januar", "februar", "mars", "april", "mai", "juni", "juli", "august", "september", "oktober",
@@ -111,5 +111,6 @@ function getDateRelatedToThisDate(weekdayNumber, numberOfWeeks, hours=0, minutes
   return date;
 }
 
-export { getTimeFormat, getDateFormatYMD, getEvents, equalDates, getDateFormat, isValidEvent, isValidParticipants,
-  isValidType, capitalizeFirstLetter, sortEvents, getDateRelatedToThisDate }
+export { getTimeFormat, getDateFormatYMD, getEventsOnDate, equalDates, getDateFormat, isValidEvent, isValidDate,
+  isValidTime, isValidPeriod, isValidParticipants, isValidType, capitalizeFirstLetter, sortEvents,
+  getDateRelatedToThisDate }
