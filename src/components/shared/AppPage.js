@@ -22,7 +22,7 @@ const styles = {
     lineHeight: 0,
   },
   content: {
-    marginTop: '64px',
+    paddingTop: '64px',
   }
 };
 
