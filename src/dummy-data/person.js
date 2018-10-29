@@ -1,19 +1,13 @@
 import Status from '../helpers/Status';
-import { roleList } from './role';
 import { raw_person_list } from '../raw-data/raw_person';
 import { erTeamsByPerson } from '../raw-data/preprocess_data';
+import { erTeamById } from '../raw-data/preprocess_data';
 import { personShouldHaveCourses } from '../raw-data/preprocess_data';
 import seedrandom from 'seedrandom';
 
  //  Seed 4 gives OK distribution of courses having different statuses, but most being ok for max_offset 20, min_offset -2, num_days_warning -2
 const random = seedrandom(4);
 
-
-function getRolesForPerson(id) {
-  return roleList
-    .filter(role => role.person === id)
-    .map(role => role.id);
-}
 
 
 // Add days to a Date object
@@ -72,15 +66,20 @@ function createPersonList() {
       
     }
 
+    let person_main_role = "";
+    if (erTeamById[personData.Rolle_lag_1]) { // If person has a special role for his/hers main team
+      person_main_role = erTeamById[personData.Rolle_lag_1]['er_team_name'];
+    }
+
     // Fill out person entry
     const personListEntry = {
         id: personData.emp_id,
         name: personData.first_name + " " + personData.last_name,
         teams: teamMemberList,
         competence: competence,
-        // TODO: handle this... 
-        roles: getRolesForPerson(0),
+        roles: person_main_role,
       };
+
       personList.push(personListEntry);
   }
   return personList
