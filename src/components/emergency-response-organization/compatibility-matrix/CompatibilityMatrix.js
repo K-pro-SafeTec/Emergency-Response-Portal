@@ -1,7 +1,6 @@
 import React from 'react';
 import AppPage from '../../shared/AppPage';
 
-import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import IllustrationCompatibilityMatrix from '../../../illustrations/comptatibility-matrix.svg';
 
@@ -14,8 +13,7 @@ const styles = {
   }
 };
 
-function MediaCard(props) {
-  const { classes } = props;
+function MediaCard() {
   return (
   <AppPage title="Forenlighetsmatrise" back="..">
     <img
@@ -30,8 +28,5 @@ function MediaCard(props) {
 );
 }
 
-MediaCard.propTypes = {
-  classes: PropTypes.object.isRequired
-};
 
 export default withStyles(styles)(MediaCard);
