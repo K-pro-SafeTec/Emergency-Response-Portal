@@ -114,7 +114,7 @@ for (let i in raw_person_list) {
     if (typeof team2 === 'number')      {team_list.push(team2);}
     if (typeof team3 === 'number')      {team_list.push(team3);}
 
-    const courses_list = [];
+    const courses_list = [0, 1, 2];
     // Find courses required for all team and collect them
     for (let team in team_list) {
         team = team_list[team];
