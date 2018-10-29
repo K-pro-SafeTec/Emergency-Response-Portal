@@ -136,4 +136,3 @@ function createTeamList() {
 export const teamList = createTeamList();
 export const teamById = {};
 teamList.forEach(team => teamById[team.id] = team);
-
