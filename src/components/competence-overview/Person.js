@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { teamById } from '../../dummy-data/team';
 import { personById } from '../../dummy-data/person';
-import { roleById } from '../../dummy-data/role';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -44,7 +43,7 @@ const Person = ({ match }) => {
         <EntityInfo Icon={PersonIcon}>
           <Typography variant="headline">{person.name}</Typography>
           <Typography variant="subheading">
-            {person.roles.map(role => roleById[role].name).join(", ")}
+            {person.roles}
           </Typography>
         </EntityInfo>
         <Table>

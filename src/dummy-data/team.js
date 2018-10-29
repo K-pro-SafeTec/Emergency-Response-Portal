@@ -28,7 +28,7 @@ function createTeamList() {
           status = Status.ERROR;
           break;
         }
-        status = mostSevere(status, person.competence[course_id].status)
+        status = mostSevere(status, person.competence[course_id].status);
         if (status === Status.ERROR) {break;} // Will return error status for team so stop checking
       }
       if (status === Status.ERROR) {break;} // Will return error status for team so stop checking
