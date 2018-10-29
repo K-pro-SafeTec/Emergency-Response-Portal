@@ -3,6 +3,7 @@ import NavMenu from '../shared/NavMenu';
 import NavMenuItem from '../shared/NavMenuItem';
 import AppPage from '../shared/AppPage';
 import { Switch, Route } from 'react-router-dom';
+import UnknownPage from '../shared/UnknownPage';
 
 // Components
 import ExerciseReport from './excercise-report/ExerciseReport';
@@ -42,5 +43,6 @@ export default ({ match }) => (
     <Route path={`${match.path}report-generator/`} component={ReportGenerator} />
     <Route path={`${match.path}emergency-response-actions/`} component={EmergencyResponseActions} />
     <Route path={`${match.path}industry-information/`} component={IndustryInformation} />
+    <Route component={UnknownPage} />
   </Switch>
 );

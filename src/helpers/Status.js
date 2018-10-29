@@ -6,12 +6,15 @@ const Status = {
 
 export default Status;
 
-const severity = new Map([
-  [Symbol.OK, 0],
-  [Symbol.WARNING, 1],
-  [Symbol.ERROR, 2]
-]);
+const severity = {
+  [Status.OK]: 0,
+  [Status.WARNING]: 1,
+  [Status.ERROR]: 2,
+};
 
 export function mostSevere(a, b) {
-  return severity.get(a) > severity.get(b) ? a : b;
+  return severity[a] > severity[b] ? a : b;
 }
+
+
+
