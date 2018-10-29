@@ -37,10 +37,11 @@ function createPersonList() {
     const competence = {}
     const today = new Date()
 
-    for (let i in competenceIdList) {
-      if (random() < 0.05) continue;
-      const course_id = competenceIdList[i];
-
+    for (let course_id of competenceIdList) {
+      if (random() < 0.05) {
+        competence[course_id] = null;
+        continue;
+      }
       // Get days to offset validUntil from today
       const offset_days = Math.round(random() * (max_offset - min_offset) + min_offset)
 
@@ -63,7 +64,6 @@ function createPersonList() {
         validUntil: date,
         comment: comment,
       }
-      
     }
 
     let person_main_role = "";
