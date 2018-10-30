@@ -13,7 +13,7 @@ beforeAll(() => {
         match={{
           params: {
             scenarioId: 1,
-            date: '2018-11-14',
+            date: getDateFormatYMD(getDateRelatedToThisDate(3, 2)),
           }
         }}
       />

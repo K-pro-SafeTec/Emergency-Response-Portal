@@ -1,8 +1,8 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 import { MemoryRouter as Router } from 'react-router-dom'
-import AppPage from "../../../components/shared/AppPage";
 import Instance from "../../../components/training/Instance";
+import {getDateFormatYMD, getDateRelatedToThisDate} from "../../../helpers/calendar-helper";
 
 let testRenderer;
 
@@ -10,14 +10,12 @@ beforeAll(() => {
   testRenderer = TestRenderer.create(
     <Router>
       <Instance
-        match={
-          {params:
-              {
-                scenarioId: 0,
-                date: '2018-09-17'
-              }
-          }
-        }
+        match={{
+          params: {
+              scenarioId: 0,
+              date: getDateFormatYMD(getDateRelatedToThisDate(1, -6))
+            }
+        }}
       />
     </Router>);
 });

@@ -45,6 +45,36 @@ exports[`renders correctly 1`] = `
   >
     <a
       className="MuiTableRow-root-3 MuiTableRow-hover-5 LinkTableRow-noUnderline-17"
+      href="/scenarios/9/2018-09-19/"
+      onClick={[Function]}
+    >
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+      >
+        2018-09-19
+      </div>
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+      >
+        9
+      </div>
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+      >
+        Brann i hjelpesystemer
+      </div>
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+      >
+        
+      </div>
+    </a>
+    <a
+      className="MuiTableRow-root-3 MuiTableRow-hover-5 LinkTableRow-noUnderline-17"
       href="/scenarios/4/2018-09-24/"
       onClick={[Function]}
     >
@@ -75,74 +105,14 @@ exports[`renders correctly 1`] = `
     </a>
     <a
       className="MuiTableRow-root-3 MuiTableRow-hover-5 LinkTableRow-noUnderline-17"
-      href="/scenarios/4/2018-09-08/"
+      href="/scenarios/3/2018-11-05/"
       onClick={[Function]}
     >
       <div
         aria-sort={null}
         className="MuiTableCell-root-8 MuiTableCell-body-10"
       >
-        2018-09-08
-      </div>
-      <div
-        aria-sort={null}
-        className="MuiTableCell-root-8 MuiTableCell-body-10"
-      >
-        4
-      </div>
-      <div
-        aria-sort={null}
-        className="MuiTableCell-root-8 MuiTableCell-body-10"
-      >
-        Fare for kollisjon
-      </div>
-      <div
-        aria-sort={null}
-        className="MuiTableCell-root-8 MuiTableCell-body-10"
-      >
-        Drivende fartøy på kollisjonskurs
-      </div>
-    </a>
-    <a
-      className="MuiTableRow-root-3 MuiTableRow-hover-5 LinkTableRow-noUnderline-17"
-      href="/scenarios/4/2018-09-22/"
-      onClick={[Function]}
-    >
-      <div
-        aria-sort={null}
-        className="MuiTableCell-root-8 MuiTableCell-body-10"
-      >
-        2018-09-22
-      </div>
-      <div
-        aria-sort={null}
-        className="MuiTableCell-root-8 MuiTableCell-body-10"
-      >
-        4
-      </div>
-      <div
-        aria-sort={null}
-        className="MuiTableCell-root-8 MuiTableCell-body-10"
-      >
-        Fare for kollisjon
-      </div>
-      <div
-        aria-sort={null}
-        className="MuiTableCell-root-8 MuiTableCell-body-10"
-      >
-        Drivende fartøy på kollisjonskurs
-      </div>
-    </a>
-    <a
-      className="MuiTableRow-root-3 MuiTableRow-hover-5 LinkTableRow-noUnderline-17"
-      href="/scenarios/3/2018-10-05/"
-      onClick={[Function]}
-    >
-      <div
-        aria-sort={null}
-        className="MuiTableCell-root-8 MuiTableCell-body-10"
-      >
-        2018-10-05
+        2018-11-05
       </div>
       <div
         aria-sort={null}
@@ -161,6 +131,36 @@ exports[`renders correctly 1`] = `
         className="MuiTableCell-root-8 MuiTableCell-body-10"
       >
         Oljeutslipp til sjø fra innretninig
+      </div>
+    </a>
+    <a
+      className="MuiTableRow-root-3 MuiTableRow-hover-5 LinkTableRow-noUnderline-17"
+      href="/scenarios/1/2018-11-14/"
+      onClick={[Function]}
+    >
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+      >
+        2018-11-14
+      </div>
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+      >
+        1
+      </div>
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+      >
+        Uantent/Antent hydrokarbonlekkasje
+      </div>
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+      >
+        Lekkasje i turret
       </div>
     </a>
   </div>

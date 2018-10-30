@@ -2,6 +2,7 @@ import React from 'react';
 import TestRenderer from 'react-test-renderer';
 import { MemoryRouter as Router } from 'react-router-dom'
 import Exercise from "../../../components/exercises/Exercise";
+import {getDateFormatYMD, getDateRelatedToThisDate} from "../../../helpers/calendar-helper";
 
 let testRenderer;
 
@@ -12,7 +13,7 @@ beforeAll(() => {
         match={{
           params: {
             scenarioId: 11,
-            date: '2018-09-30'
+            date: getDateFormatYMD(getDateRelatedToThisDate(0, -4))
           }
         }}
       />

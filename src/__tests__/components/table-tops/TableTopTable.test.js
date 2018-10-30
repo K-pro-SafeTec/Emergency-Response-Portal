@@ -2,6 +2,7 @@ import React from 'react';
 import TestRenderer from 'react-test-renderer';
 import { MemoryRouter as Router } from 'react-router-dom'
 import TableTopTable from "../../../components/table-tops/TableTopTable";
+import {getDateRelatedToThisDate} from "../../../helpers/calendar-helper";
 
 let testRenderer;
 
@@ -10,20 +11,20 @@ beforeAll(() => {
     <Router>
       <TableTopTable
         instances={[{
-          scenario: 4,
-          start: new Date(2018, 8, 24),
+          scenario: 9,
+          start: getDateRelatedToThisDate(3, -6),
         },
         {
           scenario: 4,
-          start: new Date(2018, 8, 8),
-        },
-        {
-          scenario: 4,
-          start: new Date(2018, 8, 22),
+          start: getDateRelatedToThisDate(1, -5),
         },
         {
           scenario: 3,
-          start: new Date(2018, 9, 5),
+          start: getDateRelatedToThisDate(1, 1),
+        },
+        {
+          scenario: 1,
+          start: getDateRelatedToThisDate(3, 2),
         },
         ]}
       />
