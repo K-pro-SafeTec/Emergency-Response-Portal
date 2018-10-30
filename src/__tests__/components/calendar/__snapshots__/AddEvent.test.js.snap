@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the component 1`] = `
+<div>
+  <WithStyles(Typography)
+    variant="headline"
+  >
+    Legg til ny
+     hendelse
+  </WithStyles(Typography)>
+  <form
+    className="form"
+    onSubmit={[Function]}
+  >
+    <TextField
+      InputLabelProps={
+        Object {
+          "shrink": true,
+        }
+      }
+      label="Dato"
+      name="date"
+      onChange={[Function]}
+      required={false}
+      select={false}
+      type="date"
+      value="2018-12-01"
+      variant="standard"
+    />
+    <TextField
+      InputLabelProps={
+        Object {
+          "shrink": true,
+        }
+      }
+      inputProps={
+        Object {
+          "step": 300,
+        }
+      }
+      label="Start"
+      name="start"
+      onChange={[Function]}
+      required={false}
+      select={false}
+      type="time"
+      value="09:00"
+      variant="standard"
+    />
+    <TextField
+      InputLabelProps={
+        Object {
+          "shrink": true,
+        }
+      }
+      defaultValue="10:00"
+      inputProps={
+        Object {
+          "step": 300,
+        }
+      }
+      label="Slutt"
+      name="end"
+      onChange={[Function]}
+      required={false}
+      select={false}
+      type="time"
+      variant="standard"
+    />
+    <ParticipantsSelect
+      onChange={[Function]}
+    />
+    <TypeSelect
+      onChange={[Function]}
+    />
+    <div
+      className="mt32 flex spacebetween"
+    >
+      <WithStyles(Button)
+        color="primary"
+        type="submit"
+        variant="contained"
+      >
+        Lagre
+      </WithStyles(Button)>
+      <WithStyles(Button)
+        color="primary"
+      >
+        Avbryt
+      </WithStyles(Button)>
+    </div>
+  </form>
+</div>
+`;
