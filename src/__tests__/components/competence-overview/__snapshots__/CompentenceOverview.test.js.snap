@@ -1,0 +1,792 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <header
+    className="MuiPaper-root-14 MuiPaper-elevation4-20 MuiAppBar-root-5 MuiAppBar-positionFixed-6 MuiAppBar-colorDefault-11 mui-fixed"
+  >
+    <div
+      className="MuiToolbar-root-41 MuiToolbar-regular-43 MuiToolbar-gutters-42"
+    >
+      <a
+        className="MuiButtonBase-root-51 MuiIconButton-root-45 AppPage-homeButton-2"
+        href="/"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <span
+          className="MuiIconButton-label-50"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-54"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+            />
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+          </svg>
+        </span>
+        <span
+          className="MuiTouchRipple-root-120"
+        />
+      </a>
+      <button
+        className="MuiButtonBase-root-51 MuiButtonBase-disabled-52 MuiIconButton-root-45 MuiIconButton-disabled-49"
+        disabled={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="-1"
+        type="button"
+      >
+        <span
+          className="MuiIconButton-label-50"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-54"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+            />
+          </svg>
+        </span>
+      </button>
+      <button
+        className="MuiButtonBase-root-51 MuiButtonBase-disabled-52 MuiIconButton-root-45 MuiIconButton-disabled-49"
+        disabled={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="-1"
+        type="button"
+      >
+        <span
+          className="MuiIconButton-label-50"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-54"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+            />
+          </svg>
+        </span>
+      </button>
+      <h2
+        className="MuiTypography-root-63 MuiTypography-title-69 MuiTypography-colorInherit-92 AppPage-grow-1"
+      >
+        Kompetanseoversikt
+      </h2>
+      <a
+        className="AppPage-safetecLink-3"
+        href="https://www.safetec.no/"
+      >
+        <img
+          alt="Levert av Safetec"
+          height="44px"
+          src="safetec.svg"
+          width="153px"
+        />
+      </a>
+    </div>
+  </header>,
+  <div
+    className="AppPage-content-4"
+  >
+    <ul
+      className="MuiList-root-98 MuiList-padding-99"
+    >
+      <li
+        className="MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109"
+        disabled={false}
+      >
+        <h2
+          className="MuiTypography-root-63 MuiTypography-title-69"
+        >
+          Beredskapslag
+        </h2>
+      </li>
+      <a
+        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
+        href="/teams/0/"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <div
+          className="MuiListItemIcon-root-113"
+          style={
+            Object {
+              "fontSize": "40px",
+            }
+          }
+        >
+          <img
+            alt="OBS!"
+            height="35em"
+            src="not-checkmark.svg"
+            width="35em"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root-114"
+        >
+          <span
+            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
+          >
+            Alle
+          </span>
+        </div>
+        <span
+          className="MuiTouchRipple-root-120"
+        />
+      </a>
+      <a
+        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
+        href="/teams/1/"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <div
+          className="MuiListItemIcon-root-113"
+          style={
+            Object {
+              "fontSize": "40px",
+            }
+          }
+        >
+          <img
+            alt="Ok"
+            height="35em"
+            src="checkmark.svg"
+            width="35em"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root-114"
+        >
+          <span
+            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
+          >
+            Beredskapsledelse
+          </span>
+        </div>
+        <span
+          className="MuiTouchRipple-root-120"
+        />
+      </a>
+      <a
+        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
+        href="/teams/2/"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <div
+          className="MuiListItemIcon-root-113"
+          style={
+            Object {
+              "fontSize": "40px",
+            }
+          }
+        >
+          <img
+            alt="OBS!"
+            height="35em"
+            src="not-checkmark.svg"
+            width="35em"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root-114"
+        >
+          <span
+            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
+          >
+            Søk- og redningslag
+          </span>
+        </div>
+        <span
+          className="MuiTouchRipple-root-120"
+        />
+      </a>
+      <a
+        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
+        href="/teams/3/"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <div
+          className="MuiListItemIcon-root-113"
+          style={
+            Object {
+              "fontSize": "40px",
+            }
+          }
+        >
+          <img
+            alt="Advarsel"
+            height="35em"
+            src="yellow_warning.svg"
+            width="35em"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root-114"
+        >
+          <span
+            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
+          >
+            MOB-båt lag
+          </span>
+        </div>
+        <span
+          className="MuiTouchRipple-root-120"
+        />
+      </a>
+      <a
+        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
+        href="/teams/4/"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <div
+          className="MuiListItemIcon-root-113"
+          style={
+            Object {
+              "fontSize": "40px",
+            }
+          }
+        >
+          <img
+            alt="OBS!"
+            height="35em"
+            src="not-checkmark.svg"
+            width="35em"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root-114"
+        >
+          <span
+            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
+          >
+            Livbåtlag
+          </span>
+        </div>
+        <span
+          className="MuiTouchRipple-root-120"
+        />
+      </a>
+      <a
+        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
+        href="/teams/5/"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <div
+          className="MuiListItemIcon-root-113"
+          style={
+            Object {
+              "fontSize": "40px",
+            }
+          }
+        >
+          <img
+            alt="Ok"
+            height="35em"
+            src="checkmark.svg"
+            width="35em"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root-114"
+        >
+          <span
+            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
+          >
+            HLO
+          </span>
+        </div>
+        <span
+          className="MuiTouchRipple-root-120"
+        />
+      </a>
+      <a
+        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
+        href="/teams/6/"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <div
+          className="MuiListItemIcon-root-113"
+          style={
+            Object {
+              "fontSize": "40px",
+            }
+          }
+        >
+          <img
+            alt="OBS!"
+            height="35em"
+            src="not-checkmark.svg"
+            width="35em"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root-114"
+        >
+          <span
+            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
+          >
+            Helidekklag
+          </span>
+        </div>
+        <span
+          className="MuiTouchRipple-root-120"
+        />
+      </a>
+      <a
+        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
+        href="/teams/7/"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <div
+          className="MuiListItemIcon-root-113"
+          style={
+            Object {
+              "fontSize": "40px",
+            }
+          }
+        >
+          <img
+            alt="Advarsel"
+            height="35em"
+            src="yellow_warning.svg"
+            width="35em"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root-114"
+        >
+          <span
+            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
+          >
+            Beredskapsleder
+          </span>
+        </div>
+        <span
+          className="MuiTouchRipple-root-120"
+        />
+      </a>
+      <a
+        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
+        href="/teams/8/"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <div
+          className="MuiListItemIcon-root-113"
+          style={
+            Object {
+              "fontSize": "40px",
+            }
+          }
+        >
+          <img
+            alt="Ok"
+            height="35em"
+            src="checkmark.svg"
+            width="35em"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root-114"
+        >
+          <span
+            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
+          >
+            Skadestedsleder
+          </span>
+        </div>
+        <span
+          className="MuiTouchRipple-root-120"
+        />
+      </a>
+      <a
+        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
+        href="/teams/9/"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <div
+          className="MuiListItemIcon-root-113"
+          style={
+            Object {
+              "fontSize": "40px",
+            }
+          }
+        >
+          <img
+            alt="OBS!"
+            height="35em"
+            src="not-checkmark.svg"
+            width="35em"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root-114"
+        >
+          <span
+            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
+          >
+            Søk- og redningslagsleder
+          </span>
+        </div>
+        <span
+          className="MuiTouchRipple-root-120"
+        />
+      </a>
+      <a
+        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
+        href="/teams/10/"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <div
+          className="MuiListItemIcon-root-113"
+          style={
+            Object {
+              "fontSize": "40px",
+            }
+          }
+        >
+          <img
+            alt="Ok"
+            height="35em"
+            src="checkmark.svg"
+            width="35em"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root-114"
+        >
+          <span
+            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
+          >
+            Sykepleier
+          </span>
+        </div>
+        <span
+          className="MuiTouchRipple-root-120"
+        />
+      </a>
+      <a
+        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
+        href="/teams/11/"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <div
+          className="MuiListItemIcon-root-113"
+          style={
+            Object {
+              "fontSize": "40px",
+            }
+          }
+        >
+          <img
+            alt="OBS!"
+            height="35em"
+            src="not-checkmark.svg"
+            width="35em"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root-114"
+        >
+          <span
+            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
+          >
+            Kontrollromsoperatør
+          </span>
+        </div>
+        <span
+          className="MuiTouchRipple-root-120"
+        />
+      </a>
+      <a
+        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
+        href="/teams/12/"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <div
+          className="MuiListItemIcon-root-113"
+          style={
+            Object {
+              "fontSize": "40px",
+            }
+          }
+        >
+          <img
+            alt="Advarsel"
+            height="35em"
+            src="yellow_warning.svg"
+            width="35em"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root-114"
+        >
+          <span
+            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
+          >
+            Førstehjelpslag
+          </span>
+        </div>
+        <span
+          className="MuiTouchRipple-root-120"
+        />
+      </a>
+      <a
+        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
+        href="/teams/13/"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <div
+          className="MuiListItemIcon-root-113"
+          style={
+            Object {
+              "fontSize": "40px",
+            }
+          }
+        >
+          <img
+            alt="Ok"
+            height="35em"
+            src="checkmark.svg"
+            width="35em"
+          />
+        </div>
+        <div
+          className="MuiListItemText-root-114"
+        >
+          <span
+            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
+          >
+            Livbåtkaptein
+          </span>
+        </div>
+        <span
+          className="MuiTouchRipple-root-120"
+        />
+      </a>
+    </ul>
+  </div>,
+]
+`;

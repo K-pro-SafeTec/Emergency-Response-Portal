@@ -14,9 +14,3 @@ test('renders correctly', () => {
   const tree = testRenderer.toJSON();
   expect(tree).toMatchSnapshot();
 });
-
-test('contains two buttons', () => {
-  const testInstance = testRenderer.root;
-  const buttons = testInstance.findAllByType('button');
-  expect(buttons.length).toBe(2);
-});

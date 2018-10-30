@@ -5,7 +5,6 @@ import AppPage from "../../../components/shared/AppPage";
 import Instance from "../../../components/training/Instance";
 
 let testRenderer;
-let testInstance;
 
 beforeAll(() => {
   testRenderer = TestRenderer.create(
@@ -21,14 +20,9 @@ beforeAll(() => {
         }
       />
     </Router>);
-  testInstance = testRenderer.root;
 });
 
 test('renders correctly', () => {
   const tree = testRenderer.toJSON();
   expect(tree).toMatchSnapshot();
-});
-
-test('title is correct', () => {
-  expect(testInstance.findByType(AppPage).props.title).toBe("Trening");
 });

@@ -1,6 +1,4 @@
 import React from 'react';
-import { configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 import DisplayEvent from "../../../components/calendar/DisplayEvent";
 import TestRenderer from "react-test-renderer";
 import {MemoryRouter as Router} from "react-router-dom";

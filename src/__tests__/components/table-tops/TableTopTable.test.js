@@ -4,7 +4,6 @@ import { MemoryRouter as Router } from 'react-router-dom'
 import TableTopTable from "../../../components/table-tops/TableTopTable";
 
 let testRenderer;
-let testInstance;
 
 beforeAll(() => {
   testRenderer = TestRenderer.create(
@@ -30,7 +29,6 @@ beforeAll(() => {
       />
     </Router>
   );
-  testInstance = testRenderer.root;
 });
 
 test('renders correctly', () => {

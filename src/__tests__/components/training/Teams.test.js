@@ -6,22 +6,12 @@ import Teams from "../../../components/training/Teams";
 import ListItem from "@material-ui/core/ListItem/ListItem";
 
 let testRenderer;
-let testInstance;
 
 beforeAll(() => {
     testRenderer = TestRenderer.create(<Router><Teams /></Router>);
-  testInstance = testRenderer.root;
 });
 
 test('renders correctly', () => {
   const tree = testRenderer.toJSON();
   expect(tree).toMatchSnapshot();
-});
-
-test('title is correct', () => {
-  expect(testInstance.findByType(AppPage).props.title).toBe("Trening");
-});
-
-test('list contains heading and five teams', () => {
-  expect(testInstance.findAllByType(ListItem).length).toBe(1+5);
 });

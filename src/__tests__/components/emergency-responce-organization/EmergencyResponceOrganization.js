@@ -1,12 +1,17 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 import { MemoryRouter as Router } from 'react-router-dom'
-import Teams from "../../../components/table-tops/Teams";
+import EmergencyResponseOrganization
+  from "../../../components/emergency-response-organization/EmergencyResponseOrganization";
 
 let testRenderer;
 
 beforeAll(() => {
-  testRenderer = TestRenderer.create(<Router><Teams /></Router>);
+  testRenderer = TestRenderer.create(
+    <Router>
+      <EmergencyResponseOrganization  match={{}} />
+    </Router>
+  );
 });
 
 test('renders correctly', () => {

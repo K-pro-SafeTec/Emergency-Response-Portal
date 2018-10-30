@@ -4,7 +4,6 @@ import { MemoryRouter as Router } from 'react-router-dom'
 import Team from "../../../components/table-tops/Team";
 
 let testRenderer;
-let testInstance;
 
 beforeAll(() => {
   testRenderer = TestRenderer.create(
@@ -18,7 +17,6 @@ beforeAll(() => {
       />
     </Router>
   );
-  testInstance = testRenderer.root;
 });
 
 test('renders correctly', () => {
