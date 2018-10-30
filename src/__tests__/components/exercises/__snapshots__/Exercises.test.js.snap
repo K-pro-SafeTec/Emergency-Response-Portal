@@ -1,0 +1,552 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <header
+    className="MuiPaper-root-14 MuiPaper-elevation4-20 MuiAppBar-root-5 MuiAppBar-positionFixed-6 MuiAppBar-colorDefault-11 mui-fixed"
+  >
+    <div
+      className="MuiToolbar-root-41 MuiToolbar-regular-43 MuiToolbar-gutters-42"
+    >
+      <a
+        className="MuiButtonBase-root-51 MuiIconButton-root-45 AppPage-homeButton-2"
+        href="/"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <span
+          className="MuiIconButton-label-50"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-54"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+            />
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+          </svg>
+        </span>
+        <span
+          className="MuiTouchRipple-root-115"
+        />
+      </a>
+      <button
+        className="MuiButtonBase-root-51 MuiButtonBase-disabled-52 MuiIconButton-root-45 MuiIconButton-disabled-49"
+        disabled={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="-1"
+        type="button"
+      >
+        <span
+          className="MuiIconButton-label-50"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-54"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+            />
+          </svg>
+        </span>
+      </button>
+      <button
+        className="MuiButtonBase-root-51 MuiButtonBase-disabled-52 MuiIconButton-root-45 MuiIconButton-disabled-49"
+        disabled={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="-1"
+        type="button"
+      >
+        <span
+          className="MuiIconButton-label-50"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-54"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+            />
+          </svg>
+        </span>
+      </button>
+      <h2
+        className="MuiTypography-root-63 MuiTypography-title-69 MuiTypography-colorInherit-92 AppPage-grow-1"
+      >
+        Øvelser
+      </h2>
+      <a
+        className="AppPage-safetecLink-3"
+        href="https://www.safetec.no/"
+      >
+        <img
+          alt="Levert av Safetec"
+          height="44px"
+          src="safetec.svg"
+          width="153px"
+        />
+      </a>
+    </div>
+  </header>,
+  <div
+    className="AppPage-content-4"
+  >
+    <div
+      className="MuiTable-root-98"
+    >
+      <div
+        className="MuiTableHead-root-99"
+      >
+        <div
+          className="MuiTableRow-root-100 MuiTableRow-head-103"
+        >
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-head-106"
+            scope="col"
+          >
+            Dato
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-head-106"
+            scope="col"
+          >
+            DFU
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-head-106"
+            scope="col"
+          >
+            Tittel
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-head-106"
+            scope="col"
+          >
+            Scenario
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiTableBody-root-113"
+      >
+        <a
+          className="MuiTableRow-root-100 MuiTableRow-hover-102 LinkTableRow-noUnderline-114"
+          href="/11/2018-09-30/"
+          onClick={[Function]}
+        >
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            2018-09-30
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            11
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            Alvorlig syk/skadet person
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            Personskade
+          </div>
+        </a>
+        <a
+          className="MuiTableRow-root-100 MuiTableRow-hover-102 LinkTableRow-noUnderline-114"
+          href="/11/2018-10-14/"
+          onClick={[Function]}
+        >
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            2018-10-14
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            11
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            Alvorlig syk/skadet person
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            Personskade
+          </div>
+        </a>
+        <a
+          className="MuiTableRow-root-100 MuiTableRow-hover-102 LinkTableRow-noUnderline-114"
+          href="/11/2018-10-28/"
+          onClick={[Function]}
+        >
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            2018-10-28
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            11
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            Alvorlig syk/skadet person
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            Personskade
+          </div>
+        </a>
+        <a
+          className="MuiTableRow-root-100 MuiTableRow-hover-102 LinkTableRow-noUnderline-114"
+          href="/8/2018-11-11/"
+          onClick={[Function]}
+        >
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            2018-11-11
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            8
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            Mann over bord
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            Mann over bord ved arbeid over sjø
+          </div>
+        </a>
+        <a
+          className="MuiTableRow-root-100 MuiTableRow-hover-102 LinkTableRow-noUnderline-114"
+          href="/8/2018-11-25/"
+          onClick={[Function]}
+        >
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            2018-11-25
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            8
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            Mann over bord
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            Mann over bord ved arbeid over sjø
+          </div>
+        </a>
+        <a
+          className="MuiTableRow-root-100 MuiTableRow-hover-102 LinkTableRow-noUnderline-114"
+          href="/8/2018-12-09/"
+          onClick={[Function]}
+        >
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            2018-12-09
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            8
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            Mann over bord
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            Mann over bord ved arbeid over sjø
+          </div>
+        </a>
+        <a
+          className="MuiTableRow-root-100 MuiTableRow-hover-102 LinkTableRow-noUnderline-114"
+          href="/9/2018-12-20/"
+          onClick={[Function]}
+        >
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            2018-12-20
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            9
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            Brann i hjelpesystemer
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            Brann i generator
+          </div>
+        </a>
+        <a
+          className="MuiTableRow-root-100 MuiTableRow-hover-102 LinkTableRow-noUnderline-114"
+          href="/9/2019-01-03/"
+          onClick={[Function]}
+        >
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            2019-01-03
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            9
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            Brann i hjelpesystemer
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            Brann i generator
+          </div>
+        </a>
+        <a
+          className="MuiTableRow-root-100 MuiTableRow-hover-102 LinkTableRow-noUnderline-114"
+          href="/9/2019-01-17/"
+          onClick={[Function]}
+        >
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            2019-01-17
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            9
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            Brann i hjelpesystemer
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            Brann i generator
+          </div>
+        </a>
+        <a
+          className="MuiTableRow-root-100 MuiTableRow-hover-102 LinkTableRow-noUnderline-114"
+          href="/6/2019-02-03/"
+          onClick={[Function]}
+        >
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            2019-02-03
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            6
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            Helikopterulykke på helidekk
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            Krasjlanding på helidekk
+          </div>
+        </a>
+        <a
+          className="MuiTableRow-root-100 MuiTableRow-hover-102 LinkTableRow-noUnderline-114"
+          href="/6/2019-02-17/"
+          onClick={[Function]}
+        >
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            2019-02-17
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            6
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            Helikopterulykke på helidekk
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            Krasjlanding på helidekk
+          </div>
+        </a>
+        <a
+          className="MuiTableRow-root-100 MuiTableRow-hover-102 LinkTableRow-noUnderline-114"
+          href="/6/2019-03-03/"
+          onClick={[Function]}
+        >
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            2019-03-03
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            6
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            Helikopterulykke på helidekk
+          </div>
+          <div
+            aria-sort={null}
+            className="MuiTableCell-root-105 MuiTableCell-body-107"
+          >
+            Krasjlanding på helidekk
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>,
+]
+`;

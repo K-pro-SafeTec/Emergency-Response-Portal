@@ -1,0 +1,323 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <header
+    className="MuiPaper-root-14 MuiPaper-elevation4-20 MuiAppBar-root-5 MuiAppBar-positionFixed-6 MuiAppBar-colorDefault-11 mui-fixed"
+  >
+    <div
+      className="MuiToolbar-root-41 MuiToolbar-regular-43 MuiToolbar-gutters-42"
+    >
+      <a
+        className="MuiButtonBase-root-51 MuiIconButton-root-45 AppPage-homeButton-2"
+        href="/"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <span
+          className="MuiIconButton-label-50"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-54"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+            />
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+          </svg>
+        </span>
+        <span
+          className="MuiTouchRipple-root-127"
+        />
+      </a>
+      <button
+        className="MuiButtonBase-root-51 MuiButtonBase-disabled-52 MuiIconButton-root-45 MuiIconButton-disabled-49"
+        disabled={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="-1"
+        type="button"
+      >
+        <span
+          className="MuiIconButton-label-50"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-54"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+            />
+          </svg>
+        </span>
+      </button>
+      <button
+        className="MuiButtonBase-root-51 MuiButtonBase-disabled-52 MuiIconButton-root-45 MuiIconButton-disabled-49"
+        disabled={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="-1"
+        type="button"
+      >
+        <span
+          className="MuiIconButton-label-50"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-54"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+            />
+          </svg>
+        </span>
+      </button>
+      <h2
+        className="MuiTypography-root-63 MuiTypography-title-69 MuiTypography-colorInherit-92 AppPage-grow-1"
+      >
+        Øvelser
+      </h2>
+      <a
+        className="AppPage-safetecLink-3"
+        href="https://www.safetec.no/"
+      >
+        <img
+          alt="Levert av Safetec"
+          height="44px"
+          src="safetec.svg"
+          width="153px"
+        />
+      </a>
+    </div>
+  </header>,
+  <div
+    className="AppPage-content-4"
+  >
+    <div
+      className="MuiPaper-root-14 MuiPaper-elevation2-18 MuiPaper-rounded-15"
+      style={
+        Object {
+          "margin": "1em",
+          "padding": "1em",
+        }
+      }
+    >
+      <div
+        className="EntityInfo-container-98"
+      >
+        <img
+          alt="Øvelse"
+          className="EntityInfo-avatar-99"
+          src="exerciseScenarios.svg"
+        />
+        <div
+          className="EntityInfo-info-100"
+        >
+          <h1
+            className="MuiTypography-root-63 MuiTypography-headline-68"
+          >
+            Alvorlig syk/skadet person
+          </h1>
+          <h3
+            className="MuiTypography-root-63 MuiTypography-subheading-70"
+          >
+            DFU 
+            11
+          </h3>
+        </div>
+      </div>
+      <h3
+        className="MuiTypography-root-63 MuiTypography-subheading-70"
+      >
+        Scenario:
+      </h3>
+      <p
+        className="MuiTypography-root-63 MuiTypography-body1-72 MuiTypography-paragraph-91"
+      >
+        Personskade
+      </p>
+      <h3
+        className="MuiTypography-root-63 MuiTypography-subheading-70"
+      >
+        Scenariobeskrivelse:
+      </h3>
+      <p
+        className="MuiTypography-root-63 MuiTypography-body1-72 MuiTypography-paragraph-91"
+      >
+        Klemskade som følge av løfteoperasjon. Kontainer svinger ukontrollert og treffer en dekksarbeider. Personen er bevistløs og har synlige blødninger.
+      </p>
+      <h3
+        className="MuiTypography-root-63 MuiTypography-subheading-70"
+      >
+        Forberedelser:
+      </h3>
+      <p
+        className="MuiTypography-root-63 MuiTypography-body1-72"
+      >
+        Sminke  markør
+      </p>
+      <p
+        className="MuiTypography-root-63 MuiTypography-body1-72"
+      >
+        Avtale med kranfører og forberede et skadested
+      </p>
+      <p
+        className="MuiTypography-root-63 MuiTypography-body1-72"
+      >
+        Avtale med dekksmannskap om varsling til kontrollrom, husk "Øvelse-øvelse-øvelse"
+      </p>
+      <p
+        className="MuiTypography-root-63 MuiTypography-body1-72"
+      >
+        Om mulig, simuler at markør ligger fast og må frigjøres
+      </p>
+      <h3
+        className="MuiTypography-root-63 MuiTypography-subheading-70"
+        style={
+          Object {
+            "marginTop": "12px",
+          }
+        }
+      >
+        Ytelseskrav:
+      </h3>
+      <h3
+        className="MuiTypography-root-63 MuiTypography-subheading-70"
+      >
+        Fokusområder:
+      </h3>
+      <p
+        className="MuiTypography-root-63 MuiTypography-body1-72"
+      >
+        Livreddende stabilisering på skadested
+      </p>
+      <p
+        className="MuiTypography-root-63 MuiTypography-body1-72"
+      >
+        Koordinere frigjøring av forulykket med S&R lag
+      </p>
+      <p
+        className="MuiTypography-root-63 MuiTypography-body1-72"
+      >
+        Skånsom transport til hospital
+      </p>
+      <p
+        className="MuiTypography-root-63 MuiTypography-body1-72"
+      >
+        Forberede for MEDEVAC 
+      </p>
+      <h3
+        className="MuiTypography-root-63 MuiTypography-subheading-70"
+        style={
+          Object {
+            "marginTop": "12px",
+          }
+        }
+      >
+        Utvikling:
+      </h3>
+      <p
+        className="MuiTypography-root-63 MuiTypography-body1-72"
+      >
+        Potensiell alvorlig skade på forulykket, herunder brudd og indre blødninger
+      </p>
+      <p
+        className="MuiTypography-root-63 MuiTypography-body1-72"
+      >
+        Situasjonen forverrer seg grunnet indre blødning
+      </p>
+      <p
+        className="MuiTypography-root-63 MuiTypography-body1-72"
+      >
+        Sykepleier må følge helikopter til land med pasient
+      </p>
+      <p
+        className="MuiTypography-root-63 MuiTypography-body1-72"
+      >
+        Tiltak på innretningen når sykepleier ikke lenger er tilstede
+      </p>
+      <a
+        className="MuiButtonBase-root-51 MuiButton-root-101 MuiButton-contained-112 MuiButton-containedPrimary-113 MuiButton-raised-115 MuiButton-raisedPrimary-116"
+        href="/undefineddebrief/"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        style={
+          Object {
+            "marginTop": "12px",
+          }
+        }
+        tabIndex="0"
+      >
+        <span
+          className="MuiButton-label-102"
+        >
+          Debrief
+        </span>
+        <span
+          className="MuiTouchRipple-root-127"
+        />
+      </a>
+    </div>
+  </div>,
+]
+`;

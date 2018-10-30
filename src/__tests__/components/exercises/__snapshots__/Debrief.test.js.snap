@@ -1,0 +1,806 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <header
+    className="MuiPaper-root-14 MuiPaper-elevation4-20 MuiAppBar-root-5 MuiAppBar-positionFixed-6 MuiAppBar-colorDefault-11 mui-fixed"
+  >
+    <div
+      className="MuiToolbar-root-41 MuiToolbar-regular-43 MuiToolbar-gutters-42"
+    >
+      <a
+        className="MuiButtonBase-root-51 MuiIconButton-root-45 AppPage-homeButton-2"
+        href="/"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <span
+          className="MuiIconButton-label-50"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-54"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+            />
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+          </svg>
+        </span>
+        <span
+          className="MuiTouchRipple-root-178"
+        />
+      </a>
+      <button
+        className="MuiButtonBase-root-51 MuiButtonBase-disabled-52 MuiIconButton-root-45 MuiIconButton-disabled-49"
+        disabled={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="-1"
+        type="button"
+      >
+        <span
+          className="MuiIconButton-label-50"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-54"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+            />
+          </svg>
+        </span>
+      </button>
+      <button
+        className="MuiButtonBase-root-51 MuiButtonBase-disabled-52 MuiIconButton-root-45 MuiIconButton-disabled-49"
+        disabled={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="-1"
+        type="button"
+      >
+        <span
+          className="MuiIconButton-label-50"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-54"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+            />
+          </svg>
+        </span>
+      </button>
+      <h2
+        className="MuiTypography-root-63 MuiTypography-title-69 MuiTypography-colorInherit-92 AppPage-grow-1"
+      >
+        Debrief
+      </h2>
+      <a
+        className="AppPage-safetecLink-3"
+        href="https://www.safetec.no/"
+      >
+        <img
+          alt="Levert av Safetec"
+          height="44px"
+          src="safetec.svg"
+          width="153px"
+        />
+      </a>
+    </div>
+  </header>,
+  <div
+    className="AppPage-content-4"
+  >
+    <div
+      className="MuiPaper-root-14 MuiPaper-elevation2-18 MuiPaper-rounded-15"
+      style={
+        Object {
+          "margin": "1em",
+          "padding": "1em",
+        }
+      }
+    >
+      <div
+        className="EntityInfo-container-98"
+      >
+        <img
+          alt="Øvelse"
+          className="EntityInfo-avatar-99"
+          src="exerciseScenarios.svg"
+        />
+        <div
+          className="EntityInfo-info-100"
+        >
+          <h1
+            className="MuiTypography-root-63 MuiTypography-headline-68"
+          >
+            Alvorlig syk/skadet person
+          </h1>
+          <h3
+            className="MuiTypography-root-63 MuiTypography-subheading-70"
+          >
+            DFU 
+            11
+          </h3>
+        </div>
+      </div>
+      <div
+        className="MuiFormControl-root-101 MuiFormControl-marginNormal-102 MuiFormControl-fullWidth-104"
+      >
+        <label
+          className="MuiFormLabel-root-112 MuiInputLabel-root-105 MuiInputLabel-formControl-106 MuiInputLabel-animated-109"
+          data-shrink={false}
+        >
+          Identifiserte utfordringer
+        </label>
+        <div
+          className="MuiInputBase-root-132 MuiInput-root-119 MuiInput-underline-123 MuiInputBase-fullWidth-141 MuiInput-fullWidth-126 MuiInputBase-formControl-133 MuiInput-formControl-120 MuiInputBase-multiline-140 MuiInput-multiline-125"
+          onClick={[Function]}
+        >
+          <div
+            className="MuiPrivateTextarea-root-149"
+          >
+            <textarea
+              aria-hidden="true"
+              className="MuiPrivateTextarea-textarea-150 MuiPrivateTextarea-shadow-151"
+              readOnly={true}
+              rows="1"
+              tabIndex={-1}
+              value=""
+            />
+            <textarea
+              aria-hidden="true"
+              className="MuiPrivateTextarea-textarea-150 MuiPrivateTextarea-shadow-151"
+              readOnly={true}
+              rows={1}
+              tabIndex={-1}
+            />
+            <textarea
+              aria-invalid={false}
+              className="MuiPrivateTextarea-textarea-150 MuiInputBase-input-142 MuiInput-input-127 MuiInputBase-inputMultiline-144 MuiInput-inputMultiline-129"
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              rows={1}
+              style={
+                Object {
+                  "height": 19,
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+      <h2
+        className="MuiTypography-root-63 MuiTypography-title-69"
+      >
+        Spørsmål:
+      </h2>
+      <div
+        className="MuiFormControl-root-101 MuiFormControl-marginNormal-102 MuiFormControl-fullWidth-104"
+      >
+        <label
+          className="MuiFormLabel-root-112 MuiInputLabel-root-105 MuiInputLabel-formControl-106 MuiInputLabel-animated-109"
+          data-shrink={false}
+        >
+          Hvordan ble det varslet (GA, pager, radio, telefon eller personlig oppmøte)?
+        </label>
+        <div
+          className="MuiInputBase-root-132 MuiInput-root-119 MuiInput-underline-123 MuiInputBase-fullWidth-141 MuiInput-fullWidth-126 MuiInputBase-formControl-133 MuiInput-formControl-120 MuiInputBase-multiline-140 MuiInput-multiline-125"
+          onClick={[Function]}
+        >
+          <div
+            className="MuiPrivateTextarea-root-149"
+          >
+            <textarea
+              aria-hidden="true"
+              className="MuiPrivateTextarea-textarea-150 MuiPrivateTextarea-shadow-151"
+              readOnly={true}
+              rows="1"
+              tabIndex={-1}
+              value=""
+            />
+            <textarea
+              aria-hidden="true"
+              className="MuiPrivateTextarea-textarea-150 MuiPrivateTextarea-shadow-151"
+              readOnly={true}
+              rows={1}
+              tabIndex={-1}
+            />
+            <textarea
+              aria-invalid={false}
+              className="MuiPrivateTextarea-textarea-150 MuiInputBase-input-142 MuiInput-input-127 MuiInputBase-inputMultiline-144 MuiInput-inputMultiline-129"
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              rows={1}
+              style={
+                Object {
+                  "height": 19,
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiFormControl-root-101 MuiFormControl-marginNormal-102 MuiFormControl-fullWidth-104"
+      >
+        <label
+          className="MuiFormLabel-root-112 MuiInputLabel-root-105 MuiInputLabel-formControl-106 MuiInputLabel-animated-109"
+          data-shrink={false}
+        >
+          Mønstring, tid brukt?
+        </label>
+        <div
+          className="MuiInputBase-root-132 MuiInput-root-119 MuiInput-underline-123 MuiInputBase-fullWidth-141 MuiInput-fullWidth-126 MuiInputBase-formControl-133 MuiInput-formControl-120 MuiInputBase-multiline-140 MuiInput-multiline-125"
+          onClick={[Function]}
+        >
+          <div
+            className="MuiPrivateTextarea-root-149"
+          >
+            <textarea
+              aria-hidden="true"
+              className="MuiPrivateTextarea-textarea-150 MuiPrivateTextarea-shadow-151"
+              readOnly={true}
+              rows="1"
+              tabIndex={-1}
+              value=""
+            />
+            <textarea
+              aria-hidden="true"
+              className="MuiPrivateTextarea-textarea-150 MuiPrivateTextarea-shadow-151"
+              readOnly={true}
+              rows={1}
+              tabIndex={-1}
+            />
+            <textarea
+              aria-invalid={false}
+              className="MuiPrivateTextarea-textarea-150 MuiInputBase-input-142 MuiInput-input-127 MuiInputBase-inputMultiline-144 MuiInput-inputMultiline-129"
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              rows={1}
+              style={
+                Object {
+                  "height": 19,
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiFormControl-root-101 MuiFormControl-marginNormal-102 MuiFormControl-fullWidth-104"
+      >
+        <label
+          className="MuiFormLabel-root-112 MuiInputLabel-root-105 MuiInputLabel-formControl-106 MuiInputLabel-animated-109"
+          data-shrink={false}
+        >
+          Hvordan fikk vi informasjon om skadested og var dette tilstrekkelig utfyllende, hadde vi med oss riktig utstyr?
+        </label>
+        <div
+          className="MuiInputBase-root-132 MuiInput-root-119 MuiInput-underline-123 MuiInputBase-fullWidth-141 MuiInput-fullWidth-126 MuiInputBase-formControl-133 MuiInput-formControl-120 MuiInputBase-multiline-140 MuiInput-multiline-125"
+          onClick={[Function]}
+        >
+          <div
+            className="MuiPrivateTextarea-root-149"
+          >
+            <textarea
+              aria-hidden="true"
+              className="MuiPrivateTextarea-textarea-150 MuiPrivateTextarea-shadow-151"
+              readOnly={true}
+              rows="1"
+              tabIndex={-1}
+              value=""
+            />
+            <textarea
+              aria-hidden="true"
+              className="MuiPrivateTextarea-textarea-150 MuiPrivateTextarea-shadow-151"
+              readOnly={true}
+              rows={1}
+              tabIndex={-1}
+            />
+            <textarea
+              aria-invalid={false}
+              className="MuiPrivateTextarea-textarea-150 MuiInputBase-input-142 MuiInput-input-127 MuiInputBase-inputMultiline-144 MuiInput-inputMultiline-129"
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              rows={1}
+              style={
+                Object {
+                  "height": 19,
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiFormControl-root-101 MuiFormControl-marginNormal-102 MuiFormControl-fullWidth-104"
+      >
+        <label
+          className="MuiFormLabel-root-112 MuiInputLabel-root-105 MuiInputLabel-formControl-106 MuiInputLabel-animated-109"
+          data-shrink={false}
+        >
+          Hvilken livreddende førstehjelp ble gitt, hvilket skadebilde identifiserte vi?
+        </label>
+        <div
+          className="MuiInputBase-root-132 MuiInput-root-119 MuiInput-underline-123 MuiInputBase-fullWidth-141 MuiInput-fullWidth-126 MuiInputBase-formControl-133 MuiInput-formControl-120 MuiInputBase-multiline-140 MuiInput-multiline-125"
+          onClick={[Function]}
+        >
+          <div
+            className="MuiPrivateTextarea-root-149"
+          >
+            <textarea
+              aria-hidden="true"
+              className="MuiPrivateTextarea-textarea-150 MuiPrivateTextarea-shadow-151"
+              readOnly={true}
+              rows="1"
+              tabIndex={-1}
+              value=""
+            />
+            <textarea
+              aria-hidden="true"
+              className="MuiPrivateTextarea-textarea-150 MuiPrivateTextarea-shadow-151"
+              readOnly={true}
+              rows={1}
+              tabIndex={-1}
+            />
+            <textarea
+              aria-invalid={false}
+              className="MuiPrivateTextarea-textarea-150 MuiInputBase-input-142 MuiInput-input-127 MuiInputBase-inputMultiline-144 MuiInput-inputMultiline-129"
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              rows={1}
+              style={
+                Object {
+                  "height": 19,
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiFormControl-root-101 MuiFormControl-marginNormal-102 MuiFormControl-fullWidth-104"
+      >
+        <label
+          className="MuiFormLabel-root-112 MuiInputLabel-root-105 MuiInputLabel-formControl-106 MuiInputLabel-animated-109"
+          data-shrink={false}
+        >
+          Hvordan var samordning med S&R-lag, frigjøring av forulykket og transport til hospital?
+        </label>
+        <div
+          className="MuiInputBase-root-132 MuiInput-root-119 MuiInput-underline-123 MuiInputBase-fullWidth-141 MuiInput-fullWidth-126 MuiInputBase-formControl-133 MuiInput-formControl-120 MuiInputBase-multiline-140 MuiInput-multiline-125"
+          onClick={[Function]}
+        >
+          <div
+            className="MuiPrivateTextarea-root-149"
+          >
+            <textarea
+              aria-hidden="true"
+              className="MuiPrivateTextarea-textarea-150 MuiPrivateTextarea-shadow-151"
+              readOnly={true}
+              rows="1"
+              tabIndex={-1}
+              value=""
+            />
+            <textarea
+              aria-hidden="true"
+              className="MuiPrivateTextarea-textarea-150 MuiPrivateTextarea-shadow-151"
+              readOnly={true}
+              rows={1}
+              tabIndex={-1}
+            />
+            <textarea
+              aria-invalid={false}
+              className="MuiPrivateTextarea-textarea-150 MuiInputBase-input-142 MuiInput-input-127 MuiInputBase-inputMultiline-144 MuiInput-inputMultiline-129"
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              rows={1}
+              style={
+                Object {
+                  "height": 19,
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiFormControl-root-101 MuiFormControl-marginNormal-102 MuiFormControl-fullWidth-104"
+      >
+        <label
+          className="MuiFormLabel-root-112 MuiInputLabel-root-105 MuiInputLabel-formControl-106 MuiInputLabel-animated-109"
+          data-shrink={false}
+        >
+          Egensikkerhet, var det utfordringer knyttet til dette?
+        </label>
+        <div
+          className="MuiInputBase-root-132 MuiInput-root-119 MuiInput-underline-123 MuiInputBase-fullWidth-141 MuiInput-fullWidth-126 MuiInputBase-formControl-133 MuiInput-formControl-120 MuiInputBase-multiline-140 MuiInput-multiline-125"
+          onClick={[Function]}
+        >
+          <div
+            className="MuiPrivateTextarea-root-149"
+          >
+            <textarea
+              aria-hidden="true"
+              className="MuiPrivateTextarea-textarea-150 MuiPrivateTextarea-shadow-151"
+              readOnly={true}
+              rows="1"
+              tabIndex={-1}
+              value=""
+            />
+            <textarea
+              aria-hidden="true"
+              className="MuiPrivateTextarea-textarea-150 MuiPrivateTextarea-shadow-151"
+              readOnly={true}
+              rows={1}
+              tabIndex={-1}
+            />
+            <textarea
+              aria-invalid={false}
+              className="MuiPrivateTextarea-textarea-150 MuiInputBase-input-142 MuiInput-input-127 MuiInputBase-inputMultiline-144 MuiInput-inputMultiline-129"
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              rows={1}
+              style={
+                Object {
+                  "height": 19,
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiFormControl-root-101 MuiFormControl-marginNormal-102 MuiFormControl-fullWidth-104"
+      >
+        <label
+          className="MuiFormLabel-root-112 MuiInputLabel-root-105 MuiInputLabel-formControl-106 MuiInputLabel-animated-109"
+          data-shrink={false}
+        >
+          Ble MEDEVAC vurdert/besluttet?
+        </label>
+        <div
+          className="MuiInputBase-root-132 MuiInput-root-119 MuiInput-underline-123 MuiInputBase-fullWidth-141 MuiInput-fullWidth-126 MuiInputBase-formControl-133 MuiInput-formControl-120 MuiInputBase-multiline-140 MuiInput-multiline-125"
+          onClick={[Function]}
+        >
+          <div
+            className="MuiPrivateTextarea-root-149"
+          >
+            <textarea
+              aria-hidden="true"
+              className="MuiPrivateTextarea-textarea-150 MuiPrivateTextarea-shadow-151"
+              readOnly={true}
+              rows="1"
+              tabIndex={-1}
+              value=""
+            />
+            <textarea
+              aria-hidden="true"
+              className="MuiPrivateTextarea-textarea-150 MuiPrivateTextarea-shadow-151"
+              readOnly={true}
+              rows={1}
+              tabIndex={-1}
+            />
+            <textarea
+              aria-invalid={false}
+              className="MuiPrivateTextarea-textarea-150 MuiInputBase-input-142 MuiInput-input-127 MuiInputBase-inputMultiline-144 MuiInput-inputMultiline-129"
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              rows={1}
+              style={
+                Object {
+                  "height": 19,
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiFormControl-root-101 MuiFormControl-marginNormal-102 MuiFormControl-fullWidth-104"
+      >
+        <label
+          className="MuiFormLabel-root-112 MuiInputLabel-root-105 MuiInputLabel-formControl-106 MuiInputLabel-animated-109"
+          data-shrink={false}
+        >
+          Var det andre utfordringer som ikke er dekket av punktene over?
+        </label>
+        <div
+          className="MuiInputBase-root-132 MuiInput-root-119 MuiInput-underline-123 MuiInputBase-fullWidth-141 MuiInput-fullWidth-126 MuiInputBase-formControl-133 MuiInput-formControl-120 MuiInputBase-multiline-140 MuiInput-multiline-125"
+          onClick={[Function]}
+        >
+          <div
+            className="MuiPrivateTextarea-root-149"
+          >
+            <textarea
+              aria-hidden="true"
+              className="MuiPrivateTextarea-textarea-150 MuiPrivateTextarea-shadow-151"
+              readOnly={true}
+              rows="1"
+              tabIndex={-1}
+              value=""
+            />
+            <textarea
+              aria-hidden="true"
+              className="MuiPrivateTextarea-textarea-150 MuiPrivateTextarea-shadow-151"
+              readOnly={true}
+              rows={1}
+              tabIndex={-1}
+            />
+            <textarea
+              aria-invalid={false}
+              className="MuiPrivateTextarea-textarea-150 MuiInputBase-input-142 MuiInput-input-127 MuiInputBase-inputMultiline-144 MuiInput-inputMultiline-129"
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              rows={1}
+              style={
+                Object {
+                  "height": 19,
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiFormControl-root-101 MuiFormControl-marginNormal-102 MuiFormControl-fullWidth-104"
+      >
+        <label
+          className="MuiFormLabel-root-112 MuiInputLabel-root-105 MuiInputLabel-formControl-106 MuiInputLabel-animated-109"
+          data-shrink={false}
+        >
+          Hvilke lærepunkter var det, hvilke skal vi overføre til andre som ikke var med på øvelsen?
+        </label>
+        <div
+          className="MuiInputBase-root-132 MuiInput-root-119 MuiInput-underline-123 MuiInputBase-fullWidth-141 MuiInput-fullWidth-126 MuiInputBase-formControl-133 MuiInput-formControl-120 MuiInputBase-multiline-140 MuiInput-multiline-125"
+          onClick={[Function]}
+        >
+          <div
+            className="MuiPrivateTextarea-root-149"
+          >
+            <textarea
+              aria-hidden="true"
+              className="MuiPrivateTextarea-textarea-150 MuiPrivateTextarea-shadow-151"
+              readOnly={true}
+              rows="1"
+              tabIndex={-1}
+              value=""
+            />
+            <textarea
+              aria-hidden="true"
+              className="MuiPrivateTextarea-textarea-150 MuiPrivateTextarea-shadow-151"
+              readOnly={true}
+              rows={1}
+              tabIndex={-1}
+            />
+            <textarea
+              aria-invalid={false}
+              className="MuiPrivateTextarea-textarea-150 MuiInputBase-input-142 MuiInput-input-127 MuiInputBase-inputMultiline-144 MuiInput-inputMultiline-129"
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              rows={1}
+              style={
+                Object {
+                  "height": 19,
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiFormControl-root-101 MuiFormControl-marginNormal-102 MuiFormControl-fullWidth-104"
+      >
+        <label
+          className="MuiFormLabel-root-112 MuiInputLabel-root-105 MuiInputLabel-formControl-106 MuiInputLabel-animated-109"
+          data-shrink={false}
+        >
+          Hvordan ville oppfølging av involverte blitt utført om det hadde vært en reell hendelse?
+        </label>
+        <div
+          className="MuiInputBase-root-132 MuiInput-root-119 MuiInput-underline-123 MuiInputBase-fullWidth-141 MuiInput-fullWidth-126 MuiInputBase-formControl-133 MuiInput-formControl-120 MuiInputBase-multiline-140 MuiInput-multiline-125"
+          onClick={[Function]}
+        >
+          <div
+            className="MuiPrivateTextarea-root-149"
+          >
+            <textarea
+              aria-hidden="true"
+              className="MuiPrivateTextarea-textarea-150 MuiPrivateTextarea-shadow-151"
+              readOnly={true}
+              rows="1"
+              tabIndex={-1}
+              value=""
+            />
+            <textarea
+              aria-hidden="true"
+              className="MuiPrivateTextarea-textarea-150 MuiPrivateTextarea-shadow-151"
+              readOnly={true}
+              rows={1}
+              tabIndex={-1}
+            />
+            <textarea
+              aria-invalid={false}
+              className="MuiPrivateTextarea-textarea-150 MuiInputBase-input-142 MuiInput-input-127 MuiInputBase-inputMultiline-144 MuiInput-inputMultiline-129"
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              rows={1}
+              style={
+                Object {
+                  "height": 19,
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiFormControl-root-101 MuiFormControl-marginNormal-102 MuiFormControl-fullWidth-104"
+      >
+        <label
+          className="MuiFormLabel-root-112 MuiInputLabel-root-105 MuiInputLabel-formControl-106 MuiInputLabel-animated-109"
+          data-shrink={false}
+        >
+          Læringspunkter
+        </label>
+        <div
+          className="MuiInputBase-root-132 MuiInput-root-119 MuiInput-underline-123 MuiInputBase-fullWidth-141 MuiInput-fullWidth-126 MuiInputBase-formControl-133 MuiInput-formControl-120 MuiInputBase-multiline-140 MuiInput-multiline-125"
+          onClick={[Function]}
+        >
+          <div
+            className="MuiPrivateTextarea-root-149"
+          >
+            <textarea
+              aria-hidden="true"
+              className="MuiPrivateTextarea-textarea-150 MuiPrivateTextarea-shadow-151"
+              readOnly={true}
+              rows="1"
+              tabIndex={-1}
+              value=""
+            />
+            <textarea
+              aria-hidden="true"
+              className="MuiPrivateTextarea-textarea-150 MuiPrivateTextarea-shadow-151"
+              readOnly={true}
+              rows={1}
+              tabIndex={-1}
+            />
+            <textarea
+              aria-invalid={false}
+              className="MuiPrivateTextarea-textarea-150 MuiInputBase-input-142 MuiInput-input-127 MuiInputBase-inputMultiline-144 MuiInput-inputMultiline-129"
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              rows={1}
+              style={
+                Object {
+                  "height": 19,
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+      <a
+        className="MuiButtonBase-root-51 MuiButton-root-152 MuiButton-contained-163 MuiButton-containedPrimary-164 MuiButton-raised-166 MuiButton-raisedPrimary-167"
+        href="/"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        style={
+          Object {
+            "marginTop": "12px",
+          }
+        }
+        tabIndex="0"
+      >
+        <span
+          className="MuiButton-label-153"
+        >
+          Fullfør
+        </span>
+        <span
+          className="MuiTouchRipple-root-178"
+        />
+      </a>
+    </div>
+  </div>,
+]
+`;
