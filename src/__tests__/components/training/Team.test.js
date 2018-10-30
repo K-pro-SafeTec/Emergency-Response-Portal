@@ -2,14 +2,14 @@ import React from 'react';
 import TestRenderer from 'react-test-renderer';
 import { MemoryRouter as Router } from 'react-router-dom'
 import AppPage from "../../../components/shared/AppPage";
-import Teams from "../../../components/training/Teams";
-import ListItem from "@material-ui/core/ListItem/ListItem";
+import Team from "../../../components/training/Team";
+import TrainingTable from "../../../components/training/TrainingTable";
 
 let testRenderer;
 let testInstance;
 
 beforeAll(() => {
-    testRenderer = TestRenderer.create(<Router><Teams /></Router>);
+  testRenderer = TestRenderer.create(<Router><Team match={{params: {teamId: 2}}} /></Router>);
   testInstance = testRenderer.root;
 });
 
@@ -22,6 +22,7 @@ test('title is correct', () => {
   expect(testInstance.findByType(AppPage).props.title).toBe("Trening");
 });
 
-test('list contains heading and five teams', () => {
-  expect(testInstance.findAllByType(ListItem).length).toBe(1+5);
+test('table contains all trainings', () => {
+  console.log(testInstance.findByType(TrainingTable).props);
+  expect(testInstance.findByType(TrainingTable).props.instances.length).toBe(12);
 });
