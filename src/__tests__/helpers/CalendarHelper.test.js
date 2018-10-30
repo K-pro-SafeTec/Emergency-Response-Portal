@@ -1,27 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
 import {
-  getTimeFormat,
-  getDateFormatYMD,
-  getEventsOnDate,
+  capitalizeFirstLetter,
   equalDates,
   getDateFormat,
-  isValidEvent,
-  isValidDate,
-  isValidPeriod,
-  isValidParticipants,
-  isValidType,
-  capitalizeFirstLetter,
-  sortEvents,
-} from './helpers/calendar-helper';
-import Status, { mostSevere } from './helpers/Status'
-
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+  getDateFormatYMD,
+  getEventsOnDate,
+  getTimeFormat,
+  isValidDate, isValidEvent, isValidParticipants, isValidPeriod, isValidType, sortEvents
+} from "../../helpers/calendar-helper";
 
 it('getTimeFormat and getTimeFormatYMD returns the correct time', () => {
   const date1 = new Date(2018, 3, 15, 16, 31);
@@ -97,30 +82,58 @@ it('getDateFormat works as expected', () => {
   expect(string2).toBe('Torsdag 24. desember 2020');
 });
 
-it('validEvent works as expected', () => {
+it('isValidDate', () => {
+  const date = '2018-11-10';
+  const date2 = '2018-11-1';
+  const date3 = '2018-11-00';
+  expect(isValidDate(date)).toBeTruthy();
+  expect(isValidDate(date2)).toBeTruthy();
+  expect(isValidDate(date3)).toBeFalsy();
+});
+
+it('isValidPeriod', () => {
+  const start = '20:00';
+  const end = '21:00';
+  const endEarly = '19:00';
+  expect(isValidPeriod(start, end)).toBeTruthy();
+  expect(isValidPeriod(start, endEarly)).toBeFalsy();
+});
+
+it('isValidParticipants', () => {
+  const participants = 'alle';
+  expect(isValidParticipants(participants)).toBeTruthy();
+  const participantsEmpty = '';
+  expect(isValidParticipants(participantsEmpty)).toBeFalsy();
+});
+
+it('isValidType', () => {
+  const type = 'øvelse';
+  const type2 = 'trening';
+  const type3 = 'table top';
+  const type4 = 'something';
+  expect(isValidType(type)).toBeTruthy();
+  expect(isValidType(type2)).toBeTruthy();
+  expect(isValidType(type3)).toBeTruthy();
+  expect(isValidType(type4)).toBeFalsy();
+});
+
+it('isValidEvent', () => {
   const date = '2018-11-10';
   const start = '20:00';
   const end = '21:00';
   const participants = 'alle';
   const type = 'øvelse';
-  expect(isValidDate(date)).toBeTruthy();
-  expect(isValidPeriod(start, end)).toBeTruthy();
-  expect(isValidParticipants(participants)).toBeTruthy();
-  expect(isValidType(type)).toBeTruthy();
+
   expect(isValidEvent(date, start, end, participants, type)).toBeTruthy();
 
-  const end2 = '19:00';
-  expect(isValidPeriod(start, end2)).toBeFalsy();
-  expect(isValidEvent(date, start, end2, participants, type)).toBeFalsy();
+  const endEarly = '19:00';
+  expect(isValidEvent(date, start, endEarly, participants, type)).toBeFalsy();
 
+  const participantsEmpty = '';
+  expect(isValidEvent(date, start, end, participantsEmpty, type)).toBeFalsy();
 
-  const participants2 = '';
-  expect(isValidParticipants(participants2)).toBeFalsy();
-  expect(isValidEvent(date, start, end, participants2, type)).toBeFalsy();
-
-  const type2 = 'something';
-  expect(isValidParticipants(type2)).toBeFalsy();
-  expect(isValidEvent(date, start, end, participants, type2)).toBeFalsy();
+  const typeSomething = 'something';
+  expect(isValidEvent(date, start, end, participants, typeSomething)).toBeFalsy();
 });
 
 it('capitalizeFirstLetter works as expected', () => {
@@ -162,16 +175,4 @@ it('sortEvents works as expected', () => {
   const sorted4 = sortEvents([event3, event1]);
   expect(sorted4[0]).toBe(event1);
   expect(sorted4[1]).toBe(event3);
-});
-
-it('mostSevere works as expected', () => {
-  const ok = Status.OK;
-  const warning = Status.WARNING;
-  const error = Status.ERROR;
-  expect(mostSevere(ok, warning)).toBe(warning);
-  expect(mostSevere(warning, ok)).toBe(warning);
-  expect(mostSevere(warning, error)).toBe(error);
-  expect(mostSevere(error, warning)).toBe(error);
-  expect(mostSevere(error, ok)).toBe(error);
-  expect(mostSevere(ok, error)).toBe(error);
 });
