@@ -1,93 +1,263 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders the component 1`] = `
+exports[`renders correctly 1`] = `
 <div>
-  <WithStyles(Typography)
-    variant="headline"
+  <h1
+    className="MuiTypography-root-1 MuiTypography-headline-6"
   >
     Legg til ny
      hendelse
-  </WithStyles(Typography)>
+  </h1>
   <form
     className="form"
     onSubmit={[Function]}
   >
-    <TextField
-      InputLabelProps={
-        Object {
-          "shrink": true,
-        }
-      }
-      label="Dato"
-      name="date"
-      onChange={[Function]}
-      required={false}
-      select={false}
-      type="date"
-      value="2018-12-01"
-      variant="standard"
-    />
-    <TextField
-      InputLabelProps={
-        Object {
-          "shrink": true,
-        }
-      }
-      inputProps={
-        Object {
-          "step": 300,
-        }
-      }
-      label="Start"
-      name="start"
-      onChange={[Function]}
-      required={false}
-      select={false}
-      type="time"
-      value="09:00"
-      variant="standard"
-    />
-    <TextField
-      InputLabelProps={
-        Object {
-          "shrink": true,
-        }
-      }
-      defaultValue="10:00"
-      inputProps={
-        Object {
-          "step": 300,
-        }
-      }
-      label="Slutt"
-      name="end"
-      onChange={[Function]}
-      required={false}
-      select={false}
-      type="time"
-      variant="standard"
-    />
-    <ParticipantsSelect
-      onChange={[Function]}
-    />
-    <TypeSelect
-      onChange={[Function]}
-    />
+    <div
+      className="MuiFormControl-root-36"
+    >
+      <label
+        className="MuiFormLabel-root-47 MuiFormLabel-filled-51 MuiInputLabel-root-40 MuiInputLabel-formControl-41 MuiInputLabel-animated-44 MuiInputLabel-shrink-43"
+        data-shrink={true}
+      >
+        Dato
+      </label>
+      <div
+        className="MuiInputBase-root-67 MuiInput-root-54 MuiInput-underline-58 MuiInputBase-formControl-68 MuiInput-formControl-55"
+        onClick={[Function]}
+      >
+        <input
+          aria-invalid={false}
+          className="MuiInputBase-input-77 MuiInput-input-62 MuiInputBase-inputType-80 MuiInput-inputType-65"
+          disabled={false}
+          name="date"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={false}
+          type="date"
+          value="2018-12-01"
+        />
+      </div>
+    </div>
+    <div
+      className="MuiFormControl-root-36"
+    >
+      <label
+        className="MuiFormLabel-root-47 MuiFormLabel-filled-51 MuiInputLabel-root-40 MuiInputLabel-formControl-41 MuiInputLabel-animated-44 MuiInputLabel-shrink-43"
+        data-shrink={true}
+      >
+        Start
+      </label>
+      <div
+        className="MuiInputBase-root-67 MuiInput-root-54 MuiInput-underline-58 MuiInputBase-formControl-68 MuiInput-formControl-55"
+        onClick={[Function]}
+      >
+        <input
+          aria-invalid={false}
+          className="MuiInputBase-input-77 MuiInput-input-62 MuiInputBase-inputType-80 MuiInput-inputType-65"
+          disabled={false}
+          name="start"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={false}
+          step={300}
+          type="time"
+          value="09:00"
+        />
+      </div>
+    </div>
+    <div
+      className="MuiFormControl-root-36"
+    >
+      <label
+        className="MuiFormLabel-root-47 MuiInputLabel-root-40 MuiInputLabel-formControl-41 MuiInputLabel-animated-44 MuiInputLabel-shrink-43"
+        data-shrink={true}
+      >
+        Slutt
+      </label>
+      <div
+        className="MuiInputBase-root-67 MuiInput-root-54 MuiInput-underline-58 MuiInputBase-formControl-68 MuiInput-formControl-55"
+        onClick={[Function]}
+      >
+        <input
+          aria-invalid={false}
+          className="MuiInputBase-input-77 MuiInput-input-62 MuiInputBase-inputType-80 MuiInput-inputType-65"
+          defaultValue="10:00"
+          disabled={false}
+          name="end"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={false}
+          step={300}
+          type="time"
+        />
+      </div>
+    </div>
+    <div
+      className="MuiFormControl-root-36"
+    >
+      <label
+        className="MuiFormLabel-root-47 MuiInputLabel-root-40 MuiInputLabel-formControl-41 MuiInputLabel-animated-44"
+        data-shrink={false}
+        htmlFor="age-simple"
+      >
+        Participants
+      </label>
+      <div
+        className="MuiInputBase-root-67 MuiInput-root-54 MuiInput-underline-58 MuiInputBase-formControl-68 MuiInput-formControl-55"
+        onClick={[Function]}
+      >
+        <div
+          className="MuiSelect-root-84"
+        >
+          <div
+            aria-haspopup="true"
+            aria-pressed="false"
+            className="MuiSelect-select-85 MuiSelect-selectMenu-88 MuiInputBase-input-77 MuiInput-input-62"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <span
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "&#8203;",
+                }
+              }
+            />
+          </div>
+          <input
+            name="participants"
+            type="hidden"
+            value=""
+          />
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-91 MuiSelect-icon-90"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiFormControl-root-36"
+    >
+      <label
+        className="MuiFormLabel-root-47 MuiInputLabel-root-40 MuiInputLabel-formControl-41 MuiInputLabel-animated-44"
+        data-shrink={false}
+        htmlFor="age-simple"
+      >
+        Type
+      </label>
+      <div
+        className="MuiInputBase-root-67 MuiInput-root-54 MuiInput-underline-58 MuiInputBase-formControl-68 MuiInput-formControl-55"
+        onClick={[Function]}
+      >
+        <div
+          className="MuiSelect-root-84"
+        >
+          <div
+            aria-haspopup="true"
+            aria-pressed="false"
+            className="MuiSelect-select-85 MuiSelect-selectMenu-88 MuiInputBase-input-77 MuiInput-input-62"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <span
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "&#8203;",
+                }
+              }
+            />
+          </div>
+          <input
+            name="type"
+            type="hidden"
+            value=""
+          />
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-91 MuiSelect-icon-90"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
     <div
       className="mt32 flex spacebetween"
     >
-      <WithStyles(Button)
-        color="primary"
+      <button
+        className="MuiButtonBase-root-130 MuiButton-root-104 MuiButton-contained-115 MuiButton-containedPrimary-116 MuiButton-raised-118 MuiButton-raisedPrimary-119"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
         type="submit"
-        variant="contained"
       >
-        Lagre
-      </WithStyles(Button)>
-      <WithStyles(Button)
-        color="primary"
+        <span
+          className="MuiButton-label-105"
+        >
+          Lagre
+        </span>
+        <span
+          className="MuiTouchRipple-root-133"
+        />
+      </button>
+      <button
+        className="MuiButtonBase-root-130 MuiButton-root-104 MuiButton-text-106 MuiButton-textPrimary-107 MuiButton-flat-109 MuiButton-flatPrimary-110"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        type="button"
       >
-        Avbryt
-      </WithStyles(Button)>
+        <span
+          className="MuiButton-label-105"
+        >
+          Avbryt
+        </span>
+        <span
+          className="MuiTouchRipple-root-133"
+        />
+      </button>
     </div>
   </form>
 </div>

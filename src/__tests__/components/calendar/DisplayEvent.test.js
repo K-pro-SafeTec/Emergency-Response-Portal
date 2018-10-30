@@ -1,13 +1,13 @@
 import React from 'react';
-import { shallow } from "enzyme";
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import toJson from 'enzyme-to-json';
 import DisplayEvent from "../../../components/calendar/DisplayEvent";
+import TestRenderer from "react-test-renderer";
+import {MemoryRouter as Router} from "react-router-dom";
 
-configure({ adapter: new Adapter() });
+let testRenderer;
 
-test('renders the component', () => {
+beforeAll(() => {
   const event = {
     id: 0,
     title: 'Øvelse',
@@ -16,12 +16,19 @@ test('renders the component', () => {
     participants: 'Alle',
   };
   const mockOnClick = jest.fn();
-  const wrapper = shallow(
-    <DisplayEvent
-      event={event}
-      onChangeEvent={mockOnClick}
-      onDeleteButtonClick={mockOnClick}
-      onReviewButtonClick={mockOnClick}
-    />);
-  expect(toJson(wrapper)).toMatchSnapshot();
+  testRenderer = TestRenderer.create(
+    <Router>
+      <DisplayEvent
+        event={event}
+        onChangeEvent={mockOnClick}
+        onDeleteButtonClick={mockOnClick}
+        onReviewButtonClick={mockOnClick}
+      />
+    </Router>
+  );
+});
+
+test('renders correctly', () => {
+  const tree = testRenderer.toJSON();
+  expect(tree).toMatchSnapshot();
 });

@@ -1,45 +1,83 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders the component 1`] = `
-<WithStyles(Paper)
-  className="paper-small"
+exports[`renders correctly 1`] = `
+<div
+  className="MuiPaper-root-1 MuiPaper-elevation2-5 MuiPaper-rounded-2 paper-small"
 >
-  <WithStyles(Typography)
-    variant="headline"
+  <h1
+    className="MuiTypography-root-28 MuiTypography-headline-33"
   >
     Øvelse
-  </WithStyles(Typography)>
-  <WithStyles(Typography)
-    component="p"
+  </h1>
+  <p
+    className="MuiTypography-root-28 MuiTypography-body1-37"
   >
     19:00
     -
     20:00
-  </WithStyles(Typography)>
-  <WithStyles(Typography)
-    component="p"
+  </p>
+  <p
+    className="MuiTypography-root-28 MuiTypography-body1-37"
   >
     Deltakere: 
     Alle
-  </WithStyles(Typography)>
-  <WithStyles(Button)
-    color="primary"
+  </p>
+  <button
+    className="MuiButtonBase-root-89 MuiButton-root-63 MuiButton-outlined-71 MuiButton-outlinedPrimary-72"
+    disabled={false}
+    onBlur={[Function]}
     onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
     style={
       Object {
         "marginRight": "5px",
       }
     }
-    variant="outlined"
+    tabIndex="0"
+    type="button"
   >
-    Endre
-  </WithStyles(Button)>
-  <WithStyles(Button)
-    color="secondary"
+    <span
+      className="MuiButton-label-64"
+    >
+      Endre
+    </span>
+    <span
+      className="MuiTouchRipple-root-92"
+    />
+  </button>
+  <button
+    className="MuiButtonBase-root-89 MuiButton-root-63 MuiButton-outlined-71 MuiButton-outlinedSecondary-73"
+    disabled={false}
+    onBlur={[Function]}
     onClick={[Function]}
-    variant="outlined"
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex="0"
+    type="button"
   >
-    Slett
-  </WithStyles(Button)>
-</WithStyles(Paper)>
+    <span
+      className="MuiButton-label-64"
+    >
+      Slett
+    </span>
+    <span
+      className="MuiTouchRipple-root-92"
+    />
+  </button>
+</div>
 `;
