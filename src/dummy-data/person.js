@@ -30,20 +30,20 @@ function createPersonList() {
     const competenceIdList = personShouldHaveCourses[i];
 
     // interval to offset course validUntil data from today in days
-    const max_offset = 20
-    const min_offset = -1
-    const num_days_warning = -2
+    const max_offset = 365;
+    const min_offset = -10;
+    const num_days_warning = -45;
 
-    const competence = {}
-    const today = new Date()
+    const competence = {};
+    const today = new Date();
 
     for (let course_id of competenceIdList) {
-      if (random() < 0.05) {
+      if (random() < 0.01) {
         competence[course_id] = null;
         continue;
       }
       // Get days to offset validUntil from today
-      const offset_days = Math.round(random() * (max_offset - min_offset) + min_offset)
+      const offset_days = Math.round(random() * (max_offset - min_offset) + min_offset);
 
       // Dates for today and warning date to compare if a warning needs to be displayed
       const date = addDays(today, offset_days); 
