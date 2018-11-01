@@ -145,9 +145,14 @@ Array [
   >
     <div
       className="NavMenu-content-98"
+      style={
+        Object {
+          "maxWidth": "50em",
+        }
+      }
     >
       <a
-        className="MuiButtonBase-root-51 MuiButton-root-101 MuiButton-outlined-109 MuiButton-sizeLarge-125 NavMenuItem-navigationButton-99"
+        className="MuiButtonBase-root-51 MuiButton-root-101 MuiButton-text-103 MuiButton-flat-106 MuiButton-sizeLarge-125 NavMenuItem-navigationButton-99"
         href="/emergency-response-teams/"
         onBlur={[Function]}
         onClick={[Function]}
@@ -161,11 +166,6 @@ Array [
         onTouchMove={[Function]}
         onTouchStart={[Function]}
         role="button"
-        style={
-          Object {
-            "flexBasis": "30em",
-          }
-        }
         tabIndex="0"
       >
         <span
@@ -185,7 +185,7 @@ Array [
         />
       </a>
       <a
-        className="MuiButtonBase-root-51 MuiButton-root-101 MuiButton-outlined-109 MuiButton-sizeLarge-125 NavMenuItem-navigationButton-99"
+        className="MuiButtonBase-root-51 MuiButton-root-101 MuiButton-text-103 MuiButton-flat-106 MuiButton-sizeLarge-125 NavMenuItem-navigationButton-99"
         href="/compatibility-matrix/"
         onBlur={[Function]}
         onClick={[Function]}
@@ -199,11 +199,6 @@ Array [
         onTouchMove={[Function]}
         onTouchStart={[Function]}
         role="button"
-        style={
-          Object {
-            "flexBasis": "30em",
-          }
-        }
         tabIndex="0"
       >
         <span
@@ -223,7 +218,7 @@ Array [
         />
       </a>
       <a
-        className="MuiButtonBase-root-51 MuiButton-root-101 MuiButton-outlined-109 MuiButton-sizeLarge-125 NavMenuItem-navigationButton-99"
+        className="MuiButtonBase-root-51 MuiButton-root-101 MuiButton-text-103 MuiButton-flat-106 MuiButton-sizeLarge-125 NavMenuItem-navigationButton-99"
         href="/deputies/"
         onBlur={[Function]}
         onClick={[Function]}
@@ -237,11 +232,6 @@ Array [
         onTouchMove={[Function]}
         onTouchStart={[Function]}
         role="button"
-        style={
-          Object {
-            "flexBasis": "30em",
-          }
-        }
         tabIndex="0"
       >
         <span
@@ -261,7 +251,7 @@ Array [
         />
       </a>
       <a
-        className="MuiButtonBase-root-51 MuiButton-root-101 MuiButton-outlined-109 MuiButton-sizeLarge-125 NavMenuItem-navigationButton-99"
+        className="MuiButtonBase-root-51 MuiButton-root-101 MuiButton-text-103 MuiButton-flat-106 MuiButton-sizeLarge-125 NavMenuItem-navigationButton-99"
         href="/backup-resources/"
         onBlur={[Function]}
         onClick={[Function]}
@@ -275,11 +265,6 @@ Array [
         onTouchMove={[Function]}
         onTouchStart={[Function]}
         role="button"
-        style={
-          Object {
-            "flexBasis": "30em",
-          }
-        }
         tabIndex="0"
       >
         <span

@@ -19,7 +19,7 @@ const styles = {
 };
 
 const NavMenuItem = ({ classes, name, icon, to, ...rest }) => (
-  <Button component={Link} to={to} size="large" variant="flat" className={classes.navigationButton} {...rest}>
+  <Button component={Link} to={to} size="large" variant="text" className={classes.navigationButton} {...rest}>
     <img src={icon} alt={name} className={classes.icon} />
     <div>
       {name}
