@@ -75,7 +75,7 @@ const Person = ({ match }) => {
           <ListItem>
             <Typography variant="title">Medlemskompetanse</Typography>
           </ListItem>
-          {person.teams.map(teamId => (
+          {person.teams.filter(teamId => teamId !== 0).map(teamId => (
             <TeamItem key={teamId} team={teamById[teamId]} person={person} />
           ))}
         </List>

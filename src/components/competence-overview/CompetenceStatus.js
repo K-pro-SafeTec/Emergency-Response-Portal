@@ -15,23 +15,23 @@ const styles = {
 
 const CompetenceStatus = ({ classes, competence }) => {
   let status;
-  let validityMessage;
   let comment;
   if (!competence) {
     status = Status.ERROR;
-    validityMessage = 'Ikke gjennomført';
     comment = null;
   } else {
     status = competence.status;
     comment = competence.comment;
-    if (competence.validUntil !== null) {
-      if (competence.validUntil.getTime() > now.getTime()) {
-        validityMessage = `Gyldig til ${moment(competence.validUntil).format('L')}`;
+    if (comment === null) {
+      if (competence.validUntil !== null) {
+        if (competence.validUntil.getTime() > now.getTime()) {
+          comment = `Gyldig til ${moment(competence.validUntil).format('L')}`;
+        } else {
+          comment = `Utgått ${moment(competence.validUntil).format('L')}`;
+        }
       } else {
-        validityMessage = `Utgått ${moment(competence.validUntil).format('L')}`;
+        comment = 'Gyldig (utgår aldri)'
       }
-    } else {
-      validityMessage = 'Gyldig (utgår aldri)'
     }
   }
   return (
@@ -39,8 +39,7 @@ const CompetenceStatus = ({ classes, competence }) => {
       <div className={classes.icon}>
         <StatusIcon status={status} />
       </div>
-      <Typography variant="body1">{validityMessage}</Typography>
-      <Typography variant="caption">{comment}</Typography>
+      <Typography variant="body1">{comment}</Typography>
     </div>
   );
 };
