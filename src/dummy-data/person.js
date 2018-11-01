@@ -37,7 +37,8 @@ function createPersonList() {
     const competence = {};
     const today = new Date();
 
-    for (let course_id of competenceIdList) {
+    for (let j in competenceIdList) {
+      const course_id = competenceIdList[j];
       if (random() < 0.01) {
         competence[course_id] = null;
         continue;
