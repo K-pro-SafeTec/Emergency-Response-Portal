@@ -9,7 +9,7 @@ import StatusIcon from '../shared/StatusIcon';
 import AppPage from '../shared/AppPage';
 import TeamContainer from './TeamContainer';
 import Person from './Person';
-import { teamList } from '../../dummy-data/team';
+import { teamList, teamById } from '../../dummy-data/team';
 import UnknownPage from '../shared/UnknownPage';
 
 const TeamItem = ({ team }) => (
@@ -29,7 +29,7 @@ export default ({ match }) => (
           <ListItem>
             <Typography variant="title">Beredskapslag</Typography>
           </ListItem>
-          {teamList.map(team => (
+          {teamList.filter(team => team.id !== 7).map(team => (
             <TeamItem key={team.id} team={team} />
           ))}
         </List>
