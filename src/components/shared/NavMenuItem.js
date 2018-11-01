@@ -7,8 +7,8 @@ const styles = {
   navigationButton: {
     padding: '1em',
     margin: '1em',
+    width: '20em',
     height: '15em',
-    flex: '1 0 20em',
     display: 'block',
     textAlign: 'center',
   },
@@ -19,7 +19,7 @@ const styles = {
 };
 
 const NavMenuItem = ({ classes, name, icon, to, ...rest }) => (
-  <Button component={Link} to={to} size="large" variant="outlined" className={classes.navigationButton} {...rest}>
+  <Button component={Link} to={to} size="large" variant="flat" className={classes.navigationButton} {...rest}>
     <img src={icon} alt={name} className={classes.icon} />
     <div>
       {name}
