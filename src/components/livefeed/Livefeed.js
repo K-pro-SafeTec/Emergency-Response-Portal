@@ -127,7 +127,7 @@ class Livefeed extends React.Component {
             </Grid>
             <Grid item xs={6}>
               <Paper>
-                <PreparednessSummary teams={teamList.filter(team => team.id !== 0)} />
+                <PreparednessSummary teams={teamList.filter(team => team.id !== 0 && team.id !== 7 && team.id !== 9 )} />
               </Paper>
             </Grid>
             <Grid item xs={6}>
