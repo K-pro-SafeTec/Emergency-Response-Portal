@@ -7,7 +7,9 @@ import IconTraining from '../../../icons/main-menu/training.svg';
 import IconExerciseScenarios from '../../../icons/main-menu/exerciseScenarios.svg';
 import IconTableTops from '../../../icons/main-menu/tableTops.svg';
 import UnknownPage from '../../shared/UnknownPage';
-import ReportList from './Reports';
+import Trainings from './Trainings';
+import Exercises from './Exercises';
+import TableTops from './TableTops';
 
 
 const ExerciseReports = ({ match }) => (
@@ -21,9 +23,9 @@ const ExerciseReports = ({ match }) => (
         </NavMenu>
       </AppPage>
     </Route>
-    <Route path={`${match.url}/training/`} render={props => <ReportList {...props} reports={[]} />} />
-    <Route path={`${match.url}/exercises/`} render={props => <ReportList {...props} reports={[]} />} />
-    <Route path={`${match.url}/table-tops/`} render={props => <ReportList {...props} reports={[]} />} />
+    <Route path={`${match.url}/training/`} component={Trainings} />
+    <Route path={`${match.url}/exercises/`} component={Exercises} />
+    <Route path={`${match.url}/table-tops/`} component={TableTops} />
     <Route component={UnknownPage} />
   </Switch>
 )
