@@ -31,5 +31,8 @@
     "not dead",
     "not ie <= 10",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "mockdate": "^2.0.2"
+  }
 }
