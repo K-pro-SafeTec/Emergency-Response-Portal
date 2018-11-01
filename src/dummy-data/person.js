@@ -17,6 +17,10 @@ function addDays(initial_date, days) {
   return date;
 }
 
+const grunnleggendeSikkerhetskurs = 0;
+const treningOffshore = 1;
+const ovelseOffshore = 2;
+
 function createPersonList() {
   const personList = []
   for (let i in raw_person_list) {
@@ -39,6 +43,14 @@ function createPersonList() {
 
     for (let j in competenceIdList) {
       const course_id = competenceIdList[j];
+      if (course_id === grunnleggendeSikkerhetskurs) { // Grunnleggende sikkerhetskurs
+        competence[course_id] = {
+          status: Status.OK,
+          validUntil: addDays(today, 100),
+          comment: null,
+        };
+        continue;
+      }
       if (random() < 0.01) {
         competence[course_id] = null;
         continue;
@@ -55,15 +67,11 @@ function createPersonList() {
       if (date <= today)                 {status = Status.ERROR;}
       else if (date_warning <= today)   {status = Status.WARNING;}
 
-      // Add comments on some course completions
-      let comment = null;
-      if(random() < 0.2) {comment = 'Eksempelkommentar'}
-      
       // Fill out course entry
       competence[course_id] = {
         status: status,
         validUntil: date,
-        comment: comment,
+        comment: null,
       }
     }
 
@@ -74,16 +82,41 @@ function createPersonList() {
 
     // Fill out person entry
     const personListEntry = {
-        id: personData.emp_id,
-        name: personData.first_name + " " + personData.last_name,
-        teams: teamMemberList,
-        competence: competence,
-        roles: person_main_role,
-      };
+      id: personData.emp_id,
+      name: personData.first_name + " " + personData.last_name,
+      teams: teamMemberList,
+      competence: competence,
+      roles: person_main_role,
+    };
 
-      personList.push(personListEntry);
+    personList.push(personListEntry);
   }
-  return personList
+
+  // Hardcoded competence exceptions
+
+  const livAasen = personList[9];
+  const janAndersen = personList[0];
+  const nilsBerntsen = personList[10];
+
+  livAasen.competence[treningOffshore] = {
+    status: Status.WARNING,
+    validUntil: null,
+    comment: 'Fritatt fra trening 12.12.2018'
+  };
+
+  janAndersen.competence[ovelseOffshore] = {
+    status: Status.WARNING,
+    validUntil: null,
+    comment: 'Syk ved øvelse 23.11.2018'
+  };
+
+  nilsBerntsen.competence[ovelseOffshore] = {
+    status: Status.WARNING,
+    validUntil: null,
+    comment: 'Fritatt fra øvelse 10.09.2018 og 22.10.2018'
+  };
+
+  return personList;
 }
 
 // export const personList = [
