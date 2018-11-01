@@ -147,7 +147,7 @@ Array [
       className="NavMenu-content-98"
     >
       <a
-        className="MuiButtonBase-root-51 MuiButton-root-101 MuiButton-outlined-109 MuiButton-sizeLarge-125 NavMenuItem-navigationButton-99"
+        className="MuiButtonBase-root-51 MuiButton-root-101 MuiButton-text-103 MuiButton-flat-106 MuiButton-sizeLarge-125 NavMenuItem-navigationButton-99"
         href="/exercise-report/"
         onBlur={[Function]}
         onClick={[Function]}
@@ -180,7 +180,7 @@ Array [
         />
       </a>
       <a
-        className="MuiButtonBase-root-51 MuiButton-root-101 MuiButton-outlined-109 MuiButton-sizeLarge-125 NavMenuItem-navigationButton-99"
+        className="MuiButtonBase-root-51 MuiButton-root-101 MuiButton-text-103 MuiButton-flat-106 MuiButton-sizeLarge-125 NavMenuItem-navigationButton-99"
         href="/performance-requirements/"
         onBlur={[Function]}
         onClick={[Function]}
@@ -213,7 +213,7 @@ Array [
         />
       </a>
       <a
-        className="MuiButtonBase-root-51 MuiButton-root-101 MuiButton-outlined-109 MuiButton-sizeLarge-125 NavMenuItem-navigationButton-99"
+        className="MuiButtonBase-root-51 MuiButton-root-101 MuiButton-text-103 MuiButton-flat-106 MuiButton-sizeLarge-125 NavMenuItem-navigationButton-99"
         href="/lessons-learned/"
         onBlur={[Function]}
         onClick={[Function]}
@@ -246,7 +246,7 @@ Array [
         />
       </a>
       <a
-        className="MuiButtonBase-root-51 MuiButton-root-101 MuiButton-outlined-109 MuiButton-sizeLarge-125 NavMenuItem-navigationButton-99"
+        className="MuiButtonBase-root-51 MuiButton-root-101 MuiButton-text-103 MuiButton-flat-106 MuiButton-sizeLarge-125 NavMenuItem-navigationButton-99"
         href="/report-generator/"
         onBlur={[Function]}
         onClick={[Function]}
@@ -279,7 +279,7 @@ Array [
         />
       </a>
       <a
-        className="MuiButtonBase-root-51 MuiButton-root-101 MuiButton-outlined-109 MuiButton-sizeLarge-125 NavMenuItem-navigationButton-99"
+        className="MuiButtonBase-root-51 MuiButton-root-101 MuiButton-text-103 MuiButton-flat-106 MuiButton-sizeLarge-125 NavMenuItem-navigationButton-99"
         href="/emergency-response-actions/"
         onBlur={[Function]}
         onClick={[Function]}
@@ -312,7 +312,7 @@ Array [
         />
       </a>
       <a
-        className="MuiButtonBase-root-51 MuiButton-root-101 MuiButton-outlined-109 MuiButton-sizeLarge-125 NavMenuItem-navigationButton-99"
+        className="MuiButtonBase-root-51 MuiButton-root-101 MuiButton-text-103 MuiButton-flat-106 MuiButton-sizeLarge-125 NavMenuItem-navigationButton-99"
         href="/industry-information/"
         onBlur={[Function]}
         onClick={[Function]}

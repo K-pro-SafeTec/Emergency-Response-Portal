@@ -9,12 +9,12 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
   },
 };
 
-const NavMenu = ({ classes, children }) => (
-  <div className={classes.content} children={children} />
+const NavMenu = ({ classes, ...rest }) => (
+  <div className={classes.content} {...rest} />
 );
 
 export default withStyles(styles)(NavMenu);
