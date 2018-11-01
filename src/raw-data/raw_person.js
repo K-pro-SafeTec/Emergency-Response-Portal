@@ -143,7 +143,7 @@ export const raw_person_list = [
       "skift": 0,
       "Beredskapslag_1": 2,
       "Rolle_lag_1": 9,
-      "Beredskapslag_2": 7,
+      "Beredskapslag_2": 6,
       "Beredskapslag_3": 3
     },
     {

@@ -672,9 +672,9 @@ Array [
                   }
                 >
                   <img
-                    alt="OBS!"
+                    alt="Advarsel"
                     height="35em"
-                    src="not-checkmark.svg"
+                    src="yellow_warning.svg"
                     width="35em"
                   />
                 </div>
