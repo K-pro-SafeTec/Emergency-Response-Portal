@@ -67,15 +67,11 @@ function createPersonList() {
       if (date <= today)                 {status = Status.ERROR;}
       else if (date_warning <= today)   {status = Status.WARNING;}
 
-      // Add comments on some course completions
-      let comment = null;
-      if(random() < 0.2) {comment = 'Eksempelkommentar'}
-      
       // Fill out course entry
       competence[course_id] = {
         status: status,
         validUntil: date,
-        comment: comment,
+        comment: null,
       }
     }
 
