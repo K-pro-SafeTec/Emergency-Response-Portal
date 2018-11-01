@@ -29,7 +29,7 @@ export default ({ match }) => (
           <ListItem>
             <Typography variant="title">Beredskapslag</Typography>
           </ListItem>
-          {teamList.filter(team => team.id !== 7).map(team => (
+          {teamList.filter(team => team.id !== 7 && team.id !==9).map(team => (
             <TeamItem key={team.id} team={team} />
           ))}
         </List>
