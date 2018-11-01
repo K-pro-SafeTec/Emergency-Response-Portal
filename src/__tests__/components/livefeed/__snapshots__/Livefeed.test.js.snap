@@ -852,9 +852,9 @@ Array [
                   }
                 >
                   <img
-                    alt="Ok"
+                    alt="Advarsel"
                     height="35em"
-                    src="checkmark.svg"
+                    src="yellow_warning.svg"
                     width="35em"
                   />
                 </div>
@@ -897,9 +897,9 @@ Array [
                   }
                 >
                   <img
-                    alt="OBS!"
+                    alt="Ok"
                     height="35em"
-                    src="not-checkmark.svg"
+                    src="checkmark.svg"
                     width="35em"
                   />
                 </div>
@@ -942,9 +942,9 @@ Array [
                   }
                 >
                   <img
-                    alt="Advarsel"
+                    alt="Ok"
                     height="35em"
-                    src="yellow_warning.svg"
+                    src="checkmark.svg"
                     width="35em"
                   />
                 </div>
@@ -1122,9 +1122,9 @@ Array [
                   }
                 >
                   <img
-                    alt="OBS!"
+                    alt="Ok"
                     height="35em"
-                    src="not-checkmark.svg"
+                    src="checkmark.svg"
                     width="35em"
                   />
                 </div>
