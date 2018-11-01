@@ -9,7 +9,7 @@ import StatusIcon from '../shared/StatusIcon';
 import AppPage from '../shared/AppPage';
 import TeamContainer from './TeamContainer';
 import Person from './Person';
-import { teamList, teamById } from '../../dummy-data/team';
+import { teamList } from '../../dummy-data/team';
 import UnknownPage from '../shared/UnknownPage';
 
 const TeamItem = ({ team }) => (
