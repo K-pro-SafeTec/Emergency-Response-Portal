@@ -1,15 +1,19 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 import { MemoryRouter as Router } from 'react-router-dom'
-import CompetenceOverview from "../../../components/competence-overview/CompetenceOverview";
+import Person from "../../../components/competence-overview/Person";
 
 let testRenderer;
 
 beforeAll(() => {
   testRenderer = TestRenderer.create(
     <Router>
-      <CompetenceOverview
-        match={{}}
+      <Person
+        match={{
+          params: {
+            personId: 0,
+          }
+        }}
       />
     </Router>
   );

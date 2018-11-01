@@ -45,7 +45,7 @@ Array [
           </svg>
         </span>
         <span
-          className="MuiTouchRipple-root-120"
+          className="MuiTouchRipple-root-140"
         />
       </a>
       <button
@@ -143,21 +143,364 @@ Array [
   <div
     className="AppPage-content-4"
   >
+    <div
+      className="EntityInfo-container-98"
+    >
+      <svg
+        aria-hidden="true"
+        className="MuiSvgIcon-root-54 EntityInfo-avatar-99"
+        focusable="false"
+        role="presentation"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+        />
+        <path
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+      </svg>
+      <div
+        className="EntityInfo-info-100"
+      >
+        <h1
+          className="MuiTypography-root-63 MuiTypography-headline-68"
+        >
+          Jan Andersen
+        </h1>
+        <h3
+          className="MuiTypography-root-63 MuiTypography-subheading-70"
+        >
+          Beredskapsleder
+        </h3>
+      </div>
+    </div>
+    <table
+      className="MuiTable-root-101"
+    >
+      <thead
+        className="MuiTableHead-root-102"
+      >
+        <tr
+          className="MuiTableRow-root-103 MuiTableRow-head-106"
+        >
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root-108 MuiTableCell-head-109"
+            scope="col"
+          >
+            Kompetanse
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root-108 MuiTableCell-head-109"
+            scope="col"
+          >
+            Status
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        className="MuiTableBody-root-116"
+      >
+        <tr
+          className="MuiTableRow-root-103"
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-108 MuiTableCell-body-110"
+          >
+            Grunnleggende sikkerhetskurs
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-108 MuiTableCell-body-110"
+          >
+            <div>
+              <div
+                className="CompetenceStatus-icon-117"
+              >
+                <img
+                  alt="Ok"
+                  height="35em"
+                  src="checkmark.svg"
+                  width="35em"
+                />
+              </div>
+              <p
+                className="MuiTypography-root-63 MuiTypography-body1-72"
+              >
+                Gyldig til 01/30/2019
+              </p>
+              <span
+                className="MuiTypography-root-63 MuiTypography-caption-73"
+              />
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root-103"
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-108 MuiTableCell-body-110"
+          >
+            Trening offshore
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-108 MuiTableCell-body-110"
+          >
+            <div>
+              <div
+                className="CompetenceStatus-icon-117"
+              >
+                <img
+                  alt="Ok"
+                  height="35em"
+                  src="checkmark.svg"
+                  width="35em"
+                />
+              </div>
+              <p
+                className="MuiTypography-root-63 MuiTypography-body1-72"
+              >
+                Gyldig til 03/17/2019
+              </p>
+              <span
+                className="MuiTypography-root-63 MuiTypography-caption-73"
+              />
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root-103"
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-108 MuiTableCell-body-110"
+          >
+            Øvelse offshore
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-108 MuiTableCell-body-110"
+          >
+            <div>
+              <div
+                className="CompetenceStatus-icon-117"
+              >
+                <img
+                  alt="Advarsel"
+                  height="35em"
+                  src="yellow_warning.svg"
+                  width="35em"
+                />
+              </div>
+              <p
+                className="MuiTypography-root-63 MuiTypography-body1-72"
+              >
+                Gyldig til 11/25/2018
+              </p>
+              <span
+                className="MuiTypography-root-63 MuiTypography-caption-73"
+              />
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root-103"
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-108 MuiTableCell-body-110"
+          >
+            Beredskapsledelse grunnkurs
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-108 MuiTableCell-body-110"
+          >
+            <div>
+              <div
+                className="CompetenceStatus-icon-117"
+              >
+                <img
+                  alt="Ok"
+                  height="35em"
+                  src="checkmark.svg"
+                  width="35em"
+                />
+              </div>
+              <p
+                className="MuiTypography-root-63 MuiTypography-body1-72"
+              >
+                Gyldig til 05/05/2019
+              </p>
+              <span
+                className="MuiTypography-root-63 MuiTypography-caption-73"
+              />
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root-103"
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-108 MuiTableCell-body-110"
+          >
+            Samordnet beredskapstrening på land
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-108 MuiTableCell-body-110"
+          >
+            <div>
+              <div
+                className="CompetenceStatus-icon-117"
+              >
+                <img
+                  alt="Ok"
+                  height="35em"
+                  src="checkmark.svg"
+                  width="35em"
+                />
+              </div>
+              <p
+                className="MuiTypography-root-63 MuiTypography-body1-72"
+              >
+                Gyldig til 03/07/2019
+              </p>
+              <span
+                className="MuiTypography-root-63 MuiTypography-caption-73"
+              />
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root-103"
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-108 MuiTableCell-body-110"
+          >
+            SRC/VHF-sertifikat
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-108 MuiTableCell-body-110"
+          >
+            <div>
+              <div
+                className="CompetenceStatus-icon-117"
+              >
+                <img
+                  alt="Ok"
+                  height="35em"
+                  src="checkmark.svg"
+                  width="35em"
+                />
+              </div>
+              <p
+                className="MuiTypography-root-63 MuiTypography-body1-72"
+              >
+                Gyldig til 08/20/2019
+              </p>
+              <span
+                className="MuiTypography-root-63 MuiTypography-caption-73"
+              />
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root-103"
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-108 MuiTableCell-body-110"
+          >
+            Ledertrening beredskap og krisehåndtering for plattformsjefer
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-108 MuiTableCell-body-110"
+          >
+            <div>
+              <div
+                className="CompetenceStatus-icon-117"
+              >
+                <img
+                  alt="Ok"
+                  height="35em"
+                  src="checkmark.svg"
+                  width="35em"
+                />
+              </div>
+              <p
+                className="MuiTypography-root-63 MuiTypography-body1-72"
+              >
+                Gyldig til 10/25/2019
+              </p>
+              <span
+                className="MuiTypography-root-63 MuiTypography-caption-73"
+              />
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root-103"
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-108 MuiTableCell-body-110"
+          >
+            NOFO oljevern-beredskapskurs
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-108 MuiTableCell-body-110"
+          >
+            <div>
+              <div
+                className="CompetenceStatus-icon-117"
+              >
+                <img
+                  alt="Ok"
+                  height="35em"
+                  src="checkmark.svg"
+                  width="35em"
+                />
+              </div>
+              <p
+                className="MuiTypography-root-63 MuiTypography-body1-72"
+              >
+                Gyldig til 12/28/2018
+              </p>
+              <span
+                className="MuiTypography-root-63 MuiTypography-caption-73"
+              />
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
     <ul
-      className="MuiList-root-98 MuiList-padding-99"
+      className="MuiList-root-118 MuiList-padding-119"
     >
       <li
-        className="MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109"
+        className="MuiListItem-root-122 MuiListItem-default-125 MuiListItem-gutters-129"
         disabled={false}
       >
         <h2
           className="MuiTypography-root-63 MuiTypography-title-69"
         >
-          Beredskapslag
+          Medlemskompetanse
         </h2>
       </li>
       <a
-        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
+        className="MuiButtonBase-root-51 MuiListItem-root-122 MuiListItem-default-125 MuiListItem-gutters-129 MuiListItem-button-130"
         href="/teams/0/"
         onBlur={[Function]}
         onClick={[Function]}
@@ -174,7 +517,7 @@ Array [
         tabIndex="0"
       >
         <div
-          className="MuiListItemIcon-root-113"
+          className="MuiListItemIcon-root-133"
           style={
             Object {
               "fontSize": "40px",
@@ -182,27 +525,27 @@ Array [
           }
         >
           <img
-            alt="OBS!"
+            alt="Advarsel"
             height="35em"
-            src="not-checkmark.svg"
+            src="yellow_warning.svg"
             width="35em"
           />
         </div>
         <div
-          className="MuiListItemText-root-114"
+          className="MuiListItemText-root-134"
         >
           <span
-            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
+            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-137"
           >
             Alle
           </span>
         </div>
         <span
-          className="MuiTouchRipple-root-120"
+          className="MuiTouchRipple-root-140"
         />
       </a>
       <a
-        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
+        className="MuiButtonBase-root-51 MuiListItem-root-122 MuiListItem-default-125 MuiListItem-gutters-129 MuiListItem-button-130"
         href="/teams/1/"
         onBlur={[Function]}
         onClick={[Function]}
@@ -219,7 +562,7 @@ Array [
         tabIndex="0"
       >
         <div
-          className="MuiListItemIcon-root-113"
+          className="MuiListItemIcon-root-133"
           style={
             Object {
               "fontSize": "40px",
@@ -234,245 +577,20 @@ Array [
           />
         </div>
         <div
-          className="MuiListItemText-root-114"
+          className="MuiListItemText-root-134"
         >
           <span
-            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
+            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-137"
           >
             Beredskapsledelse
           </span>
         </div>
         <span
-          className="MuiTouchRipple-root-120"
+          className="MuiTouchRipple-root-140"
         />
       </a>
       <a
-        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
-        href="/teams/2/"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="button"
-        tabIndex="0"
-      >
-        <div
-          className="MuiListItemIcon-root-113"
-          style={
-            Object {
-              "fontSize": "40px",
-            }
-          }
-        >
-          <img
-            alt="OBS!"
-            height="35em"
-            src="not-checkmark.svg"
-            width="35em"
-          />
-        </div>
-        <div
-          className="MuiListItemText-root-114"
-        >
-          <span
-            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
-          >
-            Søk- og redningslag
-          </span>
-        </div>
-        <span
-          className="MuiTouchRipple-root-120"
-        />
-      </a>
-      <a
-        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
-        href="/teams/3/"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="button"
-        tabIndex="0"
-      >
-        <div
-          className="MuiListItemIcon-root-113"
-          style={
-            Object {
-              "fontSize": "40px",
-            }
-          }
-        >
-          <img
-            alt="Advarsel"
-            height="35em"
-            src="yellow_warning.svg"
-            width="35em"
-          />
-        </div>
-        <div
-          className="MuiListItemText-root-114"
-        >
-          <span
-            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
-          >
-            MOB-båt lag
-          </span>
-        </div>
-        <span
-          className="MuiTouchRipple-root-120"
-        />
-      </a>
-      <a
-        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
-        href="/teams/4/"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="button"
-        tabIndex="0"
-      >
-        <div
-          className="MuiListItemIcon-root-113"
-          style={
-            Object {
-              "fontSize": "40px",
-            }
-          }
-        >
-          <img
-            alt="OBS!"
-            height="35em"
-            src="not-checkmark.svg"
-            width="35em"
-          />
-        </div>
-        <div
-          className="MuiListItemText-root-114"
-        >
-          <span
-            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
-          >
-            Livbåtlag
-          </span>
-        </div>
-        <span
-          className="MuiTouchRipple-root-120"
-        />
-      </a>
-      <a
-        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
-        href="/teams/5/"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="button"
-        tabIndex="0"
-      >
-        <div
-          className="MuiListItemIcon-root-113"
-          style={
-            Object {
-              "fontSize": "40px",
-            }
-          }
-        >
-          <img
-            alt="Advarsel"
-            height="35em"
-            src="yellow_warning.svg"
-            width="35em"
-          />
-        </div>
-        <div
-          className="MuiListItemText-root-114"
-        >
-          <span
-            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
-          >
-            HLO
-          </span>
-        </div>
-        <span
-          className="MuiTouchRipple-root-120"
-        />
-      </a>
-      <a
-        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
-        href="/teams/6/"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="button"
-        tabIndex="0"
-      >
-        <div
-          className="MuiListItemIcon-root-113"
-          style={
-            Object {
-              "fontSize": "40px",
-            }
-          }
-        >
-          <img
-            alt="Ok"
-            height="35em"
-            src="checkmark.svg"
-            width="35em"
-          />
-        </div>
-        <div
-          className="MuiListItemText-root-114"
-        >
-          <span
-            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
-          >
-            Helidekklag
-          </span>
-        </div>
-        <span
-          className="MuiTouchRipple-root-120"
-        />
-      </a>
-      <a
-        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
+        className="MuiButtonBase-root-51 MuiListItem-root-122 MuiListItem-default-125 MuiListItem-gutters-129 MuiListItem-button-130"
         href="/teams/7/"
         onBlur={[Function]}
         onClick={[Function]}
@@ -489,7 +607,7 @@ Array [
         tabIndex="0"
       >
         <div
-          className="MuiListItemIcon-root-113"
+          className="MuiListItemIcon-root-133"
           style={
             Object {
               "fontSize": "40px",
@@ -504,286 +622,16 @@ Array [
           />
         </div>
         <div
-          className="MuiListItemText-root-114"
+          className="MuiListItemText-root-134"
         >
           <span
-            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
+            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-137"
           >
             Beredskapsleder
           </span>
         </div>
         <span
-          className="MuiTouchRipple-root-120"
-        />
-      </a>
-      <a
-        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
-        href="/teams/8/"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="button"
-        tabIndex="0"
-      >
-        <div
-          className="MuiListItemIcon-root-113"
-          style={
-            Object {
-              "fontSize": "40px",
-            }
-          }
-        >
-          <img
-            alt="Ok"
-            height="35em"
-            src="checkmark.svg"
-            width="35em"
-          />
-        </div>
-        <div
-          className="MuiListItemText-root-114"
-        >
-          <span
-            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
-          >
-            Skadestedsleder
-          </span>
-        </div>
-        <span
-          className="MuiTouchRipple-root-120"
-        />
-      </a>
-      <a
-        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
-        href="/teams/9/"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="button"
-        tabIndex="0"
-      >
-        <div
-          className="MuiListItemIcon-root-113"
-          style={
-            Object {
-              "fontSize": "40px",
-            }
-          }
-        >
-          <img
-            alt="OBS!"
-            height="35em"
-            src="not-checkmark.svg"
-            width="35em"
-          />
-        </div>
-        <div
-          className="MuiListItemText-root-114"
-        >
-          <span
-            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
-          >
-            Søk- og redningslagsleder
-          </span>
-        </div>
-        <span
-          className="MuiTouchRipple-root-120"
-        />
-      </a>
-      <a
-        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
-        href="/teams/10/"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="button"
-        tabIndex="0"
-      >
-        <div
-          className="MuiListItemIcon-root-113"
-          style={
-            Object {
-              "fontSize": "40px",
-            }
-          }
-        >
-          <img
-            alt="Ok"
-            height="35em"
-            src="checkmark.svg"
-            width="35em"
-          />
-        </div>
-        <div
-          className="MuiListItemText-root-114"
-        >
-          <span
-            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
-          >
-            Sykepleier
-          </span>
-        </div>
-        <span
-          className="MuiTouchRipple-root-120"
-        />
-      </a>
-      <a
-        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
-        href="/teams/11/"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="button"
-        tabIndex="0"
-      >
-        <div
-          className="MuiListItemIcon-root-113"
-          style={
-            Object {
-              "fontSize": "40px",
-            }
-          }
-        >
-          <img
-            alt="Ok"
-            height="35em"
-            src="checkmark.svg"
-            width="35em"
-          />
-        </div>
-        <div
-          className="MuiListItemText-root-114"
-        >
-          <span
-            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
-          >
-            Kontrollromsoperatør
-          </span>
-        </div>
-        <span
-          className="MuiTouchRipple-root-120"
-        />
-      </a>
-      <a
-        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
-        href="/teams/12/"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="button"
-        tabIndex="0"
-      >
-        <div
-          className="MuiListItemIcon-root-113"
-          style={
-            Object {
-              "fontSize": "40px",
-            }
-          }
-        >
-          <img
-            alt="Advarsel"
-            height="35em"
-            src="yellow_warning.svg"
-            width="35em"
-          />
-        </div>
-        <div
-          className="MuiListItemText-root-114"
-        >
-          <span
-            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
-          >
-            Førstehjelpslag
-          </span>
-        </div>
-        <span
-          className="MuiTouchRipple-root-120"
-        />
-      </a>
-      <a
-        className="MuiButtonBase-root-51 MuiListItem-root-102 MuiListItem-default-105 MuiListItem-gutters-109 MuiListItem-button-110"
-        href="/teams/13/"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="button"
-        tabIndex="0"
-      >
-        <div
-          className="MuiListItemIcon-root-113"
-          style={
-            Object {
-              "fontSize": "40px",
-            }
-          }
-        >
-          <img
-            alt="Ok"
-            height="35em"
-            src="checkmark.svg"
-            width="35em"
-          />
-        </div>
-        <div
-          className="MuiListItemText-root-114"
-        >
-          <span
-            className="MuiTypography-root-63 MuiTypography-subheading-70 MuiListItemText-primary-117"
-          >
-            Livbåtkaptein
-          </span>
-        </div>
-        <span
-          className="MuiTouchRipple-root-120"
+          className="MuiTouchRipple-root-140"
         />
       </a>
     </ul>
