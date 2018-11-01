@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="MuiTable-root-1"
+>
+  <div
+    className="MuiTableHead-root-2"
+  >
+    <div
+      className="MuiTableRow-root-3 MuiTableRow-head-6"
+    >
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-head-9"
+        scope="col"
+      >
+        Dato
+      </div>
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-head-9"
+        scope="col"
+      >
+        DFU
+      </div>
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-head-9"
+        scope="col"
+      >
+        Tittel
+      </div>
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-head-9"
+        scope="col"
+      >
+        Scenario
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiTableBody-root-16"
+  >
+    <a
+      className="MuiTableRow-root-3 MuiTableRow-hover-5 LinkTableRow-noUnderline-17"
+      href="/scenarios/9/2018-09-19/"
+      onClick={[Function]}
+    >
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+      >
+        2018-09-19
+      </div>
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+      >
+        9
+      </div>
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+      >
+        Brann i hjelpesystemer
+      </div>
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+      >
+        
+      </div>
+    </a>
+    <a
+      className="MuiTableRow-root-3 MuiTableRow-hover-5 LinkTableRow-noUnderline-17"
+      href="/scenarios/4/2018-09-24/"
+      onClick={[Function]}
+    >
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+      >
+        2018-09-24
+      </div>
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+      >
+        4
+      </div>
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+      >
+        Fare for kollisjon
+      </div>
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+      >
+        Drivende fartøy på kollisjonskurs
+      </div>
+    </a>
+    <a
+      className="MuiTableRow-root-3 MuiTableRow-hover-5 LinkTableRow-noUnderline-17"
+      href="/scenarios/3/2018-11-05/"
+      onClick={[Function]}
+    >
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+      >
+        2018-11-05
+      </div>
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+      >
+        3
+      </div>
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+      >
+        Akutt utslipp
+      </div>
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+      >
+        Oljeutslipp til sjø fra innretninig
+      </div>
+    </a>
+    <a
+      className="MuiTableRow-root-3 MuiTableRow-hover-5 LinkTableRow-noUnderline-17"
+      href="/scenarios/1/2018-11-14/"
+      onClick={[Function]}
+    >
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+      >
+        2018-11-14
+      </div>
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+      >
+        1
+      </div>
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+      >
+        Uantent/Antent hydrokarbonlekkasje
+      </div>
+      <div
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+      >
+        Lekkasje i turret
+      </div>
+    </a>
+  </div>
+</div>
+`;

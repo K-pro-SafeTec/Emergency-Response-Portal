@@ -1,0 +1,1016 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <header
+    className="MuiPaper-root-16 MuiPaper-elevation4-22 MuiAppBar-root-7 MuiAppBar-positionFixed-8 MuiAppBar-colorDefault-13 mui-fixed"
+  >
+    <div
+      className="MuiToolbar-root-43 MuiToolbar-regular-45 MuiToolbar-gutters-44"
+    >
+      <a
+        className="MuiButtonBase-root-53 MuiIconButton-root-47 AppPage-homeButton-4"
+        href="/"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <span
+          className="MuiIconButton-label-52"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-56"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+            />
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+          </svg>
+        </span>
+        <span
+          className="MuiTouchRipple-root-129"
+        />
+      </a>
+      <button
+        className="MuiButtonBase-root-53 MuiButtonBase-disabled-54 MuiIconButton-root-47 MuiIconButton-disabled-51"
+        disabled={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="-1"
+        type="button"
+      >
+        <span
+          className="MuiIconButton-label-52"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-56"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+            />
+          </svg>
+        </span>
+      </button>
+      <button
+        className="MuiButtonBase-root-53 MuiButtonBase-disabled-54 MuiIconButton-root-47 MuiIconButton-disabled-51"
+        disabled={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="-1"
+        type="button"
+      >
+        <span
+          className="MuiIconButton-label-52"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-56"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+            />
+          </svg>
+        </span>
+      </button>
+      <h2
+        className="MuiTypography-root-65 MuiTypography-title-71 MuiTypography-colorInherit-94 AppPage-grow-3"
+      >
+        Beredskapsdokumenter
+      </h2>
+      <a
+        className="AppPage-safetecLink-5"
+        href="https://www.safetec.no/"
+      >
+        <img
+          alt="Levert av Safetec"
+          height="44px"
+          src="safetec.svg"
+          width="153px"
+        />
+      </a>
+    </div>
+  </header>,
+  <div
+    className="AppPage-content-6"
+  >
+    <div
+      className="Documents-tableContainer-1"
+    >
+      <div
+        className="MuiPaper-root-16 MuiPaper-elevation2-20 MuiPaper-rounded-17 Documents-table-2"
+      >
+        <h1
+          className="MuiTypography-root-65 MuiTypography-headline-70 MuiTypography-alignCenter-88"
+        >
+          Dokumenter
+        </h1>
+        <div
+          className="MuiTable-root-100"
+        >
+          <div
+            className="MuiTableHead-root-101"
+          >
+            <div
+              className="MuiTableRow-root-102 MuiTableRow-head-105"
+            >
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-head-108"
+                scope="col"
+              >
+                <span
+                  aria-describedby={null}
+                  className="MuiButtonBase-root-53 MuiTableSortLabel-root-122"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                  title="Sortér"
+                >
+                  Dok. Nr.
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root-56 MuiTableSortLabel-icon-124 MuiTableSortLabel-iconDirectionAsc-126"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-head-108"
+                scope="col"
+              >
+                <span
+                  aria-describedby={null}
+                  className="MuiButtonBase-root-53 MuiTableSortLabel-root-122 MuiTableSortLabel-active-123"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                  title="Sortér"
+                >
+                  Rev.
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root-56 MuiTableSortLabel-icon-124 MuiTableSortLabel-iconDirectionAsc-126"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-head-108"
+                scope="col"
+              >
+                <span
+                  aria-describedby={null}
+                  className="MuiButtonBase-root-53 MuiTableSortLabel-root-122"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                  title="Sortér"
+                >
+                  Dato
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root-56 MuiTableSortLabel-icon-124 MuiTableSortLabel-iconDirectionAsc-126"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-head-108"
+                scope="col"
+              >
+                <span
+                  aria-describedby={null}
+                  className="MuiButtonBase-root-53 MuiTableSortLabel-root-122"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                  title="Sortér"
+                >
+                  Tittel
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root-56 MuiTableSortLabel-icon-124 MuiTableSortLabel-iconDirectionAsc-126"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            className="MuiTableBody-root-127"
+          >
+            <a
+              className="MuiTableRow-root-102 MuiTableRow-hover-104 LinkTableRow-noUnderline-128"
+              href="/1/"
+              onClick={[Function]}
+            >
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                1
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                2.0
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                xx.xx.xxxx
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                Beredskapsanalyse
+              </div>
+            </a>
+            <a
+              className="MuiTableRow-root-102 MuiTableRow-hover-104 LinkTableRow-noUnderline-128"
+              href="/4/"
+              onClick={[Function]}
+            >
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                4
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                2.0
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                xx.xx.xxxx
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                Alarminstruks
+              </div>
+            </a>
+            <a
+              className="MuiTableRow-root-102 MuiTableRow-hover-104 LinkTableRow-noUnderline-128"
+              href="/5/"
+              onClick={[Function]}
+            >
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                5
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                2.0
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                xx.xx.xxxx
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                Dimensjoneringsanalyse
+              </div>
+            </a>
+            <a
+              className="MuiTableRow-root-102 MuiTableRow-hover-104 LinkTableRow-noUnderline-128"
+              href="/9/"
+              onClick={[Function]}
+            >
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                9
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                2.0
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                xx.xx.xxxx
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                Områdeberedskapsplan
+              </div>
+            </a>
+            <a
+              className="MuiTableRow-root-102 MuiTableRow-hover-104 LinkTableRow-noUnderline-128"
+              href="/8/"
+              onClick={[Function]}
+            >
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                8
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                3.0
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                xx.xx.xxxx
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                Risikoanalyse
+              </div>
+            </a>
+            <a
+              className="MuiTableRow-root-102 MuiTableRow-hover-104 LinkTableRow-noUnderline-128"
+              href="/10/"
+              onClick={[Function]}
+            >
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                10
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                3.0
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                xx.xx.xxxx
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                Oljevernplan
+              </div>
+            </a>
+            <a
+              className="MuiTableRow-root-102 MuiTableRow-hover-104 LinkTableRow-noUnderline-128"
+              href="/0/"
+              onClick={[Function]}
+            >
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                0
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                4.0
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                xx.xx.xxxx
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                Beredskapsplan
+              </div>
+            </a>
+            <a
+              className="MuiTableRow-root-102 MuiTableRow-hover-104 LinkTableRow-noUnderline-128"
+              href="/2/"
+              onClick={[Function]}
+            >
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                2
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                4.0
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                xx.xx.xxxx
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                Varslingsmatrise
+              </div>
+            </a>
+            <a
+              className="MuiTableRow-root-102 MuiTableRow-hover-104 LinkTableRow-noUnderline-128"
+              href="/6/"
+              onClick={[Function]}
+            >
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                6
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                5.0
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                xx.xx.xxxx
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                Styrende dokument beredskap
+              </div>
+            </a>
+            <a
+              className="MuiTableRow-root-102 MuiTableRow-hover-104 LinkTableRow-noUnderline-128"
+              href="/7/"
+              onClick={[Function]}
+            >
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                7
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                6.0
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                xx.xx.xxxx
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                Innretningsspesifikke føringer
+              </div>
+            </a>
+            <a
+              className="MuiTableRow-root-102 MuiTableRow-hover-104 LinkTableRow-noUnderline-128"
+              href="/3/"
+              onClick={[Function]}
+            >
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                3
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                11.0
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                xx.xx.xxxx
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                Telefonliste
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiPaper-root-16 MuiPaper-elevation2-20 MuiPaper-rounded-17 Documents-table-2"
+      >
+        <h1
+          className="MuiTypography-root-65 MuiTypography-headline-70 MuiTypography-alignCenter-88"
+        >
+          Tegninger
+        </h1>
+        <div
+          className="MuiTable-root-100"
+        >
+          <div
+            className="MuiTableHead-root-101"
+          >
+            <div
+              className="MuiTableRow-root-102 MuiTableRow-head-105"
+            >
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-head-108"
+                scope="col"
+              >
+                <span
+                  aria-describedby={null}
+                  className="MuiButtonBase-root-53 MuiTableSortLabel-root-122"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                  title="Sortér"
+                >
+                  Dok. Nr.
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root-56 MuiTableSortLabel-icon-124 MuiTableSortLabel-iconDirectionAsc-126"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-head-108"
+                scope="col"
+              >
+                <span
+                  aria-describedby={null}
+                  className="MuiButtonBase-root-53 MuiTableSortLabel-root-122 MuiTableSortLabel-active-123"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                  title="Sortér"
+                >
+                  Rev.
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root-56 MuiTableSortLabel-icon-124 MuiTableSortLabel-iconDirectionAsc-126"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-head-108"
+                scope="col"
+              >
+                <span
+                  aria-describedby={null}
+                  className="MuiButtonBase-root-53 MuiTableSortLabel-root-122"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                  title="Sortér"
+                >
+                  Dato
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root-56 MuiTableSortLabel-icon-124 MuiTableSortLabel-iconDirectionAsc-126"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-head-108"
+                scope="col"
+              >
+                <span
+                  aria-describedby={null}
+                  className="MuiButtonBase-root-53 MuiTableSortLabel-root-122"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                  title="Sortér"
+                >
+                  Tittel
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root-56 MuiTableSortLabel-icon-124 MuiTableSortLabel-iconDirectionAsc-126"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            className="MuiTableBody-root-127"
+          >
+            <a
+              className="MuiTableRow-root-102 MuiTableRow-hover-104 LinkTableRow-noUnderline-128"
+              href="/5/"
+              onClick={[Function]}
+            >
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                5
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                1.0
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                xx.xx.xxxx
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                Innretninger i nærheten
+              </div>
+            </a>
+            <a
+              className="MuiTableRow-root-102 MuiTableRow-hover-104 LinkTableRow-noUnderline-128"
+              href="/1/"
+              onClick={[Function]}
+            >
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                1
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                2.0
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                xx.xx.xxxx
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                Subsea installasjoner
+              </div>
+            </a>
+            <a
+              className="MuiTableRow-root-102 MuiTableRow-hover-104 LinkTableRow-noUnderline-128"
+              href="/4/"
+              onClick={[Function]}
+            >
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                4
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                2.0
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                xx.xx.xxxx
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                Førstehjelpsutstyr
+              </div>
+            </a>
+            <a
+              className="MuiTableRow-root-102 MuiTableRow-hover-104 LinkTableRow-noUnderline-128"
+              href="/0/"
+              onClick={[Function]}
+            >
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                0
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                4.0
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                xx.xx.xxxx
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                Fire and escape plan
+              </div>
+            </a>
+            <a
+              className="MuiTableRow-root-102 MuiTableRow-hover-104 LinkTableRow-noUnderline-128"
+              href="/2/"
+              onClick={[Function]}
+            >
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                2
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                4.0
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                xx.xx.xxxx
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                Plot planer
+              </div>
+            </a>
+            <a
+              className="MuiTableRow-root-102 MuiTableRow-hover-104 LinkTableRow-noUnderline-128"
+              href="/3/"
+              onClick={[Function]}
+            >
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                3
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                11.0
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                xx.xx.xxxx
+              </div>
+              <div
+                aria-sort={null}
+                className="MuiTableCell-root-107 MuiTableCell-body-109"
+              >
+                Detektor layout
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;

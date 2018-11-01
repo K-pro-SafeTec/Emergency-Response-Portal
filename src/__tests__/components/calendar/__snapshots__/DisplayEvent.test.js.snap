@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="MuiPaper-root-1 MuiPaper-elevation2-5 MuiPaper-rounded-2 paper-small"
+>
+  <h1
+    className="MuiTypography-root-28 MuiTypography-headline-33"
+  >
+    Øvelse
+  </h1>
+  <p
+    className="MuiTypography-root-28 MuiTypography-body1-37"
+  >
+    19:00
+    -
+    20:00
+  </p>
+  <p
+    className="MuiTypography-root-28 MuiTypography-body1-37"
+  >
+    Deltakere: 
+    Alle
+  </p>
+  <button
+    className="MuiButtonBase-root-89 MuiButton-root-63 MuiButton-outlined-71 MuiButton-outlinedPrimary-72"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "marginRight": "5px",
+      }
+    }
+    tabIndex="0"
+    type="button"
+  >
+    <span
+      className="MuiButton-label-64"
+    >
+      Endre
+    </span>
+    <span
+      className="MuiTouchRipple-root-92"
+    />
+  </button>
+  <button
+    className="MuiButtonBase-root-89 MuiButton-root-63 MuiButton-outlined-71 MuiButton-outlinedSecondary-73"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex="0"
+    type="button"
+  >
+    <span
+      className="MuiButton-label-64"
+    >
+      Slett
+    </span>
+    <span
+      className="MuiTouchRipple-root-92"
+    />
+  </button>
+</div>
+`;
