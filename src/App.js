@@ -14,7 +14,7 @@ import EmergencyResponseOrganization from './components/emergency-response-organ
 import CompetenceOverview from './components/competence-overview/CompetenceOverview';
 import UnknownPage from './components/shared/UnknownPage';
 import Konami from 'konami';
-
+// Deployment test
 
 class App extends Component {
   state = {
